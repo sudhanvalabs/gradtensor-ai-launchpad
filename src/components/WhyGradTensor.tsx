@@ -9,12 +9,12 @@ const differentiators = [
   {
     icon: Rocket,
     title: "Build & Deploy Real Projects",
-    description: "Portfolio pieces companies actually care about — deployed AI agents and RAG systems, not toy notebooks.",
+    description: "Portfolio pieces companies actually care about  - deployed AI agents and RAG systems, not toy notebooks.",
   },
   {
     icon: Cpu,
     title: "Modern Stack Focus",
-    description: "LLMs, agents, RAG, prompt engineering — the tools companies are hiring for right now, not outdated sklearn courses.",
+    description: "LLMs, agents, RAG, prompt engineering  - the tools companies are hiring for right now, not outdated sklearn courses.",
   },
   {
     icon: Target,
@@ -28,11 +28,11 @@ const WhyGradTensor = () => {
     <section className="border-y border-border/50 py-24 md:py-32">
       <div className="section-container">
         <div className="mb-16 animate-on-scroll">
-          <h2 className="mb-4 font-display text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="mb-4 font-display text-4xl font-bold tracking-tight sm:text-5xl">
             Why <span className="gradient-text">GradTensor</span>
           </h2>
-          <p className="max-w-xl text-muted-foreground">
-            We built what we wished existed when we were learning AI — practical, modern, and obsessed with outcomes.
+          <p className="max-w-xl text-base text-muted-foreground sm:text-lg">
+            We built what we wished existed when we were learning AI  - practical, modern, and obsessed with outcomes.
           </p>
         </div>
 
@@ -43,13 +43,13 @@ const WhyGradTensor = () => {
               className="animate-on-scroll group"
               style={{ transitionDelay: `${i * 0.1}s` }}
             >
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg border border-border bg-secondary transition-all group-hover:border-primary/30 group-hover:shadow-[var(--glow-primary)]">
-                <item.icon size={22} className="text-primary" />
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg border border-border bg-secondary transition-all duration-300 group-hover:border-primary/30 group-hover:shadow-[var(--glow-primary)] group-hover:scale-110">
+                <item.icon size={24} className="text-primary transition-transform duration-300 group-hover:scale-110" />
               </div>
-              <h3 className="mb-2 font-display text-sm font-bold tracking-tight">
+              <h3 className="mb-2 font-display text-base font-bold tracking-tight">
                 {item.title}
               </h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">
+              <p className="text-base leading-relaxed text-muted-foreground">
                 {item.description}
               </p>
             </div>

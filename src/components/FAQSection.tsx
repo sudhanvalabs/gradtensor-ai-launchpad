@@ -7,14 +7,6 @@ import {
 
 const faqs = [
   {
-    q: "Do I need ML experience to start?",
-    a: "No. The 6-week course assumes basic Python knowledge but teaches LLMs, embeddings, and agents from the ground up. If you want to learn ML from scratch, the 16-week program is better.",
-  },
-  {
-    q: "How much time per week does this require?",
-    a: "6-week course: 8 hours/week (4 live + 4 project). 16-week course: 10 hours/week (4 live + 6 project).",
-  },
-  {
     q: "What's the difference between skill-based and cohort programs?",
     a: "Skill-based courses (6 weeks) focus on one area like AI agents or RAG. The cohort program (16 weeks) is a comprehensive journey from Python basics to deployed AI systems, ideal for deeper career transitions.",
   },
@@ -24,7 +16,7 @@ const faqs = [
   },
   {
     q: "What if I can't attend live sessions?",
-    a: "All live sessions are recorded and shared within 24 hours. However, we strongly recommend attending live — the interaction, doubt-clearing, and accountability are what make cohort learning effective.",
+    a: "All live sessions are recorded and shared within 24 hours. However, we strongly recommend attending live  - the interaction, doubt-clearing, and accountability are what make cohort learning effective.",
   },
 ];
 
@@ -34,7 +26,7 @@ const FAQSection = () => {
       <div className="section-container">
         <div className="mx-auto max-w-3xl">
           <div className="mb-12 text-center animate-on-scroll">
-            <h2 className="mb-4 font-display text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="mb-4 font-display text-4xl font-bold tracking-tight sm:text-5xl">
               Frequently Asked <span className="gradient-text">Questions</span>
             </h2>
           </div>
@@ -42,10 +34,10 @@ const FAQSection = () => {
           <Accordion type="single" collapsible className="animate-on-scroll">
             {faqs.map((faq, i) => (
               <AccordionItem key={i} value={`faq-${i}`} className="border-border/50">
-                <AccordionTrigger className="font-display text-sm font-medium tracking-tight text-foreground hover:text-primary hover:no-underline">
+                <AccordionTrigger className="font-display text-base font-medium tracking-tight text-foreground hover:text-primary hover:no-underline">
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
+                <AccordionContent className="text-base leading-relaxed text-muted-foreground">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>

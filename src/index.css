@@ -1,11 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
-
 @layer base {
+  /* Light mode (default) */
   :root {
+    --background: 0 0% 100%;
+    --foreground: 224 15% 15%;
+
+    --card: 220 14% 96%;
+    --card-foreground: 224 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 15% 15%;
+
+    --primary: 174 72% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 92%;
+    --secondary-foreground: 224 15% 25%;
+
+    --muted: 220 14% 94%;
+    --muted-foreground: 220 10% 40%;
+
+    --accent: 174 72% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 13% 87%;
+    --input: 220 13% 87%;
+    --ring: 174 72% 40%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 220 14% 96%;
+    --sidebar-foreground: 224 15% 25%;
+    --sidebar-primary: 174 72% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 92%;
+    --sidebar-accent-foreground: 224 15% 25%;
+    --sidebar-border: 220 13% 87%;
+    --sidebar-ring: 174 72% 40%;
+
+    /* Custom tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(174 72% 40%), hsl(190 80% 35%));
+    --gradient-hero: linear-gradient(180deg, hsl(220 20% 97%) 0%, hsl(220 25% 94%) 50%, hsl(220 20% 97%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(220 14% 96%), hsl(220 14% 98%));
+    --glow-primary: 0 0 40px hsl(174 72% 40% / 0.1);
+    --glow-strong: 0 0 60px hsl(174 72% 40% / 0.18);
+    --shadow-card: 0 4px 24px hsl(220 20% 80% / 0.2);
+
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+
+  /* Dark mode */
+  .dark {
     --background: 228 15% 6%;
     --foreground: 210 20% 95%;
 
@@ -34,8 +88,6 @@
     --input: 225 12% 18%;
     --ring: 174 72% 56%;
 
-    --radius: 0.5rem;
-
     --sidebar-background: 225 15% 8%;
     --sidebar-foreground: 210 20% 85%;
     --sidebar-primary: 174 72% 56%;
@@ -52,9 +104,6 @@
     --glow-primary: 0 0 40px hsl(174 72% 56% / 0.15);
     --glow-strong: 0 0 60px hsl(174 72% 56% / 0.25);
     --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.3);
-
-    --font-display: 'JetBrains Mono', monospace;
-    --font-body: 'Inter', sans-serif;
   }
 }
 
@@ -96,7 +145,7 @@
   .animate-on-scroll {
     opacity: 0;
     transform: translateY(24px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .animate-on-scroll.visible {
@@ -105,13 +154,50 @@
   }
 
   .badge-skill {
-    @apply bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wider;
+    @apply bg-primary/10 text-primary border border-primary/20 px-3 py-1.5 rounded-full text-sm font-medium uppercase tracking-wider;
     font-family: var(--font-display);
   }
 
   .badge-cohort {
-    @apply bg-accent/10 text-accent border border-accent/20 px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wider;
+    @apply bg-accent/10 text-accent border border-accent/20 px-3 py-1.5 rounded-full text-sm font-medium uppercase tracking-wider;
     font-family: var(--font-display);
+  }
+
+  .badge-executive {
+    @apply bg-secondary text-secondary-foreground border border-border px-3 py-1.5 rounded-full text-sm font-medium uppercase tracking-wider;
+    font-family: var(--font-display);
+  }
+
+  /* Shimmer effect for CTA buttons */
+  .btn-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsla(0, 0%, 100%, 0.15),
+      transparent
+    );
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  /* Hover card lift */
+  .card-hover {
+    @apply transition-all duration-300;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--glow-strong);
   }
 }
 
