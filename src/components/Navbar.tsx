@@ -49,7 +49,7 @@ const Navbar = () => {
             <Moon size={18} className="block dark:hidden" />
           </button>
           <a
-            href="mailto:hello@gradtensor.com"
+            href="https://wa.me/919108030542?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20GradTensor%20courses" target="_blank" rel="noopener noreferrer"
             className="btn-shimmer rounded-lg border border-primary/30 bg-primary/10 px-5 py-2.5 font-display text-sm font-medium tracking-wider text-primary transition-all hover:bg-primary/20"
           >
             Talk to an Advisor
@@ -90,7 +90,7 @@ const Navbar = () => {
             </Link>
           ))}
           <a
-            href="mailto:hello@gradtensor.com"
+            href="https://wa.me/919108030542?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20GradTensor%20courses" target="_blank" rel="noopener noreferrer"
             className="mt-2 block rounded-lg border border-primary/30 bg-primary/10 px-4 py-2.5 text-center font-display text-sm font-medium tracking-wider text-primary"
           >
             Talk to an Advisor

@@ -118,7 +118,7 @@ const Courses = () => {
                     Executive AI programs for leaders and decision-makers. Be the first to know when we launch.
                   </p>
                   <a
-                    href="mailto:hello@gradtensor.com?subject=Executive%20Program%20Interest"
+                    href="https://wa.me/919108030542?text=Hi%2C%20I%27m%20interested%20in%20the%20Executive%20AI%20program" target="_blank" rel="noopener noreferrer"
                     className="btn-shimmer mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3.5 font-display text-base font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
                   >
                     <Mail size={18} />

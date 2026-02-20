@@ -186,14 +186,14 @@ const CourseDetail = () => {
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
-                href="mailto:hello@gradtensor.com"
+                href="https://wa.me/919108030542?text=Hi%2C%20I%27m%20interested%20in%20enrolling%20in%20the%20course" target="_blank" rel="noopener noreferrer"
                 className="btn-shimmer inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3.5 font-display text-base font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
               >
                 <Mail size={18} />
                 {course.ctaPrimary}
               </a>
               <a
-                href="mailto:hello@gradtensor.com?subject=Syllabus%20Request"
+                href="https://wa.me/919108030542?text=Hi%2C%20I%27d%20like%20to%20request%20the%20syllabus" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-8 py-3.5 font-display text-base font-medium tracking-wider text-foreground transition-all hover:border-primary/30"
               >
                 <Download size={18} />
