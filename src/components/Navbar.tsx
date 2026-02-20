@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import { useTheme } from "next-themes";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { theme, setTheme } = useTheme();
 
   const links = [
     { href: "/", label: "Home" },
@@ -12,9 +14,9 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl animate-slide-down">
       <div className="section-container flex h-16 items-center justify-between">
-        <Link to="/" className="font-display text-lg font-bold tracking-tight">
+        <Link to="/" className="font-display text-xl font-bold tracking-tight">
           <span className="gradient-text">Grad</span>
           <span className="text-foreground">Tensor</span>
         </Link>
@@ -25,47 +27,65 @@ const Navbar = () => {
             <Link
               key={link.href}
               to={link.href}
-              className={`font-display text-sm tracking-wide transition-colors hover:text-primary ${
+              className={`font-display text-base tracking-wide transition-colors hover:text-primary ${
                 location.pathname === link.href ? "text-primary" : "text-muted-foreground"
               }`}
             >
               {link.label}
             </Link>
           ))}
+          <button
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-secondary/50 text-muted-foreground transition-all hover:bg-secondary hover:text-foreground"
+            aria-label="Toggle theme"
+          >
+            <Sun size={18} className="hidden dark:block" />
+            <Moon size={18} className="block dark:hidden" />
+          </button>
           <a
             href="mailto:hello@gradtensor.com"
-            className="rounded-md border border-primary/30 bg-primary/10 px-4 py-2 font-display text-xs font-medium tracking-wider text-primary transition-all hover:bg-primary/20"
+            className="btn-shimmer rounded-lg border border-primary/30 bg-primary/10 px-5 py-2.5 font-display text-sm font-medium tracking-wider text-primary transition-all hover:bg-primary/20"
           >
             Talk to an Advisor
           </a>
         </div>
 
         {/* Mobile toggle */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="text-foreground md:hidden"
-          aria-label="Toggle menu"
-        >
-          {isOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        <div className="flex items-center gap-3 md:hidden">
+          <button
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-secondary/50 text-muted-foreground transition-all"
+            aria-label="Toggle theme"
+          >
+            <Sun size={16} className="hidden dark:block" />
+            <Moon size={16} className="block dark:hidden" />
+          </button>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-foreground"
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="border-b border-border bg-background px-4 pb-4 md:hidden">
+        <div className="border-b border-border bg-background px-4 pb-4 md:hidden animate-slide-down">
           {links.map((link) => (
             <Link
               key={link.href}
               to={link.href}
               onClick={() => setIsOpen(false)}
-              className="block py-3 font-display text-sm text-muted-foreground transition-colors hover:text-primary"
+              className="block py-3 font-display text-base text-muted-foreground transition-colors hover:text-primary"
             >
               {link.label}
             </Link>
           ))}
           <a
             href="mailto:hello@gradtensor.com"
-            className="mt-2 block rounded-md border border-primary/30 bg-primary/10 px-4 py-2 text-center font-display text-xs font-medium tracking-wider text-primary"
+            className="mt-2 block rounded-lg border border-primary/30 bg-primary/10 px-4 py-2.5 text-center font-display text-sm font-medium tracking-wider text-primary"
           >
             Talk to an Advisor
           </a>
