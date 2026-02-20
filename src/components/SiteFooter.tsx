@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { siteConfig, whatsappLink } from "@/data/siteConfig";
 
 const SiteFooter = ({ hideCta = false }: { hideCta?: boolean }) => {
   return (
@@ -20,7 +21,7 @@ const SiteFooter = ({ hideCta = false }: { hideCta?: boolean }) => {
               Browse Courses
             </Link>
             <a
-              href="https://wa.me/919108030542?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20GradTensor%20courses" target="_blank" rel="noopener noreferrer"
+              href={whatsappLink("general")} target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-lg border border-border px-8 py-3.5 font-display text-base font-medium tracking-wider text-foreground transition-all hover:border-primary/30"
             >
               Talk to an Advisor
@@ -38,12 +39,12 @@ const SiteFooter = ({ hideCta = false }: { hideCta?: boolean }) => {
             <Link to="/courses" className="transition-colors hover:text-primary">
               Courses
             </Link>
-            <a href="https://wa.me/919108030542?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20GradTensor%20courses" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary">
+            <a href={whatsappLink("general")} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary">
               WhatsApp Us
             </a>
           </div>
           <p className="text-sm text-muted-foreground">
-            © 2025 GradTensor. All rights reserved.
+            © {siteConfig.copyrightYear} {siteConfig.name}. All rights reserved.
           </p>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { siteConfig, whatsappLink } from "@/data/siteConfig";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -34,7 +35,7 @@ const Hero = () => {
                 <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-primary" />
               </span>
               <span className="font-display text-sm tracking-wider text-muted-foreground">
-                Next batch starts April 2026
+                Next batch starts {siteConfig.nextBatch}
               </span>
             </div>
 
@@ -61,7 +62,7 @@ const Hero = () => {
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </Link>
               <a
-                href="https://wa.me/919108030542?text=Hi%2C%20I%27d%20like%20to%20speak%20with%20an%20advisor%20about%20GradTensor%20courses" target="_blank" rel="noopener noreferrer"
+                href={whatsappLink("advisor")} target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-lg border border-border bg-card/50 px-8 py-4 font-display text-base font-medium tracking-wider text-foreground backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-card"
               >
                 Talk to an Advisor

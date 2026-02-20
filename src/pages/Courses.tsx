@@ -7,6 +7,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { getCoursesByCategory } from "@/data/courses";
 import type { CourseCategory } from "@/data/courses";
 import { ArrowLeft, Mail } from "lucide-react";
+import { whatsappLink } from "@/data/siteConfig";
 
 const categoryLabels: Record<CourseCategory, string> = {
   skill: "Skill-Based",
@@ -118,7 +119,7 @@ const Courses = () => {
                     Executive AI programs for leaders and decision-makers. Be the first to know when we launch.
                   </p>
                   <a
-                    href="https://wa.me/919108030542?text=Hi%2C%20I%27m%20interested%20in%20the%20Executive%20AI%20program" target="_blank" rel="noopener noreferrer"
+                    href={whatsappLink("executive")} target="_blank" rel="noopener noreferrer"
                     className="btn-shimmer mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3.5 font-display text-base font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
                   >
                     <Mail size={18} />
