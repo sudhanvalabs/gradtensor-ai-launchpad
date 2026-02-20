@@ -46,7 +46,7 @@ export const courses: Course[] = [
       "Engineers who want to add agentic AI skills quickly",
       "Anyone who needs to build and demo AI systems fast",
     ],
-    ctaPrimary: "Enroll in Next Cohort",
+    ctaPrimary: "Enroll in Next Batch",
     ctaSecondary: "Download Syllabus",
     faqs: [
       {

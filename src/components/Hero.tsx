@@ -34,7 +34,7 @@ const Hero = () => {
                 <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-primary" />
               </span>
               <span className="font-display text-sm tracking-wider text-muted-foreground">
-                Next cohort starts March 2025
+                Next batch starts April 2026
               </span>
             </div>
 
@@ -46,7 +46,7 @@ const Hero = () => {
 
             {/* Subheadline */}
             <p className="mb-10 max-w-2xl font-body text-lg leading-relaxed text-muted-foreground sm:text-xl md:text-2xl animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              Master LLMs, agents, and RAG systems through live cohorts. Get
+              Master LLMs, agents, and RAG systems through live sessions. Get
               job-ready in 6–16 weeks with deployed projects that prove you can
               build.
             </p>
