@@ -18,4 +18,4 @@ npm run dev
 
 ## Deployment
 
-Deployed via GitHub Pages using GitHub Actions. Pushes to `main` trigger automatic builds and deployments.
+Deployed via Vercel. Pushes to `main` trigger automatic builds and deployments.
