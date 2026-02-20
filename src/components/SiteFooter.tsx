@@ -16,6 +16,7 @@ const SiteFooter = ({ hideCta = false }: { hideCta?: boolean }) => {
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Link
               to="/courses"
+              onClick={() => window.scrollTo(0, 0)}
               className="btn-shimmer inline-flex items-center justify-center rounded-lg bg-primary px-8 py-3.5 font-display text-base font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
             >
               Browse Courses
@@ -36,7 +37,7 @@ const SiteFooter = ({ hideCta = false }: { hideCta?: boolean }) => {
             <span className="text-foreground">Tensor</span>
           </Link>
           <div className="flex gap-6 font-display text-sm tracking-wider">
-            <Link to="/courses" className="transition-colors hover:text-primary">
+            <Link to="/courses" onClick={() => window.scrollTo(0, 0)} className="transition-colors hover:text-primary">
               Courses
             </Link>
             <a href={whatsappLink("general")} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary">
