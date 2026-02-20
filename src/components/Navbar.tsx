@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
+import logo from "@/assets/logo.png";
+import logoDark from "@/assets/logo-dark.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,9 +18,13 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl animate-slide-down">
       <div className="section-container flex h-16 items-center justify-between">
-        <Link to="/" className="font-display text-xl font-bold tracking-tight">
-          <span className="gradient-text">Grad</span>
-          <span className="text-foreground">Tensor</span>
+        <Link to="/" className="flex items-center gap-2 font-display text-xl font-bold tracking-tight">
+          <img src={logo} alt="GradTensor" className="h-[60px] w-[60px] dark:hidden" />
+          <img src={logoDark} alt="GradTensor" className="h-[60px] w-[60px] hidden dark:block" />
+          <span>
+            <span className="gradient-text">Grad</span>
+            <span className="text-foreground">Tensor</span>
+          </span>
         </Link>
 
         {/* Desktop nav */}
