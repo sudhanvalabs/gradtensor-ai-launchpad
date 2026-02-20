@@ -3,24 +3,27 @@ import { Quote } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "I had zero AI experience before GradTensor. After 6 weeks, I shipped a RAG chatbot and an AI agent, and got placed at a Bangalore startup as a GenAI Engineer. The live cohort format kept me accountable, and the projects were exactly what interviewers wanted to see.",
-    name: "Priya Sharma",
-    college: "BITS Pilani",
-    placed: "Sarvam AI",
+      "Loved the post. I like the fact that you have stripped away the technical jargon and kept it simple and intuitive. Anyone should be able to read and comprehend it.",
+    name: "Shyam Sreenivasan",
+    title: "MS Robotics @ Northeastern | Autonomy Software Engineer",
   },
   {
     quote:
-      "The 16-week program took me from basic Python to deploying AI agents in production. The mock interviews and portfolio reviews were game-changers  - I got 3 offers in my campus placement season.",
-    name: "Arjun Mehta",
-    college: "VIT Vellore",
-    placed: "Fractal Analytics",
+      "The framing of gradient as feedback intensity rather than a real-world unit is something most tutorials skip entirely — that distinction alone probably prevents a lot of confusion for beginners. The real estate agent analogy throughout keeps everything grounded while building up to autograd naturally.",
+    name: "Neural Foundry",
+    title: "Substack",
   },
   {
     quote:
-      "As a working professional switching from backend to AI, I needed something practical, not theoretical. GradTensor's curriculum was exactly what I needed  - every week I built something I could demo.",
-    name: "Sneha Reddy",
-    college: "3 yrs exp, Infosys → AI role",
-    placed: "Thoughtworks",
+      "Really solid explanation of why shuffling matters in batch training. The section on how unshuffled batches can cluster similar examples and create biased gradients is something I wish I'd understood earlier when debugging convergence problems.",
+    name: "The AI Architect",
+    title: "Newsletter",
+  },
+  {
+    quote:
+      "The way you explained how tokens look at each other and decide what's relevant really clarified the bigram limitation. You've made such an elegant connection between search engines and QKV, thank you!",
+    name: "Rainbow Roxy",
+    title: "Newsletter",
   },
 ];
 
@@ -30,14 +33,14 @@ const Testimonials = () => {
       <div className="section-container">
         <div className="mb-16 text-center animate-on-scroll">
           <h2 className="mb-4 font-display text-4xl font-bold tracking-tight sm:text-5xl">
-            What Our <span className="gradient-text">Students Say</span>
+            What Our <span className="gradient-text">Learners Say</span>
           </h2>
           <p className="mx-auto max-w-xl text-base text-muted-foreground sm:text-lg">
-            Real outcomes from real students who went through our programs.
+            Feedback from readers of our deep-dive AI and ML content series.
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {testimonials.map((t, i) => (
             <div
               key={t.name}
@@ -50,10 +53,7 @@ const Testimonials = () => {
               </p>
               <div className="border-t border-border pt-4">
                 <p className="font-display text-base font-bold">{t.name}</p>
-                <p className="text-sm text-muted-foreground">{t.college}</p>
-                <p className="mt-1 font-display text-sm text-primary">
-                  Placed at {t.placed}
-                </p>
+                <p className="text-sm text-muted-foreground">{t.title}</p>
               </div>
             </div>
           ))}
