@@ -36,7 +36,7 @@ const Hero = () => {
                 <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-primary" />
               </span>
               <span className="font-display text-sm tracking-wider text-muted-foreground">
-                Next batch starts {siteConfig.nextBatch}
+                Enrolling now for {siteConfig.nextBatch}
               </span>
             </div>
 
