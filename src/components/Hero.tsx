@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { siteConfig, whatsappLink } from "@/data/siteConfig";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -61,12 +62,12 @@ const Hero = () => {
                 Browse Courses
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </Link>
-              <a
-                href={whatsappLink("advisor")} target="_blank" rel="noopener noreferrer"
+              <WhatsAppButton
+                href={whatsappLink("advisor")}
                 className="inline-flex items-center justify-center rounded-lg border border-border bg-card/50 px-8 py-4 font-display text-base font-medium tracking-wider text-foreground backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-card"
               >
                 Talk to an Advisor
-              </a>
+              </WhatsAppButton>
             </div>
 
             {/* Stats */}

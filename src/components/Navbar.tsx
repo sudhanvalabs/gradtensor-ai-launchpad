@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
 import { whatsappLink } from "@/data/siteConfig";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import logo from "@/assets/logo.png";
 import logoDark from "@/assets/logo-dark.png";
 
@@ -49,12 +50,12 @@ const Navbar = () => {
             <Sun size={18} className="hidden dark:block" />
             <Moon size={18} className="block dark:hidden" />
           </button>
-          <a
-            href={whatsappLink("general")} target="_blank" rel="noopener noreferrer"
+          <WhatsAppButton
+            href={whatsappLink("general")}
             className="btn-shimmer rounded-lg border border-primary/30 bg-primary/10 px-5 py-2.5 font-display text-sm font-medium tracking-wider text-primary transition-all hover:bg-primary/20"
           >
             Talk to an Advisor
-          </a>
+          </WhatsAppButton>
         </div>
 
         {/* Mobile toggle */}
@@ -90,12 +91,12 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
-          <a
-            href={whatsappLink("general")} target="_blank" rel="noopener noreferrer"
+          <WhatsAppButton
+            href={whatsappLink("general")}
             className="mt-2 block rounded-lg border border-primary/30 bg-primary/10 px-4 py-2.5 text-center font-display text-sm font-medium tracking-wider text-primary"
           >
             Talk to an Advisor
-          </a>
+          </WhatsAppButton>
         </div>
       )}
     </nav>

@@ -8,6 +8,7 @@ import { getCoursesByCategory } from "@/data/courses";
 import type { CourseCategory } from "@/data/courses";
 import { ArrowLeft, Mail } from "lucide-react";
 import { whatsappLink } from "@/data/siteConfig";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const categoryLabels: Record<CourseCategory, string> = {
   skill: "Skill-Based",
@@ -118,13 +119,13 @@ const Courses = () => {
                   <p className="mt-3 text-base text-muted-foreground sm:text-lg">
                     We're designing executive AI programs for leaders and decision-makers. Help us shape the curriculum  - tell us what you'd need.
                   </p>
-                  <a
-                    href={whatsappLink("executive")} target="_blank" rel="noopener noreferrer"
+                  <WhatsAppButton
+                    href={whatsappLink("executive")}
                     className="btn-shimmer mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3.5 font-display text-base font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
                   >
                     <Mail size={18} />
                     Share Your Interest
-                  </a>
+                  </WhatsAppButton>
                 </div>
               </div>
             </TabsContent>

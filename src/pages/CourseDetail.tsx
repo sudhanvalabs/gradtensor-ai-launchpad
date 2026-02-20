@@ -19,7 +19,8 @@ import {
   Mail,
   Download,
 } from "lucide-react";
-import { whatsappLink, whatsappCustomLink } from "@/data/siteConfig";
+import { whatsappCustomLink } from "@/data/siteConfig";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const CourseDetail = () => {
   useScrollAnimation();
@@ -186,20 +187,20 @@ const CourseDetail = () => {
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <a
-                href={whatsappCustomLink(`Hi, I'm interested in enrolling in ${course.title}`)} target="_blank" rel="noopener noreferrer"
+              <WhatsAppButton
+                href={whatsappCustomLink(`Hi, I'm interested in enrolling in ${course.title}`)}
                 className="btn-shimmer inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3.5 font-display text-base font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
               >
                 <Mail size={18} />
                 {course.ctaPrimary}
-              </a>
-              <a
-                href={whatsappCustomLink(`Hi, I'd like to request the syllabus for ${course.title}`)} target="_blank" rel="noopener noreferrer"
+              </WhatsAppButton>
+              <WhatsAppButton
+                href={whatsappCustomLink(`Hi, I'd like to request the syllabus for ${course.title}`)}
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-8 py-3.5 font-display text-base font-medium tracking-wider text-foreground transition-all hover:border-primary/30"
               >
                 <Download size={18} />
                 {course.ctaSecondary}
-              </a>
+              </WhatsAppButton>
             </div>
           </div>
         </div>

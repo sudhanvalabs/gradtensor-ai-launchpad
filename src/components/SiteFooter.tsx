@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { siteConfig, whatsappLink } from "@/data/siteConfig";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const SiteFooter = ({ hideCta = false }: { hideCta?: boolean }) => {
   return (
@@ -21,12 +22,12 @@ const SiteFooter = ({ hideCta = false }: { hideCta?: boolean }) => {
             >
               Browse Courses
             </Link>
-            <a
-              href={whatsappLink("general")} target="_blank" rel="noopener noreferrer"
+            <WhatsAppButton
+              href={whatsappLink("general")}
               className="inline-flex items-center justify-center rounded-lg border border-border px-8 py-3.5 font-display text-base font-medium tracking-wider text-foreground transition-all hover:border-primary/30"
             >
               Talk to an Advisor
-            </a>
+            </WhatsAppButton>
           </div>
         </div>}
 
@@ -40,9 +41,9 @@ const SiteFooter = ({ hideCta = false }: { hideCta?: boolean }) => {
             <Link to="/courses" onClick={() => window.scrollTo(0, 0)} className="transition-colors hover:text-primary">
               Courses
             </Link>
-            <a href={whatsappLink("general")} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary">
+            <WhatsAppButton href={whatsappLink("general")} className="transition-colors hover:text-primary">
               WhatsApp Us
-            </a>
+            </WhatsAppButton>
           </div>
           <p className="text-sm text-muted-foreground">
             © {siteConfig.copyrightYear} {siteConfig.name}. All rights reserved.
