@@ -28,3 +28,7 @@ export function whatsappLink(
   const msg = encodeURIComponent(siteConfig.whatsapp.messages[messageKey]);
   return `https://wa.me/${siteConfig.whatsapp.number}?text=${msg}`;
 }
+
+export function whatsappCustomLink(message: string): string {
+  return `https://wa.me/${siteConfig.whatsapp.number}?text=${encodeURIComponent(message)}`;
+}
