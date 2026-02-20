@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { Zap, Users, Briefcase, ArrowRight } from "lucide-react";
+import { Zap, Users, Briefcase, ArrowRight, MessageSquarePlus } from "lucide-react";
 import { getTrackPrice } from "@/data/pricing";
 import { useGeo } from "@/hooks/useGeo";
+import { whatsappLink } from "@/data/siteConfig";
 
 const tracks = [
   {
@@ -119,6 +120,32 @@ const LearningTracks = () => {
               </Link>
             </div>
           ))}
+        </div>
+
+        {/* Suggest a Topic */}
+        <div className="mt-6 animate-on-scroll" style={{ transitionDelay: "0.3s" }}>
+          <a
+            href={whatsappLink("suggest")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card-hover group flex items-center gap-6 rounded-xl border border-dashed border-border bg-card/50 p-6 transition-all hover:border-primary/30 hover:bg-card sm:p-8"
+          >
+            <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg border border-border bg-secondary transition-all group-hover:border-primary/30 group-hover:shadow-[var(--glow-primary)]">
+              <MessageSquarePlus size={22} className="text-primary" />
+            </div>
+            <div className="flex-1">
+              <h3 className="font-display text-lg font-bold tracking-tight sm:text-xl">
+                Don't see what you're looking for?
+              </h3>
+              <p className="mt-1 text-sm text-muted-foreground sm:text-base">
+                Tell us what AI topics you want to learn  - we build courses based on what the community needs.
+              </p>
+            </div>
+            <span className="hidden items-center gap-2 font-display text-base font-medium tracking-wider text-foreground transition-colors group-hover:text-primary sm:flex">
+              Suggest a Topic
+              <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+            </span>
+          </a>
         </div>
       </div>
     </section>

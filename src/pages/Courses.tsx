@@ -116,14 +116,14 @@ const Courses = () => {
                     Coming Soon
                   </h3>
                   <p className="mt-3 text-base text-muted-foreground sm:text-lg">
-                    Executive AI programs for leaders and decision-makers. Be the first to know when we launch.
+                    We're designing executive AI programs for leaders and decision-makers. Help us shape the curriculum  - tell us what you'd need.
                   </p>
                   <a
                     href={whatsappLink("executive")} target="_blank" rel="noopener noreferrer"
                     className="btn-shimmer mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3.5 font-display text-base font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
                   >
                     <Mail size={18} />
-                    Contact Us
+                    Share Your Interest
                   </a>
                 </div>
               </div>

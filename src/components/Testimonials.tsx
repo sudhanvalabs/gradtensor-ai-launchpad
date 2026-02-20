@@ -9,7 +9,7 @@ const testimonials = [
   },
   {
     quote:
-      "The framing of gradient as feedback intensity rather than a real-world unit is something most tutorials skip entirely — that distinction alone probably prevents a lot of confusion for beginners. The real estate agent analogy throughout keeps everything grounded while building up to autograd naturally.",
+      "The framing of gradient as feedback intensity rather than a real-world unit is something most tutorials skip entirely  - that distinction alone probably prevents a lot of confusion for beginners. The real estate agent analogy throughout keeps everything grounded while building up to autograd naturally.",
     name: "Neural Foundry",
     title: "Substack",
   },

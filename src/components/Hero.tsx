@@ -48,7 +48,7 @@ const Hero = () => {
             {/* Subheadline */}
             <p className="mb-10 max-w-2xl font-body text-lg leading-relaxed text-muted-foreground sm:text-xl md:text-2xl animate-fade-up" style={{ animationDelay: "0.2s" }}>
               Master LLMs, agents, and RAG systems through live sessions. Get
-              job-ready in 6–16 weeks with deployed projects that prove you can
+              job-ready in 6-16 weeks with deployed projects that prove you can
               build.
             </p>
 
@@ -72,7 +72,7 @@ const Hero = () => {
             {/* Stats */}
             <div className="mt-16 grid grid-cols-3 gap-8 border-t border-border/50 pt-8 animate-fade-up" style={{ animationDelay: "0.4s" }}>
               {[
-                { value: "6–16", label: "weeks to job-ready" },
+                { value: "6-16", label: "weeks to job-ready" },
                 { value: "48+", label: "hours of live learning" },
                 { value: "100%", label: "project-based curriculum" },
               ].map((stat) => (

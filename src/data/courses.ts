@@ -70,10 +70,10 @@ export const courses: Course[] = [
     hours: "64 live hours + 96 project hours",
     idealFor: "Students with 6+ months runway, career switchers, professionals upskilling",
     weeks: [
-      "Phase 1 (Weeks 1–4): Python, ML basics, neural networks from scratch",
-      "Phase 2 (Weeks 5–10): LLMs, RAG, AI agents, prompt engineering, fine-tuning",
-      "Phase 3 (Weeks 11–14): APIs, deployment, Docker, capstone project",
-      "Phase 4 (Weeks 15–16): Portfolio polish, resume prep, mock interviews",
+      "Phase 1 (Weeks 1-4): Python, ML basics, neural networks from scratch",
+      "Phase 2 (Weeks 5-10): LLMs, RAG, AI agents, prompt engineering, fine-tuning",
+      "Phase 3 (Weeks 11-14): APIs, deployment, Docker, capstone project",
+      "Phase 4 (Weeks 15-16): Portfolio polish, resume prep, mock interviews",
     ],
     projects: [
       "Neural network built from scratch (NumPy only)",

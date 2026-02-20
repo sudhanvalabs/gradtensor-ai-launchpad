@@ -10,7 +10,8 @@ export const siteConfig = {
       advisor: "Hi, I'd like to speak with an advisor about GradTensor courses",
       enroll: "Hi, I'm interested in enrolling in the course",
       syllabus: "Hi, I'd like to request the syllabus",
-      executive: "Hi, I'm interested in the Executive AI program",
+      executive: "Hi, I'm interested in the Executive AI program. Here's what I'd find valuable:",
+      suggest: "Hi, I'd like to suggest a course topic:",
     },
   },
 
