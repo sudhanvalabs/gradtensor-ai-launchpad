@@ -28,9 +28,6 @@ const CourseCard = ({ course }: CourseCardProps) => {
             <Clock size={16} className="text-primary" />
             {course.duration}
           </span>
-          <span className="font-display font-semibold text-primary">
-            {course.price}
-          </span>
         </div>
       </div>
 

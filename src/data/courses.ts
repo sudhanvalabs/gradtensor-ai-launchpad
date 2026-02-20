@@ -9,8 +9,6 @@ export interface Course {
   tagline: string;
   duration: string;
   hours: string;
-  price: string;
-  earlyBird: string | null;
   idealFor: string;
   weeks: string[];
   projects: string[];
@@ -30,9 +28,7 @@ export const courses: Course[] = [
     tagline: "Build production-ready AI agents in 6 weeks",
     duration: "6 weeks",
     hours: "24 live hours + 24 project hours",
-    price: "₹21,000 – ₹25,000",
-    earlyBird: "₹18,500",
-    idealFor: "Final-year CS students, 3–6 months from placements",
+    idealFor: "Final-year students & working professionals adding AI skills",
     weeks: [
       "Week 1: How LLMs Actually Work",
       "Week 2: APIs & Embeddings",
@@ -72,8 +68,6 @@ export const courses: Course[] = [
     tagline: "From Python basics to deployed AI systems",
     duration: "16 weeks",
     hours: "64 live hours + 96 project hours",
-    price: "₹45,000 – ₹65,000",
-    earlyBird: null,
     idealFor: "Students with 6+ months runway, career switchers, professionals upskilling",
     weeks: [
       "Phase 1 (Weeks 1–4): Python, ML basics, neural networks from scratch",

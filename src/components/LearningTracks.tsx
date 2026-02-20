@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import { Zap, Users, Briefcase, ArrowRight } from "lucide-react";
+import { getTrackPrice } from "@/data/pricing";
+import { useGeo } from "@/hooks/useGeo";
 
 const tracks = [
   {
     icon: Zap,
+    trackKey: "skill",
     badge: "SKILL-BASED",
     title: "Need to Upskill Fast?",
     description:
@@ -12,12 +15,12 @@ const tracks = [
       "Final-year students wanting an edge in placements",
       "Professionals adding a specific AI skill to their stack",
     ],
-    price: "Starting at ₹21,000",
     cta: "View Skill Courses",
     href: "/courses?tab=skill",
   },
   {
     icon: Users,
+    trackKey: "cohort",
     badge: "COHORT-BASED",
     title: "Want Deep Foundations?",
     description:
@@ -26,13 +29,13 @@ const tracks = [
       "2nd/3rd year students planning ahead for AI careers",
       "Working professionals making a full career switch to AI",
     ],
-    price: "Starting at ₹45,000",
     cta: "View Cohort Programs",
     href: "/courses?tab=cohort",
     featured: true,
   },
   {
     icon: Briefcase,
+    trackKey: "executive",
     badge: "EXECUTIVE",
     title: "Leading AI Strategy?",
     description:
@@ -41,13 +44,14 @@ const tracks = [
       "CTOs and product leaders evaluating AI",
       "Decision-makers managing AI teams and initiatives",
     ],
-    price: "Custom pricing",
     cta: "Learn More",
     href: "/courses?tab=executive",
   },
 ];
 
 const LearningTracks = () => {
+  const { currency } = useGeo();
+
   return (
     <section className="py-24 md:py-32">
       <div className="section-container">
@@ -103,7 +107,7 @@ const LearningTracks = () => {
               </ul>
 
               <p className="mb-6 font-display text-base font-semibold text-primary">
-                {track.price}
+                {getTrackPrice(track.trackKey, currency)}
               </p>
 
               <Link

@@ -24,7 +24,6 @@ const CourseDetail = () => {
   useScrollAnimation();
   const { slug } = useParams<{ slug: string }>();
   const course = slug ? getCourseBySlug(slug) : undefined;
-
   if (!course) {
     return (
       <div className="min-h-screen bg-background">
@@ -92,16 +91,6 @@ const CourseDetail = () => {
               </span>
             </div>
 
-            <div className="mt-6 flex items-baseline gap-3">
-              <span className="font-display text-3xl font-bold text-primary">
-                {course.price}
-              </span>
-              {course.earlyBird && (
-                <span className="rounded-full bg-primary/10 px-3 py-1.5 font-display text-sm text-primary">
-                  Early bird: {course.earlyBird}
-                </span>
-              )}
-            </div>
           </div>
         </div>
       </section>
