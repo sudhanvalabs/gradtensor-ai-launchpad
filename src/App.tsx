@@ -5,7 +5,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { ThemeProvider } from "next-themes";
-import { GeoProvider } from "@/hooks/useGeo";
 import Index from "./pages/Index";
 import Courses from "./pages/Courses";
 import CourseDetail from "./pages/CourseDetail";
@@ -24,7 +23,6 @@ function ScrollToTop() {
 const App = () => (
   <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
     <QueryClientProvider client={queryClient}>
-      <GeoProvider>
       <TooltipProvider>
         <Toaster />
         <Sonner />
@@ -38,7 +36,6 @@ const App = () => (
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
-      </GeoProvider>
     </QueryClientProvider>
   </ThemeProvider>
 );

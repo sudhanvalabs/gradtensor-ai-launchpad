@@ -1,13 +1,10 @@
 import { Link } from "react-router-dom";
 import { Zap, Users, Briefcase, ArrowRight, MessageSquarePlus } from "lucide-react";
-import { getTrackPrice } from "@/data/pricing";
-import { useGeo } from "@/hooks/useGeo";
 import { whatsappLink } from "@/data/siteConfig";
 
 const tracks = [
   {
     icon: Zap,
-    trackKey: "skill",
     badge: "SKILL-BASED",
     title: "Need to Upskill Fast?",
     description:
@@ -21,7 +18,6 @@ const tracks = [
   },
   {
     icon: Users,
-    trackKey: "cohort",
     badge: "COHORT-BASED",
     title: "Want Deep Foundations?",
     description:
@@ -36,7 +32,6 @@ const tracks = [
   },
   {
     icon: Briefcase,
-    trackKey: "executive",
     badge: "EXECUTIVE",
     title: "Leading AI Strategy?",
     description:
@@ -51,8 +46,6 @@ const tracks = [
 ];
 
 const LearningTracks = () => {
-  const { currency } = useGeo();
-
   return (
     <section className="py-24 md:py-32">
       <div className="section-container">
@@ -106,10 +99,6 @@ const LearningTracks = () => {
                   </li>
                 ))}
               </ul>
-
-              <p className="mb-6 font-display text-base font-semibold text-primary">
-                {getTrackPrice(track.trackKey, currency)}
-              </p>
 
               <Link
                 to={track.href}
