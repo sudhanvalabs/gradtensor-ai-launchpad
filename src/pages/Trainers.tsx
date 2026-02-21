@@ -88,7 +88,22 @@ const Trainers = () => {
                   {trainer.highlights.map((item, j) => (
                     <li key={j} className="flex items-start gap-2 text-sm text-muted-foreground">
                       <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                      {item}
+                      {item.includes("mlship") ? (
+                        <>
+                          Maintains{" "}
+                          <a
+                            href="https://github.com/sudhanvalabs/mlship"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary underline decoration-primary/30 underline-offset-2 hover:text-primary/80"
+                          >
+                            mlship
+                          </a>
+                          , open-source CLI for AI/ML engineers
+                        </>
+                      ) : (
+                        item
+                      )}
                     </li>
                   ))}
                 </ul>
