@@ -41,6 +41,9 @@ const SiteFooter = ({ hideCta = false }: { hideCta?: boolean }) => {
             <Link to="/courses" onClick={() => window.scrollTo(0, 0)} className="transition-colors hover:text-primary">
               Courses
             </Link>
+            <Link to="/trainers" onClick={() => window.scrollTo(0, 0)} className="transition-colors hover:text-primary">
+              Trainers
+            </Link>
             <WhatsAppButton href={whatsappLink("general")} className="transition-colors hover:text-primary">
               WhatsApp Us
             </WhatsAppButton>
