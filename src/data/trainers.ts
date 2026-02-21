@@ -28,7 +28,7 @@ export const trainers: Trainer[] = [
     ],
     links: [
       { label: "Substack", url: "https://trustandreason.substack.com" },
-      { label: "LinkedIn", url: "https://www.linkedin.com/in/prabhueshwarla" },
+      { label: "LinkedIn", url: "https://www.linkedin.com/in/peshwarla" },
     ],
   },
 ];
