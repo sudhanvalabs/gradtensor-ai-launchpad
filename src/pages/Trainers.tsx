@@ -55,6 +55,25 @@ const Trainers = () => {
                 </h2>
                 <p className="mt-1 text-base text-primary font-medium">
                   {trainer.title}
+                  {trainer.books.length > 0 && (
+                    <>
+                      {" ("}
+                      {trainer.books.map((book, j) => (
+                        <span key={j}>
+                          {j > 0 && ", "}
+                          <a
+                            href={book.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline decoration-primary/30 underline-offset-2 transition-colors hover:text-primary/80"
+                          >
+                            {book.publisher}
+                          </a>
+                        </span>
+                      ))}
+                      {")"}
+                    </>
+                  )}
                 </p>
 
                 <div className="mt-6 space-y-4">
