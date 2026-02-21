@@ -18,8 +18,8 @@ const differentiators = [
   },
   {
     icon: Target,
-    title: "Placement Outcomes",
-    description: "We optimize for job results, not just completion certificates. Resume prep, mock interviews, and portfolio polish included.",
+    title: "Built for Employability",
+    description: "Our curriculum is designed around what employers look for in AI roles. Build projects that demonstrate real capability, not just course completion.",
   },
 ];
 
