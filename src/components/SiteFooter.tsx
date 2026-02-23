@@ -47,6 +47,9 @@ const SiteFooter = ({ hideCta = false }: { hideCta?: boolean }) => {
             <WhatsAppButton href={whatsappLink("general")} className="transition-colors hover:text-primary">
               WhatsApp Us
             </WhatsAppButton>
+            <a href={`mailto:${siteConfig.email}`} className="transition-colors hover:text-primary">
+              Email Us
+            </a>
           </div>
           <p className="text-sm text-muted-foreground">
             © {siteConfig.copyrightYear} {siteConfig.name}. All rights reserved.

@@ -3,6 +3,8 @@ export const siteConfig = {
   copyrightYear: 2026,
   nextBatch: "April 2026",
 
+  email: "courses@gradtensor.com",
+
   whatsapp: {
     number: "919108030542",
     messages: {
