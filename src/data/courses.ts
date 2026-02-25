@@ -99,6 +99,52 @@ export const courses: Course[] = [
       },
     ],
   },
+  {
+    slug: "ai-ready-engineer",
+    category: "skill",
+    badge: "SKILL-BASED",
+    badgeClass: "badge-skill",
+    title: "AI-Ready Engineer",
+    tagline:
+      "Get hired in the AI era — before your batchmates figure out what's happening",
+    duration: "2 weeks",
+    hours: "8 live hours + 4 project hours",
+    idealFor: "Final-year students & fresh graduates preparing for placements",
+    weeks: [
+      "Session 1: How AI Systems Actually Work — LLMs, embeddings, RAG, agents, and tracing a real query end-to-end",
+      "Session 2: Build Part 1 — Core Document Intelligence Bot — ingestion, chunking, vector search, LLM integration, deployed to a public URL",
+      "Session 3: Build Part 2 — Extend with Advanced Features — multi-document support, conversation memory, confidence scoring, web interface",
+      "Session 4: Architecture Discussion & Project Defence — team presentations, instructor grilling, the 10 RAG interview questions, and your 90-day roadmap",
+    ],
+    projects: [
+      "Document Intelligence Bot — upload any PDF, ask questions, get precise referenced answers using RAG architecture (deployed)",
+    ],
+    whoFor: [
+      "Final-year students or recent graduates with basic Python skills",
+      "Students with placements coming who want to stand out with a real AI project",
+      "Anyone willing to put in 12 focused hours across 2 weeks to build something demoable",
+    ],
+    ctaPrimary: "Enroll Now",
+    ctaSecondary: "Request Details",
+    faqs: [
+      {
+        q: "Do I need prior AI or ML experience?",
+        a: "No. You need basic Python knowledge — the program teaches LLMs, embeddings, RAG, and agents from scratch in Session 1 before you build anything.",
+      },
+      {
+        q: "How much time does this require?",
+        a: "About 12 hours total across 2 weeks — 4 live sessions of 2 hours each plus about 1 hour of async pre-work per week.",
+      },
+      {
+        q: "What do I walk away with?",
+        a: "A production-quality Document Intelligence Bot on your GitHub, the ability to explain it at any depth in an interview, exposure to real AI interview questions, and a 90-day roadmap for your AI career.",
+      },
+      {
+        q: "How is this different from the 6-week AI Engineering course?",
+        a: "This is a focused 2-week sprint designed for students facing imminent placements. The 6-week course goes deeper into agents and frameworks. Graduates of this program get discounted access to the longer course.",
+      },
+    ],
+  },
 ];
 
 export function getCourseBySlug(slug: string): Course | undefined {
