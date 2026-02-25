@@ -51,9 +51,10 @@ const SiteFooter = ({ hideCta = false }: { hideCta?: boolean }) => {
               Email Us
             </a>
           </div>
-          <p className="text-sm text-muted-foreground">
-            © {siteConfig.copyrightYear} {siteConfig.name}. All rights reserved.
-          </p>
+          <div className="space-y-1 text-sm text-muted-foreground">
+            <p>© {siteConfig.copyrightYear} {siteConfig.name}. All rights reserved.</p>
+            <p>GradTensor is a venture of Sudhanva Labs LLP</p>
+          </div>
         </div>
       </div>
     </footer>
