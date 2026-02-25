@@ -106,18 +106,18 @@ export const courses: Course[] = [
     badgeClass: "badge-skill",
     title: "AI-Ready Engineer",
     tagline:
-      "Get hired in the AI era — before your batchmates figure out what's happening",
+      "Get hired in the AI era -before your batchmates figure out what's happening",
     duration: "2 weeks",
     hours: "8 live hours + 4 project hours",
     idealFor: "Final-year students & fresh graduates preparing for placements",
     weeks: [
-      "Session 1: How AI Systems Actually Work — LLMs, embeddings, RAG, agents, and tracing a real query end-to-end",
-      "Session 2: Build Part 1 — Core Document Intelligence Bot — ingestion, chunking, vector search, LLM integration, deployed to a public URL",
-      "Session 3: Build Part 2 — Extend with Advanced Features — multi-document support, conversation memory, confidence scoring, web interface",
-      "Session 4: Architecture Discussion & Project Defence — team presentations, instructor grilling, the 10 RAG interview questions, and your 90-day roadmap",
+      "Session 1: How AI Systems Actually Work -LLMs, embeddings, RAG, agents, and tracing a real query end-to-end",
+      "Session 2: Build Part 1 -Core Document Intelligence Bot -ingestion, chunking, vector search, LLM integration, deployed to a public URL",
+      "Session 3: Build Part 2 -Extend with Advanced Features -multi-document support, conversation memory, confidence scoring, web interface",
+      "Session 4: Architecture Discussion & Project Defence -team presentations, instructor grilling, the 10 RAG interview questions, and your 90-day roadmap",
     ],
     projects: [
-      "Document Intelligence Bot — upload any PDF, ask questions, get precise referenced answers using RAG architecture (deployed)",
+      "Document Intelligence Bot -upload any PDF, ask questions, get precise referenced answers using RAG architecture (deployed)",
     ],
     whoFor: [
       "Final-year students or recent graduates with basic Python skills",
@@ -129,11 +129,11 @@ export const courses: Course[] = [
     faqs: [
       {
         q: "Do I need prior AI or ML experience?",
-        a: "No. You need basic Python knowledge — the program teaches LLMs, embeddings, RAG, and agents from scratch in Session 1 before you build anything.",
+        a: "No. You need basic Python knowledge -the program teaches LLMs, embeddings, RAG, and agents from scratch in Session 1 before you build anything.",
       },
       {
         q: "How much time does this require?",
-        a: "About 12 hours total across 2 weeks — 4 live sessions of 2 hours each plus about 1 hour of async pre-work per week.",
+        a: "About 12 hours total across 2 weeks -4 live sessions of 2 hours each plus about 1 hour of async pre-work per week.",
       },
       {
         q: "What do I walk away with?",
