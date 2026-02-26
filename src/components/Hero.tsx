@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { siteConfig, whatsappLink } from "@/data/siteConfig";
+import { whatsappLink } from "@/data/siteConfig";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -29,17 +29,6 @@ const Hero = () => {
 
         <div className="section-container relative z-10 py-20 md:py-32">
           <div className="mx-auto max-w-4xl">
-            {/* Trust badge */}
-            <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-card/50 px-4 py-2 backdrop-blur-sm animate-fade-up">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="absolute inline-flex h-full w-full animate-pulse-ring rounded-full bg-primary" />
-                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-primary" />
-              </span>
-              <span className="font-display text-sm tracking-wider text-muted-foreground">
-                Enrolling now for {siteConfig.nextBatch}
-              </span>
-            </div>
-
             {/* Headline */}
             <h1 className="mb-6 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl animate-fade-up" style={{ animationDelay: "0.1s" }}>
               From Zero to{" "}

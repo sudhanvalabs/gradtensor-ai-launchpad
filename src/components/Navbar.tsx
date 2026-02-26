@@ -15,6 +15,7 @@ const Navbar = () => {
   const links = [
     { href: "/", label: "Home" },
     { href: "/courses", label: "Courses" },
+    { href: "/schedule", label: "Schedule" },
     { href: "/trainers", label: "Trainers" },
   ];
 

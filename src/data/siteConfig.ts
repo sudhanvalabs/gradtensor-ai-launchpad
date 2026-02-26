@@ -1,7 +1,6 @@
 export const siteConfig = {
   name: "GradTensor",
   copyrightYear: 2026,
-  nextBatch: "April 2026",
 
   email: "courses@gradtensor.com",
 

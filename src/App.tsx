@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import Courses from "./pages/Courses";
 import CourseDetail from "./pages/CourseDetail";
 import Trainers from "./pages/Trainers";
+import Schedule from "./pages/Schedule";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
             <Route path="/courses" element={<Courses />} />
             <Route path="/courses/:slug" element={<CourseDetail />} />
             <Route path="/trainers" element={<Trainers />} />
+            <Route path="/schedule" element={<Schedule />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
