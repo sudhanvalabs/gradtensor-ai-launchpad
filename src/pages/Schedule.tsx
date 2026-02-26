@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
+import SEO from "@/components/SEO";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { ArrowLeft, Calendar, Clock, Timer, ArrowRight } from "lucide-react";
 import { whatsappLink } from "@/data/siteConfig";
@@ -46,11 +47,43 @@ const upcomingBatches: Batch[] = [
   },
 ];
 
+const scheduleEventsLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Upcoming GradTensor AI Course Batches",
+  itemListElement: upcomingBatches.map((batch, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    item: {
+      "@type": "EducationEvent",
+      name: `${batch.courseTitle} - ${batch.batchLabel}`,
+      startDate: batch.startDate,
+      duration: batch.duration,
+      eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
+      location: {
+        "@type": "VirtualLocation",
+        url: "https://gradtensor.com/schedule",
+      },
+      organizer: {
+        "@type": "Organization",
+        name: "GradTensor",
+        url: "https://gradtensor.com",
+      },
+    },
+  })),
+};
+
 const Schedule = () => {
   useScrollAnimation();
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Upcoming AI Course Batches"
+        description="Find the right schedule and enroll in an upcoming GradTensor AI course batch. Live online cohorts with flexible timings."
+        path="/schedule"
+        jsonLd={scheduleEventsLd}
+      />
       <Navbar />
 
       {/* Back link */}

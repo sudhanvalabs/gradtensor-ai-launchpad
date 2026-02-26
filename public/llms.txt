@@ -1,0 +1,64 @@
+# GradTensor
+
+> Build production-ready AI agents and RAG systems. Fast-track to AI job readiness through practical, project-focused learning with live cohorts.
+
+GradTensor is an AI education company that trains final-year students, fresh graduates, and working professionals to become job-ready AI engineers. Based in India, GradTensor offers live online cohort-based and skill-based courses focused on hands-on, project-driven learning.
+
+## What Makes GradTensor Different
+
+- Courses are taught by practitioners who build AI systems in production
+- Every course results in deployed, portfolio-ready projects
+- Curriculum is designed around what companies actually ask in AI engineering interviews
+- Small cohorts with live instruction, not pre-recorded videos
+- Covers the full stack: LLMs, embeddings, RAG, AI agents, prompt engineering, deployment
+
+## Courses Offered
+
+### AI Engineering & Agentic Foundations (6 weeks)
+- Category: Skill-Based
+- Duration: 6 weeks, 24 live hours + 24 project hours
+- Topics: How LLMs work, APIs & embeddings, prompt engineering, RAG pipelines, AI agents, LangGraph
+- Projects: RAG chatbot with custom knowledge base, AI agent with tool orchestration
+- Ideal for: Final-year students and working professionals adding AI skills
+- URL: https://gradtensor.com/courses/ai-engineering-agentic-foundations
+
+### AI Foundations - Job Ready in 16 Weeks
+- Category: Cohort-Based
+- Duration: 16 weeks, 64 live hours + 96 project hours
+- Topics: Python, ML basics, neural networks, LLMs, RAG, AI agents, prompt engineering, fine-tuning, deployment, Docker
+- Projects: Neural network from scratch, RAG system, AI agent, end-to-end capstone
+- Ideal for: Students with 6+ months runway, career switchers, professionals upskilling
+- URL: https://gradtensor.com/courses/ai-foundations-job-ready-16-weeks
+
+### AI-Ready Engineer (2 weeks)
+- Category: Skill-Based
+- Duration: 2 weeks, 8 live hours + 4 project hours
+- Topics: How AI systems work, RAG architecture, document intelligence, project defence
+- Projects: Document Intelligence Bot using RAG architecture
+- Ideal for: Final-year students and fresh graduates preparing for placements
+- URL: https://gradtensor.com/courses/ai-ready-engineer
+
+## Target Audience
+
+- Final-year engineering students preparing for campus placements
+- Fresh graduates looking to stand out in AI job interviews
+- Working professionals switching to or upskilling in AI careers
+- Anyone who wants to build and deploy real AI systems, not just watch tutorials
+
+## Trainers
+
+### Prabhu Eshwarla
+- AI Systems Architect and published author (Manning Publications, Packt)
+- 20+ years in engineering and leadership across distributed systems, blockchain, and enterprise platforms
+- Former senior leader at Hewlett Packard, former CTO of a European blockchain startup
+- Master's in Engineering from BITS, Pilani
+- LinkedIn: https://www.linkedin.com/in/peshwarla
+- Substack: https://trustandreason.substack.com
+
+## Links
+
+- Website: https://gradtensor.com
+- Courses: https://gradtensor.com/courses
+- Schedule: https://gradtensor.com/schedule
+- Trainers: https://gradtensor.com/trainers
+- Email: courses@gradtensor.com

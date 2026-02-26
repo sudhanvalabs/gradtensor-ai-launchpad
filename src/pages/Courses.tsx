@@ -2,13 +2,26 @@ import { Link, useSearchParams } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
 import CourseCard from "@/components/CourseCard";
+import SEO from "@/components/SEO";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { getCoursesByCategory } from "@/data/courses";
+import { courses, getCoursesByCategory } from "@/data/courses";
 import type { CourseCategory } from "@/data/courses";
 import { ArrowLeft, Mail } from "lucide-react";
 import { whatsappLink } from "@/data/siteConfig";
 import WhatsAppButton from "@/components/WhatsAppButton";
+
+const coursesListLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "GradTensor AI Courses",
+  itemListElement: courses.map((course, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: `https://gradtensor.com/courses/${course.slug}`,
+    name: course.title,
+  })),
+};
 
 const categoryLabels: Record<CourseCategory, string> = {
   skill: "Skill-Based",
@@ -30,6 +43,12 @@ const Courses = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="AI Courses & Programs"
+        description="Choose from skill-based, cohort-based, and executive AI programs. Build production-ready AI agents and RAG systems with live cohorts."
+        path="/courses"
+        jsonLd={coursesListLd}
+      />
       <Navbar />
 
       {/* Back link */}

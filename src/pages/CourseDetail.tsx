@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
+import SEO from "@/components/SEO";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { getCourseBySlug } from "@/data/courses";
 import {
@@ -50,8 +51,49 @@ const CourseDetail = () => {
     );
   }
 
+  const courseLd = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: course.title,
+    description: course.tagline,
+    provider: {
+      "@type": "Organization",
+      name: "GradTensor",
+      url: "https://gradtensor.com",
+    },
+    hasCourseInstance: {
+      "@type": "CourseInstance",
+      courseMode: "Blended",
+      duration: course.duration,
+    },
+  };
+
+  const courseFaqLd =
+    course.faqs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: course.faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.q,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.a,
+            },
+          })),
+        }
+      : null;
+
+  const jsonLd = courseFaqLd ? [courseLd, courseFaqLd] : courseLd;
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={course.title}
+        description={course.tagline}
+        path={`/courses/${course.slug}`}
+        jsonLd={jsonLd}
+      />
       <Navbar />
 
       {/* Back link */}

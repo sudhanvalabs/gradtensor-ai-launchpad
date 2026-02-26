@@ -1,6 +1,10 @@
 export const siteConfig = {
   name: "GradTensor",
   copyrightYear: 2026,
+  siteUrl: "https://gradtensor.com",
+  twitterHandle: "@GradTensor",
+  defaultDescription:
+    "Build production-ready AI agents and RAG systems. Fast-track to AI job readiness through practical, project-focused learning with live cohorts.",
 
   email: "courses@gradtensor.com",
 

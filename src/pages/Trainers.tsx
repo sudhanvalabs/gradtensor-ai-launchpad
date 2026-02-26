@@ -1,15 +1,31 @@
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
+import SEO from "@/components/SEO";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { trainers } from "@/data/trainers";
 import { ArrowLeft, ExternalLink } from "lucide-react";
+
+const trainersLd = trainers.map((trainer) => ({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: trainer.name,
+  jobTitle: trainer.title,
+  description: trainer.bio[0],
+  sameAs: trainer.links.map((link) => link.url),
+}));
 
 const Trainers = () => {
   useScrollAnimation();
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Meet the Trainers"
+        description="Learn from practitioners who build AI systems in production. Meet GradTensor's expert trainers."
+        path="/trainers"
+        jsonLd={trainersLd}
+      />
       <Navbar />
 
       {/* Back link */}
