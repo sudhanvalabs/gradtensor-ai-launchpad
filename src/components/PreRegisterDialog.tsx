@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -68,6 +68,12 @@ const PreRegisterDialog = ({
       notes: "",
     },
   });
+
+  useEffect(() => {
+    if (defaultCourse) {
+      form.setValue("course", defaultCourse);
+    }
+  }, [defaultCourse, form]);
 
   const onSubmit = async (data: FormValues) => {
     setSubmitting(true);
