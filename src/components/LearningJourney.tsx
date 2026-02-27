@@ -150,15 +150,20 @@ const FullTrackStageCard = ({
 }) => {
   return (
     <div
-      className="animate-on-scroll flex flex-col rounded-xl border border-primary/20 bg-card p-6 transition-all hover:border-primary/30 card-glow"
+      className="animate-on-scroll relative flex flex-col rounded-xl border-2 border-primary/40 bg-card p-6 transition-all hover:border-primary/60 card-glow"
       style={{ transitionDelay: `${index * 0.08}s` }}
     >
+      {/* Featured pill */}
+      <div className="absolute -top-3 left-6 rounded-full bg-primary px-3 py-1 font-display text-xs font-bold tracking-widest text-primary-foreground">
+        MOST COMPREHENSIVE
+      </div>
+
       {/* Label + status */}
-      <div className="mb-4 flex items-center gap-3">
-        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 font-display text-sm font-bold text-primary">
+      <div className="mt-2 mb-4 flex items-center gap-3">
+        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/20 font-display text-sm font-bold text-primary">
           <Layers size={16} />
         </span>
-        <span className="font-display text-xs font-bold tracking-[0.2em] uppercase text-muted-foreground flex-1">
+        <span className="font-display text-xs font-bold tracking-[0.2em] uppercase text-primary flex-1">
           Full Track
         </span>
         <span className="badge-live">LIVE</span>
