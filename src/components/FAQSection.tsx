@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     q: "What if I can't attend live sessions?",
-    a: "All live sessions are recorded and shared within 24 hours. However, we strongly recommend attending live  - the interaction, doubt-clearing, and accountability are what make cohort learning effective.",
+    a: "All live sessions are recorded and shared within 24 hours. However, we strongly recommend attending live - the interaction, doubt-clearing, and accountability are what make live learning effective.",
   },
 ];
 

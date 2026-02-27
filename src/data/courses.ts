@@ -225,7 +225,7 @@ export const courses: Course[] = [
       "Working professionals switching to AI careers",
       "Anyone who wants deep foundations, not just surface skills",
     ],
-    ctaPrimary: "Apply for Next Cohort",
+    ctaPrimary: "Apply for Next Batch",
     ctaSecondary: "Download Full Curriculum",
     faqs: [
       {

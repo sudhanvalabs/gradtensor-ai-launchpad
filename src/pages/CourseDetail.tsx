@@ -229,7 +229,7 @@ const CourseDetail = () => {
                 Ready to get started?
               </h3>
               <p className="mt-1 text-base text-muted-foreground">
-                Secure your spot in the next cohort.
+                Secure your spot in the next batch.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">

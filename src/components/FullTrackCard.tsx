@@ -20,7 +20,7 @@ const FullTrackCard = () => {
 
           <p className="mt-3 max-w-2xl text-base text-muted-foreground sm:text-lg">
             {course.tagline}. Go from absolute beginner to deployed AI systems
-            in a single structured cohort.
+            in a single structured program.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-6 text-sm text-muted-foreground">

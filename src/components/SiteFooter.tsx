@@ -12,7 +12,7 @@ const SiteFooter = ({ hideCta = false }: { hideCta?: boolean }) => {
             Ready to Build Your AI Career?
           </h3>
           <p className="mx-auto mb-6 max-w-lg text-base text-muted-foreground">
-            Join the next cohort and go from zero to deployed AI projects in weeks, not years.
+            Join the next batch and go from zero to deployed AI projects in weeks, not years.
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Link

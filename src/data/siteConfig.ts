@@ -24,7 +24,7 @@ export const siteConfig = {
   // Future: Graphy course URLs
   // graphy: {
   //   skillCourse: "https://gradtensor.graphy.com/...",
-  //   cohortCourse: "https://gradtensor.graphy.com/...",
+  //   fullTrackCourse: "https://gradtensor.graphy.com/...",
   // },
 };
 

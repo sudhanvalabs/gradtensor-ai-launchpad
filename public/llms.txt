@@ -9,7 +9,7 @@ GradTensor is an AI education company that trains students, graduates, and worki
 - Courses are taught by practitioners who build AI systems in production
 - Every course results in deployed, portfolio-ready projects
 - Curriculum is designed around what companies actually ask in AI engineering interviews
-- Small cohorts with live instruction, not pre-recorded videos
+- Small batches with live instruction, not pre-recorded videos
 - Covers the full stack: LLMs, embeddings, RAG, AI agents, prompt engineering, deployment
 
 ## Learning Journey (5 Stages)
