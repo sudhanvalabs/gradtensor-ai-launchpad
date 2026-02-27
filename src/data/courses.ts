@@ -7,10 +7,24 @@ export type CourseStage =
 
 export type CourseStatus = "live" | "pre-register";
 
+export type Audience =
+  | "high-school"
+  | "engineering"
+  | "non-tech"
+  | "senior-it";
+
+export const audienceLabels: Record<Audience, string> = {
+  "high-school": "High School Students",
+  engineering: "Tech Students & Grads",
+  "non-tech": "Non-Tech Builders",
+  "senior-it": "Senior IT Professionals",
+};
+
 export interface Course {
   slug: string;
   stage?: CourseStage;
   status: CourseStatus;
+  audience: Audience[];
   title: string;
   tagline: string;
   duration: string;
@@ -62,6 +76,7 @@ export const courses: Course[] = [
     slug: "teen-ai-builders",
     stage: "discover",
     status: "pre-register",
+    audience: ["high-school", "non-tech"],
     title: "Teen AI Builders",
     tagline: "Build your first AI app - no coding experience needed",
     duration: "4 weeks",
@@ -79,6 +94,7 @@ export const courses: Course[] = [
     slug: "ai-ready-engineer",
     stage: "portfolio",
     status: "live",
+    audience: ["engineering"],
     title: "AI-Ready Engineer",
     tagline:
       "Get hired in the AI era - before your batchmates figure out what's happening",
@@ -126,6 +142,7 @@ export const courses: Course[] = [
     slug: "ai-engineering-agentic-foundations",
     stage: "production",
     status: "live",
+    audience: ["engineering", "non-tech"],
     title: "AI Engineering & Agentic Foundations",
     tagline: "Build production-ready AI agents in 6 weeks",
     duration: "6 weeks",
@@ -167,6 +184,7 @@ export const courses: Course[] = [
     slug: "ai-product-builder",
     stage: "ship",
     status: "pre-register",
+    audience: ["engineering", "non-tech"],
     title: "AI Product Builder",
     tagline: "Go from engineer to indie AI product maker",
     duration: "6 weeks",
@@ -184,6 +202,7 @@ export const courses: Course[] = [
     slug: "ai-transformation-partner",
     stage: "advise",
     status: "pre-register",
+    audience: ["senior-it"],
     title: "AI Transformation Partner",
     tagline: "Lead AI adoption for your team or organisation",
     duration: "4 weeks",
@@ -200,6 +219,7 @@ export const courses: Course[] = [
   {
     slug: "ai-foundations-job-ready-16-weeks",
     status: "live",
+    audience: ["engineering"],
     title: "AI Foundations - Job Ready in 16 Weeks",
     tagline: "From Python basics to deployed AI systems",
     duration: "16 weeks",

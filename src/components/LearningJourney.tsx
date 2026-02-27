@@ -5,20 +5,37 @@ import {
   getJourneyCourses,
   getFullTrackCourse,
   stageLabels,
+  audienceLabels,
 } from "@/data/courses";
-import type { Course } from "@/data/courses";
+import type { Course, Audience } from "@/data/courses";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import PreRegisterDialog from "@/components/PreRegisterDialog";
+
+const audiences = Object.keys(audienceLabels) as Audience[];
 
 const LearningJourney = () => {
   const journeyCourses = getJourneyCourses();
   const fullTrackCourse = getFullTrackCourse();
   const [dialogOpen, setDialogOpen] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState<string>("");
+  const [activeAudience, setActiveAudience] = useState<string>("all");
 
   const openPreRegister = (slug: string) => {
     setSelectedCourse(slug);
     setDialogOpen(true);
   };
+
+  const allCourses = [
+    ...journeyCourses,
+    ...(fullTrackCourse ? [fullTrackCourse] : []),
+  ];
+
+  const filteredCourses =
+    activeAudience === "all"
+      ? allCourses
+      : allCourses.filter((c) =>
+          c.audience.includes(activeAudience as Audience)
+        );
 
   return (
     <section className="py-24 md:py-32">
@@ -33,22 +50,58 @@ const LearningJourney = () => {
           </p>
         </div>
 
-        {/* 3x2 grid on desktop, vertical stack on mobile */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {journeyCourses.map((course, i) => (
-            <StageCard
-              key={course.slug}
-              course={course}
-              index={i}
-              onPreRegister={openPreRegister}
-            />
-          ))}
+        {/* Audience filter tabs */}
+        <div className="mb-10 flex justify-center animate-on-scroll">
+          <Tabs
+            value={activeAudience}
+            onValueChange={setActiveAudience}
+          >
+            <TabsList className="h-auto flex-wrap gap-1 rounded-xl bg-muted p-1.5">
+              <TabsTrigger
+                value="all"
+                className="rounded-lg px-4 py-2 font-display text-sm font-semibold tracking-wide data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+              >
+                All Programs
+              </TabsTrigger>
+              {audiences.map((a) => (
+                <TabsTrigger
+                  key={a}
+                  value={a}
+                  className="rounded-lg px-4 py-2 font-display text-sm font-semibold tracking-wide data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+                >
+                  {audienceLabels[a]}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          </Tabs>
+        </div>
 
-          {/* Full track as 6th card */}
-          {fullTrackCourse && (
-            <FullTrackStageCard course={fullTrackCourse} index={5} />
+        {/* Course grid */}
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {filteredCourses.map((course, i) =>
+            course.stage ? (
+              <StageCard
+                key={course.slug}
+                course={course}
+                index={i}
+                onPreRegister={openPreRegister}
+              />
+            ) : (
+              <FullTrackStageCard
+                key={course.slug}
+                course={course}
+                index={i}
+              />
+            )
           )}
         </div>
+
+        {filteredCourses.length === 0 && (
+          <p className="mt-8 text-center text-base text-muted-foreground">
+            No courses match this filter yet. Select "All Programs" to see
+            everything.
+          </p>
+        )}
       </div>
 
       <PreRegisterDialog
@@ -180,7 +233,7 @@ const FullTrackStageCard = ({
         program.
       </p>
 
-      {/* Duration + Hours + Projects */}
+      {/* Duration + Hours */}
       <div className="mb-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
         <span className="flex items-center gap-1.5">
           <Clock size={14} className="text-primary" />
