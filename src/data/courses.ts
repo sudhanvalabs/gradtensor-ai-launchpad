@@ -86,7 +86,7 @@ export const courses: Course[] = [
     hours: "8 live hours + 4 project hours",
     idealFor: "Final-year students & fresh graduates preparing for placements",
     whoForShort: "Final-year students & fresh grads",
-    enrollUrl: "TODO_GRAPHY_URL",
+    // enrollUrl: "TODO_GRAPHY_URL",
     weeks: [
       "Session 1: How AI Systems Actually Work - LLMs, embeddings, RAG, agents, and tracing a real query end-to-end",
       "Session 2: Build Part 1 - Core Document Intelligence Bot - ingestion, chunking, vector search, LLM integration, deployed to a public URL",
@@ -132,7 +132,7 @@ export const courses: Course[] = [
     hours: "24 live hours + 24 project hours",
     idealFor: "Final-year students & working professionals adding AI skills",
     whoForShort: "Engineers adding AI skills",
-    enrollUrl: "TODO_GRAPHY_URL",
+    // enrollUrl: "TODO_GRAPHY_URL",
     weeks: [
       "Week 1: How LLMs Actually Work",
       "Week 2: APIs & Embeddings",
@@ -207,7 +207,7 @@ export const courses: Course[] = [
     idealFor:
       "Students with 6+ months runway, career switchers, professionals upskilling",
     whoForShort: "Career switchers & deep learners",
-    enrollUrl: "TODO_GRAPHY_URL",
+    // enrollUrl: "TODO_GRAPHY_URL",
     weeks: [
       "Phase 1 (Weeks 1-4): Python, ML basics, neural networks from scratch",
       "Phase 2 (Weeks 5-10): LLMs, RAG, AI agents, prompt engineering, fine-tuning",
