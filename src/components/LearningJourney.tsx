@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight, Clock, BookOpen } from "lucide-react";
 import { getJourneyCourses, stageLabels } from "@/data/courses";
 import type { Course } from "@/data/courses";
 import PreRegisterDialog from "@/components/PreRegisterDialog";
@@ -100,13 +100,30 @@ const StageCard = ({ course, index, onPreRegister }: StageCardProps) => {
       </div>
 
       {/* Course name */}
-      <h3 className="mb-2 font-display text-lg font-bold tracking-tight lg:text-xl">
+      <h3 className="mb-1 font-display text-lg font-bold tracking-tight lg:text-xl">
         {course.title}
       </h3>
 
+      {/* Duration + Hours */}
+      <div className="mb-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
+        <span className="flex items-center gap-1.5">
+          <Clock size={12} className="text-primary" />
+          {course.duration}
+        </span>
+        <span className="flex items-center gap-1.5">
+          <BookOpen size={12} className="text-primary" />
+          {course.hours}
+        </span>
+      </div>
+
+      {/* Tagline */}
+      <p className="mb-2 text-sm text-muted-foreground">
+        {course.tagline}
+      </p>
+
       {/* Who for */}
-      <p className="mb-4 text-sm text-muted-foreground flex-1">
-        {course.whoForShort}
+      <p className="mb-4 text-xs text-muted-foreground/70 flex-1">
+        For: {course.whoForShort}
       </p>
 
       {/* Status badge + CTA */}
