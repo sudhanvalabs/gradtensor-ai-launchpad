@@ -48,22 +48,6 @@ const Courses = () => {
         </div>
       </div>
 
-      {/* Header */}
-      <section className="pt-6 pb-16 md:pt-8 md:pb-20">
-        <div className="section-container text-center">
-          <h1 className="mb-4 font-display text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl animate-fade-up">
-            Our <span className="gradient-text">Programs</span>
-          </h1>
-          <p
-            className="mx-auto max-w-2xl text-lg text-muted-foreground sm:text-xl animate-fade-up"
-            style={{ animationDelay: "0.1s" }}
-          >
-            Five stages from first curiosity to leading AI adoption. Start
-            wherever you are.
-          </p>
-        </div>
-      </section>
-
       <LearningJourney />
       <AdvisorySection />
 
