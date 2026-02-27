@@ -1,8 +1,8 @@
 # GradTensor
 
-> Build production-ready AI agents and RAG systems. Fast-track to AI job readiness through practical, project-focused learning with live cohorts.
+> Build AI products. Not just AI skills. A 5-stage learning journey from first curiosity to production-grade AI systems.
 
-GradTensor is an AI education company that trains final-year students, fresh graduates, and working professionals to become job-ready AI engineers. Based in India, GradTensor offers live online cohort-based and skill-based courses focused on hands-on, project-driven learning.
+GradTensor is an AI education company that trains students, graduates, and working professionals through a structured 5-stage learning journey. Based in India, GradTensor offers live online courses focused on hands-on, project-driven learning.
 
 ## What Makes GradTensor Different
 
@@ -12,38 +12,58 @@ GradTensor is an AI education company that trains final-year students, fresh gra
 - Small cohorts with live instruction, not pre-recorded videos
 - Covers the full stack: LLMs, embeddings, RAG, AI agents, prompt engineering, deployment
 
-## Courses Offered
+## Learning Journey (5 Stages)
 
-### AI Engineering & Agentic Foundations (6 weeks)
-- Category: Skill-Based
+### Stage 1: Discover - Teen AI Builders (4 weeks)
+- Status: Pre-Register
+- Duration: 4 weeks, 12 live hours + 8 project hours
+- For: Anyone, no coding needed
+- Build your first AI app with zero prerequisites
+
+### Stage 2: Portfolio - AI-Ready Engineer (2 weeks)
+- Status: Live
+- Duration: 2 weeks, 8 live hours + 4 project hours
+- For: Final-year students & fresh graduates preparing for placements
+- Projects: Document Intelligence Bot using RAG architecture
+- URL: https://gradtensor.com/courses/ai-ready-engineer
+
+### Stage 3: Production - AI Engineering & Agentic Foundations (6 weeks)
+- Status: Live
 - Duration: 6 weeks, 24 live hours + 24 project hours
-- Topics: How LLMs work, APIs & embeddings, prompt engineering, RAG pipelines, AI agents, LangGraph
+- For: Final-year students and working professionals adding AI skills
 - Projects: RAG chatbot with custom knowledge base, AI agent with tool orchestration
-- Ideal for: Final-year students and working professionals adding AI skills
 - URL: https://gradtensor.com/courses/ai-engineering-agentic-foundations
 
+### Stage 4: Ship - AI Product Builder (6 weeks)
+- Status: Pre-Register
+- Duration: 6 weeks, 18 live hours + 30 project hours
+- For: Engineers going independent
+- Go from engineer to indie AI product maker
+
+### Stage 5: Advise - AI Transformation Partner (4 weeks)
+- Status: Pre-Register
+- Duration: 4 weeks, 12 live hours + 8 project hours
+- For: Senior professionals, 8+ years exp
+- Lead AI adoption for your team or organisation
+
+## Full Track Program
+
 ### AI Foundations - Job Ready in 16 Weeks
-- Category: Cohort-Based
+- Status: Live
 - Duration: 16 weeks, 64 live hours + 96 project hours
 - Topics: Python, ML basics, neural networks, LLMs, RAG, AI agents, prompt engineering, fine-tuning, deployment, Docker
 - Projects: Neural network from scratch, RAG system, AI agent, end-to-end capstone
 - Ideal for: Students with 6+ months runway, career switchers, professionals upskilling
 - URL: https://gradtensor.com/courses/ai-foundations-job-ready-16-weeks
 
-### AI-Ready Engineer (2 weeks)
-- Category: Skill-Based
-- Duration: 2 weeks, 8 live hours + 4 project hours
-- Topics: How AI systems work, RAG architecture, document intelligence, project defence
-- Projects: Document Intelligence Bot using RAG architecture
-- Ideal for: Final-year students and fresh graduates preparing for placements
-- URL: https://gradtensor.com/courses/ai-ready-engineer
-
 ## Target Audience
 
+- Teens and beginners curious about AI
 - Final-year engineering students preparing for campus placements
 - Fresh graduates looking to stand out in AI job interviews
 - Working professionals switching to or upskilling in AI careers
-- Anyone who wants to build and deploy real AI systems, not just watch tutorials
+- Engineers ready to build and ship their own AI products
+- Senior professionals guiding AI strategy for teams and organisations
 
 ## Trainers
 

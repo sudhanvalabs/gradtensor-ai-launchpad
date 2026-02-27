@@ -4,9 +4,10 @@ export const siteConfig = {
   siteUrl: "https://gradtensor.com",
   twitterHandle: "@GradTensor",
   defaultDescription:
-    "Build production-ready AI agents and RAG systems. Fast-track to AI job readiness through practical, project-focused learning with live cohorts.",
+    "Build AI products. Not just AI skills. A 5-stage learning journey from first curiosity to production-grade AI systems.",
 
   email: "courses@gradtensor.com",
+  formspreeFormId: "TODO_FORMSPREE_FORM_ID",
 
   whatsapp: {
     number: "919108030542",

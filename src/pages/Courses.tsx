@@ -1,51 +1,36 @@
-import { Link, useSearchParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
-import CourseCard from "@/components/CourseCard";
+import LearningJourney from "@/components/LearningJourney";
+import FullTrackCard from "@/components/FullTrackCard";
+import AdvisorySection from "@/components/AdvisorySection";
 import SEO from "@/components/SEO";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { courses, getCoursesByCategory } from "@/data/courses";
-import type { CourseCategory } from "@/data/courses";
-import { ArrowLeft, Mail } from "lucide-react";
-import { whatsappLink } from "@/data/siteConfig";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import { courses } from "@/data/courses";
+import { ArrowLeft } from "lucide-react";
 
 const coursesListLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   name: "GradTensor AI Courses",
-  itemListElement: courses.map((course, i) => ({
-    "@type": "ListItem",
-    position: i + 1,
-    url: `https://gradtensor.com/courses/${course.slug}`,
-    name: course.title,
-  })),
-};
-
-const categoryLabels: Record<CourseCategory, string> = {
-  skill: "Skill-Based",
-  cohort: "Cohort-Based",
-  executive: "Executive",
+  itemListElement: courses
+    .filter((c) => c.status === "live")
+    .map((course, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: `https://gradtensor.com/courses/${course.slug}`,
+      name: course.title,
+    })),
 };
 
 const Courses = () => {
   useScrollAnimation();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const activeTab = (searchParams.get("tab") as CourseCategory) || "skill";
-
-  const handleTabChange = (value: string) => {
-    setSearchParams({ tab: value });
-  };
-
-  const skillCourses = getCoursesByCategory("skill");
-  const cohortCourses = getCoursesByCategory("cohort");
 
   return (
     <div className="min-h-screen bg-background">
       <SEO
         title="AI Courses & Programs"
-        description="Choose from skill-based, cohort-based, and executive AI programs. Build production-ready AI agents and RAG systems with live cohorts."
+        description="Build AI products. Not just AI skills. Explore our 5-stage learning journey from first curiosity to production-grade AI systems."
         path="/courses"
         jsonLd={coursesListLd}
       />
@@ -74,83 +59,15 @@ const Courses = () => {
             className="mx-auto max-w-2xl text-lg text-muted-foreground sm:text-xl animate-fade-up"
             style={{ animationDelay: "0.1s" }}
           >
-            From fast-track placement prep to deep foundations  - choose your path to AI job readiness.
+            Five stages from first curiosity to leading AI adoption. Start
+            wherever you are.
           </p>
         </div>
       </section>
 
-      {/* Category Tabs + Course Cards */}
-      <section className="pb-20">
-        <div className="section-container">
-          <Tabs value={activeTab} onValueChange={handleTabChange}>
-            <div className="flex justify-center">
-              <TabsList className="mb-10 h-12 gap-1 rounded-xl bg-muted p-1.5">
-                {(Object.keys(categoryLabels) as CourseCategory[]).map((cat) => (
-                  <TabsTrigger
-                    key={cat}
-                    value={cat}
-                    className="rounded-lg px-5 py-2 font-display text-sm font-semibold tracking-wide data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
-                  >
-                    {categoryLabels[cat]}
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-            </div>
-
-            {/* Skill-Based */}
-            <TabsContent value="skill">
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {skillCourses.map((course, i) => (
-                  <div
-                    key={course.slug}
-                    className="animate-fade-up opacity-0"
-                    style={{ animationDelay: `${i * 0.1}s` }}
-                  >
-                    <CourseCard course={course} />
-                  </div>
-                ))}
-              </div>
-            </TabsContent>
-
-            {/* Cohort-Based */}
-            <TabsContent value="cohort">
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {cohortCourses.map((course, i) => (
-                  <div
-                    key={course.slug}
-                    className="animate-fade-up opacity-0"
-                    style={{ animationDelay: `${i * 0.1}s` }}
-                  >
-                    <CourseCard course={course} />
-                  </div>
-                ))}
-              </div>
-            </TabsContent>
-
-            {/* Executive  - Coming Soon */}
-            <TabsContent value="executive">
-              <div className="animate-fade-up opacity-0 mx-auto max-w-xl text-center">
-                <div className="rounded-2xl border border-border bg-card p-10 md:p-14">
-                  <span className="badge-executive">EXECUTIVE</span>
-                  <h3 className="mt-5 font-display text-2xl font-bold tracking-tight sm:text-3xl">
-                    Coming Soon
-                  </h3>
-                  <p className="mt-3 text-base text-muted-foreground sm:text-lg">
-                    We're designing executive AI programs for leaders and decision-makers. Help us shape the curriculum  - tell us what you'd need.
-                  </p>
-                  <WhatsAppButton
-                    href={whatsappLink("executive")}
-                    className="btn-shimmer mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3.5 font-display text-base font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
-                  >
-                    <Mail size={18} />
-                    Share Your Interest
-                  </WhatsAppButton>
-                </div>
-              </div>
-            </TabsContent>
-          </Tabs>
-        </div>
-      </section>
+      <LearningJourney />
+      <FullTrackCard />
+      <AdvisorySection />
 
       <SiteFooter />
     </div>

@@ -1,7 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import LearningTracks from "@/components/LearningTracks";
+import LearningJourney from "@/components/LearningJourney";
+import FullTrackCard from "@/components/FullTrackCard";
 import WhyGradTensor from "@/components/WhyGradTensor";
+import AdvisorySection from "@/components/AdvisorySection";
 // import Testimonials from "@/components/Testimonials";
 import FAQSection from "@/components/FAQSection";
 import SiteFooter from "@/components/SiteFooter";
@@ -16,7 +18,7 @@ const organizationLd = {
   logo: "https://gradtensor.com/logo.png",
   email: "courses@gradtensor.com",
   description:
-    "Build production-ready AI agents and RAG systems. Fast-track to AI job readiness through practical, project-focused learning with live cohorts.",
+    "Build AI products. Not just AI skills. A 5-stage learning journey from first curiosity to production-grade AI systems.",
   sameAs: [
     "https://www.linkedin.com/company/gradtensor",
     "https://twitter.com/GradTensor",
@@ -29,10 +31,10 @@ const faqLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What's the difference between skill-based and cohort programs?",
+      name: "How is the learning journey structured?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Skill-based courses (6 weeks) focus on one area like AI agents or RAG. The cohort program (16 weeks) is a comprehensive journey from Python basics to deployed AI systems, ideal for deeper career transitions.",
+        text: "GradTensor offers a 5-stage journey: Discover (no prerequisites), Portfolio (build interview-ready projects), Production (ship production-grade AI), Ship (launch your own AI product), and Advise (lead AI adoption). You can start at any stage that matches your level.",
       },
     },
     {
@@ -60,15 +62,17 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="GradTensor - From Zero to AI Engineer"
-        description="Build production-ready AI agents and RAG systems. Fast-track to AI job readiness through practical, project-focused learning with live cohorts."
+        title="GradTensor - Build AI Products. Not Just AI Skills."
+        description="Build AI products. Not just AI skills. A 5-stage learning journey from first curiosity to production-grade AI systems."
         path="/"
         jsonLd={[organizationLd, faqLd]}
       />
       <Navbar />
       <Hero />
-      <LearningTracks />
+      <LearningJourney />
+      <FullTrackCard />
       <WhyGradTensor />
+      <AdvisorySection />
       {/* <Testimonials /> */}
       <FAQSection />
       <SiteFooter />

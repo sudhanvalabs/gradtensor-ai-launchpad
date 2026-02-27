@@ -7,8 +7,8 @@ import {
 
 const faqs = [
   {
-    q: "What's the difference between skill-based and cohort programs?",
-    a: "Skill-based courses (6 weeks) focus on one area like AI agents or RAG. The cohort program (16 weeks) is a comprehensive journey from Python basics to deployed AI systems, ideal for deeper career transitions.",
+    q: "How is the learning journey structured?",
+    a: "GradTensor offers a 5-stage journey: Discover (no prerequisites), Portfolio (build interview-ready projects), Production (ship production-grade AI), Ship (launch your own AI product), and Advise (lead AI adoption). You can start at any stage that matches your level.",
   },
   {
     q: "Will this help me in campus placements?",

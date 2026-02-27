@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, Navigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
 import SEO from "@/components/SEO";
@@ -17,7 +17,7 @@ import {
   BookOpen,
   Users,
   CheckCircle2,
-  Mail,
+  ExternalLink,
   Download,
 } from "lucide-react";
 import { whatsappCustomLink } from "@/data/siteConfig";
@@ -27,6 +27,12 @@ const CourseDetail = () => {
   useScrollAnimation();
   const { slug } = useParams<{ slug: string }>();
   const course = slug ? getCourseBySlug(slug) : undefined;
+
+  // Pre-register courses don't have detail pages
+  if (course && course.status === "pre-register") {
+    return <Navigate to="/courses" replace />;
+  }
+
   if (!course) {
     return (
       <div className="min-h-screen bg-background">
@@ -100,7 +106,7 @@ const CourseDetail = () => {
       <div className="pt-24 md:pt-28">
         <div className="section-container">
           <Link
-            to={`/courses?tab=${course.category}`}
+            to="/courses"
             className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
           >
             <ArrowLeft size={16} />
@@ -113,9 +119,7 @@ const CourseDetail = () => {
       <section className="pt-6 pb-12 md:pb-16">
         <div className="section-container">
           <div className="animate-fade-up">
-            <span className={course.badgeClass}>{course.badge}</span>
-
-            <h1 className="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+            <h1 className="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
               {course.title}
             </h1>
 
@@ -229,20 +233,33 @@ const CourseDetail = () => {
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <WhatsAppButton
-                href={whatsappCustomLink(`Hi, I'm interested in enrolling in ${course.title}`)}
-                className="btn-shimmer inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3.5 font-display text-base font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
-              >
-                <Mail size={18} />
-                {course.ctaPrimary}
-              </WhatsAppButton>
-              <WhatsAppButton
-                href={whatsappCustomLink(`Hi, I'd like to request the syllabus for ${course.title}`)}
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-8 py-3.5 font-display text-base font-medium tracking-wider text-foreground transition-all hover:border-primary/30"
-              >
-                <Download size={18} />
-                {course.ctaSecondary}
-              </WhatsAppButton>
+              {course.enrollUrl ? (
+                <a
+                  href={course.enrollUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-shimmer inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3.5 font-display text-base font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
+                >
+                  <ExternalLink size={18} />
+                  {course.ctaPrimary}
+                </a>
+              ) : (
+                <WhatsAppButton
+                  href={whatsappCustomLink(`Hi, I'm interested in enrolling in ${course.title}`)}
+                  className="btn-shimmer inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3.5 font-display text-base font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
+                >
+                  {course.ctaPrimary}
+                </WhatsAppButton>
+              )}
+              {course.ctaSecondary && (
+                <WhatsAppButton
+                  href={whatsappCustomLink(`Hi, I'd like to request the syllabus for ${course.title}`)}
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-8 py-3.5 font-display text-base font-medium tracking-wider text-foreground transition-all hover:border-primary/30"
+                >
+                  <Download size={18} />
+                  {course.ctaSecondary}
+                </WhatsAppButton>
+              )}
             </div>
           </div>
         </div>

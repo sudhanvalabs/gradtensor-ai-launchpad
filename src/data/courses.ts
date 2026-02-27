@@ -1,15 +1,23 @@
-export type CourseCategory = "skill" | "cohort" | "executive";
+export type CourseStage =
+  | "discover"
+  | "portfolio"
+  | "production"
+  | "ship"
+  | "advise";
+
+export type CourseStatus = "live" | "pre-register";
 
 export interface Course {
   slug: string;
-  category: CourseCategory;
-  badge: string;
-  badgeClass: string;
+  stage?: CourseStage;
+  status: CourseStatus;
   title: string;
   tagline: string;
   duration: string;
   hours: string;
   idealFor: string;
+  whoForShort: string;
+  enrollUrl?: string;
   weeks: string[];
   projects: string[];
   whoFor: string[];
@@ -18,17 +26,113 @@ export interface Course {
   faqs: { q: string; a: string }[];
 }
 
+export const stageLabels: Record<
+  CourseStage,
+  { number: number; label: string; description: string }
+> = {
+  discover: {
+    number: 1,
+    label: "Discover",
+    description: "Explore AI with zero prerequisites",
+  },
+  portfolio: {
+    number: 2,
+    label: "Portfolio",
+    description: "Build projects that prove your skills",
+  },
+  production: {
+    number: 3,
+    label: "Production",
+    description: "Ship production-grade AI systems",
+  },
+  ship: {
+    number: 4,
+    label: "Ship",
+    description: "Launch your own AI product",
+  },
+  advise: {
+    number: 5,
+    label: "Advise",
+    description: "Guide teams and organisations on AI",
+  },
+};
+
 export const courses: Course[] = [
   {
+    slug: "teen-ai-builders",
+    stage: "discover",
+    status: "pre-register",
+    title: "Teen AI Builders",
+    tagline: "Build your first AI app - no coding experience needed",
+    duration: "4 weeks",
+    hours: "12 live hours + 8 project hours",
+    idealFor: "Teens and beginners curious about AI",
+    whoForShort: "Anyone, no coding needed",
+    weeks: [],
+    projects: [],
+    whoFor: [],
+    ctaPrimary: "Pre-Register",
+    ctaSecondary: "",
+    faqs: [],
+  },
+  {
+    slug: "ai-ready-engineer",
+    stage: "portfolio",
+    status: "live",
+    title: "AI-Ready Engineer",
+    tagline:
+      "Get hired in the AI era - before your batchmates figure out what's happening",
+    duration: "2 weeks",
+    hours: "8 live hours + 4 project hours",
+    idealFor: "Final-year students & fresh graduates preparing for placements",
+    whoForShort: "Final-year students & fresh grads",
+    enrollUrl: "TODO_GRAPHY_URL",
+    weeks: [
+      "Session 1: How AI Systems Actually Work - LLMs, embeddings, RAG, agents, and tracing a real query end-to-end",
+      "Session 2: Build Part 1 - Core Document Intelligence Bot - ingestion, chunking, vector search, LLM integration, deployed to a public URL",
+      "Session 3: Build Part 2 - Extend with Advanced Features - multi-document support, conversation memory, confidence scoring, web interface",
+      "Session 4: Architecture Discussion & Project Defence - team presentations, instructor grilling, the 10 RAG interview questions, and your 90-day roadmap",
+    ],
+    projects: [
+      "Document Intelligence Bot - upload any PDF, ask questions, get precise referenced answers using RAG architecture (deployed)",
+    ],
+    whoFor: [
+      "Final-year students or recent graduates with basic Python skills",
+      "Students with placements coming who want to stand out with a real AI project",
+      "Anyone willing to put in 12 focused hours across 2 weeks to build something demoable",
+    ],
+    ctaPrimary: "Enroll Now",
+    ctaSecondary: "Request Details",
+    faqs: [
+      {
+        q: "Do I need prior AI or ML experience?",
+        a: "No. You need basic Python knowledge - the program teaches LLMs, embeddings, RAG, and agents from scratch in Session 1 before you build anything.",
+      },
+      {
+        q: "How much time does this require?",
+        a: "About 12 hours total across 2 weeks - 4 live sessions of 2 hours each plus about 1 hour of async pre-work per week.",
+      },
+      {
+        q: "What do I walk away with?",
+        a: "A production-quality Document Intelligence Bot on your GitHub, the ability to explain it at any depth in an interview, exposure to real AI interview questions, and a 90-day roadmap for your AI career.",
+      },
+      {
+        q: "How is this different from the 6-week AI Engineering course?",
+        a: "This is a focused 2-week sprint designed for students facing imminent placements. The 6-week course goes deeper into agents and frameworks. Graduates of this program get discounted access to the longer course.",
+      },
+    ],
+  },
+  {
     slug: "ai-engineering-agentic-foundations",
-    category: "skill",
-    badge: "SKILL-BASED",
-    badgeClass: "badge-skill",
+    stage: "production",
+    status: "live",
     title: "AI Engineering & Agentic Foundations",
     tagline: "Build production-ready AI agents in 6 weeks",
     duration: "6 weeks",
     hours: "24 live hours + 24 project hours",
     idealFor: "Final-year students & working professionals adding AI skills",
+    whoForShort: "Engineers adding AI skills",
+    enrollUrl: "TODO_GRAPHY_URL",
     weeks: [
       "Week 1: How LLMs Actually Work",
       "Week 2: APIs & Embeddings",
@@ -46,7 +150,7 @@ export const courses: Course[] = [
       "Engineers who want to add agentic AI skills quickly",
       "Anyone who needs to build and demo AI systems fast",
     ],
-    ctaPrimary: "Enroll in Next Batch",
+    ctaPrimary: "Enroll Now",
     ctaSecondary: "Download Syllabus",
     faqs: [
       {
@@ -55,20 +159,55 @@ export const courses: Course[] = [
       },
       {
         q: "How much time per week does this require?",
-        a: "About 8 hours per week  - 4 hours of live sessions and 4 hours of project work.",
+        a: "About 8 hours per week - 4 hours of live sessions and 4 hours of project work.",
       },
     ],
   },
   {
+    slug: "ai-product-builder",
+    stage: "ship",
+    status: "pre-register",
+    title: "AI Product Builder",
+    tagline: "Go from engineer to indie AI product maker",
+    duration: "6 weeks",
+    hours: "18 live hours + 30 project hours",
+    idealFor: "Engineers ready to build and launch their own AI product",
+    whoForShort: "Engineers going independent",
+    weeks: [],
+    projects: [],
+    whoFor: [],
+    ctaPrimary: "Pre-Register",
+    ctaSecondary: "",
+    faqs: [],
+  },
+  {
+    slug: "ai-transformation-partner",
+    stage: "advise",
+    status: "pre-register",
+    title: "AI Transformation Partner",
+    tagline: "Lead AI adoption for your team or organisation",
+    duration: "4 weeks",
+    hours: "12 live hours + 8 project hours",
+    idealFor: "Senior professionals guiding AI strategy",
+    whoForShort: "Senior professionals, 8+ years exp",
+    weeks: [],
+    projects: [],
+    whoFor: [],
+    ctaPrimary: "Pre-Register",
+    ctaSecondary: "",
+    faqs: [],
+  },
+  {
     slug: "ai-foundations-job-ready-16-weeks",
-    category: "cohort",
-    badge: "COHORT-BASED",
-    badgeClass: "badge-cohort",
-    title: "AI Foundations  - Job Ready in 16 Weeks",
+    status: "live",
+    title: "AI Foundations - Job Ready in 16 Weeks",
     tagline: "From Python basics to deployed AI systems",
     duration: "16 weeks",
     hours: "64 live hours + 96 project hours",
-    idealFor: "Students with 6+ months runway, career switchers, professionals upskilling",
+    idealFor:
+      "Students with 6+ months runway, career switchers, professionals upskilling",
+    whoForShort: "Career switchers & deep learners",
+    enrollUrl: "TODO_GRAPHY_URL",
     weeks: [
       "Phase 1 (Weeks 1-4): Python, ML basics, neural networks from scratch",
       "Phase 2 (Weeks 5-10): LLMs, RAG, AI agents, prompt engineering, fine-tuning",
@@ -95,53 +234,7 @@ export const courses: Course[] = [
       },
       {
         q: "How much time per week does this require?",
-        a: "About 10 hours per week  - 4 hours of live sessions and 6 hours of project work.",
-      },
-    ],
-  },
-  {
-    slug: "ai-ready-engineer",
-    category: "skill",
-    badge: "SKILL-BASED",
-    badgeClass: "badge-skill",
-    title: "AI-Ready Engineer",
-    tagline:
-      "Get hired in the AI era -before your batchmates figure out what's happening",
-    duration: "2 weeks",
-    hours: "8 live hours + 4 project hours",
-    idealFor: "Final-year students & fresh graduates preparing for placements",
-    weeks: [
-      "Session 1: How AI Systems Actually Work -LLMs, embeddings, RAG, agents, and tracing a real query end-to-end",
-      "Session 2: Build Part 1 -Core Document Intelligence Bot -ingestion, chunking, vector search, LLM integration, deployed to a public URL",
-      "Session 3: Build Part 2 -Extend with Advanced Features -multi-document support, conversation memory, confidence scoring, web interface",
-      "Session 4: Architecture Discussion & Project Defence -team presentations, instructor grilling, the 10 RAG interview questions, and your 90-day roadmap",
-    ],
-    projects: [
-      "Document Intelligence Bot -upload any PDF, ask questions, get precise referenced answers using RAG architecture (deployed)",
-    ],
-    whoFor: [
-      "Final-year students or recent graduates with basic Python skills",
-      "Students with placements coming who want to stand out with a real AI project",
-      "Anyone willing to put in 12 focused hours across 2 weeks to build something demoable",
-    ],
-    ctaPrimary: "Enroll Now",
-    ctaSecondary: "Request Details",
-    faqs: [
-      {
-        q: "Do I need prior AI or ML experience?",
-        a: "No. You need basic Python knowledge -the program teaches LLMs, embeddings, RAG, and agents from scratch in Session 1 before you build anything.",
-      },
-      {
-        q: "How much time does this require?",
-        a: "About 12 hours total across 2 weeks -4 live sessions of 2 hours each plus about 1 hour of async pre-work per week.",
-      },
-      {
-        q: "What do I walk away with?",
-        a: "A production-quality Document Intelligence Bot on your GitHub, the ability to explain it at any depth in an interview, exposure to real AI interview questions, and a 90-day roadmap for your AI career.",
-      },
-      {
-        q: "How is this different from the 6-week AI Engineering course?",
-        a: "This is a focused 2-week sprint designed for students facing imminent placements. The 6-week course goes deeper into agents and frameworks. Graduates of this program get discounted access to the longer course.",
+        a: "About 10 hours per week - 4 hours of live sessions and 6 hours of project work.",
       },
     ],
   },
@@ -151,6 +244,21 @@ export function getCourseBySlug(slug: string): Course | undefined {
   return courses.find((c) => c.slug === slug);
 }
 
-export function getCoursesByCategory(category: CourseCategory): Course[] {
-  return courses.filter((c) => c.category === category);
+/** Returns the 5 journey-stage courses (one per stage) in stage order */
+export function getJourneyCourses(): Course[] {
+  const stageOrder: CourseStage[] = [
+    "discover",
+    "portfolio",
+    "production",
+    "ship",
+    "advise",
+  ];
+  return stageOrder
+    .map((stage) => courses.find((c) => c.stage === stage))
+    .filter((c): c is Course => c !== undefined);
+}
+
+/** Returns the full-track 16-week course (no stage) */
+export function getFullTrackCourse(): Course | undefined {
+  return courses.find((c) => !c.stage && c.status === "live");
 }

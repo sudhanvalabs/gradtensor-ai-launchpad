@@ -153,18 +153,13 @@
     transform: translateY(0);
   }
 
-  .badge-skill {
-    @apply bg-primary/10 text-primary border border-primary/20 px-3 py-1.5 rounded-full text-sm font-medium uppercase tracking-wider;
+  .badge-live {
+    @apply bg-emerald-500/10 text-emerald-600 border border-emerald-500/20 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider;
     font-family: var(--font-display);
   }
 
-  .badge-cohort {
-    @apply bg-accent/10 text-accent border border-accent/20 px-3 py-1.5 rounded-full text-sm font-medium uppercase tracking-wider;
-    font-family: var(--font-display);
-  }
-
-  .badge-executive {
-    @apply bg-secondary text-secondary-foreground border border-border px-3 py-1.5 rounded-full text-sm font-medium uppercase tracking-wider;
+  .badge-pre-register {
+    @apply bg-amber-500/10 text-amber-600 border border-amber-500/20 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider;
     font-family: var(--font-display);
   }
 
