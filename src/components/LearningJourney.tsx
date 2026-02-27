@@ -77,7 +77,7 @@ const LearningJourney = () => {
         </div>
 
         {/* Course grid */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div key={activeAudience} className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {filteredCourses.map((course, i) =>
             course.stage ? (
               <StageCard
@@ -126,8 +126,8 @@ const StageCard = ({ course, index, onPreRegister }: StageCardProps) => {
 
   return (
     <div
-      className="animate-on-scroll flex flex-col rounded-xl border border-border bg-card/50 p-6 transition-all hover:border-primary/20 hover:bg-card"
-      style={{ transitionDelay: `${index * 0.08}s` }}
+      className="flex flex-col rounded-xl border border-border bg-card/50 p-6 transition-all hover:border-primary/20 hover:bg-card animate-fade-up"
+      style={{ animationDelay: `${index * 0.08}s` }}
     >
       {/* Stage number + label + status */}
       <div className="mb-4 flex items-center gap-3">
@@ -203,8 +203,8 @@ const FullTrackStageCard = ({
 }) => {
   return (
     <div
-      className="animate-on-scroll relative flex flex-col rounded-xl border-2 border-primary/40 bg-card p-6 transition-all hover:border-primary/60 card-glow"
-      style={{ transitionDelay: `${index * 0.08}s` }}
+      className="relative flex flex-col rounded-xl border-2 border-primary/40 bg-card p-6 transition-all hover:border-primary/60 card-glow animate-fade-up"
+      style={{ animationDelay: `${index * 0.08}s` }}
     >
       {/* Featured pill */}
       <div className="absolute -top-3 left-6 rounded-full bg-primary px-3 py-1 font-display text-xs font-bold tracking-widest text-primary-foreground">
