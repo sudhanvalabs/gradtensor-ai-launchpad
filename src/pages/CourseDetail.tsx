@@ -52,7 +52,7 @@ const CourseDetail = () => {
             </Link>
           </div>
         </div>
-        <SiteFooter hideCta />
+        <SiteFooter />
       </div>
     );
   }
@@ -265,7 +265,7 @@ const CourseDetail = () => {
         </div>
       </section>
 
-      <SiteFooter hideCta />
+      <SiteFooter />
     </div>
   );
 };
