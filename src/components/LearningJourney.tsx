@@ -1,12 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, ChevronRight, Clock, BookOpen } from "lucide-react";
-import { getJourneyCourses, stageLabels } from "@/data/courses";
+import { ArrowRight, Clock, BookOpen, Layers } from "lucide-react";
+import {
+  getJourneyCourses,
+  getFullTrackCourse,
+  stageLabels,
+} from "@/data/courses";
 import type { Course } from "@/data/courses";
 import PreRegisterDialog from "@/components/PreRegisterDialog";
 
 const LearningJourney = () => {
   const journeyCourses = getJourneyCourses();
+  const fullTrackCourse = getFullTrackCourse();
   const [dialogOpen, setDialogOpen] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState<string>("");
 
@@ -24,35 +29,12 @@ const LearningJourney = () => {
           </h2>
           <p className="mx-auto max-w-2xl text-base text-muted-foreground sm:text-lg">
             Five stages from first curiosity to leading AI adoption. Start
-            wherever you are.
+            wherever you are - or take the full track.
           </p>
         </div>
 
-        {/* Desktop: horizontal with connectors */}
-        <div className="hidden lg:block">
-          <div className="flex items-stretch gap-0">
-            {journeyCourses.map((course, i) => (
-              <div key={course.slug} className="flex flex-1 items-stretch">
-                <StageCard
-                  course={course}
-                  index={i}
-                  onPreRegister={openPreRegister}
-                />
-                {i < journeyCourses.length - 1 && (
-                  <div className="flex items-center px-1">
-                    <ChevronRight
-                      size={24}
-                      className="text-primary/40 flex-shrink-0"
-                    />
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Mobile/Tablet: vertical stack */}
-        <div className="lg:hidden space-y-4">
+        {/* 3x2 grid on desktop, vertical stack on mobile */}
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {journeyCourses.map((course, i) => (
             <StageCard
               key={course.slug}
@@ -61,6 +43,11 @@ const LearningJourney = () => {
               onPreRegister={openPreRegister}
             />
           ))}
+
+          {/* Full track as 6th card */}
+          {fullTrackCourse && (
+            <FullTrackStageCard course={fullTrackCourse} index={5} />
+          )}
         </div>
       </div>
 
@@ -86,7 +73,7 @@ const StageCard = ({ course, index, onPreRegister }: StageCardProps) => {
 
   return (
     <div
-      className="animate-on-scroll flex flex-col rounded-xl border border-border bg-card/50 p-6 transition-all hover:border-primary/20 hover:bg-card flex-1"
+      className="animate-on-scroll flex flex-col rounded-xl border border-border bg-card/50 p-6 transition-all hover:border-primary/20 hover:bg-card"
       style={{ transitionDelay: `${index * 0.08}s` }}
     >
       {/* Stage number + label + status */}
@@ -124,7 +111,7 @@ const StageCard = ({ course, index, onPreRegister }: StageCardProps) => {
         </span>
       </div>
 
-      {/* Status badge + CTA */}
+      {/* CTA */}
       <div className="mt-auto pt-4 border-t border-border/50">
         {isLive ? (
           <Link
@@ -149,6 +136,69 @@ const StageCard = ({ course, index, onPreRegister }: StageCardProps) => {
             />
           </button>
         )}
+      </div>
+    </div>
+  );
+};
+
+const FullTrackStageCard = ({
+  course,
+  index,
+}: {
+  course: Course;
+  index: number;
+}) => {
+  return (
+    <div
+      className="animate-on-scroll flex flex-col rounded-xl border border-primary/20 bg-card p-6 transition-all hover:border-primary/30 card-glow"
+      style={{ transitionDelay: `${index * 0.08}s` }}
+    >
+      {/* Label + status */}
+      <div className="mb-4 flex items-center gap-3">
+        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 font-display text-sm font-bold text-primary">
+          <Layers size={16} />
+        </span>
+        <span className="font-display text-xs font-bold tracking-[0.2em] uppercase text-muted-foreground flex-1">
+          Full Track
+        </span>
+        <span className="badge-live">LIVE</span>
+      </div>
+
+      {/* Course name */}
+      <h3 className="mb-3 font-display text-xl font-bold tracking-tight">
+        {course.title}
+      </h3>
+
+      {/* Tagline */}
+      <p className="mb-4 text-base text-muted-foreground flex-1">
+        {course.tagline}. From absolute beginner to deployed AI systems in one
+        program.
+      </p>
+
+      {/* Duration + Hours + Projects */}
+      <div className="mb-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
+        <span className="flex items-center gap-1.5">
+          <Clock size={14} className="text-primary" />
+          {course.duration}
+        </span>
+        <span className="flex items-center gap-1.5">
+          <BookOpen size={14} className="text-primary" />
+          {course.hours}
+        </span>
+      </div>
+
+      {/* CTA */}
+      <div className="mt-auto pt-4 border-t border-border/50">
+        <Link
+          to={`/courses/${course.slug}`}
+          className="group/btn flex items-center justify-between font-display text-base font-semibold tracking-wider text-primary transition-colors hover:text-primary/80"
+        >
+          Learn More
+          <ArrowRight
+            size={16}
+            className="transition-transform group-hover/btn:translate-x-1"
+          />
+        </Link>
       </div>
     </div>
   );

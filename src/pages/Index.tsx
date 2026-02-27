@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import LearningJourney from "@/components/LearningJourney";
-import FullTrackCard from "@/components/FullTrackCard";
 import WhyGradTensor from "@/components/WhyGradTensor";
 import AdvisorySection from "@/components/AdvisorySection";
 // import Testimonials from "@/components/Testimonials";
@@ -70,7 +69,6 @@ const Index = () => {
       <Navbar />
       <Hero />
       <LearningJourney />
-      <FullTrackCard />
       <WhyGradTensor />
       <AdvisorySection />
       {/* <Testimonials /> */}

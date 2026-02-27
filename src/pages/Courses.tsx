@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
 import LearningJourney from "@/components/LearningJourney";
-import FullTrackCard from "@/components/FullTrackCard";
 import AdvisorySection from "@/components/AdvisorySection";
 import SEO from "@/components/SEO";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -66,7 +65,6 @@ const Courses = () => {
       </section>
 
       <LearningJourney />
-      <FullTrackCard />
       <AdvisorySection />
 
       <SiteFooter />
