@@ -89,78 +89,65 @@ const StageCard = ({ course, index, onPreRegister }: StageCardProps) => {
       className="animate-on-scroll flex flex-col rounded-xl border border-border bg-card/50 p-6 transition-all hover:border-primary/20 hover:bg-card flex-1"
       style={{ transitionDelay: `${index * 0.08}s` }}
     >
-      {/* Stage number + label */}
+      {/* Stage number + label + status */}
       <div className="mb-4 flex items-center gap-3">
         <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 font-display text-sm font-bold text-primary">
           {info.number}
         </span>
-        <span className="font-display text-xs font-bold tracking-[0.2em] uppercase text-muted-foreground">
+        <span className="font-display text-xs font-bold tracking-[0.2em] uppercase text-muted-foreground flex-1">
           {info.label}
+        </span>
+        <span className={isLive ? "badge-live" : "badge-pre-register"}>
+          {isLive ? "LIVE" : "SOON"}
         </span>
       </div>
 
       {/* Course name */}
-      <h3 className="mb-1 font-display text-lg font-bold tracking-tight lg:text-xl">
+      <h3 className="mb-3 font-display text-xl font-bold tracking-tight">
         {course.title}
       </h3>
 
+      {/* Tagline */}
+      <p className="mb-4 text-base text-muted-foreground flex-1">
+        {course.tagline}
+      </p>
+
       {/* Duration + Hours */}
-      <div className="mb-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
+      <div className="mb-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
         <span className="flex items-center gap-1.5">
-          <Clock size={12} className="text-primary" />
+          <Clock size={14} className="text-primary" />
           {course.duration}
         </span>
         <span className="flex items-center gap-1.5">
-          <BookOpen size={12} className="text-primary" />
+          <BookOpen size={14} className="text-primary" />
           {course.hours}
         </span>
       </div>
 
-      {/* Tagline */}
-      <p className="mb-2 text-sm text-muted-foreground">
-        {course.tagline}
-      </p>
-
-      {/* Who for */}
-      <p className="mb-4 text-xs text-muted-foreground/70 flex-1">
-        For: {course.whoForShort}
-      </p>
-
       {/* Status badge + CTA */}
-      <div className="mt-auto">
+      <div className="mt-auto pt-4 border-t border-border/50">
         {isLive ? (
-          <>
-            <span className="badge-live mb-3 inline-block">LIVE</span>
-            <Link
-              to={`/courses/${course.slug}`}
-              className="group/btn flex items-center gap-2 font-display text-sm font-medium tracking-wider text-foreground transition-colors hover:text-primary"
-            >
-              Learn More
-              <ArrowRight
-                size={14}
-                className="transition-transform group-hover/btn:translate-x-1"
-              />
-            </Link>
-          </>
+          <Link
+            to={`/courses/${course.slug}`}
+            className="group/btn flex items-center justify-between font-display text-base font-semibold tracking-wider text-primary transition-colors hover:text-primary/80"
+          >
+            Learn More
+            <ArrowRight
+              size={16}
+              className="transition-transform group-hover/btn:translate-x-1"
+            />
+          </Link>
         ) : (
-          <>
-            <span className="badge-pre-register mb-3 inline-block">
-              PRE-REGISTER
-            </span>
-            <button
-              onClick={() => onPreRegister(course.slug)}
-              className="group/btn flex items-center gap-2 font-display text-sm font-medium tracking-wider text-foreground transition-colors hover:text-primary"
-            >
-              Pre-Register
-              <ArrowRight
-                size={14}
-                className="transition-transform group-hover/btn:translate-x-1"
-              />
-            </button>
-            <p className="mt-1 text-xs text-muted-foreground">
-              Launching soon...
-            </p>
-          </>
+          <button
+            onClick={() => onPreRegister(course.slug)}
+            className="group/btn flex w-full items-center justify-between font-display text-base font-semibold tracking-wider text-primary transition-colors hover:text-primary/80"
+          >
+            Pre-Register
+            <ArrowRight
+              size={16}
+              className="transition-transform group-hover/btn:translate-x-1"
+            />
+          </button>
         )}
       </div>
     </div>
