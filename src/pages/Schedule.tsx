@@ -19,22 +19,22 @@ interface Batch {
 
 const upcomingBatches: Batch[] = [
   {
-    courseTitle: "AI-Ready Engineer",
-    courseSlug: "ai-ready-engineer",
+    courseTitle: "Teen AI Builders",
+    courseSlug: "teen-ai-builders",
     batchLabel: "Batch 1",
-    startDate: "March 26, 2026",
-    days: "Thu & Fri",
-    time: "7:30 - 9:30 PM IST",
-    duration: "2 weeks",
+    startDate: "April 1, 2026",
+    days: "Wed & Thu",
+    time: "11:00 AM - 12:00 PM IST",
+    duration: "4 weeks",
   },
   {
-    courseTitle: "AI-Ready Engineer",
-    courseSlug: "ai-ready-engineer",
+    courseTitle: "Teen AI Builders",
+    courseSlug: "teen-ai-builders",
     batchLabel: "Batch 2",
-    startDate: "April 9, 2026",
-    days: "Thu & Fri",
-    time: "7:30 - 9:30 PM IST",
-    duration: "2 weeks",
+    startDate: "April 15, 2026",
+    days: "Wed & Thu",
+    time: "4:00 - 5:00 PM IST",
+    duration: "4 weeks",
   },
   {
     courseTitle: "AI Engineering & Agentic Foundations",
@@ -42,8 +42,8 @@ const upcomingBatches: Batch[] = [
     batchLabel: "Next Batch",
     startDate: "April 20, 2026",
     days: "Mon & Tue",
-    time: "7:30 - 9:30 PM IST",
-    duration: "16 weeks",
+    time: "8:30 - 10:30 PM IST",
+    duration: "6 weeks",
   },
 ];
 
@@ -80,7 +80,7 @@ const Schedule = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Upcoming AI Course Batches"
-        description="Find the right schedule and enroll in an upcoming GradTensor AI course batch. Live online cohorts with flexible timings."
+        description="Find the right schedule and enroll in an upcoming GradTensor AI course batch. Live online classes with flexible timings."
         path="/schedule"
         jsonLd={scheduleEventsLd}
       />

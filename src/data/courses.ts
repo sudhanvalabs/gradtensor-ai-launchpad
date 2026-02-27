@@ -75,7 +75,7 @@ export const courses: Course[] = [
   {
     slug: "teen-ai-builders",
     stage: "discover",
-    status: "pre-register",
+    status: "live",
     audience: ["high-school"],
     title: "Teen AI Builders",
     tagline: "Build your first AI app - no coding experience needed",
@@ -86,7 +86,7 @@ export const courses: Course[] = [
     weeks: [],
     projects: [],
     whoFor: [],
-    ctaPrimary: "Pre-Register",
+    ctaPrimary: "Register",
     ctaSecondary: "",
     faqs: [],
   },
@@ -110,7 +110,7 @@ export const courses: Course[] = [
   {
     slug: "ai-ready-engineer",
     stage: "portfolio",
-    status: "live",
+    status: "pre-register",
     audience: ["engineering"],
     title: "AI-Ready Engineer",
     tagline:

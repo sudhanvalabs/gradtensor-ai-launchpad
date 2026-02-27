@@ -8,6 +8,8 @@ import {
   audienceLabels,
 } from "@/data/courses";
 import type { Course, Audience } from "@/data/courses";
+import { whatsappCustomLink } from "@/data/siteConfig";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import PreRegisterDialog from "@/components/PreRegisterDialog";
 
@@ -170,7 +172,7 @@ const StageCard = ({ course, index, onPreRegister }: StageCardProps) => {
 
       {/* CTA */}
       <div className="mt-auto pt-4 border-t border-border/50">
-        {isLive ? (
+        {isLive && course.weeks.length > 0 ? (
           <Link
             to={`/courses/${course.slug}`}
             className="group/btn flex items-center justify-between font-display text-base font-semibold tracking-wider text-primary transition-colors hover:text-primary/80"
@@ -181,6 +183,17 @@ const StageCard = ({ course, index, onPreRegister }: StageCardProps) => {
               className="transition-transform group-hover/btn:translate-x-1"
             />
           </Link>
+        ) : isLive ? (
+          <WhatsAppButton
+            href={whatsappCustomLink(`Hi, I'm interested in ${course.title}`)}
+            className="group/btn flex w-full items-center justify-between font-display text-base font-semibold tracking-wider text-primary transition-colors hover:text-primary/80"
+          >
+            {course.ctaPrimary}
+            <ArrowRight
+              size={16}
+              className="transition-transform group-hover/btn:translate-x-1"
+            />
+          </WhatsAppButton>
         ) : (
           <button
             onClick={() => onPreRegister(course.slug)}
