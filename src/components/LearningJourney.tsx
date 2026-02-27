@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Clock, BookOpen, Layers } from "lucide-react";
 import {
   getJourneyCourses,
-  getFullTrackCourse,
+  getStagelessCourses,
   stageLabels,
   audienceLabels,
 } from "@/data/courses";
@@ -15,7 +15,7 @@ const audiences = Object.keys(audienceLabels) as Audience[];
 
 const LearningJourney = () => {
   const journeyCourses = getJourneyCourses();
-  const fullTrackCourse = getFullTrackCourse();
+  const stagelessCourses = getStagelessCourses();
   const [dialogOpen, setDialogOpen] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState<string>("");
   const [activeAudience, setActiveAudience] = useState<string>("all");
@@ -25,10 +25,7 @@ const LearningJourney = () => {
     setDialogOpen(true);
   };
 
-  const allCourses = [
-    ...journeyCourses,
-    ...(fullTrackCourse ? [fullTrackCourse] : []),
-  ];
+  const allCourses = [...journeyCourses, ...stagelessCourses];
 
   const filteredCourses =
     activeAudience === "all"
@@ -79,18 +76,19 @@ const LearningJourney = () => {
         {/* Course grid */}
         <div key={activeAudience} className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {filteredCourses.map((course, i) =>
-            course.stage ? (
-              <StageCard
+            course.slug === "ai-foundations-job-ready-16-weeks" ? (
+              <FullTrackStageCard
                 key={course.slug}
                 course={course}
                 index={i}
                 onPreRegister={openPreRegister}
               />
             ) : (
-              <FullTrackStageCard
+              <StageCard
                 key={course.slug}
                 course={course}
                 index={i}
+                onPreRegister={openPreRegister}
               />
             )
           )}
@@ -120,8 +118,8 @@ interface StageCardProps {
 }
 
 const StageCard = ({ course, index, onPreRegister }: StageCardProps) => {
-  const stage = course.stage!;
-  const info = stageLabels[stage];
+  const stage = course.stage;
+  const info = stage ? stageLabels[stage] : null;
   const isLive = course.status === "live";
 
   return (
@@ -131,12 +129,18 @@ const StageCard = ({ course, index, onPreRegister }: StageCardProps) => {
     >
       {/* Stage number + label + status */}
       <div className="mb-4 flex items-center gap-3">
-        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 font-display text-sm font-bold text-primary">
-          {info.number}
-        </span>
-        <span className="font-display text-xs font-bold tracking-[0.2em] uppercase text-muted-foreground flex-1">
-          {info.label}
-        </span>
+        {info ? (
+          <>
+            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 font-display text-sm font-bold text-primary">
+              {info.number}
+            </span>
+            <span className="font-display text-xs font-bold tracking-[0.2em] uppercase text-muted-foreground flex-1">
+              {info.label}
+            </span>
+          </>
+        ) : (
+          <span className="flex-1" />
+        )}
         <span className={isLive ? "badge-live" : "badge-pre-register"}>
           {isLive ? "LIVE" : "SOON"}
         </span>
@@ -197,10 +201,13 @@ const StageCard = ({ course, index, onPreRegister }: StageCardProps) => {
 const FullTrackStageCard = ({
   course,
   index,
+  onPreRegister,
 }: {
   course: Course;
   index: number;
+  onPreRegister: (slug: string) => void;
 }) => {
+  const isLive = course.status === "live";
   return (
     <div
       className="relative flex flex-col rounded-xl border-2 border-primary/40 bg-card p-6 transition-all hover:border-primary/60 card-glow animate-fade-up"
@@ -219,7 +226,9 @@ const FullTrackStageCard = ({
         <span className="font-display text-xs font-bold tracking-[0.2em] uppercase text-primary flex-1">
           Full Track
         </span>
-        <span className="badge-live">LIVE</span>
+        <span className={isLive ? "badge-live" : "badge-pre-register"}>
+          {isLive ? "LIVE" : "SOON"}
+        </span>
       </div>
 
       {/* Course name */}
@@ -247,16 +256,29 @@ const FullTrackStageCard = ({
 
       {/* CTA */}
       <div className="mt-auto pt-4 border-t border-border/50">
-        <Link
-          to={`/courses/${course.slug}`}
-          className="group/btn flex items-center justify-between font-display text-base font-semibold tracking-wider text-primary transition-colors hover:text-primary/80"
-        >
-          Learn More
-          <ArrowRight
-            size={16}
-            className="transition-transform group-hover/btn:translate-x-1"
-          />
-        </Link>
+        {isLive ? (
+          <Link
+            to={`/courses/${course.slug}`}
+            className="group/btn flex items-center justify-between font-display text-base font-semibold tracking-wider text-primary transition-colors hover:text-primary/80"
+          >
+            Learn More
+            <ArrowRight
+              size={16}
+              className="transition-transform group-hover/btn:translate-x-1"
+            />
+          </Link>
+        ) : (
+          <button
+            onClick={() => onPreRegister(course.slug)}
+            className="group/btn flex w-full items-center justify-between font-display text-base font-semibold tracking-wider text-primary transition-colors hover:text-primary/80"
+          >
+            Pre-Register
+            <ArrowRight
+              size={16}
+              className="transition-transform group-hover/btn:translate-x-1"
+            />
+          </button>
+        )}
       </div>
     </div>
   );

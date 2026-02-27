@@ -76,13 +76,30 @@ export const courses: Course[] = [
     slug: "teen-ai-builders",
     stage: "discover",
     status: "pre-register",
-    audience: ["high-school", "non-tech"],
+    audience: ["high-school"],
     title: "Teen AI Builders",
     tagline: "Build your first AI app - no coding experience needed",
     duration: "4 weeks",
     hours: "12 live hours + 8 project hours",
     idealFor: "Teens and beginners curious about AI",
     whoForShort: "Anyone, no coding needed",
+    weeks: [],
+    projects: [],
+    whoFor: [],
+    ctaPrimary: "Pre-Register",
+    ctaSecondary: "",
+    faqs: [],
+  },
+  {
+    slug: "ai-explorer",
+    status: "pre-register",
+    audience: ["non-tech"],
+    title: "AI Explorer",
+    tagline: "Understand AI and build your first app - no technical background needed",
+    duration: "4 weeks",
+    hours: "12 live hours + 8 project hours",
+    idealFor: "Non-tech professionals and curious minds exploring AI",
+    whoForShort: "No coding needed",
     weeks: [],
     projects: [],
     whoFor: [],
@@ -218,7 +235,7 @@ export const courses: Course[] = [
   },
   {
     slug: "ai-foundations-job-ready-16-weeks",
-    status: "live",
+    status: "pre-register",
     audience: ["engineering"],
     title: "AI Foundations - Job Ready in 16 Weeks",
     tagline: "From Python basics to deployed AI systems",
@@ -227,7 +244,6 @@ export const courses: Course[] = [
     idealFor:
       "Students with 6+ months runway, career switchers, professionals upskilling",
     whoForShort: "Career switchers & deep learners",
-    // enrollUrl: "TODO_GRAPHY_URL",
     weeks: [
       "Phase 1 (Weeks 1-4): Python, ML basics, neural networks from scratch",
       "Phase 2 (Weeks 5-10): LLMs, RAG, AI agents, prompt engineering, fine-tuning",
@@ -280,5 +296,86 @@ export function getJourneyCourses(): Course[] {
 
 /** Returns the full-track 16-week course (no stage) */
 export function getFullTrackCourse(): Course | undefined {
-  return courses.find((c) => !c.stage && c.status === "live");
+  return courses.find((c) => c.slug === "ai-foundations-job-ready-16-weeks");
+}
+
+/** Returns courses that don't belong to a journey stage (full track, AI Explorer, etc.) */
+export function getStagelessCourses(): Course[] {
+  return courses.filter((c) => !c.stage);
+}
+
+export type Background = "high-school" | "college-tech" | "professional" | "non-tech";
+export type TechComfort = "none" | "basic" | "comfortable";
+export type Goal = "explore" | "get-hired" | "build-product" | "lead-strategy";
+
+export function recommendCourses(
+  background: Background,
+  techComfort: TechComfort,
+  goal: Goal
+): Course[] {
+  const scoreMap = new Map<string, number>();
+
+  for (const course of courses) {
+    scoreMap.set(course.slug, 0);
+  }
+
+  const add = (slug: string, points: number) => {
+    scoreMap.set(slug, (scoreMap.get(slug) || 0) + points);
+  };
+
+  // Background scoring
+  if (background === "high-school") {
+    add("teen-ai-builders", 3);
+  } else if (background === "college-tech") {
+    add("ai-ready-engineer", 3);
+    add("ai-engineering-agentic-foundations", 2);
+    add("ai-foundations-job-ready-16-weeks", 2);
+  } else if (background === "professional") {
+    add("ai-engineering-agentic-foundations", 3);
+    add("ai-product-builder", 2);
+    add("ai-transformation-partner", 2);
+  } else if (background === "non-tech") {
+    add("ai-explorer", 3);
+    add("ai-product-builder", 1);
+  }
+
+  // Tech comfort scoring
+  if (techComfort === "none") {
+    add("teen-ai-builders", 2);
+    add("ai-explorer", 2);
+    add("ai-foundations-job-ready-16-weeks", 1);
+  } else if (techComfort === "basic") {
+    add("ai-ready-engineer", 2);
+    add("ai-foundations-job-ready-16-weeks", 2);
+  } else if (techComfort === "comfortable") {
+    add("ai-engineering-agentic-foundations", 2);
+    add("ai-product-builder", 2);
+    add("ai-ready-engineer", 1);
+  }
+
+  // Goal scoring
+  if (goal === "explore") {
+    add("teen-ai-builders", 2);
+    add("ai-explorer", 2);
+    add("ai-foundations-job-ready-16-weeks", 1);
+  } else if (goal === "get-hired") {
+    add("ai-ready-engineer", 3);
+    add("ai-engineering-agentic-foundations", 2);
+    add("ai-foundations-job-ready-16-weeks", 2);
+  } else if (goal === "build-product") {
+    add("ai-product-builder", 3);
+    add("ai-engineering-agentic-foundations", 2);
+  } else if (goal === "lead-strategy") {
+    add("ai-transformation-partner", 3);
+  }
+
+  // Sort by score descending and return top 2
+  const sorted = [...scoreMap.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .filter(([, score]) => score > 0)
+    .slice(0, 2)
+    .map(([slug]) => getCourseBySlug(slug)!)
+    .filter(Boolean);
+
+  return sorted;
 }
