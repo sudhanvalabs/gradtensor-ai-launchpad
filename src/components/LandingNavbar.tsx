@@ -25,6 +25,13 @@ const LandingNavbar = () => {
             <span className="text-foreground">Tensor</span>
           </span>
         </Link>
+
+        <Link
+          to="/courses"
+          className="ml-auto text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+        >
+          Browse Courses
+        </Link>
       </div>
     </nav>
   );
