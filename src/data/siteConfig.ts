@@ -8,6 +8,8 @@ export const siteConfig = {
 
   email: "courses@gradtensor.com",
   formspreeFormId: "TODO_FORMSPREE_FORM_ID",
+  googleSheetUrl:
+    "https://script.google.com/macros/s/AKfycbwEBRDxehgeoOExaGU0aoglDrmQ3QVtGHFHF9myOj_CfSzYycA6VtLjQLRf-7_rHfc/exec",
 
   whatsapp: {
     number: "919108030542",
