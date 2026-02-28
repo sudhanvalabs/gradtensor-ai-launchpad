@@ -277,7 +277,7 @@ const PreRegisterDialog = ({
               className="w-full font-display font-semibold tracking-wider"
               disabled={submitting}
             >
-              {submitting ? "Submitting..." : "Continue to WhatsApp"}
+              {submitting ? "Submitting..." : "Pre-Register"}
             </Button>
           </form>
         </Form>
