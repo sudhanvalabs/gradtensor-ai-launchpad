@@ -5,49 +5,9 @@ import SiteFooter from "@/components/SiteFooter";
 import SEO from "@/components/SEO";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { ArrowLeft, Calendar, Clock, Timer, ArrowRight } from "lucide-react";
-import { whatsappLink } from "@/data/siteConfig";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import RegisterDialog from "@/components/RegisterDialog";
-
-interface Batch {
-  courseTitle: string;
-  courseSlug: string;
-  batchLabel: string;
-  startDate: string;
-  days: string;
-  time: string;
-  duration: string;
-}
-
-const upcomingBatches: Batch[] = [
-  {
-    courseTitle: "Teen AI Builders",
-    courseSlug: "teen-ai-builders",
-    batchLabel: "Batch 1",
-    startDate: "April 1, 2026",
-    days: "Wed & Thu",
-    time: "11:00 AM - 12:00 PM IST",
-    duration: "4 weeks",
-  },
-  {
-    courseTitle: "Teen AI Builders",
-    courseSlug: "teen-ai-builders",
-    batchLabel: "Batch 2",
-    startDate: "April 15, 2026",
-    days: "Wed & Thu",
-    time: "4:00 - 5:00 PM IST",
-    duration: "4 weeks",
-  },
-  {
-    courseTitle: "AI Engineering & Agentic Foundations",
-    courseSlug: "ai-engineering-agentic-foundations",
-    batchLabel: "Next Batch",
-    startDate: "April 20, 2026",
-    days: "Mon & Tue",
-    time: "8:30 - 10:30 PM IST",
-    duration: "6 weeks",
-  },
-];
+import EngineeringRegisterDialog from "@/components/EngineeringRegisterDialog";
+import { upcomingBatches, type Batch } from "@/data/batches";
 
 const scheduleEventsLd = {
   "@context": "https://schema.org",
@@ -77,14 +37,19 @@ const scheduleEventsLd = {
 
 const Schedule = () => {
   useScrollAnimation();
-  const [registerOpen, setRegisterOpen] = useState(false);
+  const [teenRegisterOpen, setTeenRegisterOpen] = useState(false);
+  const [engRegisterOpen, setEngRegisterOpen] = useState(false);
   const [registerBatch, setRegisterBatch] = useState("");
   const [registerTitle, setRegisterTitle] = useState("");
 
   const openRegister = (batch: Batch) => {
     setRegisterTitle(batch.courseTitle);
     setRegisterBatch(`${batch.batchLabel} - ${batch.startDate}`);
-    setRegisterOpen(true);
+    if (batch.courseSlug === "teen-ai-builders") {
+      setTeenRegisterOpen(true);
+    } else {
+      setEngRegisterOpen(true);
+    }
   };
 
   return (
@@ -171,23 +136,13 @@ const Schedule = () => {
 
                   {/* Enroll button */}
                   <div className="mt-auto">
-                    {batch.courseSlug === "teen-ai-builders" ? (
-                      <button
-                        onClick={() => openRegister(batch)}
-                        className="btn-shimmer group inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-display text-sm font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
-                      >
-                        Enroll Now
-                        <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-                      </button>
-                    ) : (
-                      <WhatsAppButton
-                        href={whatsappLink("enroll")}
-                        className="btn-shimmer group inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-display text-sm font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
-                      >
-                        Enroll Now
-                        <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-                      </WhatsAppButton>
-                    )}
+                    <button
+                      onClick={() => openRegister(batch)}
+                      className="btn-shimmer group inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-display text-sm font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
+                    >
+                      Enroll Now
+                      <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                    </button>
                   </div>
                 </div>
               </div>
@@ -199,8 +154,14 @@ const Schedule = () => {
       <SiteFooter />
 
       <RegisterDialog
-        open={registerOpen}
-        onOpenChange={setRegisterOpen}
+        open={teenRegisterOpen}
+        onOpenChange={setTeenRegisterOpen}
+        courseTitle={registerTitle}
+        defaultBatch={registerBatch}
+      />
+      <EngineeringRegisterDialog
+        open={engRegisterOpen}
+        onOpenChange={setEngRegisterOpen}
         courseTitle={registerTitle}
         defaultBatch={registerBatch}
       />

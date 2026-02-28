@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -33,6 +34,7 @@ const formSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
   role: z.string().min(1, "Please select your current role"),
   python: z.string().min(1, "Please select your Python experience"),
+  batch: z.string().optional(),
   notes: z.string().optional(),
 });
 
@@ -42,12 +44,14 @@ interface EngineeringRegisterDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   courseTitle: string;
+  defaultBatch?: string;
 }
 
 const EngineeringRegisterDialog = ({
   open,
   onOpenChange,
   courseTitle,
+  defaultBatch = "",
 }: EngineeringRegisterDialogProps) => {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -56,9 +60,16 @@ const EngineeringRegisterDialog = ({
       email: "",
       role: "",
       python: "",
+      batch: defaultBatch,
       notes: "",
     },
   });
+
+  useEffect(() => {
+    if (defaultBatch) {
+      form.setValue("batch", defaultBatch);
+    }
+  }, [defaultBatch, form]);
 
   const onSubmit = async (data: FormValues) => {
     try {
@@ -71,6 +82,7 @@ const EngineeringRegisterDialog = ({
           email: data.email,
           role: data.role,
           python: data.python,
+          batch: data.batch || "",
           notes: data.notes || "",
         }),
       });
@@ -85,6 +97,7 @@ const EngineeringRegisterDialog = ({
       `Email: ${data.email}`,
       `Current Role: ${data.role}`,
       `Python Experience: ${data.python}`,
+      data.batch ? `Preferred Batch: ${data.batch}` : "",
       data.notes ? `Notes: ${data.notes}` : "",
     ]
       .filter(Boolean)
@@ -200,6 +213,26 @@ const EngineeringRegisterDialog = ({
                       <SelectItem value="Comfortable">Comfortable</SelectItem>
                     </SelectContent>
                   </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="batch"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>
+                    Preferred batch{" "}
+                    <span className="text-muted-foreground">(optional)</span>
+                  </FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="e.g. Next Batch - April 20"
+                      {...field}
+                    />
+                  </FormControl>
                   <FormMessage />
                 </FormItem>
               )}

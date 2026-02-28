@@ -5,6 +5,7 @@ import StickyCTA from "@/components/StickyCTA";
 import EngineeringRegisterDialog from "@/components/EngineeringRegisterDialog";
 import SEO from "@/components/SEO";
 import { getCourseBySlug } from "@/data/courses";
+import { getBatchesForCourse } from "@/data/batches";
 import {
   Accordion,
   AccordionContent,
@@ -21,6 +22,9 @@ import {
   Wrench,
   Zap,
   CheckCircle2,
+  Calendar,
+  Timer,
+  ArrowRight,
 } from "lucide-react";
 
 const course = getCourseBySlug("ai-engineering-agentic-foundations")!;
@@ -49,6 +53,8 @@ const benefits = [
   },
 ];
 
+const engBatches = getBatchesForCourse("ai-engineering-agentic-foundations");
+
 const extraFaqs = [
   {
     q: "Who is this course for?",
@@ -62,9 +68,15 @@ const extraFaqs = [
 
 const AIEngineeringLanding = () => {
   const [registerOpen, setRegisterOpen] = useState(false);
+  const [registerBatch, setRegisterBatch] = useState("");
   const heroRef = useRef<HTMLElement>(null);
 
   const openRegister = () => setRegisterOpen(true);
+
+  const openRegisterWithBatch = (batchLabel: string, startDate: string) => {
+    setRegisterBatch(`${batchLabel} - ${startDate}`);
+    setRegisterOpen(true);
+  };
 
   const faqs = [...course.faqs, ...extraFaqs];
 
@@ -264,8 +276,63 @@ const AIEngineeringLanding = () => {
         </div>
       </section>
 
+      {/* Upcoming Batches */}
+      {engBatches.length > 0 && (
+        <section className="py-16 md:py-20">
+          <div className="section-container">
+            <h2 className="mb-10 text-center font-display text-2xl font-bold tracking-tight sm:text-3xl">
+              Upcoming Batches
+            </h2>
+            <div className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-2">
+              {engBatches.map((batch) => (
+                <div
+                  key={`${batch.courseSlug}-${batch.batchLabel}`}
+                  className="flex flex-col rounded-2xl border border-border bg-card p-6 transition-all hover:border-primary/30 hover:shadow-lg"
+                >
+                  <span className="mb-3 inline-flex w-fit items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 font-display text-xs font-semibold tracking-wider text-primary">
+                    {batch.batchLabel}
+                  </span>
+                  <div className="mb-6 flex flex-col gap-3 text-sm text-muted-foreground">
+                    <div className="flex items-center gap-2">
+                      <Calendar size={16} className="text-primary" />
+                      <span>Starts {batch.startDate}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Calendar size={16} className="text-primary" />
+                      <span>{batch.days}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Clock size={16} className="text-primary" />
+                      <span>{batch.time}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Timer size={16} className="text-primary" />
+                      <span>{batch.duration}</span>
+                    </div>
+                  </div>
+                  <div className="mt-auto">
+                    <button
+                      onClick={() =>
+                        openRegisterWithBatch(batch.batchLabel, batch.startDate)
+                      }
+                      className="btn-shimmer group inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-display text-sm font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
+                    >
+                      Enroll Now
+                      <ArrowRight
+                        size={16}
+                        className="transition-transform group-hover:translate-x-1"
+                      />
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* CTA Banner */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-muted/30">
         <div className="section-container text-center">
           <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">
             Start Building Production AI Systems
@@ -323,6 +390,7 @@ const AIEngineeringLanding = () => {
         open={registerOpen}
         onOpenChange={setRegisterOpen}
         courseTitle={COURSE_TITLE}
+        defaultBatch={registerBatch}
       />
     </div>
   );
