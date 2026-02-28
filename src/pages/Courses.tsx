@@ -49,7 +49,7 @@ const Courses = () => {
       </div>
 
       <LearningJourney />
-      <AdvisorySection />
+      {/* <AdvisorySection /> */}
 
       <SiteFooter />
     </div>

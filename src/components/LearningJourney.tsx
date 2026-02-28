@@ -189,9 +189,9 @@ const StageCard = ({ course, index, onPreRegister, onRegister }: StageCardProps)
         {isLive && course.weeks.length > 0 ? (
           <Link
             to={`/courses/${course.slug}`}
-            className="group/btn flex items-center justify-between font-display text-base font-semibold tracking-wider text-primary transition-colors hover:text-primary/80"
+            className="btn-shimmer group/btn flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 font-display text-sm font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
           >
-            Learn More
+            Enroll Now
             <ArrowRight
               size={16}
               className="transition-transform group-hover/btn:translate-x-1"
@@ -200,7 +200,7 @@ const StageCard = ({ course, index, onPreRegister, onRegister }: StageCardProps)
         ) : isLive ? (
           <button
             onClick={() => onRegister(course.slug)}
-            className="group/btn flex w-full items-center justify-between font-display text-base font-semibold tracking-wider text-primary transition-colors hover:text-primary/80"
+            className="btn-shimmer group/btn flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 font-display text-sm font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
           >
             {course.ctaPrimary}
             <ArrowRight
@@ -211,7 +211,7 @@ const StageCard = ({ course, index, onPreRegister, onRegister }: StageCardProps)
         ) : (
           <button
             onClick={() => onPreRegister(course.slug)}
-            className="group/btn flex w-full items-center justify-between font-display text-base font-semibold tracking-wider text-primary transition-colors hover:text-primary/80"
+            className="group/btn flex w-full items-center justify-center gap-2 rounded-lg border border-border px-4 py-2.5 font-display text-sm font-semibold tracking-wider text-muted-foreground transition-colors hover:border-primary/30 hover:text-primary"
           >
             Pre-Register
             <ArrowRight
@@ -286,9 +286,9 @@ const FullTrackStageCard = ({
         {isLive ? (
           <Link
             to={`/courses/${course.slug}`}
-            className="group/btn flex items-center justify-between font-display text-base font-semibold tracking-wider text-primary transition-colors hover:text-primary/80"
+            className="btn-shimmer group/btn flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 font-display text-sm font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
           >
-            Learn More
+            Enroll Now
             <ArrowRight
               size={16}
               className="transition-transform group-hover/btn:translate-x-1"
@@ -297,7 +297,7 @@ const FullTrackStageCard = ({
         ) : (
           <button
             onClick={() => onPreRegister(course.slug)}
-            className="group/btn flex w-full items-center justify-between font-display text-base font-semibold tracking-wider text-primary transition-colors hover:text-primary/80"
+            className="group/btn flex w-full items-center justify-center gap-2 rounded-lg border border-border px-4 py-2.5 font-display text-sm font-semibold tracking-wider text-muted-foreground transition-colors hover:border-primary/30 hover:text-primary"
           >
             Pre-Register
             <ArrowRight
