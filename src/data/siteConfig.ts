@@ -7,7 +7,7 @@ export const siteConfig = {
     "Build AI products. Not just AI skills. A 5-stage learning journey from first curiosity to production-grade AI systems.",
 
   email: "courses@gradtensor.com",
-  formspreeFormId: "TODO_FORMSPREE_FORM_ID",
+
   googleSheetUrl:
     "https://script.google.com/macros/s/AKfycbwEBRDxehgeoOExaGU0aoglDrmQ3QVtGHFHF9myOj_CfSzYycA6VtLjQLRf-7_rHfc/exec",
 
