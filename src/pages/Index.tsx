@@ -1,8 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import LearningJourney from "@/components/LearningJourney";
 import WhyGradTensor from "@/components/WhyGradTensor";
-import AdvisorySection from "@/components/AdvisorySection";
 // import Testimonials from "@/components/Testimonials";
 import FAQSection from "@/components/FAQSection";
 import SiteFooter from "@/components/SiteFooter";
@@ -68,9 +66,7 @@ const Index = () => {
       />
       <Navbar />
       <Hero />
-      <LearningJourney />
       <WhyGradTensor />
-      <AdvisorySection />
       {/* <Testimonials /> */}
       <FAQSection />
       <SiteFooter />
