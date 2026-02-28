@@ -20,7 +20,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { whatsappCustomLink } from "@/data/siteConfig";
+import { siteConfig, whatsappCustomLink } from "@/data/siteConfig";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -66,7 +66,28 @@ const RegisterDialog = ({
     }
   }, [defaultBatch, form]);
 
-  const onSubmit = (data: FormValues) => {
+  const onSubmit = async (data: FormValues) => {
+    // Save to Google Sheet + email notification
+    try {
+      await fetch(siteConfig.googleSheetUrl, {
+        method: "POST",
+        body: JSON.stringify({
+          type: "registration",
+          course: courseTitle,
+          name: data.name,
+          email: data.email,
+          age: data.age,
+          grade: data.grade,
+          school: data.school,
+          batch: data.batch || "",
+          notes: data.notes || "",
+        }),
+      });
+    } catch {
+      // Sheet save failed silently — still proceed to WhatsApp
+    }
+
+    // Open WhatsApp with pre-filled message
     const message = [
       `Hi, I'd like to register for ${courseTitle}`,
       ``,
