@@ -331,26 +331,6 @@ const AIEngineeringLanding = () => {
         </section>
       )}
 
-      {/* CTA Banner */}
-      <section className="py-16 md:py-20 bg-muted/30">
-        <div className="section-container text-center">
-          <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">
-            Start Building Production AI Systems
-          </h2>
-          <p className="mx-auto mt-3 max-w-xl text-lg text-muted-foreground">
-            6 weeks from now, you'll have deployed AI agents on your portfolio.
-            Limited seats per batch.
-          </p>
-          <Button
-            onClick={openRegister}
-            size="lg"
-            className="btn-shimmer mt-8 rounded-lg bg-primary px-10 py-4 font-display text-lg font-semibold tracking-wider text-primary-foreground"
-          >
-            Enroll Now
-          </Button>
-        </div>
-      </section>
-
       {/* FAQ */}
       <section className="py-16 md:py-20 bg-muted/30">
         <div className="section-container">
