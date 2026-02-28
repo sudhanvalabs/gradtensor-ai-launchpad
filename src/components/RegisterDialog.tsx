@@ -97,7 +97,7 @@ const RegisterDialog = ({
       `Grade/Class: ${data.grade}`,
       `School: ${data.school}`,
       data.batch ? `Preferred Batch: ${data.batch}` : "",
-      data.notes ? `Why I'm interested: ${data.notes}` : "",
+      data.notes ? `Would love to build: ${data.notes}` : "",
     ]
       .filter(Boolean)
       .join("\n");
@@ -231,12 +231,12 @@ const RegisterDialog = ({
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>
-                    Why are you interested?{" "}
+                    What would you love to build with AI?{" "}
                     <span className="text-muted-foreground">(optional)</span>
                   </FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="Tell us what excites you about AI"
+                      placeholder="e.g. A chatbot, a game, an app for my school..."
                       rows={3}
                       {...field}
                     />
