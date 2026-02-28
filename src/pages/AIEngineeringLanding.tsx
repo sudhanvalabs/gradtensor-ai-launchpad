@@ -165,7 +165,7 @@ const AIEngineeringLanding = () => {
           </div>
 
           {/* Cover image */}
-          <div className="hidden md:block">
+          <div>
             <img
               src={coverImage}
               alt="AI Engineering & Agentic Foundations"

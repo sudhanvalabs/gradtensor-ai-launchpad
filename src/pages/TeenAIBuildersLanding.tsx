@@ -193,7 +193,7 @@ const TeenAIBuildersLanding = () => {
           </div>
 
           {/* Cover image */}
-          <div className="hidden md:block">
+          <div>
             <img
               src={coverImage}
               alt="Teen AI Builders"
