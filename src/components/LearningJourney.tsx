@@ -202,7 +202,7 @@ const StageCard = ({ course, index, onPreRegister, onRegister }: StageCardProps)
             onClick={() => onRegister(course.slug)}
             className="btn-shimmer group/btn flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 font-display text-sm font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
           >
-            {course.ctaPrimary}
+            Enroll Now
             <ArrowRight
               size={16}
               className="transition-transform group-hover/btn:translate-x-1"
