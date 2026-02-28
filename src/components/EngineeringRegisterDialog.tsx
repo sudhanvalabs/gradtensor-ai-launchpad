@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -17,6 +16,9 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
 import {
   Select,
   SelectContent,
@@ -24,91 +26,78 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import { CheckCircle2 } from "lucide-react";
-import { siteConfig } from "@/data/siteConfig";
-import { courses, getCourseBySlug } from "@/data/courses";
-
-const preRegisterCourses = courses.filter((c) => c.status === "pre-register");
+import { siteConfig, whatsappCustomLink } from "@/data/siteConfig";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
-  course: z.string().min(1, "Please select a course"),
-  background: z.string().min(1, "Please select your background"),
+  role: z.string().min(1, "Please select your current role"),
+  python: z.string().min(1, "Please select your Python experience"),
   notes: z.string().optional(),
 });
 
 type FormValues = z.infer<typeof formSchema>;
 
-interface PreRegisterDialogProps {
+interface EngineeringRegisterDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  defaultCourse?: string;
+  courseTitle: string;
 }
 
-const PreRegisterDialog = ({
+const EngineeringRegisterDialog = ({
   open,
   onOpenChange,
-  defaultCourse,
-}: PreRegisterDialogProps) => {
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-
+  courseTitle,
+}: EngineeringRegisterDialogProps) => {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       email: "",
-      course: defaultCourse || "",
-      background: "",
+      role: "",
+      python: "",
       notes: "",
     },
   });
 
-  useEffect(() => {
-    if (defaultCourse) {
-      form.setValue("course", defaultCourse);
-    }
-  }, [defaultCourse, form]);
-
   const onSubmit = async (data: FormValues) => {
-    const courseTitle = getCourseBySlug(data.course)?.title || data.course;
-
-    setSubmitting(true);
     try {
-      // Save to Google Sheet
       await fetch(siteConfig.googleSheetUrl, {
         method: "POST",
         body: JSON.stringify({
+          type: "registration",
+          course: courseTitle,
           name: data.name,
           email: data.email,
-          course: courseTitle,
-          background: data.background,
+          role: data.role,
+          python: data.python,
           notes: data.notes || "",
         }),
       });
-      setSubmitted(true);
     } catch {
-      // Sheet save failed silently — still show confirmation
-      setSubmitted(true);
-    } finally {
-      setSubmitting(false);
+      // Sheet save failed silently — still proceed to WhatsApp
     }
+
+    const message = [
+      `Hi, I'd like to register for ${courseTitle}`,
+      ``,
+      `Name: ${data.name}`,
+      `Email: ${data.email}`,
+      `Current Role: ${data.role}`,
+      `Python Experience: ${data.python}`,
+      data.notes ? `Notes: ${data.notes}` : "",
+    ]
+      .filter(Boolean)
+      .join("\n");
+
+    const url = whatsappCustomLink(message);
+    window.open(url, "_blank", "noopener,noreferrer");
+    onOpenChange(false);
   };
 
   const handleOpenChange = (open: boolean) => {
     if (!open) {
-      setSubmitted(false);
-      form.reset({
-        name: "",
-        email: "",
-        course: defaultCourse || "",
-        background: "",
-        notes: "",
-      });
+      form.reset();
     }
     onOpenChange(open);
   };
@@ -116,43 +105,18 @@ const PreRegisterDialog = ({
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogContent className="sm:max-w-md">
-        {submitted ? (
-          <div className="py-8 text-center">
-            <CheckCircle2 className="mx-auto mb-4 h-12 w-12 text-primary" />
-            <DialogHeader>
-              <DialogTitle className="text-center font-display text-2xl">
-                You're on the list!
-              </DialogTitle>
-              <DialogDescription className="text-center text-base">
-                Thanks for pre-registering. We'll let you know as soon as
-                this course is scheduled.
-              </DialogDescription>
-            </DialogHeader>
-            <Button
-              onClick={() => onOpenChange(false)}
-              variant="outline"
-              className="mt-6 font-display font-semibold tracking-wider"
-            >
-              Close
-            </Button>
-          </div>
-        ) : (
-        <>
         <DialogHeader>
           <DialogTitle className="font-display text-xl">
-            Pre-Register for Early Access
+            Register for {courseTitle}
           </DialogTitle>
           <DialogDescription className="text-sm">
-            Be the first to know when this course launches. No payment
-            required. You'll be connected to us on WhatsApp to confirm.
+            Fill in your details and you'll be connected to us on WhatsApp to
+            complete your registration.
           </DialogDescription>
         </DialogHeader>
 
         <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(onSubmit)}
-            className="space-y-4"
-          >
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField
               control={form.control}
               name="name"
@@ -187,25 +151,27 @@ const PreRegisterDialog = ({
 
             <FormField
               control={form.control}
-              name="course"
+              name="role"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Course</FormLabel>
+                  <FormLabel>Current Role</FormLabel>
                   <Select
                     onValueChange={field.onChange}
-                    value={field.value}
+                    defaultValue={field.value}
                   >
                     <FormControl>
                       <SelectTrigger>
-                        <SelectValue placeholder="Select a course" />
+                        <SelectValue placeholder="Select your current role" />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
-                      {preRegisterCourses.map((c) => (
-                        <SelectItem key={c.slug} value={c.slug}>
-                          {c.title}
-                        </SelectItem>
-                      ))}
+                      <SelectItem value="Student">Student</SelectItem>
+                      <SelectItem value="Working Professional">
+                        Working Professional
+                      </SelectItem>
+                      <SelectItem value="Career Switcher">
+                        Career Switcher
+                      </SelectItem>
                     </SelectContent>
                   </Select>
                   <FormMessage />
@@ -215,34 +181,23 @@ const PreRegisterDialog = ({
 
             <FormField
               control={form.control}
-              name="background"
+              name="python"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Background</FormLabel>
+                  <FormLabel>Experience with Python</FormLabel>
                   <Select
                     onValueChange={field.onChange}
-                    value={field.value}
+                    defaultValue={field.value}
                   >
                     <FormControl>
                       <SelectTrigger>
-                        <SelectValue placeholder="Select your background" />
+                        <SelectValue placeholder="Select your experience level" />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
-                      <SelectItem value="student">Student</SelectItem>
-                      <SelectItem value="fresh-graduate">
-                        Fresh Graduate
-                      </SelectItem>
-                      <SelectItem value="working-professional">
-                        Working Professional
-                      </SelectItem>
-                      <SelectItem value="career-switcher">
-                        Career Switcher
-                      </SelectItem>
-                      <SelectItem value="teen">
-                        Teen / Pre-college
-                      </SelectItem>
-                      <SelectItem value="other">Other</SelectItem>
+                      <SelectItem value="None">None</SelectItem>
+                      <SelectItem value="Basic">Basic</SelectItem>
+                      <SelectItem value="Comfortable">Comfortable</SelectItem>
                     </SelectContent>
                   </Select>
                   <FormMessage />
@@ -256,12 +211,12 @@ const PreRegisterDialog = ({
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>
-                    Notes{" "}
+                    Anything else you'd like us to know?{" "}
                     <span className="text-muted-foreground">(optional)</span>
                   </FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="Anything you'd like us to know"
+                      placeholder="e.g. Your goals, questions, preferred batch timing..."
                       rows={3}
                       {...field}
                     />
@@ -274,17 +229,14 @@ const PreRegisterDialog = ({
             <Button
               type="submit"
               className="w-full font-display font-semibold tracking-wider"
-              disabled={submitting}
             >
-              {submitting ? "Submitting..." : "Pre-Register"}
+              Continue to WhatsApp
             </Button>
           </form>
         </Form>
-        </>
-        )}
       </DialogContent>
     </Dialog>
   );
 };
 
-export default PreRegisterDialog;
+export default EngineeringRegisterDialog;

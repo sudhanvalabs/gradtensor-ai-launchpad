@@ -11,6 +11,8 @@ import CourseDetail from "./pages/CourseDetail";
 import Trainers from "./pages/Trainers";
 import Schedule from "./pages/Schedule";
 import NotFound from "./pages/NotFound";
+import TeenAIBuildersLanding from "./pages/TeenAIBuildersLanding";
+import AIEngineeringLanding from "./pages/AIEngineeringLanding";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +38,8 @@ const App = () => (
             <Route path="/courses/:slug" element={<CourseDetail />} />
             <Route path="/trainers" element={<Trainers />} />
             <Route path="/schedule" element={<Schedule />} />
+            <Route path="/teen-ai-builders" element={<TeenAIBuildersLanding />} />
+            <Route path="/ai-engineering" element={<AIEngineeringLanding />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

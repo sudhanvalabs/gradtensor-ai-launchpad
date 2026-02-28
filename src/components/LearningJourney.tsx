@@ -15,6 +15,11 @@ import { getCourseBySlug } from "@/data/courses";
 
 const audiences = Object.keys(audienceLabels) as Audience[];
 
+const landingPages: Record<string, string> = {
+  "teen-ai-builders": "/teen-ai-builders",
+  "ai-engineering-agentic-foundations": "/ai-engineering",
+};
+
 const LearningJourney = () => {
   const journeyCourses = getJourneyCourses();
   const stagelessCourses = getStagelessCourses();
@@ -186,28 +191,17 @@ const StageCard = ({ course, index, onPreRegister, onRegister }: StageCardProps)
 
       {/* CTA */}
       <div className="mt-auto pt-4 border-t border-border/50">
-        {isLive && course.weeks.length > 0 ? (
+        {isLive ? (
           <Link
-            to={`/courses/${course.slug}`}
+            to={landingPages[course.slug] || `/courses/${course.slug}`}
             className="btn-shimmer group/btn flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 font-display text-sm font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
           >
-            Enroll Now
+            View & Enroll
             <ArrowRight
               size={16}
               className="transition-transform group-hover/btn:translate-x-1"
             />
           </Link>
-        ) : isLive ? (
-          <button
-            onClick={() => onRegister(course.slug)}
-            className="btn-shimmer group/btn flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 font-display text-sm font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
-          >
-            Enroll Now
-            <ArrowRight
-              size={16}
-              className="transition-transform group-hover/btn:translate-x-1"
-            />
-          </button>
         ) : (
           <button
             onClick={() => onPreRegister(course.slug)}
@@ -285,10 +279,10 @@ const FullTrackStageCard = ({
       <div className="mt-auto pt-4 border-t border-border/50">
         {isLive ? (
           <Link
-            to={`/courses/${course.slug}`}
+            to={landingPages[course.slug] || `/courses/${course.slug}`}
             className="btn-shimmer group/btn flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 font-display text-sm font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
           >
-            Enroll Now
+            View & Enroll
             <ArrowRight
               size={16}
               className="transition-transform group-hover/btn:translate-x-1"
