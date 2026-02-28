@@ -8,23 +8,29 @@ import {
   audienceLabels,
 } from "@/data/courses";
 import type { Course, Audience } from "@/data/courses";
-import { whatsappCustomLink } from "@/data/siteConfig";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import PreRegisterDialog from "@/components/PreRegisterDialog";
+import RegisterDialog from "@/components/RegisterDialog";
+import { getCourseBySlug } from "@/data/courses";
 
 const audiences = Object.keys(audienceLabels) as Audience[];
 
 const LearningJourney = () => {
   const journeyCourses = getJourneyCourses();
   const stagelessCourses = getStagelessCourses();
-  const [dialogOpen, setDialogOpen] = useState(false);
+  const [preRegDialogOpen, setPreRegDialogOpen] = useState(false);
+  const [registerDialogOpen, setRegisterDialogOpen] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState<string>("");
   const [activeAudience, setActiveAudience] = useState<string>("all");
 
   const openPreRegister = (slug: string) => {
     setSelectedCourse(slug);
-    setDialogOpen(true);
+    setPreRegDialogOpen(true);
+  };
+
+  const openRegister = (slug: string) => {
+    setSelectedCourse(slug);
+    setRegisterDialogOpen(true);
   };
 
   const allCourses = [...journeyCourses, ...stagelessCourses];
@@ -91,6 +97,7 @@ const LearningJourney = () => {
                 course={course}
                 index={i}
                 onPreRegister={openPreRegister}
+                onRegister={openRegister}
               />
             )
           )}
@@ -105,9 +112,15 @@ const LearningJourney = () => {
       </div>
 
       <PreRegisterDialog
-        open={dialogOpen}
-        onOpenChange={setDialogOpen}
+        open={preRegDialogOpen}
+        onOpenChange={setPreRegDialogOpen}
         defaultCourse={selectedCourse}
+      />
+
+      <RegisterDialog
+        open={registerDialogOpen}
+        onOpenChange={setRegisterDialogOpen}
+        courseTitle={getCourseBySlug(selectedCourse)?.title || ""}
       />
     </section>
   );
@@ -117,9 +130,10 @@ interface StageCardProps {
   course: Course;
   index: number;
   onPreRegister: (slug: string) => void;
+  onRegister: (slug: string) => void;
 }
 
-const StageCard = ({ course, index, onPreRegister }: StageCardProps) => {
+const StageCard = ({ course, index, onPreRegister, onRegister }: StageCardProps) => {
   const stage = course.stage;
   const info = stage ? stageLabels[stage] : null;
   const isLive = course.status === "live";
@@ -184,8 +198,8 @@ const StageCard = ({ course, index, onPreRegister }: StageCardProps) => {
             />
           </Link>
         ) : isLive ? (
-          <WhatsAppButton
-            href={whatsappCustomLink(`Hi, I'm interested in ${course.title}`)}
+          <button
+            onClick={() => onRegister(course.slug)}
             className="group/btn flex w-full items-center justify-between font-display text-base font-semibold tracking-wider text-primary transition-colors hover:text-primary/80"
           >
             {course.ctaPrimary}
@@ -193,7 +207,7 @@ const StageCard = ({ course, index, onPreRegister }: StageCardProps) => {
               size={16}
               className="transition-transform group-hover/btn:translate-x-1"
             />
-          </WhatsAppButton>
+          </button>
         ) : (
           <button
             onClick={() => onPreRegister(course.slug)}
