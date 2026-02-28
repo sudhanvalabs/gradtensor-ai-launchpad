@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -27,6 +28,7 @@ const formSchema = z.object({
   age: z.string().min(1, "Please enter your age"),
   grade: z.string().min(1, "Please enter your grade/class"),
   school: z.string().min(2, "Please enter your school name"),
+  batch: z.string().optional(),
   notes: z.string().optional(),
 });
 
@@ -36,12 +38,14 @@ interface RegisterDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   courseTitle: string;
+  defaultBatch?: string;
 }
 
 const RegisterDialog = ({
   open,
   onOpenChange,
   courseTitle,
+  defaultBatch = "",
 }: RegisterDialogProps) => {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -51,9 +55,16 @@ const RegisterDialog = ({
       age: "",
       grade: "",
       school: "",
+      batch: defaultBatch,
       notes: "",
     },
   });
+
+  useEffect(() => {
+    if (defaultBatch) {
+      form.setValue("batch", defaultBatch);
+    }
+  }, [defaultBatch, form]);
 
   const onSubmit = (data: FormValues) => {
     const message = [
@@ -64,6 +75,7 @@ const RegisterDialog = ({
       `Age: ${data.age}`,
       `Grade/Class: ${data.grade}`,
       `School: ${data.school}`,
+      data.batch ? `Preferred Batch: ${data.batch}` : "",
       data.notes ? `Why I'm interested: ${data.notes}` : "",
     ]
       .filter(Boolean)
@@ -166,6 +178,26 @@ const RegisterDialog = ({
                   <FormLabel>School</FormLabel>
                   <FormControl>
                     <Input placeholder="Your school name" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="batch"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>
+                    Preferred batch{" "}
+                    <span className="text-muted-foreground">(optional)</span>
+                  </FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="e.g. Batch 1 - April 1"
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
@@ -6,6 +7,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { ArrowLeft, Calendar, Clock, Timer, ArrowRight } from "lucide-react";
 import { whatsappLink } from "@/data/siteConfig";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import RegisterDialog from "@/components/RegisterDialog";
 
 interface Batch {
   courseTitle: string;
@@ -75,6 +77,15 @@ const scheduleEventsLd = {
 
 const Schedule = () => {
   useScrollAnimation();
+  const [registerOpen, setRegisterOpen] = useState(false);
+  const [registerBatch, setRegisterBatch] = useState("");
+  const [registerTitle, setRegisterTitle] = useState("");
+
+  const openRegister = (batch: Batch) => {
+    setRegisterTitle(batch.courseTitle);
+    setRegisterBatch(`${batch.batchLabel} - ${batch.startDate}`);
+    setRegisterOpen(true);
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -160,13 +171,23 @@ const Schedule = () => {
 
                   {/* Enroll button */}
                   <div className="mt-auto">
-                    <WhatsAppButton
-                      href={whatsappLink("enroll")}
-                      className="btn-shimmer group inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-display text-sm font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
-                    >
-                      Enroll Now
-                      <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-                    </WhatsAppButton>
+                    {batch.courseSlug === "teen-ai-builders" ? (
+                      <button
+                        onClick={() => openRegister(batch)}
+                        className="btn-shimmer group inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-display text-sm font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
+                      >
+                        Enroll Now
+                        <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                      </button>
+                    ) : (
+                      <WhatsAppButton
+                        href={whatsappLink("enroll")}
+                        className="btn-shimmer group inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-display text-sm font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
+                      >
+                        Enroll Now
+                        <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                      </WhatsAppButton>
+                    )}
                   </div>
                 </div>
               </div>
@@ -176,6 +197,13 @@ const Schedule = () => {
       </section>
 
       <SiteFooter />
+
+      <RegisterDialog
+        open={registerOpen}
+        onOpenChange={setRegisterOpen}
+        courseTitle={registerTitle}
+        defaultBatch={registerBatch}
+      />
     </div>
   );
 };
