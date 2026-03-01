@@ -19,7 +19,6 @@ import {
   Sparkles,
   Code2,
   Lightbulb,
-  Users,
   Trophy,
   Calendar,
   Timer,
@@ -54,18 +53,13 @@ const benefits = [
 const projects = [
   {
     icon: Lightbulb,
-    title: "AI Chatbot",
-    description: "Build a smart chatbot that answers questions on any topic you choose",
+    title: "Your Own AI Assistant",
+    description: "Build a conversational AI with its own personality, its own purpose, and its own shareable web link - something friends and family can actually use from their phone.",
   },
   {
     icon: Code2,
-    title: "AI-Powered App",
-    description: "Create an app that uses AI to solve a real problem you care about",
-  },
-  {
-    icon: Users,
-    title: "Team Project",
-    description: "Collaborate with peers to build and present a creative AI solution",
+    title: "A Real Web App",
+    description: "Your AI assistant gets a proper chat interface - not a code file, but a working app that looks and feels like a messaging app. You generate a link and share it with the world.",
   },
 ];
 
@@ -307,7 +301,7 @@ const TeenAIBuildersLanding = () => {
           <h2 className="mb-10 text-center font-display text-2xl font-bold tracking-tight sm:text-3xl">
             What You'll Build
           </h2>
-          <div className="grid gap-6 sm:grid-cols-3">
+          <div className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-2">
             {projects.map((p) => (
               <div
                 key={p.title}
