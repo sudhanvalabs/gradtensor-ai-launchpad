@@ -102,7 +102,9 @@ const TeenAIBuildersLanding = () => {
   const [registerBatch, setRegisterBatch] = useState("");
   const heroRef = useRef<HTMLElement>(null);
 
-  const openRegister = () => setRegisterOpen(true);
+  const scrollToBatches = () => {
+    document.getElementById("upcoming-batches")?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const openRegisterWithBatch = (batchLabel: string, startDate: string) => {
     setRegisterBatch(`${batchLabel} - ${startDate}`);
@@ -184,7 +186,7 @@ const TeenAIBuildersLanding = () => {
             </div>
 
             <Button
-              onClick={openRegister}
+              onClick={scrollToBatches}
               size="lg"
               className="btn-shimmer mt-8 rounded-lg bg-primary px-10 py-4 font-display text-lg font-semibold tracking-wider text-primary-foreground"
             >
@@ -289,7 +291,7 @@ const TeenAIBuildersLanding = () => {
 
       {/* Upcoming Batches */}
       {teenBatches.length > 0 && (
-        <section className="py-16 md:py-20 bg-muted/30">
+        <section id="upcoming-batches" className="py-16 md:py-20 bg-muted/30">
           <div className="section-container">
             <h2 className="mb-10 text-center font-display text-2xl font-bold tracking-tight sm:text-3xl">
               Upcoming Batches
@@ -372,7 +374,7 @@ const TeenAIBuildersLanding = () => {
       {/* Sticky CTA (mobile) */}
       <StickyCTA
         label="Enroll Now"
-        onClick={openRegister}
+        onClick={scrollToBatches}
         heroRef={heroRef}
       />
 
