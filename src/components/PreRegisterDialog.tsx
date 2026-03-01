@@ -92,7 +92,7 @@ const PreRegisterDialog = ({
       });
       setSubmitted(true);
     } catch {
-      // Sheet save failed silently — still show confirmation
+      // Sheet save failed silently - still show confirmation
       setSubmitted(true);
     } finally {
       setSubmitting(false);

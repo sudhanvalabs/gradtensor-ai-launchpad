@@ -87,7 +87,7 @@ const EngineeringRegisterDialog = ({
         }),
       });
     } catch {
-      // Sheet save failed silently — still proceed to WhatsApp
+      // Sheet save failed silently - still proceed to WhatsApp
     }
 
     const message = [

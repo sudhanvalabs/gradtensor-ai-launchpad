@@ -176,7 +176,7 @@ export const courses: Course[] = [
       "Week 6: Frameworks, Production, and Deployment",
     ],
     projects: [
-      "A deployed RAG system that reads your documents and answers questions accurately — without hallucinating. Deployed at a public URL by Week 4.",
+      "A deployed RAG system that reads your documents and answers questions accurately - without hallucinating. Deployed at a public URL by Week 4.",
       "A deployed AI agent that reasons across multiple steps, uses real tools to take actions, and operates reliably in production. Live by Week 6.",
     ],
     whoFor: [
@@ -189,11 +189,11 @@ export const courses: Course[] = [
     faqs: [
       {
         q: "Do I need machine learning or AI experience to start?",
-        a: "No prior AI or ML experience needed. The course starts from LLM fundamentals and builds up from there. You need Python basics and professional coding experience — the AI knowledge is what the course provides.",
+        a: "No prior AI or ML experience needed. The course starts from LLM fundamentals and builds up from there. You need Python basics and professional coding experience - the AI knowledge is what the course provides.",
       },
       {
         q: "How much time per week does this require?",
-        a: "Approximately 8 hours per week — 4 hours of live sessions and 4 hours of project work.",
+        a: "Approximately 8 hours per week - 4 hours of live sessions and 4 hours of project work.",
       },
     ],
   },
@@ -257,7 +257,7 @@ export const courses: Course[] = [
     audience: ["non-tech"],
     title: "Build With AI Tools",
     tagline:
-      "Build real apps and products using AI coding agents like Claude Code. No traditional coding experience needed — just the methodology to build effectively.",
+      "Build real apps and products using AI coding agents like Claude Code. No traditional coding experience needed - just the methodology to build effectively.",
     duration: "TBD",
     hours: "TBD",
     idealFor: "Non-tech professionals wanting to build with AI tools",

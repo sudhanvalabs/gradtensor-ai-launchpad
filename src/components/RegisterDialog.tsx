@@ -84,7 +84,7 @@ const RegisterDialog = ({
         }),
       });
     } catch {
-      // Sheet save failed silently — still proceed to WhatsApp
+      // Sheet save failed silently - still proceed to WhatsApp
     }
 
     // Open WhatsApp with pre-filled message

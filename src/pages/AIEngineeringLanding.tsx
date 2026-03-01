@@ -38,19 +38,19 @@ const benefits = [
     icon: BrainCircuit,
     title: "Build From First Principles",
     description:
-      "Every concept is taught from the ground up before any framework is introduced. When something breaks in production — and it will — you will know exactly why and how to fix it.",
+      "Every concept is taught from the ground up before any framework is introduced. When something breaks in production - and it will - you will know exactly why and how to fix it.",
   },
   {
     icon: Wrench,
     title: "Industry Tools and Stack",
     description:
-      "You learn the tools that appear in actual job descriptions — not toy examples. Vector databases, LangChain, LangGraph, FastAPI, Docker, and cloud deployment are all part of the curriculum.",
+      "You learn the tools that appear in actual job descriptions - not toy examples. Vector databases, LangChain, LangGraph, FastAPI, Docker, and cloud deployment are all part of the curriculum.",
   },
   {
     icon: Rocket,
     title: "Two Portfolio Pieces You Can Demo",
     description:
-      "Both projects are deployed at a real public URL by the end of the course. Not a GitHub repository nobody will open — a live system you can show in an interview and explain every design decision behind.",
+      "Both projects are deployed at a real public URL by the end of the course. Not a GitHub repository nobody will open - a live system you can show in an interview and explain every design decision behind.",
   },
   {
     icon: Users,
@@ -62,18 +62,18 @@ const benefits = [
     icon: Shield,
     title: "Production Skills, Not Just AI Skills",
     description:
-      "Most AI courses stop at \"it works on my laptop.\" This course goes further — containerisation, deployment, observability, and cost management. The skills that turn a working prototype into a production system.",
+      "Most AI courses stop at \"it works on my laptop.\" This course goes further - containerisation, deployment, observability, and cost management. The skills that turn a working prototype into a production system.",
   },
 ];
 
 const projects = [
   {
-    title: "Portfolio Piece 1 — RAG System",
+    title: "Portfolio Piece 1 - RAG System",
     description:
-      "A deployed AI system that reads your documents and answers questions from them accurately — without hallucinating. Built on the same Retrieval-Augmented Generation architecture used by enterprise AI teams. Deployed at a public URL by Week 4.",
+      "A deployed AI system that reads your documents and answers questions from them accurately - without hallucinating. Built on the same Retrieval-Augmented Generation architecture used by enterprise AI teams. Deployed at a public URL by Week 4.",
   },
   {
-    title: "Portfolio Piece 2 — Production AI Agent",
+    title: "Portfolio Piece 2 - Production AI Agent",
     description:
       "A deployed AI agent that reasons across multiple steps, uses real tools to take actions, and operates reliably in production. Wrapped as a REST API, containerised with Docker, deployed to the cloud. Live by the end of Week 6.",
   },
@@ -108,7 +108,7 @@ const curriculum = [
     week: 5,
     title: "Agents From First Principles",
     description:
-      "Build a working AI agent from scratch — no frameworks. Understand the reasoning loop, tool calling, and memory architecture before any abstraction hides it from you.",
+      "Build a working AI agent from scratch - no frameworks. Understand the reasoning loop, tool calling, and memory architecture before any abstraction hides it from you.",
   },
   {
     week: 6,
@@ -126,14 +126,14 @@ const whoForYes = [
 ];
 
 const whoForNo = [
-  "You have no coding experience — start with AI-Ready Engineer instead",
+  "You have no coding experience - start with AI-Ready Engineer instead",
   "You are looking for a no-code AI course",
   "You want certification without building something real",
 ];
 
 const prerequisites = [
-  "Python basics — you can read and write simple Python code",
-  "At least 1–2 years of professional experience writing code in any language or domain",
+  "Python basics - you can read and write simple Python code",
+  "At least 1-2 years of professional experience writing code in any language or domain",
   "A laptop with a stable internet connection",
   "Curiosity about how AI systems actually work",
 ];
@@ -141,35 +141,35 @@ const prerequisites = [
 const faqs = [
   {
     q: "Do I need machine learning or AI experience to start?",
-    a: "No prior AI or ML experience needed. The course starts from LLM fundamentals and builds up from there. You need Python basics and professional coding experience — the AI knowledge is what the course provides.",
+    a: "No prior AI or ML experience needed. The course starts from LLM fundamentals and builds up from there. You need Python basics and professional coding experience - the AI knowledge is what the course provides.",
   },
   {
     q: "What Python level do I need?",
-    a: "You should be comfortable reading and writing simple Python — variables, functions, loops, and basic data structures. You do not need to be a Python expert. If you can follow a Python script and understand roughly what it does, you are ready.",
+    a: "You should be comfortable reading and writing simple Python - variables, functions, loops, and basic data structures. You do not need to be a Python expert. If you can follow a Python script and understand roughly what it does, you are ready.",
   },
   {
     q: "How much time per week does this require?",
-    a: "Approximately 8 hours per week — 4 hours of live sessions and 4 hours of project work. The project hours are structured with clear deliverables so you are not staring at a blank screen wondering what to do.",
+    a: "Approximately 8 hours per week - 4 hours of live sessions and 4 hours of project work. The project hours are structured with clear deliverables so you are not staring at a blank screen wondering what to do.",
   },
   {
     q: "Are sessions recorded?",
-    a: "Sessions are live only. Live interaction — questions, debugging in real time, seeing how an experienced engineer thinks through problems — is a core part of the learning. If a session is missed, please inform us in advance and we will share a summary and help you catch up.",
+    a: "Sessions are live only. Live interaction - questions, debugging in real time, seeing how an experienced engineer thinks through problems - is a core part of the learning. If a session is missed, please inform us in advance and we will share a summary and help you catch up.",
   },
   {
     q: "What tools and platforms will I use?",
-    a: "You will work with industry-standard tools throughout the course. We will send the complete tool list and setup instructions after enrollment. Most tools have free tiers sufficient for the coursework — we will guide you through managing costs so there are no surprises.",
+    a: "You will work with industry-standard tools throughout the course. We will send the complete tool list and setup instructions after enrollment. Most tools have free tiers sufficient for the coursework - we will guide you through managing costs so there are no surprises.",
   },
   {
     q: "What will I have at the end of the course?",
-    a: "Two deployed AI projects at real public URLs — a RAG system and a production AI agent. Both are yours to keep, extend, and demonstrate. You will also have a genuine understanding of how each system works at every level, which means you can explain and defend every design decision in an interview or to a client.",
+    a: "Two deployed AI projects at real public URLs - a RAG system and a production AI agent. Both are yours to keep, extend, and demonstrate. You will also have a genuine understanding of how each system works at every level, which means you can explain and defend every design decision in an interview or to a client.",
   },
   {
     q: "What comes after this course?",
-    a: "This course takes you to Level 3 of the GradTensor AI learning journey — a complete, production-ready single AI agent. The next level — multi-agent systems with orchestration — is a separate advanced course coming soon. If you are a senior professional looking to advise organisations on AI transformation, the AI Transformation Partner course may also be relevant.",
+    a: "This course takes you to Level 3 of the GradTensor AI learning journey - a complete, production-ready single AI agent. The next level - multi-agent systems with orchestration - is a separate advanced course coming soon. If you are a senior professional looking to advise organisations on AI transformation, the AI Transformation Partner course may also be relevant.",
   },
   {
     q: "How do I enroll?",
-    a: "Click the Enroll Now button above. For questions before enrolling, WhatsApp us at +91 91080 30542 — we are happy to help you decide if this course is the right fit for where you are right now.",
+    a: "Click the Enroll Now button above. For questions before enrolling, WhatsApp us at +91 91080 30542 - we are happy to help you decide if this course is the right fit for where you are right now.",
   },
 ];
 
@@ -245,7 +245,7 @@ const AIEngineeringLanding = () => {
             </h1>
 
             <p className="mt-4 text-lg text-muted-foreground sm:text-xl">
-              From LLM fundamentals to production-ready AI agents — in 6 weeks.
+              From LLM fundamentals to production-ready AI agents - in 6 weeks.
             </p>
             <p className="mt-3 text-base text-muted-foreground">
               Build two real AI systems that you can deploy, demo, and explain at any level of depth. Not tutorials. Not theory. Production-quality engineering.
@@ -379,7 +379,7 @@ const AIEngineeringLanding = () => {
           </h2>
           <div className="mx-auto max-w-2xl">
             <p className="mb-8 text-base leading-relaxed text-muted-foreground">
-              This course is designed for working software engineers and developers with at least 1–2 years of experience writing code professionally — in any domain. Web development, mobile, backend, enterprise, startup — the domain does not matter. What matters is that you are comfortable writing and reading code.
+              This course is designed for working software engineers and developers with at least 1-2 years of experience writing code professionally - in any domain. Web development, mobile, backend, enterprise, startup - the domain does not matter. What matters is that you are comfortable writing and reading code.
             </p>
 
             <h3 className="mb-4 font-display text-lg font-semibold">

@@ -81,7 +81,7 @@ const LearningJourney = () => {
           </h2>
           <p className="mx-auto max-w-2xl text-base text-muted-foreground sm:text-lg">
             Three tracks built for where you are right now. Every track leads to
-            the same place — building and shipping real AI products.
+            the same place - building and shipping real AI products.
           </p>
         </div>
 
