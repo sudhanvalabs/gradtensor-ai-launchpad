@@ -125,21 +125,17 @@ const faqs = [
   },
   {
     q: "How are the live classes conducted?",
-    a: "All sessions are live on Google Meet in small batches of maximum 20 students, so every student gets individual attention. Each session is 1 hour, twice a week for 4 weeks. If a session is missed, please inform us in advance and we will help you catch up.",
+    a: "All sessions are live on Google Meet in small batches of maximum 20 students, so every student gets individual attention. Each session is 1 hour, twice a week for 4 weeks.",
   },
   {
     q: "What will my teen have at the end of the course?",
-    a: "A working AI assistant with a real web interface - something friends and family can actually use. They will understand how modern AI systems work, know how to build with AI tools, and have a clear picture of where to go next if they want to keep learning.",
+    a: "A working AI assistant with a real web interface - something friends and family can actually use. They will understand basics of how modern AI systems work, know how to build with AI tools, and have a clear picture of where to go next if they want to keep learning.",
   },
   {
     q: "What if my teen gets stuck during a session?",
     a: "The batch size is capped at 20 students so every student gets individual attention. The instructor will address questions in real time during every session. Students also get access to a WhatsApp group for the batch where they can ask questions between sessions and get help from both the instructor and fellow students.",
   },
-  {
-    q: "What if my teen misses a session?",
-    a: "Sessions are live only - we do not provide recordings, as the live interaction is a core part of the learning experience. If a session must be missed, please inform us at least a few hours in advance. We will share a summary of what was covered and help your teen catch up before the next session. Missing more than two sessions is not recommended as each session builds on the previous one.",
-  },
-  {
+{
     q: "Is this course only for teens interested in a tech career?",
     a: "Not at all. Understanding how AI works and being able to build with it is a useful skill regardless of what your teen wants to do in life - medicine, law, business, arts, or anything else. AI is becoming part of every field. This course gives teens a practical, hands-on understanding of it at an age when that knowledge compounds the most.",
   },
