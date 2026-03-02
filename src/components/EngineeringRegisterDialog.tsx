@@ -71,25 +71,9 @@ const EngineeringRegisterDialog = ({
     }
   }, [defaultBatch, form]);
 
-  const onSubmit = async (data: FormValues) => {
-    try {
-      await fetch(siteConfig.googleSheetUrl, {
-        method: "POST",
-        body: JSON.stringify({
-          type: "registration",
-          course: courseTitle,
-          name: data.name,
-          email: data.email,
-          role: data.role,
-          python: data.python,
-          batch: data.batch || "",
-          notes: data.notes || "",
-        }),
-      });
-    } catch {
-      // Sheet save failed silently - still proceed to WhatsApp
-    }
-
+  const onSubmit = (data: FormValues) => {
+    // Build WhatsApp URL and open immediately (must be synchronous to
+    // avoid popup blockers on iOS Safari)
     const message = [
       `Hi, I'd like to register for ${courseTitle}`,
       ``,
@@ -106,6 +90,21 @@ const EngineeringRegisterDialog = ({
     const url = whatsappCustomLink(message);
     window.open(url, "_blank", "noopener,noreferrer");
     onOpenChange(false);
+
+    // Save to Google Sheet in the background (fire-and-forget)
+    fetch(siteConfig.googleSheetUrl, {
+      method: "POST",
+      body: JSON.stringify({
+        type: "registration",
+        course: courseTitle,
+        name: data.name,
+        email: data.email,
+        role: data.role,
+        python: data.python,
+        batch: data.batch || "",
+        notes: data.notes || "",
+      }),
+    }).catch(() => {});
   };
 
   const handleOpenChange = (open: boolean) => {

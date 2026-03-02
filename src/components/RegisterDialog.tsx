@@ -66,28 +66,9 @@ const RegisterDialog = ({
     }
   }, [defaultBatch, form]);
 
-  const onSubmit = async (data: FormValues) => {
-    // Save to Google Sheet + email notification
-    try {
-      await fetch(siteConfig.googleSheetUrl, {
-        method: "POST",
-        body: JSON.stringify({
-          type: "registration",
-          course: courseTitle,
-          name: data.name,
-          email: data.email,
-          age: data.age,
-          grade: data.grade,
-          school: data.school,
-          batch: data.batch || "",
-          notes: data.notes || "",
-        }),
-      });
-    } catch {
-      // Sheet save failed silently - still proceed to WhatsApp
-    }
-
-    // Open WhatsApp with pre-filled message
+  const onSubmit = (data: FormValues) => {
+    // Build WhatsApp URL and open immediately (must be synchronous to
+    // avoid popup blockers on iOS Safari)
     const message = [
       `Hi, I'd like to register for ${courseTitle}`,
       ``,
@@ -105,6 +86,22 @@ const RegisterDialog = ({
     const url = whatsappCustomLink(message);
     window.open(url, "_blank", "noopener,noreferrer");
     onOpenChange(false);
+
+    // Save to Google Sheet in the background (fire-and-forget)
+    fetch(siteConfig.googleSheetUrl, {
+      method: "POST",
+      body: JSON.stringify({
+        type: "registration",
+        course: courseTitle,
+        name: data.name,
+        email: data.email,
+        age: data.age,
+        grade: data.grade,
+        school: data.school,
+        batch: data.batch || "",
+        notes: data.notes || "",
+      }),
+    }).catch(() => {});
   };
 
   const handleOpenChange = (open: boolean) => {
