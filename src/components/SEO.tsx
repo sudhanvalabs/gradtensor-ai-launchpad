@@ -12,7 +12,7 @@ const SEO = ({ title, description, path = "/", jsonLd }: SEOProps) => {
   const fullTitle = `${title} | ${siteConfig.name}`;
   const desc = description || siteConfig.defaultDescription;
   const url = `${siteConfig.siteUrl}${path}`;
-  const image = `${siteConfig.siteUrl}/logo.png`;
+  const image = `${siteConfig.siteUrl}/og/home.png`;
 
   const jsonLdArray = jsonLd
     ? Array.isArray(jsonLd)
