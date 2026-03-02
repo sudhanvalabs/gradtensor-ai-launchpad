@@ -116,6 +116,23 @@ const Trainers = () => {
                           </a>
                           , open-source CLI for AI/ML engineers
                         </>
+                      ) : item.includes("published author") && trainer.books.length > 0 ? (
+                        <>
+                          Published author:{" "}
+                          {trainer.books.map((book, bi) => (
+                            <span key={bi}>
+                              {bi > 0 && " and "}
+                              <a
+                                href={book.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-primary underline decoration-primary/30 underline-offset-2 hover:text-primary/80"
+                              >
+                                {book.title}
+                              </a>
+                            </span>
+                          ))}
+                        </>
                       ) : (
                         item
                       )}
