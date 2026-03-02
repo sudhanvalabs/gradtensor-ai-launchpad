@@ -264,10 +264,23 @@ const AIEngineeringLanding = () => {
               </span>
             </div>
 
+            {/* Pricing */}
+            <div className="mt-8">
+              <p className="font-display text-2xl font-bold text-foreground">
+                Rs. 24,999{" "}
+                <span className="text-base font-medium text-muted-foreground">
+                  inclusive of GST
+                </span>
+              </p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Founding batch price - available for the April 20 batch only. Price increases from the next batch.
+              </p>
+            </div>
+
             <Button
               onClick={scrollToBatches}
               size="lg"
-              className="btn-shimmer mt-8 rounded-lg bg-primary px-10 py-4 font-display text-lg font-semibold tracking-wider text-primary-foreground"
+              className="btn-shimmer mt-6 rounded-lg bg-primary px-10 py-4 font-display text-lg font-semibold tracking-wider text-primary-foreground"
             >
               Enroll Now
             </Button>
