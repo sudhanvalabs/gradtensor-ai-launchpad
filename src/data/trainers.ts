@@ -4,7 +4,7 @@ export interface Trainer {
   title: string;
   bio: string[];
   highlights: string[];
-  books: { publisher: string; url: string }[];
+  books: { title: string; publisher: string; url: string }[];
   links: { label: string; url: string }[];
 }
 
@@ -28,8 +28,8 @@ export const trainers: Trainer[] = [
       "Maintains mlship, open-source CLI for AI/ML engineers",
     ],
     books: [
-      { publisher: "Manning", url: "https://www.amazon.in/Rust-Servers-Services-Prabhu-Eshwarla/dp/1617298603" },
-      { publisher: "Packt", url: "https://www.amazon.in/Practical-System-Programming-Rust-Developers/dp/1800560966/" },
+      { title: "Rust Servers, Services, and Apps", publisher: "Manning", url: "https://www.amazon.in/Rust-Servers-Services-Prabhu-Eshwarla/dp/1617298603" },
+      { title: "Practical System Programming for Rust Developers", publisher: "Packt", url: "https://www.amazon.in/Practical-System-Programming-Rust-Developers/dp/1800560966/" },
     ],
     links: [
       { label: "Substack", url: "https://trustandreason.substack.com" },

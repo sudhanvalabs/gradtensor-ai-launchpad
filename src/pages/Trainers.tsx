@@ -73,21 +73,20 @@ const Trainers = () => {
                   {trainer.title}
                   {trainer.books.length > 0 && (
                     <>
-                      {" ("}
+                      {" | Author of "}
                       {trainer.books.map((book, j) => (
                         <span key={j}>
-                          {j > 0 && ", "}
+                          {j > 0 && " and "}
                           <a
                             href={book.url}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="underline decoration-primary/30 underline-offset-2 transition-colors hover:text-primary/80"
                           >
-                            {book.publisher}
+                            {book.title}
                           </a>
                         </span>
                       ))}
-                      {")"}
                     </>
                   )}
                 </p>
