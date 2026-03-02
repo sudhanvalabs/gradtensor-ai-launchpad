@@ -1,4 +1,4 @@
-const SITE_URL = "https://gradtensor.com";
+const SITE_URL = "https://www.gradtensor.com";
 
 const CRAWLER_UA =
   /WhatsApp|facebookexternalhit|Facebot|Twitterbot|LinkedInBot|TelegramBot|Slackbot|Discordbot|Googlebot/i;
