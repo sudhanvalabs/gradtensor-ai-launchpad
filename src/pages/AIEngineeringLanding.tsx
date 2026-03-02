@@ -56,7 +56,7 @@ const benefits = [
     icon: Users,
     title: "Live Sessions, Small Cohort",
     description:
-      "24 hours of live instruction with real-time Q&A. Maximum 15 students per batch so every question gets answered.",
+      "24 hours of live instruction with real-time Q&A. Limited students per batch so every question gets answered.",
   },
   {
     icon: Shield,

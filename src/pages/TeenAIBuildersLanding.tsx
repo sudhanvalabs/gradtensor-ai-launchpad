@@ -125,7 +125,7 @@ const faqs = [
   },
   {
     q: "How are the live classes conducted?",
-    a: "All sessions are live on Google Meet in small batches of maximum 20 students, so every student gets individual attention. Each session is 1 hour, twice a week for 4 weeks.",
+    a: "All sessions are live on Google Meet in small batches with limited students, so every student gets individual attention. Each session is 1 hour, twice a week for 4 weeks.",
   },
   {
     q: "What will my teen have at the end of the course?",
@@ -133,7 +133,7 @@ const faqs = [
   },
   {
     q: "What if my teen gets stuck during a session?",
-    a: "The batch size is capped at 20 students so every student gets individual attention. The instructor will address questions in real time during every session. Students also get access to a WhatsApp group for the batch where they can ask questions between sessions and get help from both the instructor and fellow students.",
+    a: "Batch sizes are kept small so every student gets individual attention. The instructor will address questions in real time during every session. Students also get access to a WhatsApp group for the batch where they can ask questions between sessions and get help from both the instructor and fellow students.",
   },
 {
     q: "Is this course only for teens interested in a tech career?",
