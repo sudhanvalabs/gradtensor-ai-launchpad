@@ -20,13 +20,13 @@ const OG_DATA: Record<string, OGData> = {
     title: "Teen AI Builders - Live AI Course for Teens | GradTensor",
     description:
       "Build your first AI app in 8 live sessions. No coding experience needed. Live classes, real projects, and a certificate. For ages 13 and above.",
-    image: "/og/teen-ai-builders.png",
+    image: "/og/teen-ai-builders.jpg",
   },
   "/ai-engineering": {
     title: "AI Engineering & Agentic Foundations - 6-Week Live Course | GradTensor",
     description:
       "From LLM fundamentals to production-ready AI agents in 6 weeks. Build and deploy a RAG system and an AI agent. Live classes for engineers and professionals.",
-    image: "/og/ai-engineering.png",
+    image: "/og/ai-engineering.jpg",
   },
   "/courses": {
     title: "AI Courses & Programs | GradTensor",
