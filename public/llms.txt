@@ -16,7 +16,7 @@ GradTensor is an AI education company that trains students, graduates, and worki
 
 ### Stage 1: Discover - Teen AI Builders (4 weeks)
 - Status: Pre-Register
-- Duration: 4 weeks, 12 live hours + 8 project hours
+- Duration: 4 weeks, 8 live hours
 - For: Anyone, no coding needed
 - Build your first AI app with zero prerequisites
 

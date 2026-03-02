@@ -231,7 +231,7 @@ const AIEngineeringLanding = () => {
         ref={heroRef}
         className="pt-16"
       >
-        <div className="section-container py-16 md:py-24">
+        <div className="section-container py-10 md:py-14">
           <div className="grid items-center gap-10 md:grid-cols-2">
           <div>
             <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 font-display text-sm font-medium text-primary">

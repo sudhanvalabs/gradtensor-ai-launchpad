@@ -80,7 +80,7 @@ export const courses: Course[] = [
     title: "Teen AI Builders",
     tagline: "Build your first AI app - no coding experience needed",
     duration: "4 weeks",
-    hours: "12 live hours + 8 project hours",
+    hours: "8 live hours",
     idealFor: "Teens and beginners curious about AI",
     whoForShort: "Anyone, no coding needed",
     weeks: [],
