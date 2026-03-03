@@ -13,7 +13,7 @@ const OG_DATA: Record<string, OGData> = {
   "/": {
     title: "GradTensor - Build AI Products. Not Just AI Skills.",
     description:
-      "Build AI products. Not just AI skills. A 5-stage learning journey from first curiosity to production-grade AI systems.",
+      "Build AI products. Not just AI skills. Live, hands-on courses that take you from your first AI app to production-grade systems.",
     image: "/og/home.png",
   },
   "/teen-ai-builders": {
@@ -51,7 +51,7 @@ const OG_DATA: Record<string, OGData> = {
 const FALLBACK: OGData = {
   title: "GradTensor - Build AI Products. Not Just AI Skills.",
   description:
-    "Build AI products. Not just AI skills. A 5-stage learning journey from first curiosity to production-grade AI systems.",
+    "Build AI products. Not just AI skills. Live, hands-on courses that take you from your first AI app to production-grade systems.",
   image: "/og/home.png",
 };
 

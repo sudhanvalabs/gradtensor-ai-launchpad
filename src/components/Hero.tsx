@@ -37,8 +37,8 @@ const Hero = () => {
 
             {/* Subheadline */}
             <p className="mb-10 max-w-2xl font-body text-lg leading-relaxed text-muted-foreground sm:text-xl md:text-2xl animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              A 5-stage learning journey - from your first AI app to
-              production-grade systems, shipped products, and strategic advisory.
+              Live, hands-on courses that take you from your first AI app
+              to production-grade systems.
             </p>
 
             {/* CTAs */}
@@ -61,8 +61,8 @@ const Hero = () => {
             {/* Stats */}
             <div className="mt-16 grid grid-cols-3 gap-8 border-t border-border/50 pt-8 animate-fade-up" style={{ animationDelay: "0.4s" }}>
               {[
-                { value: "5", label: "learning stages" },
-                { value: "2-16", label: "weeks per course" },
+                { value: "Live", label: "online classes" },
+                { value: "2-6", label: "weeks per course" },
                 { value: "100%", label: "project-based" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center sm:text-left">

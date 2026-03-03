@@ -1,8 +1,8 @@
 # GradTensor
 
-> Build AI products. Not just AI skills. A 5-stage learning journey from first curiosity to production-grade AI systems.
+> Build AI products. Not just AI skills. Live, hands-on courses that take you from your first AI app to production-grade systems.
 
-GradTensor is an AI education company that trains students, graduates, and working professionals through a structured 5-stage learning journey. Based in India, GradTensor offers live online courses focused on hands-on, project-driven learning.
+GradTensor is an AI education company that trains students, graduates, and working professionals through live, hands-on courses. Based in India, GradTensor offers live online courses focused on project-driven learning.
 
 ## What Makes GradTensor Different
 
