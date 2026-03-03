@@ -14,10 +14,6 @@ const faqs = [
     q: "Will this help me in campus placements?",
     a: "Yes. You'll have deployed projects to show in interviews, and you'll be able to answer AI engineering questions that 99% of students can't. We've designed this specifically around what companies ask in campus AI roles.",
   },
-  {
-    q: "What if I can't attend live sessions?",
-    a: "All live sessions are recorded and shared within 24 hours. However, we strongly recommend attending live - the interaction, doubt-clearing, and accountability are what make live learning effective.",
-  },
 ];
 
 const FAQSection = () => {
