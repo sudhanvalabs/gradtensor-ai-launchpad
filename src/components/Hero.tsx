@@ -62,7 +62,7 @@ const Hero = () => {
             <div className="mt-16 grid grid-cols-3 gap-8 border-t border-border/50 pt-8 animate-fade-up" style={{ animationDelay: "0.4s" }}>
               {[
                 { value: "Live", label: "online classes" },
-                { value: "2-6", label: "weeks per course" },
+                { value: "2-16", label: "weeks per course" },
                 { value: "100%", label: "project-based" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center sm:text-left">
