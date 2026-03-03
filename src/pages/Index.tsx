@@ -1,8 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import WhyGradTensor from "@/components/WhyGradTensor";
-// import Testimonials from "@/components/Testimonials";
-import FAQSection from "@/components/FAQSection";
 import SiteFooter from "@/components/SiteFooter";
 import SEO from "@/components/SEO";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -22,29 +20,6 @@ const organizationLd = {
   ],
 };
 
-const faqLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How is the learning journey structured?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "GradTensor offers a 5-stage journey: Discover (no prerequisites), Portfolio (build interview-ready projects), Production (ship production-grade AI), Ship (launch your own AI product), and Advise (lead AI adoption). You can start at any stage that matches your level.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Will this help me in campus placements?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. You'll have deployed projects to show in interviews, and you'll be able to answer AI engineering questions that 99% of students can't. We've designed this specifically around what companies ask in campus AI roles.",
-      },
-    },
-  ],
-};
-
 const Index = () => {
   useScrollAnimation();
 
@@ -54,13 +29,11 @@ const Index = () => {
         title="GradTensor - Build AI Products. Not Just AI Skills."
         description="Build AI products. Not just AI skills. A 5-stage learning journey from first curiosity to production-grade AI systems."
         path="/"
-        jsonLd={[organizationLd, faqLd]}
+        jsonLd={[organizationLd]}
       />
       <Navbar />
       <Hero />
       <WhyGradTensor />
-      {/* <Testimonials /> */}
-      <FAQSection />
       <SiteFooter />
     </div>
   );
