@@ -226,7 +226,7 @@ const TeenAIBuildersLanding = () => {
 
             <p className="mt-4 text-lg text-muted-foreground sm:text-xl">
               Build your first AI app - no coding experience needed.
-              <br className="hidden sm:block" />A fun, hands-on course
+              <br className="hidden sm:block" />{" "}A fun, hands-on course
               designed for teens who want to create, not just consume.
             </p>
 
