@@ -228,7 +228,7 @@ const EngineeringRegisterDialog = ({
                   </FormLabel>
                   <FormControl>
                     <Input
-                      placeholder="e.g. Next Batch - April 20"
+                      placeholder="e.g. Next Batch - May 18"
                       {...field}
                     />
                   </FormControl>

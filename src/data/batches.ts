@@ -31,7 +31,7 @@ export const upcomingBatches: Batch[] = [
     courseTitle: "AI Engineering & Agentic Foundations",
     courseSlug: "ai-engineering-agentic-foundations",
     batchLabel: "Next Batch",
-    startDate: "April 20, 2026",
+    startDate: "May 18, 2026",
     days: "Mon & Tue",
     time: "8:30 - 10:30 PM IST",
     duration: "6 weeks",
