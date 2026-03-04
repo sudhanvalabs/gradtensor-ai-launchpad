@@ -16,29 +16,29 @@ const LandingNavbar = () => {
           <img
             src={logo}
             alt="GradTensor"
-            className="h-[60px] w-[60px] dark:hidden"
+            className="h-10 w-10 sm:h-[60px] sm:w-[60px] dark:hidden"
           />
           <img
             src={logoDark}
             alt="GradTensor"
-            className="h-[60px] w-[60px] hidden dark:block"
+            className="h-10 w-10 sm:h-[60px] sm:w-[60px] hidden dark:block"
           />
-          <span>
+          <span className="hidden sm:inline">
             <span className="gradient-text">Grad</span>
             <span className="text-foreground">Tensor</span>
           </span>
         </Link>
 
-        <div className="ml-auto flex items-center gap-4">
+        <div className="ml-auto flex items-center gap-2 sm:gap-4">
           <Link
             to="/courses"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+            className="text-xs sm:text-sm font-medium text-muted-foreground transition-colors hover:text-primary whitespace-nowrap"
           >
             Browse Courses
           </Link>
           <WhatsAppButton
             href={whatsappLink("general")}
-            className="flex items-center gap-1.5 rounded-lg border border-primary/30 bg-primary/10 px-4 py-2 font-display text-sm font-medium tracking-wider text-primary transition-all hover:bg-primary/20"
+            className="flex items-center gap-1.5 rounded-lg border border-primary/30 bg-primary/10 px-2.5 py-1.5 sm:px-4 sm:py-2 font-display text-xs sm:text-sm font-medium tracking-wider text-primary transition-all hover:bg-primary/20 whitespace-nowrap"
           >
             <MessageCircle size={16} />
             <span className="hidden sm:inline">WhatsApp Us</span>
