@@ -125,7 +125,7 @@ const faqs = [
   },
   {
     q: "Is there any cost for the tools used in the course?",
-    a: "Google Colab is free. Students will need to purchase a minimum of $5 (approx. Rs. 460, subject to exchange rate) in AI API credits for the exercises. This is a one-time purchase that covers the entire course. We will guide students step by step on how to set this up and monitor their usage.",
+    a: "Google Colab is free. Students will need to purchase a minimum of $5 (approx. Rs. 460, subject to exchange rate) in AI API credits for the exercises. This is a one-time purchase that covers the entire course (this amount is paid directly to the AI platform and does not go to GradTensor). We will guide students step by step on how to set this up and monitor their usage.",
   },
   {
     q: "How are the live classes conducted?",
