@@ -117,11 +117,11 @@ const faqs = [
   },
   {
     q: "What tools and accounts will my teen need to set up?",
-    a: "We use Google Colab for all coding - it runs entirely in the browser, nothing to install, and works on any laptop including school Chromebooks. Your teen will also need to create a free API key to connect to an AI service. We walk through both setups step by step in the first session. Nothing needs to be set up before day one - just show up with a laptop and a Google account.",
+    a: "We use Google Colab for all coding - it runs entirely in the browser, nothing to install, and works on any laptop including school Chromebooks. Your teen will also need an AI API key with $5 in credits - this requires a credit/debit card, so a parent's help will be needed. The instructor will walk through the setup during the course and give time to complete it before the next session. Nothing needs to be set up before day one - just show up with a laptop and a Google account.",
   },
   {
     q: "Is there any cost for the tools used in the course?",
-    a: "Google Colab is free. The AI API key comes with a free usage tier that is more than sufficient for the entire course - most students will not need to pay anything. If usage does exceed the free tier, the cost is minimal (typically less than Rs. 100 for the full course). We will guide students on how to monitor their usage so there are no surprises.",
+    a: "Google Colab is free. Students will need to purchase a minimum of $5 (approx. Rs. 460, subject to exchange rate) in AI API credits for the exercises. This is a one-time purchase that covers the entire course. We will guide students step by step on how to set this up and monitor their usage.",
   },
   {
     q: "How are the live classes conducted?",
@@ -253,6 +253,9 @@ const TeenAIBuildersLanding = () => {
               </p>
               <p className="mt-1 text-sm text-muted-foreground">
                 Founding batch price - increases to Rs. 5,999 from Batch 3 onwards
+              </p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                + $5 (approx. Rs. 460, subject to exchange rate) for AI API credits used during exercises
               </p>
             </div>
 
