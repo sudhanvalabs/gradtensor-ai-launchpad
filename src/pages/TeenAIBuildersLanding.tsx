@@ -108,6 +108,10 @@ const faqs = [
     a: "Primarily designed for school students ages 13 and above. The course is hands-on and project-based - engaging for teens while building real, practical skills.",
   },
   {
+    q: "Is this course only for teens?",
+    a: "The course is designed for ages 13 and above. While the curriculum and pace are optimized for school students, adults who are complete beginners to AI and coding are welcome to join. The content is the same regardless of age.",
+  },
+  {
     q: "What does my teen need before the course starts?",
     a: "Just three things: a laptop or desktop computer (see the next question for specifications), a stable internet connection, and a Google account (Gmail). No software installation needed. No prior setup required. Everything else is handled in the first session.",
   },
