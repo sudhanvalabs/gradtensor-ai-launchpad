@@ -272,9 +272,6 @@ const AIEngineeringLanding = () => {
                   inclusive of GST
                 </span>
               </p>
-              <p className="mt-1 text-sm text-muted-foreground">
-                Founding batch price - available for the May 18 batch only. Price increases from the next batch.
-              </p>
             </div>
 
             <Button

@@ -256,9 +256,6 @@ const TeenAIBuildersLanding = () => {
                 </span>
               </p>
               <p className="mt-1 text-sm text-muted-foreground">
-                Founding batch price. Price increases from Batch 3 onwards
-              </p>
-              <p className="mt-1 text-sm text-muted-foreground">
                 + $5 (approx. Rs. 460, subject to exchange rate) for AI API credits used during exercises
               </p>
             </div>
