@@ -250,7 +250,7 @@ const TeenAIBuildersLanding = () => {
             {/* Pricing */}
             <div className="mt-8">
               <p className="font-display text-2xl font-bold text-foreground">
-                Rs. 4,200{" "}
+                Rs. 4,199{" "}
                 <span className="text-base font-medium text-muted-foreground">
                   + GST
                 </span>
