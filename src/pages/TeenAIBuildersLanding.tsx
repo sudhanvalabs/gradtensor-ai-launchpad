@@ -250,10 +250,7 @@ const TeenAIBuildersLanding = () => {
             {/* Pricing */}
             <div className="mt-8">
               <p className="font-display text-2xl font-bold text-foreground">
-                Rs. 4,199{" "}
-                <span className="text-base font-medium text-muted-foreground">
-                  + GST
-                </span>
+                Rs. 2,999
               </p>
               <p className="mt-1 text-sm text-muted-foreground">
                 + $5 (approx. Rs. 460, subject to exchange rate) for AI API credits used during exercises
