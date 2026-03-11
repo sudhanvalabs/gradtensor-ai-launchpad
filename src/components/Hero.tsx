@@ -37,7 +37,7 @@ const Hero = () => {
 
             {/* Subheadline */}
             <p className="mb-10 max-w-2xl font-display text-xl leading-relaxed text-foreground sm:text-2xl md:text-3xl animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              We help people stop fearing AI and start building with it.
+              We help people stop fearing AI and start thriving with it.
             </p>
 
             {/* CTAs */}
