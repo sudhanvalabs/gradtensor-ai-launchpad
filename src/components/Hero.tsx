@@ -36,7 +36,10 @@ const Hero = () => {
             </h1>
 
             {/* Subheadline */}
-            <p className="mb-10 max-w-2xl font-body text-lg leading-relaxed text-muted-foreground sm:text-xl md:text-2xl animate-fade-up" style={{ animationDelay: "0.2s" }}>
+            <p className="mb-4 max-w-2xl font-display text-xl leading-relaxed text-foreground sm:text-2xl md:text-3xl animate-fade-up" style={{ animationDelay: "0.2s" }}>
+              We help people stop fearing AI and start building with it.
+            </p>
+            <p className="mb-10 max-w-2xl font-body text-lg leading-relaxed text-muted-foreground sm:text-xl animate-fade-up" style={{ animationDelay: "0.25s" }}>
               Live, hands-on courses that take you from your first AI app
               to production-grade systems.
             </p>
