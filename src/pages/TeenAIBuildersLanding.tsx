@@ -16,86 +16,176 @@ import {
   Clock,
   Video,
   Rocket,
-  Sparkles,
-  Code2,
-  Lightbulb,
-  Trophy,
   Calendar,
   Timer,
   ArrowRight,
+  Cpu,
+  Globe,
+  MessageSquare,
+  Presentation,
+  CheckCircle2,
+  XCircle,
 } from "lucide-react";
 
 const COURSE_TITLE = "Teen AI Builders";
 
-const benefits = [
+const learnCards = [
   {
-    icon: Sparkles,
-    title: "No Coding Needed",
-    description: "Start from scratch - we teach you everything",
+    icon: Cpu,
+    title: "How AI Assistants Actually Work",
+    description:
+      "Tokens, context, why AI sometimes gets things wrong - explained in plain language, not jargon.",
   },
   {
-    icon: Video,
-    title: "Live Classes",
-    description: "Real instructors, not just videos",
+    icon: Globe,
+    title: "Build and Deploy a Real Web App",
+    description:
+      "Write code that talks to an AI model, then wrap it in a web interface anyone can use.",
   },
   {
-    icon: Rocket,
-    title: "Build Real Projects",
-    description: "Launch an AI app you can show off",
+    icon: MessageSquare,
+    title: "Design AI Behaviour Through Prompts",
+    description:
+      "Control how an AI thinks, speaks and behaves - the skill behind every real AI product ever built.",
   },
   {
-    icon: Trophy,
-    title: "Certificate",
-    description: "Earn a credential for your portfolio",
+    icon: Presentation,
+    title: "Present and Defend a Technical Project",
+    description:
+      "Demo their project, explain every decision, answer questions. The skill that serves them in college interviews and beyond.",
   },
 ];
 
-const projects = [
+const comparisonRows = [
   {
-    icon: Lightbulb,
-    title: "Your Own AI Assistant",
-    description: "Build a conversational AI with its own personality, its own purpose, and its own shareable web link - something friends and family can actually use from their phone.",
+    aspect: "Personality",
+    chatgpt: "Generic, resets every chat",
+    yours: "Designed by them, consistent always",
   },
   {
-    icon: Code2,
-    title: "A Real Web App",
-    description: "Your AI assistant gets a proper chat interface - not a code file, but a working app that looks and feels like a messaging app. You generate a link and share it with the world.",
+    aspect: "Memory",
+    chatgpt: "Forgets when the tab closes",
+    yours: "Remembers name, level and history across sessions",
+  },
+  {
+    aspect: "Purpose",
+    chatgpt: "Does everything averagely",
+    yours: "Genuinely good at one specific thing they chose",
+  },
+  {
+    aspect: "Ownership",
+    chatgpt: "Anyone's chatbot",
+    yours: "Their AI, their name for it, their link, their design",
   },
 ];
 
 const curriculum = [
   {
     week: "Week 1",
-    title: "Understand and Set Up",
+    title: "Understand & Set Up",
     sessions: [
-      { title: "The World of Conversational AI", description: "Understand how AI assistants actually work - and how they are different from the bots that existed before. See the full landscape of AI systems from simple conversational apps to autonomous AI agents. Leave knowing exactly where you are starting and where the ladder goes." },
-      { title: "Your First AI Program", description: "Write your first program that talks directly to an AI - no ChatGPT, no apps, just you and the AI communicating through code. No prior coding experience needed." },
+      {
+        title: "How AI Assistants Actually Work",
+        description:
+          "Understand what is really happening when you talk to an AI - and where this course sits on the AI landscape.",
+      },
+      {
+        title: "Your First AI Program",
+        description:
+          "Write real code that talks directly to an AI model. No prior experience needed.",
+      },
     ],
   },
   {
     week: "Week 2",
-    title: "Personality and Memory",
+    title: "Personality & Memory",
     sessions: [
-      { title: "Give Your AI a Personality", description: "Learn to control how your AI thinks, speaks, and behaves. Every student's AI assistant becomes unique here." },
-      { title: "Make It Remember", description: "Build an AI assistant that remembers the conversation - just like ChatGPT does. Understand why this is harder than it sounds and what it means for AI systems." },
+      {
+        title: "Give Your Assistant a Personality",
+        description:
+          "Design who your AI is - its name, how it speaks, and what makes it distinctly yours.",
+      },
+      {
+        title: "Make It Remember",
+        description:
+          "Build an assistant that remembers across sessions - the feature that separates what you build from any free AI tool.",
+      },
     ],
   },
   {
     week: "Week 3",
-    title: "Purpose and Interface",
+    title: "Purpose & Interface",
     sessions: [
-      { title: "Give Your AI a Job", description: "Turn your AI assistant from a fun experiment into something genuinely useful. A study helper, a quiz bot, a recommendation engine - your choice." },
-      { title: "Make It Real", description: "Transform your AI into a real app that anyone can use - no coding knowledge required on their end." },
+      {
+        title: "Give It a Teaching Method",
+        description:
+          "Move from personality to purpose - your AI now has a structured way of being genuinely useful.",
+      },
+      {
+        title: "Make It Real",
+        description:
+          "Move out of the code editor into a proper web app with a shareable link. Anyone can use it from their phone.",
+      },
     ],
   },
   {
     week: "Week 4",
-    title: "Refine and Showcase",
+    title: "Refine & Showcase",
     sessions: [
-      { title: "Make It Yours", description: "Improve, extend, and personalise. This is where your AI becomes something you are genuinely proud of." },
-      { title: "Showcase", description: "Present your AI to a real audience. Celebrate what you built. Understand where the journey goes next." },
+      {
+        title: "Make It Yours",
+        description:
+          "Polish, extend, personalise. One more round of deliberate improvement - this is where good becomes great.",
+      },
+      {
+        title: "Showcase",
+        description:
+          "Present your assistant to a real audience. Demo it, explain it, defend every decision. Leave knowing what to build next.",
+      },
     ],
   },
+];
+
+const outcomes = [
+  {
+    number: "01",
+    title: "A Personalised AI Assistant at a Public URL",
+    description:
+      "Built, deployed, and working. Friends and family can open the link right now and use it. Ready to demo to anyone at any time.",
+  },
+  {
+    number: "02",
+    title: "Cross-Session Memory",
+    description:
+      "An AI that remembers users across conversations - something no free AI tool does out of the box. A genuine technical differentiator.",
+  },
+  {
+    number: "03",
+    title: "The Ability to Explain What You Built",
+    description:
+      "From a 30-second demo to a 10-minute walkthrough of every technical decision. This is what stands out in college interviews and competitions.",
+  },
+  {
+    number: "04",
+    title: "A Foundation to Keep Building",
+    description:
+      "The same codebase can be extended into anything. Students leave knowing how to keep going - and what to build next.",
+  },
+];
+
+const isFor = [
+  "You are aged 13-18",
+  "You are curious about how AI actually works",
+  "You want to build something real, not watch videos",
+  "You are willing to put in 8 hours across 4 weeks",
+  "You have no coding experience - or some",
+];
+
+const notFor = [
+  "You want a passive video course at 2x speed",
+  "You want a certificate without doing real work",
+  "You are not comfortable with basic computer use",
+  "You expect to use a phone instead of a laptop",
 ];
 
 const faqs = [
@@ -139,7 +229,7 @@ const faqs = [
     q: "What if my teen gets stuck during a session?",
     a: "Batch sizes are kept small so every student gets individual attention. The instructor will address questions in real time during every session. Students also get access to a WhatsApp group for the batch where they can ask questions between sessions and get help from both the instructor and fellow students.",
   },
-{
+  {
     q: "Is this course only for teens interested in a tech career?",
     a: "Not at all. Understanding how AI works and being able to build with it is a useful skill regardless of what your teen wants to do in life - medicine, law, business, arts, or anything else. AI is becoming part of every field. This course gives teens a practical, hands-on understanding of it at an age when that knowledge compounds the most.",
   },
@@ -165,7 +255,9 @@ const TeenAIBuildersLanding = () => {
   const heroRef = useRef<HTMLElement>(null);
 
   const scrollToBatches = () => {
-    document.getElementById("upcoming-batches")?.scrollIntoView({ behavior: "smooth" });
+    document
+      .getElementById("upcoming-batches")
+      ?.scrollIntoView({ behavior: "smooth" });
   };
 
   const openRegisterWithBatch = (batchLabel: string, startDate: string) => {
@@ -212,95 +304,68 @@ const TeenAIBuildersLanding = () => {
       <LandingNavbar />
 
       {/* Hero */}
-      <section
-        ref={heroRef}
-        className="pt-16"
-      >
+      <section ref={heroRef} className="pt-16">
         <div className="section-container py-10 md:py-14">
           <div className="grid items-center gap-10 md:grid-cols-2">
-          <div>
-            <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 font-display text-sm font-medium text-primary">
-              Live Course - Next Batch Starting Soon
-            </span>
-
-            <h1 className="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-              <span className="gradient-text">Teen AI</span>{" "}
-              <span className="text-foreground">Builders</span>
-            </h1>
-
-            <p className="mt-4 text-lg text-muted-foreground sm:text-xl">
-              Build your first AI app - no coding experience needed.
-              <br className="hidden sm:block" />{" "}A fun, hands-on course
-              designed for teens who want to create, not just consume.
-            </p>
-
-            {/* Stats row */}
-            <div className="mt-8 flex flex-wrap gap-6 text-base">
-              <span className="flex items-center gap-2 text-muted-foreground">
-                <Clock size={18} className="text-primary" /> 4 Weeks
+            <div>
+              <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 font-display text-sm font-medium text-primary">
+                Live Course - Next Batch Starting Soon
               </span>
-              <span className="flex items-center gap-2 text-muted-foreground">
-                <Video size={18} className="text-primary" /> 8 Live Sessions
-              </span>
-              <span className="flex items-center gap-2 text-muted-foreground">
-                <Rocket size={18} className="text-primary" /> 1 Deployed AI App
-              </span>
-            </div>
 
-            {/* Pricing */}
-            <div className="mt-8">
-              <p className="font-display text-2xl font-bold text-foreground">
-                Rs. 2,999
+              <h1 className="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+                <span className="gradient-text">Teen AI</span>{" "}
+                <span className="text-foreground">Builders</span>
+              </h1>
+
+              <p className="mt-4 text-lg text-muted-foreground sm:text-xl">
+                Your child will build their own personalised AI assistant - with
+                a public web link, a personality they design, and a memory that
+                works across conversations. In 4 weeks. No coding experience
+                needed.
               </p>
-              <p className="mt-1 text-sm text-muted-foreground">
-                + $5 (approx. Rs. 460, subject to exchange rate) for AI API credits used during exercises
-              </p>
-            </div>
 
-            <Button
-              onClick={scrollToBatches}
-              size="lg"
-              className="btn-shimmer mt-6 rounded-lg bg-primary px-10 py-4 font-display text-lg font-semibold tracking-wider text-primary-foreground"
-            >
-              Enroll Now
-            </Button>
-          </div>
+              {/* Stats row */}
+              <div className="mt-8 flex flex-wrap gap-6 text-base">
+                <span className="flex items-center gap-2 text-muted-foreground">
+                  <Clock size={18} className="text-primary" /> 4 Weeks
+                </span>
+                <span className="flex items-center gap-2 text-muted-foreground">
+                  <Video size={18} className="text-primary" /> 8 Live Sessions
+                </span>
+                <span className="flex items-center gap-2 text-muted-foreground">
+                  <Rocket size={18} className="text-primary" /> 1 Deployed AI
+                  App
+                </span>
+              </div>
 
-          {/* Cover image */}
-          <div>
-            <img
-              src={coverImage}
-              alt="Teen AI Builders"
-              className="w-full rounded-2xl object-cover shadow-lg"
-            />
-          </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Key Benefits */}
-      <section className="py-16 md:py-20">
-        <div className="section-container">
-          <h2 className="mb-10 text-center font-display text-2xl font-bold tracking-tight sm:text-3xl">
-            Why Teens Love This Course
-          </h2>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {benefits.map((b) => (
-              <div
-                key={b.title}
-                className="card-hover rounded-2xl border border-border bg-card p-6 text-center"
-              >
-                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                  <b.icon size={24} />
-                </div>
-                <h3 className="font-display text-lg font-semibold">
-                  {b.title}
-                </h3>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  {b.description}
+              {/* Pricing */}
+              <div className="mt-8">
+                <p className="font-display text-2xl font-bold text-foreground">
+                  Rs. 2,999
+                </p>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  + $5 (approx. Rs. 460, subject to exchange rate) for AI API
+                  credits used during exercises
                 </p>
               </div>
-            ))}
+
+              <Button
+                onClick={scrollToBatches}
+                size="lg"
+                className="btn-shimmer mt-6 rounded-lg bg-primary px-10 py-4 font-display text-lg font-semibold tracking-wider text-primary-foreground"
+              >
+                Enroll Now
+              </Button>
+            </div>
+
+            {/* Cover image */}
+            <div>
+              <img
+                src={coverImage}
+                alt="Teen AI Builders"
+                className="w-full rounded-2xl object-cover shadow-lg"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -308,23 +373,76 @@ const TeenAIBuildersLanding = () => {
       {/* What You'll Build */}
       <section className="py-16 md:py-20 bg-muted/30">
         <div className="section-container">
-          <h2 className="mb-10 text-center font-display text-2xl font-bold tracking-tight sm:text-3xl">
+          <h2 className="mb-4 text-center font-display text-2xl font-bold tracking-tight sm:text-3xl">
             What You'll Build
           </h2>
+          <p className="mx-auto mb-10 max-w-3xl text-center text-base leading-relaxed text-muted-foreground">
+            Every student builds their own personalised AI assistant - something
+            with a name they choose, a personality they design, and a memory
+            that persists across sessions. It lives at a web link anyone can
+            open on their phone. This is not a tutorial project you throw away.
+            It is something they own, can extend, and can demo to anyone.
+          </p>
+
+          {/* Comparison table */}
+          <h3 className="mb-6 text-center font-display text-lg font-semibold">
+            How Is This Different from Just Using ChatGPT?
+          </h3>
+          <div className="mx-auto max-w-3xl overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr>
+                  <th className="border-b border-border p-3 text-left font-display font-semibold text-muted-foreground">
+                    &nbsp;
+                  </th>
+                  <th className="border-b border-border p-3 text-left font-display font-semibold text-muted-foreground">
+                    ChatGPT
+                  </th>
+                  <th className="border-b border-border bg-primary/10 p-3 text-left font-display font-semibold text-primary">
+                    What Your Child Builds
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonRows.map((row) => (
+                  <tr key={row.aspect}>
+                    <td className="border-b border-border/50 p-3 font-display font-medium text-foreground">
+                      {row.aspect}
+                    </td>
+                    <td className="border-b border-border/50 p-3 text-muted-foreground">
+                      {row.chatgpt}
+                    </td>
+                    <td className="border-b border-border/50 bg-primary/5 p-3 text-foreground">
+                      {row.yours}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* What You'll Learn */}
+      <section className="py-16 md:py-20">
+        <div className="section-container">
+          <h2 className="mb-10 text-center font-display text-2xl font-bold tracking-tight sm:text-3xl">
+            What You'll Learn
+          </h2>
           <div className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-2">
-            {projects.map((p) => (
+            {learnCards.map((card) => (
               <div
-                key={p.title}
+                key={card.title}
                 className="rounded-2xl border border-border bg-card p-6"
               >
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  <p.icon size={20} />
+                  <card.icon size={20} />
                 </div>
                 <h3 className="font-display text-lg font-semibold">
-                  {p.title}
+                  {card.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {p.description}
+                  {card.description}
                 </p>
               </div>
             ))}
@@ -332,12 +450,18 @@ const TeenAIBuildersLanding = () => {
         </div>
       </section>
 
-      {/* Curriculum Snapshot */}
-      <section className="py-16 md:py-20">
+      {/* The 8-Session Journey */}
+      <section className="py-16 md:py-20 bg-muted/30">
         <div className="section-container">
-          <h2 className="mb-10 text-center font-display text-2xl font-bold tracking-tight sm:text-3xl">
+          <h2 className="mb-4 text-center font-display text-2xl font-bold tracking-tight sm:text-3xl">
             The 8-Session Journey
           </h2>
+          <p className="mx-auto mb-10 max-w-2xl text-center text-base text-muted-foreground">
+            4 weeks. 8 live sessions. Each session builds directly on the last.
+            By Session 6, students have a working app at a public link. Sessions
+            7 and 8 are about making it genuinely good and presenting it with
+            confidence.
+          </p>
           <div className="mx-auto max-w-2xl space-y-8">
             {curriculum.map((week, wi) => (
               <div key={wi}>
@@ -370,9 +494,88 @@ const TeenAIBuildersLanding = () => {
         </div>
       </section>
 
+      {/* What You Leave With */}
+      <section className="py-16 md:py-20">
+        <div className="section-container">
+          <h2 className="mb-4 text-center font-display text-2xl font-bold tracking-tight sm:text-3xl">
+            What You Leave With
+          </h2>
+          <p className="mx-auto mb-10 max-w-2xl text-center text-base text-muted-foreground">
+            Four concrete things - not a certificate with nothing behind it.
+          </p>
+          <div className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-2">
+            {outcomes.map((o) => (
+              <div
+                key={o.number}
+                className="rounded-2xl border border-border bg-card p-6"
+              >
+                <span className="font-display text-3xl font-bold text-primary/30">
+                  {o.number}
+                </span>
+                <h3 className="mt-2 font-display text-lg font-semibold">
+                  {o.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {o.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Who This Is For */}
+      <section className="py-16 md:py-20 bg-muted/30">
+        <div className="section-container">
+          <h2 className="mb-10 text-center font-display text-2xl font-bold tracking-tight sm:text-3xl">
+            Who This Is For
+          </h2>
+          <div className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-2">
+            <div className="rounded-2xl border border-green-500/30 bg-green-500/5 p-6">
+              <h3 className="mb-4 font-display text-lg font-semibold text-green-600 dark:text-green-400">
+                This program IS for you if...
+              </h3>
+              <ul className="space-y-3">
+                {isFor.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-2 text-sm text-muted-foreground"
+                  >
+                    <CheckCircle2
+                      size={16}
+                      className="mt-0.5 flex-shrink-0 text-green-600 dark:text-green-400"
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-orange-500/30 bg-orange-500/5 p-6">
+              <h3 className="mb-4 font-display text-lg font-semibold text-orange-600 dark:text-orange-400">
+                This program is NOT for you if...
+              </h3>
+              <ul className="space-y-3">
+                {notFor.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-2 text-sm text-muted-foreground"
+                  >
+                    <XCircle
+                      size={16}
+                      className="mt-0.5 flex-shrink-0 text-orange-600 dark:text-orange-400"
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Upcoming Batches */}
       {teenBatches.length > 0 && (
-        <section id="upcoming-batches" className="py-16 md:py-20 bg-muted/30">
+        <section id="upcoming-batches" className="py-16 md:py-20">
           <div className="section-container">
             <h2 className="mb-10 text-center font-display text-2xl font-bold tracking-tight sm:text-3xl">
               Upcoming Batches
@@ -426,7 +629,7 @@ const TeenAIBuildersLanding = () => {
       )}
 
       {/* FAQ */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-muted/30">
         <div className="section-container">
           <div className="mx-auto max-w-3xl">
             <h2 className="mb-8 text-center font-display text-2xl font-bold tracking-tight sm:text-3xl">
