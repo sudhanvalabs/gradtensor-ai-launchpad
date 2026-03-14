@@ -13,7 +13,7 @@ const organizationLd = {
   logo: "https://gradtensor.com/logo.png",
   email: "courses@gradtensor.com",
   description:
-    "Build AI products. Not just AI skills. Live, hands-on courses that take you from your first AI app to production-grade systems.",
+    "We help people stop fearing AI and start thriving with it. Live, hands-on courses from GradTensor.",
   sameAs: [
     "https://www.linkedin.com/company/gradtensor",
     "https://twitter.com/GradTensor",
@@ -27,7 +27,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="GradTensor - Build AI Products. Not Just AI Skills."
-        description="Build AI products. Not just AI skills. Live, hands-on courses that take you from your first AI app to production-grade systems."
+        description="We help people stop fearing AI and start thriving with it. Live, hands-on courses from GradTensor."
         path="/"
         jsonLd={[organizationLd]}
       />

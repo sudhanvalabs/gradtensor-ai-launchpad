@@ -1,6 +1,6 @@
 # GradTensor
 
-> Build AI products. Not just AI skills. Live, hands-on courses that take you from your first AI app to production-grade systems.
+> We help people stop fearing AI and start thriving with it. Live, hands-on courses from GradTensor.
 
 GradTensor is an AI education company that trains students, graduates, and working professionals through live, hands-on courses. Based in India, GradTensor offers live online courses focused on project-driven learning.
 
