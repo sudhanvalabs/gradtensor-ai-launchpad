@@ -72,13 +72,36 @@ export const stageLabels: Record<
 };
 
 export const courses: Course[] = [
+  // --- Entry point course (shown in its own section) ---
+  {
+    slug: "ai-explorer",
+    status: "live",
+    audience: ["high-school", "engineering", "non-tech", "senior-it"],
+    title: "AI Explorer",
+    tagline:
+      "Understand AI, use it confidently, know where it is going",
+    duration: "2 weeks",
+    hours: "4 live sessions | 60 minutes each",
+    idealFor:
+      "Anyone who wants to understand AI - regardless of background, role, or age",
+    whoForShort: "No prior knowledge needed",
+    weeks: [],
+    projects: [],
+    whoFor: [],
+    ctaPrimary: "View & Enroll",
+    ctaSecondary: "",
+    faqs: [],
+  },
+
+  // --- Segment 1: School Students ---
   {
     slug: "teen-ai-builders",
     stage: "discover",
     status: "live",
     audience: ["high-school"],
     title: "Teen AI Builders",
-    tagline: "Build your first AI app - no coding experience needed",
+    tagline:
+      "Build your personalised AI assistant, no coding experience needed",
     duration: "4 weeks",
     hours: "8 live hours",
     idealFor: "Teens and beginners curious about AI",
@@ -91,15 +114,16 @@ export const courses: Course[] = [
     faqs: [],
   },
   {
-    slug: "ai-explorer",
+    slug: "ai-builder-pro",
     status: "pre-register",
-    audience: ["non-tech"],
-    title: "AI Explorer",
-    tagline: "Understand AI and build your first app - no technical background needed",
+    audience: ["high-school"],
+    title: "AI Builder Pro",
+    tagline:
+      "Advanced AI for school students, build a production-grade AI application",
     duration: "4 weeks",
-    hours: "12 live hours + 8 project hours",
-    idealFor: "Non-tech professionals and curious minds exploring AI",
-    whoForShort: "No coding needed",
+    hours: "8 live hours",
+    idealFor: "School students who have completed Teen AI Builders",
+    whoForShort: "School students, after Teen AI Builders",
     weeks: [],
     projects: [],
     whoFor: [],
@@ -107,6 +131,8 @@ export const courses: Course[] = [
     ctaSecondary: "",
     faqs: [],
   },
+
+  // --- Segment 2: College Students ---
   {
     slug: "ai-ready-engineer",
     stage: "portfolio",
@@ -114,12 +140,11 @@ export const courses: Course[] = [
     audience: ["engineering"],
     title: "AI-Ready Engineer",
     tagline:
-      "Get hired in the AI era - before your batchmates figure out what's happening",
+      "Get hired in the AI era before your batchmates figure out what's happening",
     duration: "2 weeks",
     hours: "8 live hours + 4 project hours",
     idealFor: "Final-year students & fresh graduates preparing for placements",
     whoForShort: "Final-year students & fresh grads",
-    // enrollUrl: "TODO_GRAPHY_URL",
     weeks: [
       "Session 1: How AI Systems Actually Work - LLMs, embeddings, RAG, agents, and tracing a real query end-to-end",
       "Session 2: Build Part 1 - Core Document Intelligence Bot - ingestion, chunking, vector search, LLM integration, deployed to a public URL",
@@ -155,18 +180,19 @@ export const courses: Course[] = [
       },
     ],
   },
+
+  // --- Segment 3: Tech Professionals ---
   {
     slug: "ai-engineering-agentic-foundations",
     stage: "production",
     status: "live",
     audience: ["engineering", "non-tech"],
     title: "AI Engineering & Agentic Foundations",
-    tagline: "Build production-ready AI agents in 6 weeks",
+    tagline: "Build production-ready AI agents",
     duration: "6 weeks",
     hours: "24 live hours + 24 project hours",
     idealFor: "Final-year students & working professionals adding AI skills",
     whoForShort: "Engineers adding AI skills",
-    // enrollUrl: "TODO_GRAPHY_URL",
     weeks: [
       "Week 1: How LLMs Actually Work",
       "Week 2: APIs, Prompt Engineering, and Structured Outputs",
@@ -198,6 +224,102 @@ export const courses: Course[] = [
     ],
   },
   {
+    slug: "multi-agent-systems",
+    status: "pre-register",
+    audience: ["engineering"],
+    title: "Multi-Agent Systems",
+    tagline:
+      "Multiple specialised agents collaborating under an orchestrator",
+    duration: "TBD",
+    hours: "TBD",
+    idealFor: "Engineers ready to build advanced multi-agent architectures",
+    whoForShort: "Experienced AI engineers",
+    weeks: [],
+    projects: [],
+    whoFor: [],
+    ctaPrimary: "Pre-Register",
+    ctaSecondary: "",
+    faqs: [],
+  },
+
+  // --- Segment 4: Non-Tech Working Professionals ---
+  {
+    slug: "beyond-chatgpt",
+    status: "pre-register",
+    audience: ["non-tech"],
+    title:
+      "Beyond ChatGPT: Master AI Automation with Claude, n8n and Zapier for Workplace Productivity",
+    tagline:
+      "Automate 30-50% of your daily work without writing a single line of code",
+    duration: "6 weeks",
+    hours: "Approximately 6 hours",
+    idealFor:
+      "Working professionals with no coding background who want to automate their work",
+    whoForShort: "No coding needed",
+    weeks: [],
+    projects: [],
+    whoFor: [],
+    ctaPrimary: "Pre-Register",
+    ctaSecondary: "",
+    faqs: [],
+  },
+
+  // --- Segment 5: Corporate Teams ---
+  {
+    slug: "ai-prompts-customer-support",
+    status: "live",
+    audience: ["senior-it"],
+    title: "AI Prompts for Customer Support",
+    tagline: "Respond better, respond faster",
+    duration: "1 week",
+    hours: "Blended live and recorded",
+    idealFor: "Companies training their customer-facing and functional teams",
+    whoForShort: "Customer-facing teams",
+    weeks: [],
+    projects: [],
+    whoFor: [],
+    ctaPrimary: "View & Enroll",
+    ctaSecondary: "",
+    faqs: [],
+  },
+
+  /* --- Commented out: can be restored later ---
+  {
+    slug: "ai-explorer-old",
+    status: "pre-register",
+    audience: ["non-tech"],
+    title: "AI Explorer (old)",
+    tagline: "Understand AI and build your first app - no technical background needed",
+    duration: "4 weeks",
+    hours: "12 live hours + 8 project hours",
+    idealFor: "Non-tech professionals and curious minds exploring AI",
+    whoForShort: "No coding needed",
+    weeks: [],
+    projects: [],
+    whoFor: [],
+    ctaPrimary: "Pre-Register",
+    ctaSecondary: "",
+    faqs: [],
+  },
+  {
+    slug: "build-with-ai-tools",
+    status: "pre-register",
+    audience: ["non-tech"],
+    title: "Build With AI Tools",
+    tagline:
+      "Build real apps and products using AI coding agents like Claude Code. No traditional coding experience needed - just the methodology to build effectively.",
+    duration: "TBD",
+    hours: "TBD",
+    idealFor: "Non-tech professionals wanting to build with AI tools",
+    whoForShort: "No coding needed",
+    weeks: [],
+    projects: [],
+    whoFor: [],
+    ctaPrimary: "Pre-Register",
+    ctaSecondary: "",
+    faqs: [],
+  },
+  {
     slug: "ai-product-builder",
     stage: "ship",
     status: "pre-register",
@@ -226,42 +348,6 @@ export const courses: Course[] = [
     hours: "12 live hours + 8 project hours",
     idealFor: "Senior professionals guiding AI strategy",
     whoForShort: "Senior professionals, 8+ years exp",
-    weeks: [],
-    projects: [],
-    whoFor: [],
-    ctaPrimary: "Pre-Register",
-    ctaSecondary: "",
-    faqs: [],
-  },
-  {
-    slug: "multi-agent-systems",
-    status: "pre-register",
-    audience: ["engineering"],
-    title: "Multi-Agent Systems",
-    tagline:
-      "Multiple specialised agents collaborating under an orchestrator. Includes the Architecting Multi-Agent Systems module.",
-    duration: "TBD",
-    hours: "TBD",
-    idealFor: "Engineers ready to build advanced multi-agent architectures",
-    whoForShort: "Experienced AI engineers",
-    weeks: [],
-    projects: [],
-    whoFor: [],
-    ctaPrimary: "Pre-Register",
-    ctaSecondary: "",
-    faqs: [],
-  },
-  {
-    slug: "build-with-ai-tools",
-    status: "pre-register",
-    audience: ["non-tech"],
-    title: "Build With AI Tools",
-    tagline:
-      "Build real apps and products using AI coding agents like Claude Code. No traditional coding experience needed - just the methodology to build effectively.",
-    duration: "TBD",
-    hours: "TBD",
-    idealFor: "Non-tech professionals wanting to build with AI tools",
-    whoForShort: "No coding needed",
     weeks: [],
     projects: [],
     whoFor: [],
@@ -310,6 +396,7 @@ export const courses: Course[] = [
       },
     ],
   },
+  --- */
 ];
 
 export function getCourseBySlug(slug: string): Course | undefined {
