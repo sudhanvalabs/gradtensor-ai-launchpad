@@ -31,6 +31,7 @@ export interface Course {
   hours: string;
   idealFor: string;
   whoForShort: string;
+  price?: string; // e.g. "INR 2,999 + GST" — omit if not yet decided
   enrollUrl?: string;
   weeks: string[];
   projects: string[];
@@ -85,6 +86,7 @@ export const courses: Course[] = [
     idealFor:
       "Anyone who wants to understand AI - regardless of background, role, or age",
     whoForShort: "No prior knowledge needed",
+    price: "INR 2,999 + GST",
     weeks: [],
     projects: [],
     whoFor: [],
@@ -106,6 +108,7 @@ export const courses: Course[] = [
     hours: "8 live hours",
     idealFor: "Teens and beginners curious about AI",
     whoForShort: "Anyone, no coding needed",
+    price: "INR 2,999 + GST",
     weeks: [],
     projects: [],
     whoFor: [],
@@ -124,6 +127,7 @@ export const courses: Course[] = [
     hours: "8 live hours",
     idealFor: "School students who have completed Teen AI Builders",
     whoForShort: "School students, after Teen AI Builders",
+    price: "INR 3,999 + GST",
     weeks: [],
     projects: [],
     whoFor: [],
@@ -145,6 +149,7 @@ export const courses: Course[] = [
     hours: "8 live hours + 4 project hours",
     idealFor: "Final-year students & fresh graduates preparing for placements",
     whoForShort: "Final-year students & fresh grads",
+    price: "INR 3,999 + GST",
     weeks: [
       "Session 1: How AI Systems Actually Work - LLMs, embeddings, RAG, agents, and tracing a real query end-to-end",
       "Session 2: Build Part 1 - Core Document Intelligence Bot - ingestion, chunking, vector search, LLM integration, deployed to a public URL",
@@ -193,6 +198,7 @@ export const courses: Course[] = [
     hours: "24 live hours + 24 project hours",
     idealFor: "Final-year students & working professionals adding AI skills",
     whoForShort: "Engineers adding AI skills",
+    price: "INR 24,999 + GST",
     weeks: [
       "Week 1: How LLMs Actually Work",
       "Week 2: APIs, Prompt Engineering, and Structured Outputs",
@@ -255,6 +261,7 @@ export const courses: Course[] = [
     idealFor:
       "Working professionals and final-year students in any stream",
     whoForShort: "No coding needed",
+    price: "INR 3,999 + GST",
     weeks: [],
     projects: [],
     whoFor: [],
@@ -277,6 +284,7 @@ export const courses: Course[] = [
     idealFor:
       "Working professionals with no coding background who want to automate their work",
     whoForShort: "No coding needed",
+    price: "INR 8,999 + GST",
     weeks: [],
     projects: [],
     whoFor: [],
@@ -296,6 +304,7 @@ export const courses: Course[] = [
     hours: "Blended live and recorded",
     idealFor: "Companies training their customer-facing and functional teams",
     whoForShort: "Customer-facing teams",
+    price: "INR 4,999 + GST",
     weeks: [],
     projects: [],
     whoFor: [],

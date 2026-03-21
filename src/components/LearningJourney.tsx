@@ -288,6 +288,13 @@ const CourseCard = ({
         )}
       </div>
 
+      {/* Price */}
+      {course.price && (
+        <p className="mb-3 font-display text-lg font-bold tracking-tight text-foreground">
+          {course.price}
+        </p>
+      )}
+
       {/* CTA */}
       <div className="mt-auto pt-3 border-t border-border/50">
         {isLive ? (
