@@ -12,7 +12,7 @@ export const upcomingBatches: Batch[] = [
   {
     courseTitle: "Teen AI Builders",
     courseSlug: "teen-ai-builders",
-    batchLabel: "Batch 1",
+    batchLabel: "Next Batch",
     startDate: "April 15, 2026",
     days: "Wed & Thu",
     time: "10:00 - 11:00 AM IST",
