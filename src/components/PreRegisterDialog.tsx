@@ -36,6 +36,7 @@ const preRegisterCourses = courses.filter((c) => c.status === "pre-register");
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
+  whatsapp: z.string().min(10, "Please enter a valid WhatsApp number"),
   course: z.string().min(1, "Please select a course"),
   background: z.string().min(1, "Please select your background"),
   notes: z.string().optional(),
@@ -62,6 +63,7 @@ const PreRegisterDialog = ({
     defaultValues: {
       name: "",
       email: "",
+      whatsapp: "",
       course: defaultCourse || "",
       background: "",
       notes: "",
@@ -85,6 +87,7 @@ const PreRegisterDialog = ({
         body: JSON.stringify({
           name: data.name,
           email: data.email,
+          whatsapp: data.whatsapp,
           course: courseTitle,
           background: data.background,
           notes: data.notes || "",
@@ -105,6 +108,7 @@ const PreRegisterDialog = ({
       form.reset({
         name: "",
         email: "",
+        whatsapp: "",
         course: defaultCourse || "",
         background: "",
         notes: "",
@@ -178,6 +182,24 @@ const PreRegisterDialog = ({
                     <Input
                       type="email"
                       placeholder="you@example.com"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="whatsapp"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>WhatsApp Number</FormLabel>
+                  <FormControl>
+                    <Input
+                      type="tel"
+                      placeholder="+91 98765 43210"
                       {...field}
                     />
                   </FormControl>

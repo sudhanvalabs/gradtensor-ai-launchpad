@@ -267,7 +267,7 @@ export const courses: Course[] = [
   // --- Segment 5: Corporate Teams ---
   {
     slug: "ai-prompts-customer-support",
-    status: "live",
+    status: "pre-register",
     audience: ["senior-it"],
     title: "AI Prompts for Customer Support",
     tagline: "Respond better, respond faster",
