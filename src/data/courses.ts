@@ -262,7 +262,7 @@ export const courses: Course[] = [
     idealFor:
       "Working professionals and final-year students in any stream",
     whoForShort: "No coding needed",
-    price: "INR 6,999 + GST",
+    price: "INR 8,999 + GST",
     weeks: [],
     projects: [],
     whoFor: [],
