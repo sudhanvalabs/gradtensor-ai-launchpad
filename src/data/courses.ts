@@ -149,7 +149,7 @@ export const courses: Course[] = [
     hours: "8 live hours + 4 project hours",
     idealFor: "Final-year students & fresh graduates preparing for placements",
     whoForShort: "Final-year students & fresh grads",
-    price: "INR 3,999 + GST",
+    price: "INR 5,999 + GST",
     weeks: [
       "Session 1: How AI Systems Actually Work - LLMs, embeddings, RAG, agents, and tracing a real query end-to-end",
       "Session 2: Build Part 1 - Core Document Intelligence Bot - ingestion, chunking, vector search, LLM integration, deployed to a public URL",
@@ -240,6 +240,7 @@ export const courses: Course[] = [
     hours: "TBD",
     idealFor: "Engineers ready to build advanced multi-agent architectures",
     whoForShort: "Experienced AI engineers",
+    price: "INR 14,999 + GST",
     weeks: [],
     projects: [],
     whoFor: [],
@@ -261,7 +262,7 @@ export const courses: Course[] = [
     idealFor:
       "Working professionals and final-year students in any stream",
     whoForShort: "No coding needed",
-    price: "INR 3,999 + GST",
+    price: "INR 6,999 + GST",
     weeks: [],
     projects: [],
     whoFor: [],
@@ -284,7 +285,7 @@ export const courses: Course[] = [
     idealFor:
       "Working professionals with no coding background who want to automate their work",
     whoForShort: "No coding needed",
-    price: "INR 8,999 + GST",
+    price: "INR 11,999 + GST",
     weeks: [],
     projects: [],
     whoFor: [],
@@ -304,7 +305,7 @@ export const courses: Course[] = [
     hours: "Blended live and recorded",
     idealFor: "Companies training their customer-facing and functional teams",
     whoForShort: "Customer-facing teams",
-    price: "INR 4,999 + GST",
+    price: "Pricing on request",
     weeks: [],
     projects: [],
     whoFor: [],

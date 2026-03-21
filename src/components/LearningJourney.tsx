@@ -219,6 +219,19 @@ const LearningJourney = () => {
             );
           })}
         </Tabs>
+
+        {/* Pricing note */}
+        <p className="mt-10 text-center text-sm text-muted-foreground/70">
+          All prices are in Indian Rupees and applicable for students and
+          professionals based in India. International students -{" "}
+          <a
+            href="mailto:courses@gradtensor.com"
+            className="text-primary underline underline-offset-2 hover:text-primary/80"
+          >
+            please contact us
+          </a>{" "}
+          for pricing in your region.
+        </p>
       </div>
 
       <PreRegisterDialog
