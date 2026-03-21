@@ -43,8 +43,8 @@ const tabs = [
   },
   {
     value: "tech",
-    trigger: "Tech Professionals",
-    name: "Tech Professionals",
+    trigger: "Engineers & Developers",
+    name: "Engineers & Developers",
     label:
       "For working engineers and developers with 1+ years of coding experience",
     color: "#a78bfa",
@@ -54,10 +54,10 @@ const tabs = [
   },
   {
     value: "non-tech",
-    trigger: "Non-Tech Professionals",
-    name: "Non-Tech Working Professionals",
+    trigger: "Working Professionals",
+    name: "Working Professionals",
     label:
-      "For working professionals with no coding background who want to automate their work",
+      "For working professionals who want to automate their work - no coding background needed",
     color: "#34d399",
     slugs: ["beyond-chatgpt"],
   },
