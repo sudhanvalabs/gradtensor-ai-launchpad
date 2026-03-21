@@ -39,7 +39,10 @@ const tabs = [
     name: "College Students",
     label: "For college students preparing for placements and AI careers",
     color: "#818cf8",
-    slugs: ["ai-ready-engineer"],
+    slugs: [
+      { slug: "ai-ready-engineer", context: "For engineering and CS students" },
+      { slug: "the-human-edge", context: "For final-year students in any stream entering a shifting job market" },
+    ],
   },
   {
     value: "tech",
@@ -59,7 +62,10 @@ const tabs = [
     label:
       "For working professionals who want to automate their work - no coding background needed",
     color: "#34d399",
-    slugs: ["beyond-chatgpt"],
+    slugs: [
+      { slug: "the-human-edge", context: "For mid-career professionals rethinking their role in the age of AI" },
+      "beyond-chatgpt",
+    ],
   },
   {
     value: "corporate",
@@ -116,9 +122,12 @@ const LearningJourney = () => {
           </TabsList>
 
           {tabs.map((tab) => {
-            const tabCourses = tab.slugs
-              .map((s) => getCourseBySlug(s))
-              .filter((c): c is Course => c !== undefined);
+            const entries = tab.slugs.map((s) => {
+              const slug = typeof s === "string" ? s : s.slug;
+              const context = typeof s === "string" ? undefined : s.context;
+              const course = getCourseBySlug(slug);
+              return course ? { course, context } : null;
+            }).filter((e): e is { course: Course; context?: string } => e !== null);
 
             return (
               <TabsContent key={tab.value} value={tab.value}>
@@ -139,14 +148,20 @@ const LearningJourney = () => {
 
                   {/* Course cards */}
                   <div className="mx-auto max-w-2xl space-y-4">
-                    {tabCourses.map((course, i) => (
-                      <CourseCard
-                        key={course.slug}
-                        course={course}
-                        index={i}
-                        onPreRegister={openPreRegister}
-                        onRegister={openRegister}
-                      />
+                    {entries.map(({ course, context }, i) => (
+                      <div key={course.slug}>
+                        {context && (
+                          <p className="mb-2 font-display text-xs font-bold tracking-[0.15em] uppercase text-muted-foreground">
+                            {context}
+                          </p>
+                        )}
+                        <CourseCard
+                          course={course}
+                          index={i}
+                          onPreRegister={openPreRegister}
+                          onRegister={openRegister}
+                        />
+                      </div>
                     ))}
                   </div>
 

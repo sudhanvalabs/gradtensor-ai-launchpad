@@ -242,7 +242,28 @@ export const courses: Course[] = [
     faqs: [],
   },
 
-  // --- Segment 4: Non-Tech Working Professionals ---
+  // --- Shared: College Students + Working Professionals ---
+  {
+    slug: "the-human-edge",
+    status: "pre-register",
+    audience: ["engineering", "non-tech"],
+    title: "The Human Edge",
+    tagline:
+      "How to make yourself irreplaceable in the age of AI",
+    duration: "2-3 weeks",
+    hours: "5 live sessions | 60 minutes each",
+    idealFor:
+      "Working professionals and final-year students in any stream",
+    whoForShort: "No coding needed",
+    weeks: [],
+    projects: [],
+    whoFor: [],
+    ctaPrimary: "Pre-Register",
+    ctaSecondary: "",
+    faqs: [],
+  },
+
+  // --- Segment 4: Working Professionals ---
   {
     slug: "beyond-chatgpt",
     status: "pre-register",
