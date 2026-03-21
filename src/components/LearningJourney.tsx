@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Clock, BookOpen, ChevronDown } from "lucide-react";
 import { getCourseBySlug } from "@/data/courses";
 import type { Course } from "@/data/courses";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import PreRegisterDialog from "@/components/PreRegisterDialog";
 import RegisterDialog from "@/components/RegisterDialog";
 
@@ -11,8 +12,20 @@ const landingPages: Record<string, string> = {
   "ai-engineering-agentic-foundations": "/ai-engineering",
 };
 
-const segments = [
+const tabs = [
   {
+    value: "start-here",
+    trigger: "Start Here",
+    name: "New to AI? Start Here.",
+    label:
+      "AI Explorer is for anyone who wants to understand AI and use it confidently - regardless of background, role, or age. No prior knowledge needed. Complete this first, then choose the track that fits your goals.",
+    color: "#60a5fa",
+    slugs: ["ai-explorer"],
+    footerNote: "Leads naturally into any of the five tracks.",
+  },
+  {
+    value: "school",
+    trigger: "School Students",
     name: "School Students (Age 13-18)",
     label: "For school students aged 13-18",
     color: "#2dd4bf",
@@ -21,12 +34,16 @@ const segments = [
       "Complete Teen AI Builders first, then continue into AI Builder Pro.",
   },
   {
+    value: "college",
+    trigger: "College Students",
     name: "College Students",
     label: "For college students preparing for placements and AI careers",
     color: "#818cf8",
     slugs: ["ai-ready-engineer"],
   },
   {
+    value: "tech",
+    trigger: "Tech Professionals",
     name: "Tech Professionals",
     label:
       "For working engineers and developers with 1+ years of coding experience",
@@ -36,6 +53,8 @@ const segments = [
       "AI Engineering and Agentic Foundations is the prerequisite for Multi-Agent Systems.",
   },
   {
+    value: "non-tech",
+    trigger: "Non-Tech Professionals",
     name: "Non-Tech Working Professionals",
     label:
       "For working professionals with no coding background who want to automate their work",
@@ -43,6 +62,8 @@ const segments = [
     slugs: ["beyond-chatgpt"],
   },
   {
+    value: "corporate",
+    trigger: "Corporate Teams",
     name: "Corporate Teams",
     label: "For companies training their customer-facing and functional teams",
     color: "#f59e0b",
@@ -66,83 +87,59 @@ const LearningJourney = () => {
     setRegisterDialogOpen(true);
   };
 
-  const explorerCourse = getCourseBySlug("ai-explorer");
-
   return (
     <section className="py-24 md:py-32">
       <div className="section-container">
-        {/* AI Explorer - Entry Point */}
-        {explorerCourse && (
-          <div className="mb-20 animate-on-scroll">
-            <div className="mb-8 text-center">
-              <h2 className="mb-4 font-display text-4xl font-bold tracking-tight sm:text-5xl">
-                New to AI? <span className="gradient-text">Start Here.</span>
-              </h2>
-              <p className="mx-auto max-w-2xl text-base text-muted-foreground sm:text-lg">
-                AI Explorer is for anyone who wants to understand AI and use it
-                confidently - regardless of background, role, or age. No prior
-                knowledge needed. Complete this first, then choose the track
-                that fits your goals.
-              </p>
-            </div>
-
-            <div className="mx-auto max-w-2xl">
-              <CourseCard
-                course={explorerCourse}
-                index={0}
-                onPreRegister={openPreRegister}
-                onRegister={openRegister}
-              />
-            </div>
-
-            <p className="mt-6 text-center text-sm text-muted-foreground/70 italic">
-              Leads naturally into any of the five tracks below.
-            </p>
-          </div>
-        )}
-
-        {/* Find Your Track heading */}
-        <div className="mb-16 text-center animate-on-scroll">
+        {/* Heading */}
+        <div className="mb-12 text-center animate-on-scroll">
           <h2 className="mb-4 font-display text-4xl font-bold tracking-tight sm:text-5xl">
             Find Your <span className="gradient-text">Track</span>
           </h2>
           <p className="mx-auto max-w-2xl text-base text-muted-foreground sm:text-lg">
-            Every GradTensor course is built for a specific audience. Find your
+            Every GradTensor course is built for a specific audience. Pick your
             segment and start where you are.
           </p>
         </div>
 
-        {/* Audience Segments */}
-        <div className="space-y-16">
-          {segments.map((segment, segIndex) => {
-            const segmentCourses = segment.slugs
+        {/* Tabbed segments */}
+        <Tabs defaultValue="start-here" className="animate-on-scroll">
+          <TabsList className="mx-auto mb-10 flex h-auto w-full max-w-4xl flex-wrap justify-center gap-1 bg-transparent p-0">
+            {tabs.map((tab) => (
+              <TabsTrigger
+                key={tab.value}
+                value={tab.value}
+                className="rounded-full border border-border bg-card/50 px-4 py-2 font-display text-xs font-semibold tracking-wide transition-all data-[state=active]:border-primary/50 data-[state=active]:bg-primary/10 data-[state=active]:text-primary sm:text-sm"
+              >
+                {tab.trigger}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+
+          {tabs.map((tab) => {
+            const tabCourses = tab.slugs
               .map((s) => getCourseBySlug(s))
               .filter((c): c is Course => c !== undefined);
 
             return (
-              <div
-                key={segment.name}
-                className="animate-on-scroll"
-                style={{ animationDelay: `${segIndex * 0.1}s` }}
-              >
+              <TabsContent key={tab.value} value={tab.value}>
                 <div
                   className="rounded-xl border border-border bg-card/30 p-6 md:p-8"
                   style={{
                     borderLeftWidth: "4px",
-                    borderLeftColor: segment.color,
+                    borderLeftColor: tab.color,
                   }}
                 >
-                  {/* Segment header */}
+                  {/* Tab header */}
                   <h2 className="mb-2 font-display text-2xl font-bold tracking-tight">
-                    {segment.name}
+                    {tab.name}
                   </h2>
                   <p className="mb-8 max-w-2xl text-base text-muted-foreground">
-                    {segment.label}
+                    {tab.label}
                   </p>
 
                   {/* Course cards */}
                   <div className="mx-auto max-w-2xl space-y-4">
-                    {segmentCourses.map((course, i) => (
+                    {tabCourses.map((course, i) => (
                       <CourseCard
                         key={course.slug}
                         course={course}
@@ -154,20 +151,27 @@ const LearningJourney = () => {
                   </div>
 
                   {/* Progression note */}
-                  {segment.progressionNote && (
+                  {(tab as { progressionNote?: string }).progressionNote && (
                     <div className="mx-auto mt-6 max-w-2xl flex items-start gap-2 rounded-lg border border-dashed border-border bg-muted/30 px-4 py-3">
                       <ChevronDown
                         size={18}
                         className="mt-0.5 shrink-0 text-primary"
                       />
                       <p className="text-sm text-muted-foreground">
-                        {segment.progressionNote}
+                        {(tab as { progressionNote?: string }).progressionNote}
                       </p>
                     </div>
                   )}
 
+                  {/* Footer note (Start Here tab) */}
+                  {(tab as { footerNote?: string }).footerNote && (
+                    <p className="mx-auto mt-6 max-w-2xl text-center text-sm text-muted-foreground/70 italic">
+                      {(tab as { footerNote?: string }).footerNote}
+                    </p>
+                  )}
+
                   {/* Corporate segment extras */}
-                  {segment.corporateNote && (
+                  {(tab as { corporateNote?: boolean }).corporateNote && (
                     <div className="mx-auto mt-6 max-w-2xl space-y-3">
                       <p className="text-sm text-muted-foreground">
                         We also build industry-specific versions for Finance,
@@ -186,10 +190,10 @@ const LearningJourney = () => {
                     </div>
                   )}
                 </div>
-              </div>
+              </TabsContent>
             );
           })}
-        </div>
+        </Tabs>
       </div>
 
       <PreRegisterDialog
