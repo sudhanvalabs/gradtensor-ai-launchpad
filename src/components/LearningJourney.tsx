@@ -232,14 +232,6 @@ const CourseCard = ({
       className="flex flex-col rounded-xl border border-border bg-card/50 p-5 transition-all hover:border-primary/20 hover:bg-card animate-fade-up"
       style={{ animationDelay: `${index * 0.08}s` }}
     >
-      {/* Status badge */}
-      <div className="mb-3 flex items-center gap-3">
-        <span className="flex-1" />
-        <span className={isLive ? "badge-live" : "badge-pre-register"}>
-          {isLive ? "LIVE" : "COMING SOON"}
-        </span>
-      </div>
-
       {/* Course name */}
       <h3 className="mb-2 font-display text-lg font-bold tracking-tight">
         {course.title}
@@ -289,7 +281,7 @@ const CourseCard = ({
             onClick={() => onPreRegister(course.slug)}
             className="group/btn flex w-full items-center justify-center gap-2 rounded-lg border border-border px-4 py-2.5 font-display text-sm font-semibold tracking-wider text-muted-foreground transition-colors hover:border-primary/30 hover:text-primary"
           >
-            Pre-Register
+            Register Interest
             <ArrowRight
               size={16}
               className="transition-transform group-hover/btn:translate-x-1"
