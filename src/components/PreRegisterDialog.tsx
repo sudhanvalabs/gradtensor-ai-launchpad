@@ -121,11 +121,11 @@ const PreRegisterDialog = ({
             <CheckCircle2 className="mx-auto mb-4 h-12 w-12 text-primary" />
             <DialogHeader>
               <DialogTitle className="text-center font-display text-2xl">
-                You're on the list!
+                We've got your details!
               </DialogTitle>
               <DialogDescription className="text-center text-base">
-                Thanks for pre-registering. We'll let you know as soon as
-                this course is scheduled.
+                Thanks for registering your interest. We'll reach out on
+                WhatsApp with batch dates and next steps.
               </DialogDescription>
             </DialogHeader>
             <Button
@@ -140,11 +140,12 @@ const PreRegisterDialog = ({
         <>
         <DialogHeader>
           <DialogTitle className="font-display text-xl">
-            Pre-Register for Early Access
+            Register Your Interest
           </DialogTitle>
           <DialogDescription className="text-sm">
-            Be the first to know when this course launches. No payment
-            required. You'll be connected to us on WhatsApp to confirm.
+            Tell us you're interested and we'll reach out on WhatsApp
+            with batch dates, timings, and any questions you have. No
+            payment required.
           </DialogDescription>
         </DialogHeader>
 
@@ -276,7 +277,7 @@ const PreRegisterDialog = ({
               className="w-full font-display font-semibold tracking-wider"
               disabled={submitting}
             >
-              {submitting ? "Submitting..." : "Pre-Register"}
+              {submitting ? "Submitting..." : "Register Interest"}
             </Button>
           </form>
         </Form>
