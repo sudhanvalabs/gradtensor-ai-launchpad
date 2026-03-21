@@ -20,7 +20,9 @@ const tabs = [
     label:
       "AI Explorer is for anyone who wants to understand AI and use it confidently - regardless of background, role, or age. No prior knowledge needed. Complete this first, then choose the track that fits your goals.",
     color: "#60a5fa",
-    slugs: ["ai-explorer"],
+    slugs: [
+      { slug: "ai-explorer", context: "For anyone - no prior knowledge needed" },
+    ],
     footerNote: "Leads naturally into any of the five tracks.",
   },
   {
@@ -29,7 +31,10 @@ const tabs = [
     name: "School Students (Age 13-18)",
     label: "For school students aged 13-18",
     color: "#2dd4bf",
-    slugs: ["teen-ai-builders", "ai-builder-pro"],
+    slugs: [
+      { slug: "teen-ai-builders", context: "For beginners with no coding experience" },
+      { slug: "ai-builder-pro", context: "For students who have completed Teen AI Builders" },
+    ],
     progressionNote:
       "Complete Teen AI Builders first, then continue into AI Builder Pro.",
   },
@@ -51,7 +56,10 @@ const tabs = [
     label:
       "For working engineers and developers with 1+ years of coding experience",
     color: "#a78bfa",
-    slugs: ["ai-engineering-agentic-foundations", "multi-agent-systems"],
+    slugs: [
+      { slug: "ai-engineering-agentic-foundations", context: "For engineers with 1+ years of coding experience" },
+      { slug: "multi-agent-systems", context: "For engineers who have completed AI Engineering and Agentic Foundations" },
+    ],
     progressionNote:
       "AI Engineering and Agentic Foundations is the prerequisite for Multi-Agent Systems.",
   },
@@ -64,7 +72,7 @@ const tabs = [
     color: "#34d399",
     slugs: [
       { slug: "the-human-edge", context: "For mid-career professionals rethinking their role in the age of AI" },
-      "beyond-chatgpt",
+      { slug: "beyond-chatgpt", context: "For professionals who want to automate daily work without writing code" },
     ],
   },
   {
@@ -73,7 +81,9 @@ const tabs = [
     name: "Corporate Teams",
     label: "For companies training their customer-facing and functional teams",
     color: "#f59e0b",
-    slugs: ["ai-prompts-customer-support"],
+    slugs: [
+      { slug: "ai-prompts-customer-support", context: "For customer support, sales, and service teams" },
+    ],
     corporateNote: true,
   },
 ];
