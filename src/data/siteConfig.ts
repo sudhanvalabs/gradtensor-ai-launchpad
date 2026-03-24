@@ -4,7 +4,7 @@ export const siteConfig = {
   siteUrl: "https://gradtensor.com",
   twitterHandle: "@GradTensor",
   defaultDescription:
-    "We help people stop fearing AI and start thriving with it. Live, hands-on courses from GradTensor.",
+    "We help people stop fearing AI and start getting ahead with it. Live, hands-on courses from GradTensor.",
 
   email: "courses@gradtensor.com",
 
