@@ -28,15 +28,25 @@ const tabs = [
   {
     value: "school",
     trigger: "School Students",
-    name: "School Students (Age 13-18)",
-    label: "For school students aged 13-18",
+    name: "School Students (Ages 8-18)",
+    label:
+      "A clear progression from curiosity to production-level AI skills. Every course is designed for a specific age and readiness level.",
     color: "#2dd4bf",
     slugs: [
-      { slug: "teen-ai-builders", context: "For beginners with no coding experience" },
-      { slug: "ai-builder-pro", context: "For students who have completed Teen AI Builders" },
+      { section: "For Parents" },
+      { slug: "parent-ai-workshop", context: "Start here - understand your child's AI learning journey" },
+      { section: "Ages 8-12" },
+      { slug: "little-ai-builders", context: "Creative AI exploration - no coding" },
+      { section: "Ages 13-18 - Start Here" },
+      { slug: "ai-explorer-teens", context: "Try before you commit - 1 weekend" },
+      { section: "Ages 13-18 - Build" },
+      { slug: "teen-ai-builders", context: "Build a real AI app in 4 weekends" },
+      { slug: "ai-builder-pro", context: "After Teen AI Builders - go deeper with RAG and document intelligence" },
+      { section: "Class 11-12 - Engineering Path" },
+      { slug: "ai-ready-engineer", context: "Bridge to engineering college - production AI skills" },
     ],
     progressionNote:
-      "Complete Teen AI Builders first, then continue into AI Builder Pro.",
+      "Little AI Builders (8-12) -> AI Explorer for Teens -> Teen AI Builders -> AI Builder Pro -> AI-Ready Engineer (Class 11-12). Parent AI Workshop recommended before enrolling your child.",
   },
   {
     value: "college",
