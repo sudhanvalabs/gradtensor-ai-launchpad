@@ -95,10 +95,20 @@ const tabs = [
     value: "corporate",
     trigger: "Corporate Teams",
     name: "Corporate Teams",
-    label: "For companies training their customer-facing and functional teams",
+    label:
+      "Custom AI training and learning roadmaps for your teams. A structured progression from AI literacy to process automation - tailored to your function, your workflows, your documents. Online or onsite.",
     color: "#f59e0b",
     slugs: [
-      { slug: "ai-prompts-customer-support", context: "For customer support, sales, and service teams" },
+      { slug: "b2b-customer-support" },
+      { slug: "b2b-hr" },
+      { slug: "b2b-marketing" },
+      { slug: "b2b-sales" },
+      { slug: "b2b-operations" },
+      { slug: "b2b-finance" },
+      { slug: "b2b-ca" },
+      { slug: "b2b-legal" },
+      { slug: "b2b-teachers" },
+      { slug: "b2b-procurement" },
     ],
     corporateNote: true,
   },
@@ -233,18 +243,14 @@ const LearningJourney = () => {
                   {(tab as { corporateNote?: boolean }).corporateNote && (
                     <div className="mx-auto mt-6 max-w-2xl space-y-3">
                       <p className="text-sm text-muted-foreground">
-                        We also build industry-specific versions for Finance,
-                        Marketing, HR, and Consulting teams.{" "}
+                        Every course is customised to your team's actual workflows and documents. We also offer company-wide AI Explorer sessions as a starting point.{" "}
                         <a
                           href="mailto:partnerships@gradtensor.com"
                           className="text-primary underline underline-offset-2 hover:text-primary/80"
                         >
                           Contact us
                         </a>{" "}
-                        to discuss a custom batch for your organisation.
-                      </p>
-                      <p className="text-sm italic text-muted-foreground/70">
-                        More industry-specific courses coming soon.
+                        to discuss a training roadmap for your organisation.
                       </p>
                     </div>
                   )}
@@ -377,6 +383,17 @@ const CourseCard = ({
               className="transition-transform group-hover/btn:translate-x-1"
             />
           </Link>
+        ) : course.ctaPrimary === "Contact Us" ? (
+          <a
+            href="mailto:partnerships@gradtensor.com"
+            className="group/btn flex w-full items-center justify-center gap-2 rounded-lg border border-border px-4 py-2.5 font-display text-sm font-semibold tracking-wider text-muted-foreground transition-colors hover:border-primary/30 hover:text-primary"
+          >
+            Contact Us
+            <ArrowRight
+              size={16}
+              className="transition-transform group-hover/btn:translate-x-1"
+            />
+          </a>
         ) : (
           <button
             onClick={() => onPreRegister(course.slug)}
