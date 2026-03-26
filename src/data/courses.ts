@@ -79,7 +79,7 @@ export const courses: Course[] = [
     slug: "one-hour-on-ai",
     status: "live",
     audience: ["high-school", "engineering", "non-tech", "senior-it"],
-    title: "One Hour on AI",
+    title: "One Hour on AI: What You Actually Need to Know",
     tagline:
       "New to AI? Join our free monthly live session - 90 minutes, open to everyone, no commitment required",
     description:
