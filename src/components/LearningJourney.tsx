@@ -347,10 +347,13 @@ const CourseCard = ({
           </p>
         </div>
         {hasDetails && (
-          <ChevronDown
-            size={18}
-            className={`mt-1 shrink-0 text-muted-foreground transition-transform ${expanded ? "rotate-180" : ""}`}
-          />
+          <span className="mt-1 flex shrink-0 items-center gap-1 text-xs text-muted-foreground/70 hover:text-primary transition-colors">
+            {expanded ? "Less" : "More details"}
+            <ChevronDown
+              size={14}
+              className={`transition-transform ${expanded ? "rotate-180" : ""}`}
+            />
+          </span>
         )}
       </div>
 
