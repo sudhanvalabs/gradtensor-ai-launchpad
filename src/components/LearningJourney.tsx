@@ -42,12 +42,23 @@ const tabs = [
     value: "college",
     trigger: "College Students",
     name: "College Students",
-    label: "For college students preparing for placements and AI careers",
+    label:
+      "Stop fearing AI and start getting ahead with it. Courses for every stream, every year - from AI awareness to career-ready skills.",
     color: "#818cf8",
     slugs: [
-      { slug: "ai-ready-engineer", context: "For engineering and CS students" },
-      { slug: "the-human-edge", context: "For final-year students in any stream entering a shifting job market" },
+      { section: "Start Here - Any Stream, Any Year" },
+      { slug: "ai-explorer-students", context: "For any college student - no technical background needed" },
+      { section: "Build With AI" },
+      { slug: "build-first-ai-app", context: "For students who want a portfolio project - no coding needed" },
+      { section: "For Your Stream" },
+      { slug: "ai-for-mba", context: "For MBA, PGDM, and BBA students" },
+      { slug: "ai-for-professional-degree", context: "For CA and Law students - select your track at registration" },
+      { section: "Placement-Ready" },
+      { slug: "ai-ready-engineer", context: "For final-year CS/IT/MCA students with basic Python" },
+      { slug: "the-human-edge", context: "For final-year students in any stream" },
     ],
+    progressionNote:
+      "AI Explorer for Students is the ideal starting point. From there, pick the course that fits your stream and goals.",
   },
   {
     value: "tech",

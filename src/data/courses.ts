@@ -139,17 +139,138 @@ export const courses: Course[] = [
 
   // --- Segment 2: College Students ---
   {
+    slug: "ai-explorer-students",
+    status: "pre-register",
+    audience: ["engineering"],
+    title: "AI Explorer for Students",
+    tagline:
+      "Understand AI. Use it at college. Know what it means for your career",
+    description:
+      "Everyone is talking about AI. Your professors are mentioning it. Companies are asking about it in interviews. You have tried ChatGPT a few times but you are not sure if you are using it right. You leave with a clear mental model of AI, hands-on experience with 3 tools, an honest picture of what AI means for your career path, and a 90-day action plan you start the next day.",
+    duration: "1 weekend",
+    hours: "2 hours Saturday + 2 hours Sunday",
+    idealFor: "Any college student, any year, any stream",
+    whoForShort: "Any stream, any year",
+    price: "INR 999 + GST",
+    weeks: [
+      "Session 1: What AI actually is - clear up misconceptions, build the right mental model, live comparison of ChatGPT, Claude, and Gemini",
+      "Session 2: AI for your academic life - research, writing, learning, project work, internship applications, and things AI gets wrong",
+      "Session 3: AI and the job market - which roles are growing, which are declining, what companies are actually looking for",
+      "Session 4: Your AI starter plan - 3 tools to use this week, a 90-day skill-building roadmap based on your stream and goals",
+    ],
+    projects: [],
+    whoFor: [
+      "Any college student, any year, any stream - engineering, commerce, arts, science, law, medicine",
+      "No technical background needed",
+    ],
+    ctaPrimary: "Pre-Register",
+    ctaSecondary: "",
+    faqs: [],
+  },
+  {
+    slug: "build-first-ai-app",
+    status: "pre-register",
+    audience: ["engineering"],
+    title: "Build Your First AI App",
+    tagline:
+      "Go from zero to a working AI application. No coding experience needed",
+    description:
+      "Most of your batchmates will graduate having used AI. You will graduate having built with it. That is a different conversation in every interview. You leave with a fully working, deployed AI application with a public URL - a portfolio project you can put on LinkedIn and show at interviews. No coding background required. The course assumes nothing and gets you to a working, shareable AI application in 4 weekends.",
+    duration: "4 weekends",
+    hours: "2 hours Saturday + 2 hours Sunday each weekend",
+    idealFor: "College students who want to build something with AI - any stream",
+    whoForShort: "No coding needed",
+    price: "INR 3,999 + GST",
+    weeks: [
+      "Weekend 1: What is AI and how does it think, then your first AI program in Google Colab",
+      "Weekend 2: Give your AI a personality, then make it remember across sessions",
+      "Weekend 3: Design your AI's behaviour with prompt engineering, then build the web interface",
+      "Weekend 4: Deploy to a public URL anyone can use, then Demo Day - present your project",
+    ],
+    projects: [
+      "A fully working AI application deployed at a public URL - yours to show at interviews, put on LinkedIn, and share with anyone",
+    ],
+    whoFor: [
+      "College students in any year, any stream who want to build something with AI",
+      "Entrepreneurs, tinkerers, internship applicants who want to stand out",
+      "No coding background required",
+    ],
+    ctaPrimary: "Pre-Register",
+    ctaSecondary: "",
+    faqs: [],
+  },
+  {
+    slug: "ai-for-mba",
+    status: "pre-register",
+    audience: ["engineering"],
+    title: "AI for MBA and Management Students",
+    tagline:
+      "Lead in the AI era. Think strategically. Decide confidently",
+    description:
+      "Every management role you interview for will ask about AI. Every organisation you join will be figuring out AI. The students who can think clearly about AI strategy - not just use AI tools - will be the ones who lead. You leave with a business-focused mental model for evaluating AI, confidence in case study and interview discussions, and a framework for leading AI adoption in any organisation.",
+    duration: "1 weekend",
+    hours: "2 hours Saturday + 2 hours Sunday",
+    idealFor: "MBA, PGDM, BBA students across all specialisations",
+    whoForShort: "Management students",
+    price: "INR 2,999 + GST",
+    weeks: [
+      "Session 1: The AI business landscape - what companies are actually doing with AI versus what they claim",
+      "Session 2: AI in your future function - how AI is changing marketing, finance, HR, operations, and consulting",
+      "Session 3: Leading AI adoption - ethics, governance, bias, and the questions every leader needs to ask",
+      "Session 4: Your AI leadership edge - frameworks for evaluating AI investments, positioning yourself as an AI-literate business leader",
+    ],
+    projects: [],
+    whoFor: [
+      "MBA, PGDM, BBA students across marketing, finance, HR, operations, and consulting tracks",
+      "Students headed into leadership and strategy roles, not coding roles",
+    ],
+    ctaPrimary: "Pre-Register",
+    ctaSecondary: "",
+    faqs: [],
+  },
+  {
+    slug: "ai-for-professional-degree",
+    status: "pre-register",
+    audience: ["engineering"],
+    title: "AI for Professional Degree Students",
+    tagline:
+      "Enter your profession ahead of it. Not behind it",
+    description:
+      "AI is already changing how senior CAs and lawyers work - client communications, audit documentation, compliance notices, contract review, legal drafting. Most professional degree students will enter their first role without knowing any of this. The ones who do will stand out from day one. You leave with hands-on experience with profession-relevant AI workflows and a clear action plan for building AI skills during articleship or law school.",
+    duration: "1 weekend",
+    hours: "2 hours Saturday + 2 hours Sunday",
+    idealFor: "CA students (Foundation, IPCC, Final), article clerks, LLB and LLM students",
+    whoForShort: "CA & Law students",
+    price: "INR 1,999 + GST",
+    weeks: [
+      "Session 1: What AI is actually doing in your profession - honest picture of which tasks are being automated",
+      "Session 2: AI tools for your professional work - live demos tailored to your track (CA or Law)",
+      "Session 3: AI in your articleship or internship - how to demonstrate AI literacy to your principal or senior partner",
+      "Session 4: The AI-ready professional - what skills to build, how to position yourself in interviews",
+    ],
+    projects: [],
+    whoFor: [
+      "CA students at any stage - Foundation, IPCC, Final, or article clerks",
+      "LLB and LLM students at any year",
+    ],
+    ctaPrimary: "Pre-Register",
+    ctaSecondary: "",
+    faqs: [],
+  },
+  {
     slug: "ai-ready-engineer",
     stage: "portfolio",
     status: "pre-register",
     audience: ["engineering"],
     title: "AI-Ready Engineer",
     tagline:
-      "Get hired in the AI era before your batchmates figure out what's happening",
+      "Get hired in the AI era before your batchmates figure out what is happening",
+    description:
+      "Most engineering graduates know Python and data structures. Very few know how to build production AI systems - RAG pipelines, LangChain agents, FastAPI backends, vector databases. Companies are hiring for these skills right now and finding very few candidates who have them. You leave with a deployed AI engineering project, production experience with LangChain, RAG, and FastAPI, and a resume that stands out from every other CS graduate.",
     duration: "2 weeks",
     hours: "8 live hours + 4 project hours",
     idealFor: "Final-year students & fresh graduates preparing for placements",
-    whoForShort: "Final-year students & fresh grads",
+    whoForShort: "Final-year CS/IT students",
     price: "INR 7,999 + GST",
     weeks: [
       "Session 1: How AI Systems Actually Work - LLMs, embeddings, RAG, agents, and tracing a real query end-to-end",
@@ -257,16 +378,27 @@ export const courses: Course[] = [
     audience: ["engineering", "non-tech"],
     title: "The Human Edge",
     tagline:
-      "How to make yourself irreplaceable in the age of AI",
+      "Make yourself irreplaceable in the age of AI",
+    description:
+      "AI is automating tasks that entry-level jobs used to involve. Fresher hiring has slowed in some sectors. The question is not whether AI will affect your career - it is whether you will be on the right side of that change. You leave with a clear picture of where AI is heading for your career path, hands-on AI skills applied to your target function, the human skills AI cannot replicate, and a written 90-day plan you start the next day.",
     duration: "2-3 weeks",
     hours: "5 live sessions | 60 minutes each",
     idealFor:
-      "Working professionals and final-year students in any stream",
-    whoForShort: "No coding needed",
+      "Final-year college students in any stream, 6-18 months from entering the workforce",
+    whoForShort: "Final-year, any stream",
     price: "INR 8,999 + GST",
-    weeks: [],
+    weeks: [
+      "Session 1: The honest reality - what AI is actually doing to entry-level work in India. Not the fear, not the hype. The real picture.",
+      "Session 2: AI fluency for your role - hands-on AI skills applied to tasks common in your target function",
+      "Session 3: The skills AI cannot replace - taste, judgment, communication, adaptability. Co-delivered with a soft skills specialist.",
+      "Session 4: Visibility and personal brand - why being skilled is not enough, how to build a presence that creates opportunities",
+      "Session 5: Your 90-day plan - workshop session. Each student leaves with a written, specific action plan.",
+    ],
     projects: [],
-    whoFor: [],
+    whoFor: [
+      "Final-year college students in any stream - engineering, commerce, arts, humanities, science, law, management",
+      "Students who are 6-18 months away from entering the workforce",
+    ],
     ctaPrimary: "Pre-Register",
     ctaSecondary: "",
     faqs: [],
