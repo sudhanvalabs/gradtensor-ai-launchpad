@@ -18,12 +18,12 @@ const tabs = [
     trigger: "Start Here",
     name: "New to AI? Start Here.",
     label:
-      "AI Explorer is for anyone who wants to understand AI and use it confidently - regardless of background, role, or age. No prior knowledge needed. Complete this first, then choose the track that fits your goals.",
+      "Join our free monthly live session - 90 minutes, open to everyone, no commitment required. We will help you understand AI and find your right starting point.",
     color: "#60a5fa",
     slugs: [
-      { slug: "ai-explorer", context: "For anyone - no prior knowledge needed" },
+      { slug: "one-hour-on-ai", context: "Runs twice every month - live online" },
     ],
-    footerNote: "Leads naturally into any of the five tracks.",
+    footerNote: "After this session, pick the track that fits your goals.",
   },
   {
     value: "school",

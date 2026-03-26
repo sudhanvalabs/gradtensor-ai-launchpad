@@ -74,24 +74,29 @@ export const stageLabels: Record<
 };
 
 export const courses: Course[] = [
-  // --- Entry point course (shown in its own section) ---
+  // --- Entry point event (shown in Start Here section) ---
   {
-    slug: "ai-explorer",
+    slug: "one-hour-on-ai",
     status: "live",
     audience: ["high-school", "engineering", "non-tech", "senior-it"],
-    title: "AI Explorer",
+    title: "One Hour on AI",
     tagline:
-      "Understand AI, use it confidently, know where it is going",
-    duration: "2 weeks",
-    hours: "4 live sessions | 60 minutes each",
+      "New to AI? Join our free monthly live session - 90 minutes, open to everyone, no commitment required",
+    description:
+      "We will help you understand AI and find your right starting point. Whether you are a student, a working professional, or just curious - this session gives you a clear, honest picture of what AI is, what it can do, and which GradTensor course (if any) is right for you. Runs twice every month. Live online.",
+    duration: "90 minutes",
+    hours: "Runs twice every month",
     idealFor:
-      "Anyone who wants to understand AI - regardless of background, role, or age",
-    whoForShort: "No prior knowledge needed",
-    price: "INR 3,999 + GST",
+      "Anyone curious about AI - students, professionals, parents, anyone",
+    whoForShort: "Open to everyone",
+    price: "INR 99",
     weeks: [],
     projects: [],
-    whoFor: [],
-    ctaPrimary: "View & Enroll",
+    whoFor: [
+      "Anyone curious about AI - no prior knowledge needed",
+      "Students, working professionals, parents, or anyone wanting to understand AI before committing to a course",
+    ],
+    ctaPrimary: "Register",
     ctaSecondary: "",
     faqs: [],
   },
