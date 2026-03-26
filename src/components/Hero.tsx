@@ -35,11 +35,6 @@ const Hero = () => {
               <span className="gradient-text">Start Getting Ahead With It.</span>
             </h1>
 
-            {/* Subheadline */}
-            <p className="mb-10 max-w-2xl font-display text-xl leading-relaxed text-foreground sm:text-2xl md:text-3xl animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              Stop fearing AI. Start getting ahead with it.
-            </p>
-
             {/* CTAs */}
             <div className="flex flex-col gap-4 sm:flex-row animate-fade-up" style={{ animationDelay: "0.3s" }}>
               <Link
