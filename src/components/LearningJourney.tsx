@@ -68,12 +68,28 @@ const tabs = [
     trigger: "Working Professionals",
     name: "Working Professionals",
     label:
-      "For working professionals who want to automate their work - no coding background needed",
+      "Stop fearing AI. Start getting ahead with it. Pick your profession and level — no coding, no new tools, just Claude or ChatGPT.",
     color: "#34d399",
     slugs: [
-      { slug: "the-human-edge", context: "For mid-career professionals rethinking their role in the age of AI" },
-      { slug: "beyond-chatgpt", context: "For professionals who want to automate daily work without writing code" },
+      { section: "Start Here" },
+      { slug: "ai-explorer-professionals", context: "Entry point — for any working professional" },
+      { section: "Level 1: AI Prompts — Pick your profession" },
+      { slug: "ai-prompts-ca" },
+      { slug: "ai-prompts-finance" },
+      { slug: "ai-prompts-hr" },
+      { slug: "ai-prompts-marketing" },
+      { slug: "ai-prompts-sales" },
+      { slug: "ai-prompts-legal" },
+      { section: "Level 2: AI Workflows — Pick your profession" },
+      { slug: "ai-workflows-ca" },
+      { slug: "ai-workflows-finance" },
+      { slug: "ai-workflows-hr" },
+      { slug: "ai-workflows-marketing" },
+      { slug: "ai-workflows-sales" },
+      { slug: "ai-workflows-legal" },
     ],
+    progressionNote:
+      "AI Explorer for Professionals → Level 1: AI Prompts → Level 2: AI Workflows. Most professionals who attend AI Explorer enroll in Level 1 before the final session ends.",
   },
   {
     value: "corporate",
@@ -132,12 +148,21 @@ const LearningJourney = () => {
           </TabsList>
 
           {tabs.map((tab) => {
-            const entries = tab.slugs.map((s) => {
-              const slug = typeof s === "string" ? s : s.slug;
-              const context = typeof s === "string" ? undefined : s.context;
-              const course = getCourseBySlug(slug);
-              return course ? { course, context } : null;
-            }).filter((e): e is { course: Course; context?: string } => e !== null);
+            type TabEntry =
+              | { type: "course"; course: Course; context?: string }
+              | { type: "section"; title: string };
+
+            const entries: TabEntry[] = tab.slugs
+              .map((s): TabEntry | null => {
+                if ("section" in s) {
+                  return { type: "section", title: s.section };
+                }
+                const slug = typeof s === "string" ? s : s.slug;
+                const context = typeof s === "string" ? undefined : s.context;
+                const course = getCourseBySlug(slug);
+                return course ? { type: "course", course, context } : null;
+              })
+              .filter((e): e is TabEntry => e !== null);
 
             return (
               <TabsContent key={tab.value} value={tab.value}>
@@ -158,21 +183,30 @@ const LearningJourney = () => {
 
                   {/* Course cards */}
                   <div className="mx-auto max-w-2xl space-y-4">
-                    {entries.map(({ course, context }, i) => (
-                      <div key={course.slug}>
-                        {context && (
-                          <p className="mb-2 font-display text-xs font-bold tracking-[0.15em] uppercase text-muted-foreground">
-                            {context}
-                          </p>
-                        )}
-                        <CourseCard
-                          course={course}
-                          index={i}
-                          onPreRegister={openPreRegister}
-                          onRegister={openRegister}
-                        />
-                      </div>
-                    ))}
+                    {entries.map((entry, i) =>
+                      entry.type === "section" ? (
+                        <h3
+                          key={entry.title}
+                          className="pt-6 pb-1 font-display text-sm font-bold tracking-[0.1em] uppercase text-primary first:pt-0"
+                        >
+                          {entry.title}
+                        </h3>
+                      ) : (
+                        <div key={entry.course.slug}>
+                          {entry.context && (
+                            <p className="mb-2 font-display text-xs font-bold tracking-[0.15em] uppercase text-muted-foreground">
+                              {entry.context}
+                            </p>
+                          )}
+                          <CourseCard
+                            course={entry.course}
+                            index={i}
+                            onPreRegister={openPreRegister}
+                            onRegister={openRegister}
+                          />
+                        </div>
+                      )
+                    )}
                   </div>
 
                   {/* Progression note */}
