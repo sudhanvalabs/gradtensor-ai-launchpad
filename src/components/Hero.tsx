@@ -31,8 +31,8 @@ const Hero = () => {
           <div className="mx-auto max-w-4xl">
             {/* Headline */}
             <h1 className="mb-6 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl animate-fade-up" style={{ animationDelay: "0.1s" }}>
-              Build AI Products.{" "}
-              <span className="gradient-text">Not Just AI Skills.</span>
+              Stop Fearing AI.{" "}
+              <span className="gradient-text">Start Getting Ahead With It.</span>
             </h1>
 
             {/* Subheadline */}

@@ -77,7 +77,7 @@ export const courses: Course[] = [
   // --- Entry point event (shown in Start Here section) ---
   {
     slug: "one-hour-on-ai",
-    status: "live",
+    status: "pre-register",
     audience: ["high-school", "engineering", "non-tech", "senior-it"],
     title: "One Hour on AI: What You Actually Need to Know",
     tagline:

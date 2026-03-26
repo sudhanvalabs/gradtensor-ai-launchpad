@@ -11,7 +11,7 @@ interface OGData {
 
 const OG_DATA: Record<string, OGData> = {
   "/": {
-    title: "GradTensor - Build AI Products. Not Just AI Skills.",
+    title: "GradTensor - Stop Fearing AI. Start Getting Ahead With It.",
     description:
       "We help people stop fearing AI and start getting ahead with it. Live, hands-on courses from GradTensor.",
     image: "/og/home.png",
@@ -31,7 +31,7 @@ const OG_DATA: Record<string, OGData> = {
   "/courses": {
     title: "AI Courses & Programs | GradTensor",
     description:
-      "Build AI products. Not just AI skills. Three learning tracks - Student, Technical Builder, and Non-Technical Builder - each leading to real AI products you can ship.",
+      "Stop fearing AI. Start getting ahead with it. Courses for school students, college students, working professionals, and corporate teams.",
     image: "/og/courses.png",
   },
   "/schedule": {
@@ -49,7 +49,7 @@ const OG_DATA: Record<string, OGData> = {
 };
 
 const FALLBACK: OGData = {
-  title: "GradTensor - Build AI Products. Not Just AI Skills.",
+  title: "GradTensor - Stop Fearing AI. Start Getting Ahead With It.",
   description:
     "We help people stop fearing AI and start getting ahead with it. Live, hands-on courses from GradTensor.",
   image: "/og/home.png",

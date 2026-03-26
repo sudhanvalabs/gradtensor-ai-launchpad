@@ -26,7 +26,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="GradTensor - Build AI Products. Not Just AI Skills."
+        title="GradTensor - Stop Fearing AI. Start Getting Ahead With It."
         description="We help people stop fearing AI and start getting ahead with it. Live, hands-on courses from GradTensor."
         path="/"
         jsonLd={[organizationLd]}
