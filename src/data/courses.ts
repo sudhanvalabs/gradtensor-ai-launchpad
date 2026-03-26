@@ -241,7 +241,7 @@ export const courses: Course[] = [
     hours: "2 hours Saturday + 2 hours Sunday",
     idealFor: "CA students (Foundation, IPCC, Final), article clerks, LLB and LLM students",
     whoForShort: "CA & Law students",
-    price: "INR 1,999 + GST",
+    price: "INR 2,999 + GST",
     weeks: [
       "Session 1: What AI is actually doing in your profession - honest picture of which tasks are being automated",
       "Session 2: AI tools for your professional work - live demos tailored to your track (CA or Law)",
