@@ -68,19 +68,19 @@ const tabs = [
     trigger: "Working Professionals",
     name: "Working Professionals",
     label:
-      "Stop fearing AI. Start getting ahead with it. Pick your profession and level — no coding, no new tools, just Claude or ChatGPT.",
+      "Stop fearing AI. Start getting ahead with it. Pick your profession and level - no coding, no new tools, just Claude or ChatGPT.",
     color: "#34d399",
     slugs: [
       { section: "Start Here" },
-      { slug: "ai-explorer-professionals", context: "Entry point — for any working professional" },
-      { section: "Level 1: AI Prompts — Pick your profession" },
+      { slug: "ai-explorer-professionals", context: "Entry point - for any working professional" },
+      { section: "Level 1: AI Prompts - Pick your profession" },
       { slug: "ai-prompts-ca" },
       { slug: "ai-prompts-finance" },
       { slug: "ai-prompts-hr" },
       { slug: "ai-prompts-marketing" },
       { slug: "ai-prompts-sales" },
       { slug: "ai-prompts-legal" },
-      { section: "Level 2: AI Workflows — Pick your profession" },
+      { section: "Level 2: AI Workflows - Pick your profession" },
       { slug: "ai-workflows-ca" },
       { slug: "ai-workflows-finance" },
       { slug: "ai-workflows-hr" },
@@ -296,23 +296,45 @@ const CourseCard = ({
   onPreRegister,
   onRegister,
 }: CourseCardProps) => {
+  const [expanded, setExpanded] = useState(false);
   const isLive = course.status === "live";
   const isTBD = course.duration === "TBD";
+  const hasDetails = !!course.description;
 
   return (
     <div
       className="flex flex-col rounded-xl border border-border bg-card/50 p-5 transition-all hover:border-primary/20 hover:bg-card animate-fade-up"
       style={{ animationDelay: `${index * 0.08}s` }}
     >
-      {/* Course name */}
-      <h3 className="mb-2 font-display text-lg font-bold tracking-tight">
-        {course.title}
-      </h3>
+      {/* Course name + expand toggle */}
+      <div
+        className={`flex items-start justify-between gap-2 ${hasDetails ? "cursor-pointer" : ""}`}
+        onClick={() => hasDetails && setExpanded(!expanded)}
+      >
+        <div className="flex-1">
+          <h3 className="mb-2 font-display text-lg font-bold tracking-tight">
+            {course.title}
+          </h3>
+          <p className="mb-3 text-sm text-muted-foreground">
+            {course.tagline}
+          </p>
+        </div>
+        {hasDetails && (
+          <ChevronDown
+            size={18}
+            className={`mt-1 shrink-0 text-muted-foreground transition-transform ${expanded ? "rotate-180" : ""}`}
+          />
+        )}
+      </div>
 
-      {/* Tagline */}
-      <p className="mb-3 text-sm text-muted-foreground flex-1">
-        {course.tagline}
-      </p>
+      {/* Expandable description */}
+      {hasDetails && expanded && (
+        <div className="mb-4 rounded-lg bg-muted/30 px-4 py-3">
+          <p className="text-sm leading-relaxed text-muted-foreground">
+            {course.description}
+          </p>
+        </div>
+      )}
 
       {/* Duration + Hours */}
       <div className="mb-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">

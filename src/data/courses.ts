@@ -31,7 +31,8 @@ export interface Course {
   hours: string;
   idealFor: string;
   whoForShort: string;
-  price?: string; // e.g. "INR 2,999 + GST" — omit if not yet decided
+  description?: string;
+  price?: string; // e.g. "INR 2,999 + GST" - omit if not yet decided
   enrollUrl?: string;
   weeks: string[];
   projects: string[];
@@ -281,22 +282,24 @@ export const courses: Course[] = [
     title: "AI Explorer for Professionals",
     tagline:
       "Understand AI, use it confidently at work, know where it is going",
+    description:
+      "Everyone around you is talking about AI. You are not sure if you are using it right, if you are missing something important, or whether your role is at risk. This course gives you clarity - not hype, not fear, just an honest picture. You leave with a clear mental model of how AI works, hands-on experience with Claude and ChatGPT using examples from your own profession, and a personal 30-day action plan.",
     duration: "1 weekend",
     hours: "2 hours Saturday + 2 hours Sunday",
     idealFor:
-      "Any working professional who wants to understand AI — regardless of role or industry",
+      "Any working professional who wants to understand AI - regardless of role or industry",
     whoForShort: "No prior knowledge needed",
     price: "INR 999 + GST",
     weeks: [
-      "Session 1: What AI actually is — clear up misconceptions, build the right mental model, live side-by-side comparison of ChatGPT, Claude, and Gemini on a real work task",
-      "Session 2: What AI is genuinely good at — and where it fails. Hallucination explained honestly. Why prompt quality matters more than which tool you use",
-      "Session 3: AI at work — live demos from real professional scenarios across functions. You leave with 2-3 working prompts you built yourself",
-      "Session 4: Where AI is going — and your personal 30-day action plan for using AI at work starting tomorrow",
+      "Session 1: What AI actually is - clear up misconceptions, build the right mental model, live side-by-side comparison of ChatGPT, Claude, and Gemini on a real work task",
+      "Session 2: What AI is genuinely good at - and where it fails. Hallucination explained honestly. Why prompt quality matters more than which tool you use",
+      "Session 3: AI at work - live demos from real professional scenarios across functions. You leave with 2-3 working prompts you built yourself",
+      "Session 4: Where AI is going - and your personal 30-day action plan for using AI at work starting tomorrow",
     ],
     projects: [],
     whoFor: [
       "Any working professional who has tried ChatGPT once or twice and still does not feel confident about what it can do for their work",
-      "Finance, HR, marketing, sales, legal, CA, operations — any function, any industry",
+      "Finance, HR, marketing, sales, legal, CA, operations - any function, any industry",
       "No technical background needed",
     ],
     ctaPrimary: "Pre-Register",
@@ -304,13 +307,15 @@ export const courses: Course[] = [
     faqs: [],
   },
 
-  // Level 1: AI Prompts — profession-specific
+  // Level 1: AI Prompts - profession-specific
   {
     slug: "ai-prompts-ca",
     status: "pre-register",
     audience: ["non-tech"],
     title: "AI Prompts for Chartered Accountants",
     tagline: "Do in 8 minutes what used to take 45",
+    description:
+      "Your colleagues are producing the same work faster. Junior CAs at tech-forward firms are already using AI to draft audit observations, tax summaries, and client communications in minutes. You leave with 8 personal prompt templates - audit observations, tax computation summaries, compliance notices, client communications, article clerk briefs, board talking points, filing checklists, and internal SOPs. Use them the next morning.",
     duration: "1 day",
     hours: "1-day workshop or 3 × 90 min live sessions",
     idealFor: "Chartered Accountants and article clerks",
@@ -329,6 +334,8 @@ export const courses: Course[] = [
     audience: ["non-tech"],
     title: "AI Prompts for Finance Professionals",
     tagline: "Turn numbers into narratives in minutes, not hours",
+    description:
+      "If your management reports take a day and your variance commentary sounds like every other finance team's, AI is the fastest way to close that gap. You leave with 8 personal prompt templates for the written layer on top of your analysis - management reports, variance analysis, board presentations, client reviews, budget documentation, invoice disputes, policy explanations, and month-end close updates.",
     duration: "1 day",
     hours: "1-day workshop or 3 × 90 min live sessions",
     idealFor: "Finance professionals in reporting, analysis, and FP&A roles",
@@ -348,6 +355,8 @@ export const courses: Course[] = [
     title: "AI Prompts for HR Professionals",
     tagline:
       "Spend less time drafting. More time on the work that actually matters",
+    description:
+      "If you are spending half your day on JDs, offer letters, and rejection emails, that time is costing you influence. You leave with 8 personal prompt templates - job descriptions, candidate outreach messages, interview question sets, offer letters, rejection emails, performance review comments, policy communications, and onboarding plans. Before: 1 hour writing a JD. After: 10 minutes.",
     duration: "1 day",
     hours: "1-day workshop or 3 × 90 min live sessions",
     idealFor: "HR professionals across hiring, L&D, and operations",
@@ -366,6 +375,8 @@ export const courses: Course[] = [
     audience: ["non-tech"],
     title: "AI Prompts for Marketing Professionals",
     tagline: "Kill the blank page. Ship campaigns faster",
+    description:
+      "If the person next to you is producing 3 content variants while you are still on your first draft, it shows in output and campaign velocity. You leave with 8 personal prompt templates - social media posts, email campaigns, ad copy variations, content calendars, campaign briefs, competitor analysis summaries, SEO descriptions, and performance report narratives. Before: 2 hours for 5 social variants. After: 20 minutes.",
     duration: "1 day",
     hours: "1-day workshop or 3 × 90 min live sessions",
     idealFor: "Marketing professionals in content, campaigns, and brand roles",
@@ -384,6 +395,8 @@ export const courses: Course[] = [
     audience: ["non-tech"],
     title: "AI Prompts for Sales Professionals",
     tagline: "Write less. Sell more",
+    description:
+      "Every hour you spend drafting emails and proposals is an hour you are not in a conversation. AI does not close deals - you do. But it gets the writing done so you have more time for the conversations that matter. You leave with 8 templates - cold outreach, follow-ups, proposals, objection responses, re-engagement messages, win/loss notes, reference requests, and CRM deal updates. Before: 20 minutes per cold email. After: 3 minutes.",
     duration: "1 day",
     hours: "1-day workshop or 3 × 90 min live sessions",
     idealFor: "Sales professionals in B2B and B2C roles",
@@ -402,6 +415,8 @@ export const courses: Course[] = [
     audience: ["non-tech"],
     title: "AI Prompts for Legal Professionals",
     tagline: "Draft in minutes. Think for hours",
+    description:
+      "The most valuable thing a lawyer does is think - interpret, advise, judge risk. The least valuable is drafting routine correspondence and formatting documents. You leave with 8 personal prompt templates - NDA drafts, plain-language summaries, legal opinion memos, contract review checklists, clause explanations, cease and desist drafts, compliance communications, and client status updates. Before: 2 hours drafting an NDA. After: 20 minutes.",
     duration: "1 day",
     hours: "1-day workshop or 3 × 90 min live sessions",
     idealFor: "Lawyers, legal counsel, and compliance professionals",
@@ -415,13 +430,15 @@ export const courses: Course[] = [
     faqs: [],
   },
 
-  // Level 2: AI Workflows — profession-specific
+  // Level 2: AI Workflows - profession-specific
   {
     slug: "ai-workflows-ca",
     status: "pre-register",
     audience: ["non-tech"],
     title: "AI Workflows for Chartered Accountants",
     tagline: "Collapse a 10-step process into 3 prompts",
+    description:
+      "Level 1 made your drafting faster. Level 2 makes entire processes shorter. A multi-step process - receive invoice, extract data, verify vendor, calculate TDS, draft approval note - compressed into a chained prompt sequence you run in 8 minutes instead of 45. You learn process mapping, master prompt design, and chained prompting. You leave with documented master prompts for your 5 most time-consuming processes. No new tools - just Claude used at full depth.",
     duration: "2 days",
     hours: "2-day workshop or 5 × 90 min live sessions",
     idealFor:
@@ -441,6 +458,8 @@ export const courses: Course[] = [
     audience: ["non-tech"],
     title: "AI Workflows for Finance Professionals",
     tagline: "Build prompt chains that turn raw data into board-ready output",
+    description:
+      "Your analysis is already good. The problem is the time it takes to turn it into narratives and reports that non-finance people actually read. You learn to build prompt chains that take raw data and produce polished financial communication - variance commentary, management reports, board packs - in a fraction of the time. Before: management report narrative takes 3 hours. After: 25 minutes.",
     duration: "2 days",
     hours: "2-day workshop or 5 × 90 min live sessions",
     idealFor:
@@ -460,6 +479,8 @@ export const courses: Course[] = [
     audience: ["non-tech"],
     title: "AI Workflows for HR Professionals",
     tagline: "Automate the hiring pipeline. Reclaim your strategic time",
+    description:
+      "HR professionals spend most of their time on process - screening, scheduling, communicating, documenting. You learn to compress multi-step HR processes using chained prompting so the administrative load drops dramatically. Resume screening, interview prep, offer workflows, performance reviews, policy rollouts, exit analysis, and L&D assessments - all compressed. Before: screening 50 resumes takes 3 hours. After: 40 minutes.",
     duration: "2 days",
     hours: "2-day workshop or 5 × 90 min live sessions",
     idealFor:
@@ -479,6 +500,8 @@ export const courses: Course[] = [
     audience: ["non-tech"],
     title: "AI Workflows for Marketing Professionals",
     tagline: "One brief becomes a full campaign. In two hours",
+    description:
+      "A campaign brief that used to take a team a week to execute - content calendar, copy variations, email sequence, social posts, performance report - can be compressed into 2-3 hours using chained prompting. You still make all the creative decisions. You just stop spending time on the blank page. Before: campaign brief to first-week content takes 2 days. After: 90 minutes.",
     duration: "2 days",
     hours: "2-day workshop or 5 × 90 min live sessions",
     idealFor:
@@ -498,6 +521,8 @@ export const courses: Course[] = [
     audience: ["non-tech"],
     title: "AI Workflows for Sales Professionals",
     tagline: "Build a personalised outreach machine. Without a team",
+    description:
+      "Top salespeople are not just better at conversations - they are better at preparing for them. You learn to build prompt chains that research a prospect, generate personalised outreach, prepare for the meeting, and follow up - compressing hours of preparation into minutes. Before: researching and personalising outreach for 10 prospects takes a morning. After: 1 hour.",
     duration: "2 days",
     hours: "2-day workshop or 5 × 90 min live sessions",
     idealFor:
@@ -517,6 +542,8 @@ export const courses: Course[] = [
     audience: ["non-tech"],
     title: "AI Workflows for Legal Professionals",
     tagline: "Handle twice the work. Bill the same hours",
+    description:
+      "Legal work has two components: the thinking and the drafting. You get paid for the thinking. AI compresses the drafting so dramatically that the same working hours produce significantly more output - more clients served, more matters progressed, more documents reviewed. Contract reviews, matter preparation, document drafting, due diligence, client communications, compliance audits, and billing narratives - all compressed. Before: contract review and client summary takes 2 hours. After: 25 minutes.",
     duration: "2 days",
     hours: "2-day workshop or 5 × 90 min live sessions",
     idealFor:
