@@ -29,7 +29,7 @@ const Courses = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="AI Courses & Programs"
-        description="Stop fearing AI. Start getting ahead with it. Courses for school students, college students, working professionals, and corporate teams."
+        description="AI Agentic Engineering Bootcamp, Teen AI Builders for schools, and corporate AI training. Stop fearing AI. Start getting ahead with it."
         path="/courses"
         jsonLd={coursesListLd}
       />

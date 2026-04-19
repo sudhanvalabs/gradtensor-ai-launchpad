@@ -6,7 +6,6 @@ import SEO from "@/components/SEO";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { ArrowLeft, Calendar, Clock, Timer, ArrowRight } from "lucide-react";
 import RegisterDialog from "@/components/RegisterDialog";
-import EngineeringRegisterDialog from "@/components/EngineeringRegisterDialog";
 import { upcomingBatches, type Batch } from "@/data/batches";
 
 const scheduleEventsLd = {
@@ -37,19 +36,14 @@ const scheduleEventsLd = {
 
 const Schedule = () => {
   useScrollAnimation();
-  const [teenRegisterOpen, setTeenRegisterOpen] = useState(false);
-  const [engRegisterOpen, setEngRegisterOpen] = useState(false);
+  const [registerOpen, setRegisterOpen] = useState(false);
   const [registerBatch, setRegisterBatch] = useState("");
   const [registerTitle, setRegisterTitle] = useState("");
 
   const openRegister = (batch: Batch) => {
     setRegisterTitle(batch.courseTitle);
     setRegisterBatch(`${batch.batchLabel} - ${batch.startDate}`);
-    if (batch.courseSlug === "teen-ai-builders") {
-      setTeenRegisterOpen(true);
-    } else {
-      setEngRegisterOpen(true);
-    }
+    setRegisterOpen(true);
   };
 
   return (
@@ -154,14 +148,8 @@ const Schedule = () => {
       <SiteFooter />
 
       <RegisterDialog
-        open={teenRegisterOpen}
-        onOpenChange={setTeenRegisterOpen}
-        courseTitle={registerTitle}
-        defaultBatch={registerBatch}
-      />
-      <EngineeringRegisterDialog
-        open={engRegisterOpen}
-        onOpenChange={setEngRegisterOpen}
+        open={registerOpen}
+        onOpenChange={setRegisterOpen}
         courseTitle={registerTitle}
         defaultBatch={registerBatch}
       />

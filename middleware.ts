@@ -17,22 +17,22 @@ const OG_DATA: Record<string, OGData> = {
     image: "/og/home.png",
   },
   "/teen-ai-builders": {
-    title: "Teen AI Builders - Live AI Course for Teens | GradTensor",
+    title: "Teen AI Builders - School Programme | GradTensor",
     description:
-      "Build your first AI app in 8 live sessions. No coding experience needed. Live classes, real projects, and a certificate. For ages 13 and above.",
+      "Hands-on AI development for Grades 8 to 12. Students build a fully deployed AI-powered web application over 12 weeks. Bring Teen AI Builders to your school.",
     image: "/og/teen-ai-builders.jpg",
-  },
-  "/ai-engineering": {
-    title: "AI Engineering & Agentic Foundations - 6-Week Live Course | GradTensor",
-    description:
-      "From LLM fundamentals to production-ready AI agents in 6 weeks. Build and deploy a RAG system and an AI agent. Live classes for engineers and professionals.",
-    image: "/og/ai-engineering.jpg",
   },
   "/courses": {
     title: "AI Courses & Programs | GradTensor",
     description:
-      "Stop fearing AI. Start getting ahead with it. Courses for school students, college students, working professionals, and corporate teams.",
+      "AI Agentic Engineering Bootcamp, Teen AI Builders for schools, and corporate AI training. Stop fearing AI. Start getting ahead with it.",
     image: "/og/courses.png",
+  },
+  "/corporate": {
+    title: "Corporate AI Training | GradTensor",
+    description:
+      "AI training for your teams - from AI prompts that speed up daily work to AI workflows that compress entire processes. Customised to your function, your workflows, your documents.",
+    image: "/og/home.png",
   },
   "/schedule": {
     title: "Upcoming AI Course Batches | GradTensor",
@@ -99,5 +99,5 @@ export default function middleware(request: Request): Response | undefined {
 }
 
 export const config = {
-  matcher: ["/", "/teen-ai-builders", "/ai-engineering", "/courses", "/schedule", "/trainers"],
+  matcher: ["/", "/teen-ai-builders", "/courses", "/corporate", "/schedule", "/trainers"],
 };

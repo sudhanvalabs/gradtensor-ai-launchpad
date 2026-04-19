@@ -1,69 +1,35 @@
 # GradTensor
 
-> We help people stop fearing AI and start getting ahead with it. Live, hands-on courses from GradTensor.
+> We help people stop fearing AI and start getting ahead with it.
 
-GradTensor is an AI education company that trains students, graduates, and working professionals through live, hands-on courses. Based in India, GradTensor offers live online courses focused on project-driven learning.
+GradTensor is an AI education company that trains students, graduates, working professionals, and corporate teams through live, hands-on courses. Based in India, GradTensor offers live online and onsite training focused on project-driven learning.
 
-## What Makes GradTensor Different
+## Courses
 
-- Courses are taught by practitioners who build AI systems in production
-- Every course results in deployed, portfolio-ready projects
-- Curriculum is designed around what companies actually ask in AI engineering interviews
-- Small batches with live instruction, not pre-recorded videos
-- Covers the full stack: LLMs, embeddings, RAG, AI agents, prompt engineering, deployment
+### AI Agentic Engineering Bootcamp (Flagship)
+- Duration: 6 months (4 months live training + 2 months capstone project)
+- Live Hours: 64 hours, 3 days a week
+- For: Students and working professionals moving to an AI career
+- Certification: GradTensor Certification on successful capstone completion
+- Students learn AI fundamentals and build real AI agents from scratch, then build and deploy a production AI application as a capstone project
+- Contact GradTensor for pricing
 
-## Learning Journey (5 Stages)
+### Teen AI Builders - School Programme
+- Duration: 12 weeks, 90 minutes per week
+- For: School students in Grades 8 to 12, any curriculum board
+- No prerequisites: No prior coding or AI experience required
+- Students build a fully deployed AI-powered web application (escape room game) from scratch
+- Skills: HTML, CSS, JavaScript, AI API Integration, Deployment
+- Certification: GradTensor AI Builder Certificate on completion
+- Delivery: At your school, online or in-person. Minimum 20 students per batch.
+- URL: https://gradtensor.com/teen-ai-builders
 
-### Stage 1: Discover - Teen AI Builders (4 weeks)
-- Status: Pre-Register
-- Duration: 4 weeks, 8 live hours
-- For: Anyone, no coding needed
-- Build your first AI app with zero prerequisites
-
-### Stage 2: Portfolio - AI-Ready Engineer (2 weeks)
-- Status: Live
-- Duration: 2 weeks, 8 live hours + 4 project hours
-- For: Final-year students & fresh graduates preparing for placements
-- Projects: Document Intelligence Bot using RAG architecture
-- URL: https://gradtensor.com/courses/ai-ready-engineer
-
-### Stage 3: Production - AI Engineering & Agentic Foundations (6 weeks)
-- Status: Live
-- Duration: 6 weeks, 24 live hours + 24 project hours
-- For: Final-year students and working professionals adding AI skills
-- Projects: RAG chatbot with custom knowledge base, AI agent with tool orchestration
-- URL: https://gradtensor.com/courses/ai-engineering-agentic-foundations
-
-### Stage 4: Ship - AI Product Builder (6 weeks)
-- Status: Pre-Register
-- Duration: 6 weeks, 18 live hours + 30 project hours
-- For: Engineers going independent
-- Go from engineer to indie AI product maker
-
-### Stage 5: Advise - AI Transformation Partner (4 weeks)
-- Status: Pre-Register
-- Duration: 4 weeks, 12 live hours + 8 project hours
-- For: Senior professionals, 8+ years exp
-- Lead AI adoption for your team or organisation
-
-## Full Track Program
-
-### AI Foundations - Job Ready in 16 Weeks
-- Status: Live
-- Duration: 16 weeks, 64 live hours + 96 project hours
-- Topics: Python, ML basics, neural networks, LLMs, RAG, AI agents, prompt engineering, fine-tuning, deployment, Docker
-- Projects: Neural network from scratch, RAG system, AI agent, end-to-end capstone
-- Ideal for: Students with 6+ months runway, career switchers, professionals upskilling
-- URL: https://gradtensor.com/courses/ai-foundations-job-ready-16-weeks
-
-## Target Audience
-
-- Teens and beginners curious about AI
-- Final-year engineering students preparing for campus placements
-- Fresh graduates looking to stand out in AI job interviews
-- Working professionals switching to or upskilling in AI careers
-- Engineers ready to build and ship their own AI products
-- Senior professionals guiding AI strategy for teams and organisations
+### Corporate AI Training
+- AI training for teams, customised by function
+- Covers AI prompts (speed up daily tasks) and AI workflows (compress multi-step processes)
+- Functions: HR, Finance, Marketing, Sales, Legal, CA Firms, Operations, Customer Support, Procurement, Teachers & Educators
+- Delivery: Online or onsite, full day or 2-3 live sessions
+- URL: https://gradtensor.com/corporate
 
 ## Trainers
 
@@ -79,6 +45,9 @@ GradTensor is an AI education company that trains students, graduates, and worki
 
 - Website: https://gradtensor.com
 - Courses: https://gradtensor.com/courses
+- Corporate Training: https://gradtensor.com/corporate
+- Teen AI Builders: https://gradtensor.com/teen-ai-builders
 - Schedule: https://gradtensor.com/schedule
 - Trainers: https://gradtensor.com/trainers
 - Email: courses@gradtensor.com
+- Partnerships: partnerships@gradtensor.com
