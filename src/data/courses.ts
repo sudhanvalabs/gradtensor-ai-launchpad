@@ -136,6 +136,25 @@ export const courses: Course[] = [
 
   // --- Corporate Training ---
   {
+    slug: "b2b-leadership",
+    status: "pre-register",
+    category: "corporate",
+    title: "Leadership Teams",
+    tagline: "Lead the AI shift. Decide sharper. Move the organisation forward",
+    description:
+      "Senior leaders need a working grasp of AI - not coding skills, but the judgement to make confident bets on where AI fits, what to fund, and how to redesign teams and processes around it. Training covers AI prompts for strategic thinking, board and investor communication, and AI workflows that compress executive analysis and decision-making.",
+    duration: "Online or onsite",
+    hours: "Half day or full day",
+    idealFor: "CEOs, CXOs, founders, business heads, function heads, senior leadership teams",
+    whoForShort: "Senior leaders",
+    weeks: [],
+    projects: [],
+    whoFor: [],
+    ctaPrimary: "Contact Us",
+    ctaSecondary: "",
+    faqs: [],
+  },
+  {
     slug: "b2b-customer-support",
     status: "pre-register",
     category: "corporate",

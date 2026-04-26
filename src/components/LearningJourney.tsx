@@ -230,6 +230,7 @@ const LearningJourney = () => {
             {/* Function tags */}
             <div className="mb-6 flex flex-wrap gap-2">
               {[
+                "Leadership",
                 "HR",
                 "Finance",
                 "Marketing",
