@@ -1,6 +1,6 @@
 export type CourseStatus = "live" | "pre-register";
 
-export type CourseCategory = "bootcamp" | "school" | "corporate";
+export type CourseCategory = "workshop" | "bootcamp" | "school" | "corporate";
 
 export interface Course {
   slug: string;
@@ -24,6 +24,60 @@ export interface Course {
 }
 
 export const courses: Course[] = [
+  // --- Entry Workshop: 2-Day Hands-On ---
+  {
+    slug: "ai-workshop-2-day",
+    status: "pre-register",
+    category: "workshop",
+    title: "Build a Real AI Application in 2 Days",
+    tagline:
+      "A 2-day hands-on workshop. Build and deploy a live AI Interview Coach. No prior AI experience needed.",
+    description:
+      "The clearest entry point into AI - and a stepping stone to the AI Agentic Engineering Bootcamp. By end of Day 2 you have a deployed, mobile-ready AI Interview Coach at your own URL - built from scratch using real AI APIs. You use AI to generate the code; we teach you how to direct it, read it, and make it yours.",
+    duration: "2 days",
+    hours: "9 AM - 5 PM, hands-on coding",
+    idealFor:
+      "Engineering, BCA/MCA students, and working developers wanting hands-on AI",
+    whoForShort: "Students & developers",
+    weeks: [
+      "Day 1 - Understand and Build: How LLMs and AI APIs work. First API call to Claude. System prompts, conversation history, structured output. End state - a working interview coach in your browser.",
+      "Day 2 - Ship and Impress: Error handling, mobile-responsive UI, memory so the app remembers past interviews, and live deployment. End state - your AI Interview Coach live at a URL you own.",
+    ],
+    projects: [
+      "AI Mock Interview Coach - deployed live at your own URL. Conducts a full mock interview for any company and role, scores your answers, gives detailed feedback, and generates a personalised 30-day placement prep plan.",
+    ],
+    whoFor: [
+      "Engineering students - B.E / B.Tech, any branch (CS, IT, ECE, Mechanical, Civil)",
+      "BCA / MCA students wanting to get ahead in AI",
+      "Working developers - PHP, Java, Python, .NET - adding AI skills",
+      "No prior AI experience needed - just a laptop and curiosity",
+    ],
+    ctaPrimary: "Pre-Register",
+    ctaSecondary: "",
+    faqs: [
+      {
+        q: "What will I actually build?",
+        a: "An AI Mock Interview Coach. You enter any company and role and the AI conducts a full mock interview - asks questions, scores your answers, gives detailed feedback, and generates a personalised 30-day placement prep plan. By end of Day 2 it is deployed live at a URL you own.",
+      },
+      {
+        q: "Do I need prior AI or coding experience?",
+        a: "No prior AI experience. Basic familiarity with code helps but is not required - you use AI to generate the code, and we teach you how to direct it, read it, and make it yours.",
+      },
+      {
+        q: "Is this for individuals or for colleges?",
+        a: "Both. The workshop runs as a hands-on programme for engineering and technical colleges, and we also run public batches for individual students and working developers.",
+      },
+      {
+        q: "How does this connect to the bootcamp?",
+        a: "The workshop is the entry path. It gives you a working understanding of AI APIs, prompts, and deployment in 2 days. The 6-month AI Agentic Engineering Bootcamp goes much deeper - advanced memory and vector databases, AI agents that search the web, multi-agent systems, and production-ready agentic AI systems that make you an in-demand AI Engineer.",
+      },
+      {
+        q: "Do I get a certificate?",
+        a: "Yes. You receive a GradTensor participation certificate, plus access to the GradTensor AI community on WhatsApp.",
+      },
+    ],
+  },
+
   // --- Flagship: AI Agentic Engineering Bootcamp ---
   {
     slug: "ai-agentic-engineering-bootcamp",
