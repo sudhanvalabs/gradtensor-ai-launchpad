@@ -162,9 +162,6 @@ const AIMasteryGradient = ({ showCoursesCta = true }: AIMasteryGradientProps) =>
 
                 {/* Audience chips */}
                 <div className="mt-auto pt-4 border-t border-border/40">
-                  <p className="mb-2 font-mono text-[10px] tracking-wider uppercase text-muted-foreground">
-                    // In partnership with
-                  </p>
                   <div className="flex flex-wrap gap-1.5">
                     {lvl.audiences.map((key) => {
                       const aud = audienceMap[key];
