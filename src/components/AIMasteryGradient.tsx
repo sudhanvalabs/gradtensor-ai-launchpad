@@ -21,7 +21,7 @@ const audienceMap: Record<
   schools: { icon: School, label: "Schools" },
   collegesAndInstitutes: {
     icon: GraduationCap,
-    label: "Colleges & Training Institutes",
+    label: "Colleges & Institutes",
   },
   corporates: { icon: Building2, label: "Corporates" },
   workingPros: { icon: Briefcase, label: "Working Professionals" },
@@ -196,7 +196,7 @@ const AIMasteryGradient = ({ showCoursesCta = true }: AIMasteryGradientProps) =>
             <strong className="text-foreground">
               AI Agentic Engineering Bootcamp
             </strong>{" "}
-            for colleges, training institutes and working professionals.
+            for colleges, institutes and working professionals.
           </p>
         </div>
 

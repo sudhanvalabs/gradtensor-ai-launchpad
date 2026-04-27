@@ -108,7 +108,7 @@ const About = () => {
               <p>
                 Most of our courses are delivered through institutional
                 partnerships - educational institutions (schools, colleges and
-                training institutes) and corporate training. Live, hands-on,
+                institutes) and corporate training. Live, hands-on,
                 and customised to the audience in the room.
               </p>
             </div>
@@ -120,7 +120,7 @@ const About = () => {
                   // Educational Institutions
                 </p>
                 <p className="font-display text-base font-semibold">
-                  Schools, Colleges, Training Institutes
+                  Schools, Colleges, Institutes
                 </p>
                 <p className="mt-2 text-sm text-muted-foreground">
                   Programmes that prepare students for the AI-shaped job
@@ -252,7 +252,7 @@ const About = () => {
               Want to work together?
             </h2>
             <p className="mb-6 text-base text-muted-foreground">
-              See our programmes for colleges, training institutes, schools and
+              See our programmes for colleges, institutes, schools and
               corporates - or get in touch to discuss a partnership.
             </p>
             <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">

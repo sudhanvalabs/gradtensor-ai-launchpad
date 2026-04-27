@@ -28,7 +28,7 @@ const EducationalInstitutions = () => {
           </p>
           <h2 className="mb-4 font-display text-4xl font-bold tracking-tight sm:text-5xl">
             Programmes for colleges,{" "}
-            <span className="gradient-text">training institutes &amp; schools</span>
+            <span className="gradient-text">institutes &amp; schools</span>
           </h2>
           <p className="max-w-2xl text-base text-muted-foreground sm:text-lg">
             Delivered through institutional partnerships. Career-aligned,
@@ -94,7 +94,7 @@ const EducationalInstitutions = () => {
                 <ul className="space-y-1 text-sm text-muted-foreground">
                   <li>· Engineering colleges</li>
                   <li>· BCA / MCA institutes</li>
-                  <li>· Technical training institutes</li>
+                  <li>· Technical institutes</li>
                   <li>· Placement &amp; career-prep partners</li>
                 </ul>
               </div>

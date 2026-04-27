@@ -24,7 +24,7 @@ export interface Course {
 }
 
 export const courses: Course[] = [
-  // --- AI Builder Intensive: 2-Day Hands-On (B2B for colleges & training institutes) ---
+  // --- AI Builder Intensive: 2-Day Hands-On (B2B for colleges & institutes) ---
   {
     slug: "ai-builder-intensive",
     status: "pre-register",
@@ -33,7 +33,7 @@ export const courses: Course[] = [
     tagline:
       "A 2-day hands-on programme for engineering, BCA and MCA colleges. Students build and deploy a live AI Interview Coach.",
     description:
-      "Delivered through partnerships with engineering colleges, BCA/MCA institutes, and training institutes. Final and pre-final year students build and deploy a live, mobile-ready AI Mock Interview Coach at their own URL by end of Day 2 - using real AI APIs. The clearest entry point into AI for placement-bound students.",
+      "Delivered through partnerships with engineering colleges and BCA/MCA institutes. Final and pre-final year students build and deploy a live, mobile-ready AI Mock Interview Coach at their own URL by end of Day 2 - using real AI APIs. The clearest entry point into AI for placement-bound students.",
     duration: "2 days",
     hours: "9 AM - 5 PM, in-person or online",
     idealFor:
@@ -64,7 +64,7 @@ export const courses: Course[] = [
       },
       {
         q: "Is this delivered to individuals?",
-        a: "No. The programme is delivered through institutional partnerships only - engineering colleges, BCA/MCA institutes, and training institutes. Individual students access it through their college or training partner.",
+        a: "No. The programme is delivered through institutional partnerships only - engineering colleges and BCA/MCA institutes. Individual students access it through their college or training partner.",
       },
       {
         q: "How does this connect to the bootcamp?",

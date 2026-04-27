@@ -60,7 +60,7 @@ const Courses = () => {
           </h1>
           <p className="max-w-2xl text-base text-muted-foreground sm:text-lg">
             GradTensor delivers AI programmes through partnerships with
-            colleges, training institutes, schools and corporates - a clear
+            colleges, institutes, schools and corporates - a clear
             progression from your first AI application to production agentic
             systems.
           </p>
