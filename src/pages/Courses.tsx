@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
-import LearningJourney from "@/components/LearningJourney";
-import AdvisorySection from "@/components/AdvisorySection";
+import AIMasteryGradientStrip from "@/components/AIMasteryGradientStrip";
+import EducationalInstitutions from "@/components/EducationalInstitutions";
+import CorporateOfferings from "@/components/CorporateOfferings";
 import SEO from "@/components/SEO";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { courses } from "@/data/courses";
@@ -48,8 +49,28 @@ const Courses = () => {
         </div>
       </div>
 
-      <LearningJourney />
-      {/* <AdvisorySection /> */}
+      {/* Page intro */}
+      <section className="pt-12 pb-4 md:pt-16">
+        <div className="section-container">
+          <p className="mb-4 font-mono text-xs tracking-[0.2em] text-primary uppercase">
+            // All Programmes
+          </p>
+          <h1 className="mb-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl">
+            Every AI skill you need.{" "}
+            <span className="gradient-text">In the right order.</span>
+          </h1>
+          <p className="max-w-2xl text-base text-muted-foreground sm:text-lg">
+            GradTensor delivers AI programmes through partnerships with
+            colleges, training institutes, schools and corporates - a clear
+            progression from your first AI application to production agentic
+            systems.
+          </p>
+        </div>
+      </section>
+
+      <AIMasteryGradientStrip />
+      <EducationalInstitutions />
+      <CorporateOfferings />
 
       <SiteFooter />
     </div>

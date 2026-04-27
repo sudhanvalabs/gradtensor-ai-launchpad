@@ -2,13 +2,13 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { useEffect } from "react";
 import { ThemeProvider } from "next-themes";
 import Index from "./pages/Index";
 import Courses from "./pages/Courses";
 import CourseDetail from "./pages/CourseDetail";
-import Trainers from "./pages/Trainers";
+import About from "./pages/About";
 import Schedule from "./pages/Schedule";
 import NotFound from "./pages/NotFound";
 import TeenAIBuildersLanding from "./pages/TeenAIBuildersLanding";
@@ -36,7 +36,8 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/courses/:slug" element={<CourseDetail />} />
-            <Route path="/trainers" element={<Trainers />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/trainers" element={<Navigate to="/about" replace />} />
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/teen-ai-builders" element={<TeenAIBuildersLanding />} />
             <Route path="/corporate" element={<Corporate />} />

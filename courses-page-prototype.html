@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses - GradTensor</title>
+<meta name="description" content="GradTensor courses - a clear progression from your first AI application to production agentic systems. Delivered through college, school and corporate partnerships.">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&family=Satoshi:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0A0F1E;
+    --paper: #F7F5F0;
+    --paper-warm: #FAF8F3;
+    --green: #2D6A4F;
+    --green-bright: #52B788;
+    --green-pale: #D8F3DC;
+    --amber: #E9A800;
+    --amber-pale: #FFF5DB;
+    --slate: #6B7080;
+    --border: #DDD8CE;
+    --mono: 'DM Mono', monospace;
+    --serif: 'Instrument Serif', serif;
+    --sans: 'Satoshi', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+
+  /* ── UTILITY ── */
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 32px; }
+  .mono { font-family: var(--mono); }
+
+  /* ── NAV ── */
+  nav {
+    border-bottom: 1px solid var(--border);
+    padding: 14px 0;
+    position: sticky; top: 0;
+    background: var(--paper);
+    z-index: 100;
+    backdrop-filter: saturate(180%);
+  }
+  .nav-inner {
+    max-width: 1080px; margin: 0 auto; padding: 0 32px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px;
+  }
+  .nav-brand { display: flex; align-items: center; gap: 12px; }
+  .nav-logo {
+    background: var(--ink); color: var(--green-bright);
+    font-family: var(--mono); font-size: 11px; font-weight: 500;
+    padding: 4px 8px; border-radius: 3px; letter-spacing: 1px;
+  }
+  .nav-name { font-size: 14px; font-weight: 700; color: var(--ink); }
+  .nav-section {
+    font-family: var(--mono); font-size: 11px; color: var(--slate);
+    letter-spacing: 1.5px; text-transform: uppercase;
+    border-left: 1px solid var(--border); padding-left: 12px;
+  }
+  .nav-right { display: flex; align-items: center; gap: 18px; }
+  .nav-link {
+    font-size: 13px; font-weight: 500; color: var(--ink);
+    text-decoration: none;
+  }
+  .nav-link.muted { color: var(--slate); font-family: var(--mono); font-size: 12px; }
+  .nav-link.cta {
+    background: var(--green); color: white;
+    padding: 8px 16px; border-radius: 4px;
+    font-weight: 700; font-size: 13px;
+  }
+  .nav-link.cta:hover { background: #1e5038; }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 96px 0 72px;
+    border-bottom: 1px solid var(--border);
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 480px; height: 480px;
+    background: radial-gradient(circle, rgba(82,183,136,0.10) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--mono); font-size: 11px; color: var(--green);
+    letter-spacing: 1.5px; text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+  .hero-eyebrow::before {
+    content: ''; width: 18px; height: 6px; background: var(--green-bright);
+    border-radius: 1px; display: inline-block;
+  }
+  .hero-title {
+    font-family: var(--serif);
+    font-size: clamp(42px, 6.4vw, 72px);
+    line-height: 1.04;
+    color: var(--ink);
+    margin-bottom: 20px;
+    max-width: 920px;
+    letter-spacing: -0.5px;
+  }
+  .hero-title em { color: var(--green); font-style: italic; }
+  .hero-subtitle {
+    font-size: 18px; color: var(--slate);
+    max-width: 660px; line-height: 1.65;
+  }
+
+  /* ── SECTION LABELS ── */
+  .section-label {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--mono); font-size: 11px; color: var(--green);
+    letter-spacing: 2px; text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .section-label::before {
+    content: ''; width: 18px; height: 6px; background: var(--green-bright);
+    border-radius: 1px; display: inline-block;
+  }
+  .section-title {
+    font-family: var(--serif); font-size: clamp(30px, 4.2vw, 44px);
+    color: var(--ink); line-height: 1.15; margin-bottom: 16px;
+    letter-spacing: -0.3px;
+  }
+  .section-title em { color: var(--green); font-style: italic; }
+
+  .section-body {
+    font-size: 16px; color: var(--slate); line-height: 1.7;
+    max-width: 660px;
+  }
+
+  /* ── GRADIENT (light band) ── */
+  .gradient {
+    background: var(--paper-warm);
+    padding: 88px 0 96px;
+    color: var(--ink);
+    position: relative; overflow: hidden;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .gradient::before {
+    content: ''; position: absolute;
+    top: -120px; right: -120px;
+    width: 520px; height: 520px;
+    background: radial-gradient(circle, rgba(82,183,136,0.10) 0%, transparent 65%);
+    border-radius: 50%; pointer-events: none;
+  }
+  .gradient-intro { display: flex; flex-direction: column; gap: 8px; margin-bottom: 48px; }
+  .gradient-flow {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 14px; align-items: stretch;
+    position: relative;
+  }
+  .level-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--green-bright);
+    border-radius: 8px;
+    padding: 24px 22px 26px;
+    display: flex; flex-direction: column; gap: 12px;
+    position: relative;
+  }
+  .level-card.l1 {
+    border-top-color: var(--amber);
+  }
+  .level-num {
+    background: var(--green-bright); color: var(--ink);
+    font-family: var(--mono); font-size: 10px; font-weight: 500;
+    padding: 3px 8px; border-radius: 3px; letter-spacing: 1px;
+    align-self: flex-start;
+  }
+  .level-card.l1 .level-num { background: var(--amber); color: var(--ink); }
+  .level-name {
+    font-family: var(--serif); font-size: 26px;
+    color: var(--ink); line-height: 1.15;
+  }
+  .level-name em { color: var(--green); font-style: italic; }
+  .level-card.l1 .level-name em { color: var(--amber); }
+  .level-desc {
+    font-size: 13.5px; color: var(--slate);
+    line-height: 1.6;
+  }
+  .level-tag {
+    margin-top: auto;
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--green);
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+  }
+  .level-card.l1 .level-tag {
+    color: #6a4c00;
+  }
+  .gradient-footer {
+    margin-top: 40px;
+    display: flex; flex-wrap: wrap; gap: 24px; align-items: center;
+    font-family: var(--mono); font-size: 11px;
+    color: var(--slate);
+    letter-spacing: 1px; text-transform: uppercase;
+  }
+  .gradient-footer .accent { color: var(--green); }
+  .gradient-footer .accent-amber { color: var(--amber); }
+
+  /* ── INSTITUTIONAL SECTIONS ── */
+  .inst-section {
+    padding: 96px 0 88px;
+    border-bottom: 1px solid var(--border);
+  }
+  .inst-section.last { border-bottom: none; }
+
+  .flagship-card {
+    margin-top: 56px;
+    background: var(--ink); color: white;
+    border-radius: 14px;
+    padding: 44px 48px;
+    display: grid; grid-template-columns: 1.05fr 1fr;
+    gap: 48px;
+    position: relative; overflow: hidden;
+  }
+  .flagship-card::before {
+    content: ''; position: absolute;
+    top: -100px; right: -100px;
+    width: 380px; height: 380px;
+    background: radial-gradient(circle, rgba(82,183,136,0.20) 0%, transparent 60%);
+    border-radius: 50%; pointer-events: none;
+  }
+  .flagship-left { position: relative; z-index: 1; }
+  .flagship-right { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 16px; }
+
+  .product-tag {
+    font-family: var(--mono); font-size: 10px;
+    color: var(--green); letter-spacing: 2px; text-transform: uppercase;
+    margin-bottom: 14px;
+    display: inline-block;
+  }
+  .flagship-card .product-tag { color: var(--green-bright); }
+
+  .product-title {
+    font-family: var(--serif); font-size: 40px;
+    line-height: 1.08; color: var(--ink);
+    margin-bottom: 16px; letter-spacing: -0.4px;
+  }
+  .flagship-card .product-title { color: white; font-size: 44px; }
+  .product-title em { color: var(--green); font-style: italic; }
+  .flagship-card .product-title em { color: var(--green-bright); }
+
+  .product-format {
+    font-family: var(--mono); font-size: 12px;
+    color: var(--slate); letter-spacing: 0.5px;
+    margin-bottom: 18px;
+    border-left: 2px solid var(--green-bright);
+    padding-left: 12px;
+  }
+  .flagship-card .product-format { color: rgba(255,255,255,0.65); }
+
+  .product-project {
+    font-family: var(--serif); font-size: 19px; font-style: italic;
+    color: var(--ink); line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .flagship-card .product-project { color: white; font-size: 21px; }
+
+  .product-section-label {
+    font-family: var(--mono); font-size: 10px;
+    color: var(--green); letter-spacing: 1.5px; text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .flagship-card .product-section-label { color: var(--green-bright); }
+
+  .audience-list, .gets-list {
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .audience-list li, .gets-list li {
+    list-style: none;
+    font-size: 13.5px; color: var(--slate);
+    line-height: 1.55;
+    padding-left: 16px; position: relative;
+  }
+  .flagship-card .audience-list li,
+  .flagship-card .gets-list li {
+    color: rgba(255,255,255,0.74);
+  }
+  .audience-list li::before {
+    content: '·'; position: absolute; left: 0; top: -2px;
+    color: var(--green-bright); font-weight: 700; font-size: 18px;
+  }
+  .gets-list li::before {
+    content: '→'; position: absolute; left: 0; top: 0;
+    color: var(--green-bright); font-weight: 700;
+  }
+
+  .product-block { margin-bottom: 4px; }
+
+  .level-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--green-pale); color: var(--green);
+    font-family: var(--mono); font-size: 10px; font-weight: 500;
+    padding: 5px 10px; border-radius: 999px;
+    border: 1px solid rgba(82,183,136,0.4);
+    letter-spacing: 0.5px;
+  }
+  .flagship-card .level-pill {
+    background: rgba(82,183,136,0.15); color: var(--green-bright);
+    border-color: rgba(82,183,136,0.4);
+  }
+
+  .partner-line {
+    font-family: var(--mono); font-size: 12px;
+    color: rgba(255,255,255,0.85);
+    border: 1px dashed rgba(255,255,255,0.18);
+    padding: 10px 14px; border-radius: 6px;
+    background: rgba(255,255,255,0.04);
+  }
+  .partner-line strong { font-weight: 700; }
+
+  .product-actions {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    margin-top: 8px;
+  }
+  .btn-primary {
+    background: var(--green); color: white;
+    padding: 12px 22px; border-radius: 4px;
+    font-size: 14px; font-weight: 700;
+    text-decoration: none; display: inline-block;
+    font-family: var(--sans);
+    transition: background 0.15s;
+  }
+  .btn-primary:hover { background: #1e5038; }
+  .btn-primary.bright {
+    background: var(--green-bright); color: var(--ink);
+  }
+  .btn-primary.bright:hover { background: #3da175; }
+  .btn-secondary {
+    color: var(--green); font-size: 13px; font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1.5px solid var(--green-bright);
+    padding: 12px 4px 11px;
+  }
+  .flagship-card .btn-secondary {
+    color: var(--green-bright);
+    border-color: rgba(82,183,136,0.4);
+  }
+
+  /* ── SIDE-BY-SIDE INST CARDS ── */
+  .inst-grid {
+    margin-top: 36px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  }
+  .inst-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px;
+    display: flex; flex-direction: column;
+  }
+  .inst-format {
+    font-family: var(--mono); font-size: 12px;
+    color: var(--slate); margin-bottom: 18px;
+    border-left: 2px solid var(--green-bright);
+    padding-left: 12px;
+  }
+  .inst-desc {
+    font-size: 14.5px; color: var(--slate); line-height: 1.65;
+    margin-bottom: 18px;
+  }
+  .inst-card .product-title { font-size: 28px; margin-bottom: 8px; }
+
+  .inst-meta {
+    margin-bottom: 18px;
+    display: flex; flex-wrap: wrap; gap: 6px;
+  }
+  .meta-tag {
+    font-family: var(--mono); font-size: 10px;
+    background: var(--green-pale); color: var(--green);
+    padding: 4px 9px; border-radius: 3px;
+    border: 1px solid rgba(82,183,136,0.3);
+    letter-spacing: 0.3px;
+  }
+  .inst-card .level-pill { margin-bottom: 18px; align-self: flex-start; }
+  .inst-actions { margin-top: auto; padding-top: 8px; }
+
+  /* ── CORPORATE CARD (rich) ── */
+  .corp-card {
+    margin-top: 56px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 40px 44px;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .corp-card .product-title { font-size: 36px; }
+  .corp-modes {
+    display: flex; flex-direction: column; gap: 14px;
+    margin: 4px 0 22px;
+  }
+  .corp-mode {
+    border-left: 3px solid var(--green-bright);
+    padding: 8px 14px;
+    background: var(--paper-warm);
+    border-radius: 0 6px 6px 0;
+  }
+  .corp-mode.amber {
+    border-left-color: var(--amber);
+    background: #FFFAEC;
+  }
+  .corp-mode-head {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 4px;
+  }
+  .corp-mode-name {
+    font-family: var(--serif); font-style: italic;
+    font-size: 18px; color: var(--ink);
+  }
+  .corp-mode-pill {
+    font-family: var(--mono); font-size: 9px; letter-spacing: 1px;
+    text-transform: uppercase;
+    background: var(--green-pale); color: var(--green);
+    padding: 2px 7px; border-radius: 3px;
+  }
+  .corp-mode.amber .corp-mode-pill {
+    background: var(--amber-pale); color: #6a4c00;
+  }
+  .corp-mode-desc {
+    font-size: 13px; color: var(--slate); line-height: 1.55;
+  }
+  .corp-functions {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    margin-bottom: 22px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 48px 0 56px;
+    border-top: 1px solid var(--border);
+    background: var(--paper);
+  }
+  .footer-inner {
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+    text-align: center;
+  }
+  .footer-brand { font-weight: 700; color: var(--ink); font-size: 14px; }
+  .footer-links {
+    font-size: 13px; color: var(--slate);
+    display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;
+  }
+  .footer-links a { text-decoration: none; }
+  .footer-links a:hover { color: var(--green); }
+  .footer-tag {
+    font-family: var(--mono); font-size: 11px;
+    color: var(--green); letter-spacing: 1px;
+    margin-top: 6px;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .gradient-flow { grid-template-columns: repeat(2, 1fr); }
+    .flagship-card, .corp-card { grid-template-columns: 1fr; gap: 28px; padding: 32px; }
+    .inst-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .container, .nav-inner { padding: 0 20px; }
+    .hero { padding: 64px 0 56px; }
+    .gradient { padding: 64px 0 72px; }
+    .inst-section { padding: 64px 0 56px; }
+    .gradient-flow { grid-template-columns: 1fr; }
+    .nav-section { display: none; }
+    .nav-link.muted { display: none; }
+    .product-title { font-size: 28px; }
+    .flagship-card .product-title { font-size: 32px; }
+    .level-card { padding: 22px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <div class="nav-logo">GT</div>
+      <div class="nav-name">GradTensor</div>
+      <div class="nav-section">// Courses</div>
+    </div>
+    <div class="nav-right">
+      <a href="mailto:courses@gradtensor.com" class="nav-link muted">courses@gradtensor.com</a>
+      <a href="https://wa.me/919108030542" class="nav-link cta">WhatsApp Us</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">// All Programmes</div>
+    <h1 class="hero-title">Every AI skill you need.<br><em>In the right order.</em></h1>
+    <p class="hero-subtitle">
+      GradTensor delivers AI programmes through partnerships with colleges, training institutes, schools and corporates - a clear progression from your first AI application to production agentic systems.
+    </p>
+  </div>
+</section>
+
+<!-- AI MASTERY GRADIENT -->
+<section class="gradient">
+  <div class="container">
+    <div class="gradient-intro">
+      <div class="section-label">// The AI Mastery Gradient</div>
+      <h2 class="section-title">Four levels. One direction.<br><em>Find where you are.</em></h2>
+    </div>
+
+    <div class="gradient-flow">
+      <div class="level-card l1">
+        <span class="level-num">LEVEL 1</span>
+        <div class="level-name">AI <em>Consumer</em></div>
+        <p class="level-desc">Mental models, jargon, becoming AI-native. Daily use without building.</p>
+        <div class="level-tag">// Corporates only</div>
+      </div>
+
+      <div class="level-card">
+        <span class="level-num">LEVEL 2</span>
+        <div class="level-name">AI <em>Builder</em></div>
+        <p class="level-desc">Cross the line from consumer to creator. Build and deploy real AI-powered applications using live APIs.</p>
+        <div class="level-tag">// We teach this</div>
+      </div>
+
+      <div class="level-card">
+        <span class="level-num">LEVEL 3</span>
+        <div class="level-name">AI <em>Agent Builder</em></div>
+        <p class="level-desc">Single-purpose agents that do real work. Tool use, RAG, retrieval pipelines.</p>
+        <div class="level-tag">// We teach this</div>
+      </div>
+
+      <div class="level-card">
+        <span class="level-num">LEVEL 4</span>
+        <div class="level-name">AI <em>Orchestrator</em></div>
+        <p class="level-desc">Systems where multiple agents hand off, coordinate, and deliver outcomes.</p>
+        <div class="level-tag">// We teach this</div>
+      </div>
+    </div>
+
+    <div class="gradient-footer">
+      <span><span class="accent-amber">●</span> Level 1 - Awareness for whole organisations</span>
+      <span><span class="accent">●</span> Levels 2-4 - Builders, agent engineers, orchestrators</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOR EDUCATIONAL INSTITUTIONS -->
+<section class="inst-section">
+  <div class="container">
+    <div class="section-label">// For Educational Institutions</div>
+    <h2 class="section-title">Programmes for colleges,<br><em>training institutes &amp; schools.</em></h2>
+    <p class="section-body">
+      Delivered through institutional partnerships. Career-aligned, placement-ready, and customised to your students.
+    </p>
+
+    <!-- FLAGSHIP: Bootcamp -->
+    <article class="flagship-card">
+      <div class="flagship-left">
+        <div class="product-tag">Flagship · 6 Months</div>
+        <h3 class="product-title">AI Agentic Engineering <em>Bootcamp</em></h3>
+        <div class="product-format">6 Months · 64 Live Hours · 3 Days/Week · Live Online</div>
+        <p class="product-project">Build production agentic AI systems - the role companies will pay a premium for.</p>
+        <span class="level-pill">Level 3-4 - AI Agent Builder to AI Orchestrator</span>
+      </div>
+      <div class="flagship-right">
+        <div class="product-block">
+          <div class="product-section-label">Delivered through partnerships with</div>
+          <ul class="audience-list">
+            <li>Engineering colleges</li>
+            <li>BCA / MCA institutes</li>
+            <li>Technical training institutes</li>
+            <li>Placement &amp; career-prep partners</li>
+          </ul>
+        </div>
+        <div class="product-block">
+          <div class="product-section-label">What students walk away with</div>
+          <ul class="gets-list">
+            <li>Production-grade agentic AI systems built and deployed</li>
+            <li>Capstone project mentored by GradTensor</li>
+            <li>GradTensor certification on capstone completion</li>
+            <li>The skill stack of an in-demand AI Engineer</li>
+          </ul>
+        </div>
+        <div class="partner-line">Pricing on request. <strong>Cohort sizes are limited.</strong> Partnership enquiries welcome.</div>
+        <div class="product-actions">
+          <a href="mailto:partnerships@gradtensor.com?subject=AI%20Agentic%20Engineering%20Bootcamp%20%E2%80%94%20Partnership%20Enquiry" class="btn-primary bright">Partnership Enquiry</a>
+          <a href="mailto:courses@gradtensor.com?subject=Bootcamp%20%E2%80%94%20Curriculum%20Request" class="btn-secondary">Request curriculum →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- TWO INSTITUTIONAL CARDS -->
+    <div class="inst-grid">
+
+      <article class="inst-card">
+        <div class="product-tag">For Engineering, BCA &amp; MCA Colleges</div>
+        <h3 class="product-title">AI Builder <em>Intensive</em></h3>
+        <div class="inst-format">2 Days · 9 AM-5 PM · In-person or Online</div>
+        <p class="inst-desc">
+          Students build and deploy a live AI Mock Interview Coach by end of Day 2 - using real AI APIs. The clearest entry point into AI for placement-bound students.
+        </p>
+        <span class="level-pill">Level 2 - AI Builder</span>
+        <div class="product-section-label" style="margin-top:18px;">Built for</div>
+        <ul class="audience-list" style="margin-bottom:18px;">
+          <li>Final &amp; pre-final year students preparing for placements</li>
+          <li>Engineering, BCA, MCA cohorts - any branch</li>
+          <li>College &amp; training-institute placement programmes</li>
+        </ul>
+        <div class="inst-actions">
+          <a href="mailto:partnerships@gradtensor.com?subject=AI%20Builder%20Intensive%20%E2%80%94%20College%20Proposal" class="btn-primary">For Colleges: Download Proposal →</a>
+        </div>
+      </article>
+
+      <article class="inst-card">
+        <div class="product-tag">For Schools (Grades 8-12)</div>
+        <h3 class="product-title">Teen AI <em>Builders</em></h3>
+        <div class="inst-format">12 Weeks · One slot per week · 90 min</div>
+        <p class="inst-desc">
+          Students build a fully deployed AI-powered escape room game. Every line of code written and understood by the student. Live at a URL they can share.
+        </p>
+        <span class="level-pill">Level 2 - AI Builder</span>
+        <div class="product-section-label" style="margin-top:18px;">Skills students learn</div>
+        <div class="inst-meta">
+          <span class="meta-tag">HTML / CSS</span>
+          <span class="meta-tag">JavaScript</span>
+          <span class="meta-tag">AI API Integration</span>
+          <span class="meta-tag">Deployment</span>
+        </div>
+        <div class="inst-actions">
+          <a href="https://www.gradtensor.com/teen-ai-builders" class="btn-primary">Bring to Your School →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOR CORPORATES -->
+<section class="inst-section last">
+  <div class="container">
+    <div class="section-label">// For Corporates</div>
+    <h2 class="section-title">AI training for the<br><em>whole organisation.</em></h2>
+    <p class="section-body">
+      From AI literacy across leadership and teams, to function-specific workflows that compress entire processes. Customised to your function, your workflows, your documents.
+    </p>
+
+    <article class="corp-card">
+      <div class="flagship-left">
+        <div class="product-tag">For Enterprises</div>
+        <h3 class="product-title">Corporate AI <em>Training</em></h3>
+        <div class="product-format">Half-day to 3-Day Workshops · Online or Onsite</div>
+        <p class="product-project" style="font-size:17px;">Two layers of training, designed to be combined or run independently.</p>
+
+        <div class="corp-modes">
+          <div class="corp-mode amber">
+            <div class="corp-mode-head">
+              <div class="corp-mode-name">AI Foundations &amp; Literacy</div>
+              <span class="corp-mode-pill">Level 1</span>
+            </div>
+            <div class="corp-mode-desc">
+              Half-day awareness sessions for leadership and the broader workforce. Mental models, jargon, what AI can and cannot do, and how to use it confidently every day.
+            </div>
+          </div>
+          <div class="corp-mode">
+            <div class="corp-mode-head">
+              <div class="corp-mode-name">Function-Specific AI Training</div>
+              <span class="corp-mode-pill">Level 2</span>
+            </div>
+            <div class="corp-mode-desc">
+              Deeper workshops for individual functions. AI prompts that cut drafting time by 50-70% and AI workflows that compress multi-step processes into chained prompt sequences.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flagship-right">
+        <div class="product-block">
+          <div class="product-section-label">Functions we train</div>
+          <div class="corp-functions">
+            <span class="meta-tag">Leadership</span>
+            <span class="meta-tag">HR</span>
+            <span class="meta-tag">Finance</span>
+            <span class="meta-tag">Marketing</span>
+            <span class="meta-tag">Sales</span>
+            <span class="meta-tag">Legal</span>
+            <span class="meta-tag">CA Firms</span>
+            <span class="meta-tag">Operations</span>
+            <span class="meta-tag">Customer Support</span>
+            <span class="meta-tag">Procurement</span>
+            <span class="meta-tag">Teachers &amp; Educators</span>
+          </div>
+        </div>
+        <div class="product-block">
+          <div class="product-section-label">What teams walk away with</div>
+          <ul class="gets-list">
+            <li>Ready-to-use prompt templates for the team's most common tasks</li>
+            <li>Function-specific AI workflows that compress multi-step processes</li>
+            <li>Confidence to use AI daily - across leadership and teams</li>
+            <li>Customised to your workflows, your documents, your tone</li>
+          </ul>
+        </div>
+        <div class="product-actions">
+          <a href="https://www.gradtensor.com/corporate" class="btn-primary">Explore Corporate Training →</a>
+          <a href="mailto:partnerships@gradtensor.com?subject=Corporate%20AI%20Training%20%E2%80%94%20Enquiry" class="btn-secondary">Request a roadmap →</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">GradTensor · A venture of Sudhanva Labs LLP · Bengaluru, India</div>
+      <div class="footer-links">
+        <a href="https://wa.me/919108030542">WhatsApp</a>
+        <span>·</span>
+        <a href="mailto:courses@gradtensor.com">courses@gradtensor.com</a>
+        <span>·</span>
+        <a href="tel:+919108030542">+91 91080 30542</a>
+      </div>
+      <div class="footer-tag">// Stop fearing AI. Start getting ahead with it.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // No-op: smooth scroll handled via CSS scroll-behavior.
+</script>
+
+</body>
+</html>

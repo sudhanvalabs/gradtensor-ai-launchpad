@@ -52,15 +52,23 @@ const Hero = () => {
               </WhatsAppButton>
             </div>
 
+            {/* Mono tagline */}
+            <p
+              className="mt-5 font-mono text-xs tracking-wide text-muted-foreground animate-fade-up"
+              style={{ animationDelay: "0.35s" }}
+            >
+              // From AI user to AI builder to AI orchestrator - find your level
+            </p>
+
             {/* Stats */}
-            <div className="mt-16 grid grid-cols-3 gap-8 border-t border-border/50 pt-8 animate-fade-up" style={{ animationDelay: "0.4s" }}>
+            <div className="mt-16 grid grid-cols-1 gap-8 border-t border-border/50 pt-8 sm:grid-cols-3 animate-fade-up" style={{ animationDelay: "0.4s" }}>
               {[
-                { value: "Live", label: "online classes" },
-                { value: "2-16", label: "weeks per course" },
-                { value: "100%", label: "project-based" },
+                { value: "4 Live Sessions", label: "AI Builder Cohort" },
+                { value: "6 Months", label: "AI Agentic Engineering Bootcamp" },
+                { value: "100% Hands-On", label: "Every course ends with a deployed app" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center sm:text-left">
-                  <div className="font-display text-3xl font-bold text-primary sm:text-4xl">
+                  <div className="font-display text-2xl font-bold text-primary sm:text-3xl">
                     {stat.value}
                   </div>
                   <div className="mt-1 text-sm text-muted-foreground sm:text-base">

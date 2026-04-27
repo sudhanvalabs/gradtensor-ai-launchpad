@@ -4,22 +4,26 @@ const differentiators = [
   {
     icon: Radio,
     title: "Live Cohorts, Not Recorded Videos",
-    description: "Real-time learning with instructor support, peer collaboration, and accountability that pre-recorded courses can't match.",
+    description:
+      "Real-time learning with practitioners who ship AI in production. Live cohorts with instructor support - not pre-recorded videos you will never finish.",
   },
   {
     icon: Rocket,
-    title: "Build & Deploy Real Projects",
-    description: "Portfolio pieces companies actually care about  - deployed AI agents and RAG systems, not toy notebooks.",
+    title: "Build and Deploy Real Applications",
+    description:
+      "Every course ends with a live deployed application at a URL you own. An AI Interview Coach. An AI Document Analyst. Production agentic systems. Not toy notebooks.",
   },
   {
     icon: Cpu,
-    title: "Modern Stack Focus",
-    description: "LLMs, agents, RAG, prompt engineering  - the tools companies are hiring for right now, not outdated sklearn courses.",
+    title: "The Right Level for You",
+    description:
+      "We teach a clear progression - AI Builder Intensive for students, AI Builder Cohort for working developers, AI Agentic Engineering Bootcamp for serious career investment. Find your level and take the next step.",
   },
   {
     icon: Target,
-    title: "Built for Employability",
-    description: "Our curriculum is designed around what employers look for in AI roles. Build projects that demonstrate real capability, not just course completion.",
+    title: "Built for Builders, Not Browsers",
+    description:
+      "56% higher pay for AI-skilled developers (PwC 2025). 143% growth in AI Engineer job postings (LinkedIn 2026). The developers who build with AI will pull away from those who only use it.",
   },
 ];
 
