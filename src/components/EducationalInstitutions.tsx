@@ -106,21 +106,15 @@ const EducationalInstitutions = () => {
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
                 <a
                   href={partnershipMail(
-                    "AI Agentic Engineering Bootcamp - Partnership Enquiry"
+                    "AI Agentic Engineering Bootcamp - Enquiry"
                   )}
                   className="btn-shimmer group/btn inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3 font-display text-sm font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
                 >
-                  Partnership Enquiry
+                  Enquiry
                   <ArrowRight
                     size={16}
                     className="transition-transform group-hover/btn:translate-x-1"
                   />
-                </a>
-                <a
-                  href="mailto:courses@gradtensor.com?subject=Bootcamp%20%E2%80%94%20Curriculum%20Request"
-                  className="inline-flex items-center justify-center gap-2 font-display text-sm font-semibold tracking-wider text-primary border-b border-primary/40 pb-1 hover:text-primary/80"
-                >
-                  Request curriculum →
                 </a>
               </div>
             </div>

@@ -105,7 +105,7 @@ interface AIMasteryGradientProps {
 
 const AIMasteryGradient = ({ showCoursesCta = true }: AIMasteryGradientProps) => {
   return (
-    <section className="border-y border-border/50 py-24 md:py-32">
+    <section id="gradient" className="scroll-mt-20 border-y border-border/50 py-24 md:py-32">
       <div className="section-container">
         {/* Heading */}
         <div className="mb-16 animate-on-scroll">

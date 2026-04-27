@@ -1,6 +1,5 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import AIMasteryGradientStrip from "@/components/AIMasteryGradientStrip";
 import WhyGradTensor from "@/components/WhyGradTensor";
 import SiteFooter from "@/components/SiteFooter";
 import SEO from "@/components/SEO";
@@ -34,7 +33,6 @@ const Index = () => {
       />
       <Navbar />
       <Hero />
-      <AIMasteryGradientStrip subtitle="A 4-level AI mastery ladder, from AI consumer to AI orchestrator. Find where you are and take the next step." />
       <WhyGradTensor />
       <SiteFooter />
     </div>

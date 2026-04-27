@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
-import AIMasteryGradientStrip from "@/components/AIMasteryGradientStrip";
 import EducationalInstitutions from "@/components/EducationalInstitutions";
 import CorporateOfferings from "@/components/CorporateOfferings";
 import SEO from "@/components/SEO";
@@ -68,7 +67,6 @@ const Courses = () => {
         </div>
       </section>
 
-      <AIMasteryGradientStrip />
       <EducationalInstitutions />
       <CorporateOfferings />
 

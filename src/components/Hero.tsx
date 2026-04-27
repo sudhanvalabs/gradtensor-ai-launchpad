@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { whatsappLink } from "@/data/siteConfig";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -38,18 +36,18 @@ const Hero = () => {
             {/* CTAs */}
             <div className="flex flex-col gap-4 sm:flex-row animate-fade-up" style={{ animationDelay: "0.3s" }}>
               <Link
-                to="/courses"
+                to="/about#gradient"
                 className="btn-shimmer group inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 font-display text-base font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
               >
-                Explore the Journey
+                Explore AI Learning Framework
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </Link>
-              <WhatsAppButton
-                href={whatsappLink("advisor")}
+              <Link
+                to="/courses"
                 className="inline-flex items-center justify-center rounded-lg border border-border bg-card/50 px-8 py-4 font-display text-base font-medium tracking-wider text-foreground backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-card"
               >
-                Talk to an Advisor
-              </WhatsAppButton>
+                Explore Courses
+              </Link>
             </div>
 
             {/* Mono tagline */}
@@ -63,9 +61,9 @@ const Hero = () => {
             {/* Stats */}
             <div className="mt-16 grid grid-cols-1 gap-8 border-t border-border/50 pt-8 sm:grid-cols-3 animate-fade-up" style={{ animationDelay: "0.4s" }}>
               {[
-                { value: "4 Live Sessions", label: "AI Builder Cohort" },
-                { value: "6 Months", label: "AI Agentic Engineering Bootcamp" },
-                { value: "100% Hands-On", label: "Every course ends with a deployed app" },
+                { value: "Live Sessions", label: "Instructor-led, every course" },
+                { value: "Half-day to 6 Months", label: "Course durations across programmes" },
+                { value: "100% Hands-On", label: "Every Level 2+ course ends with a deployed app" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center sm:text-left">
                   <div className="font-display text-2xl font-bold text-primary sm:text-3xl">

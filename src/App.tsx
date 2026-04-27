@@ -17,10 +17,21 @@ import Corporate from "./pages/Corporate";
 const queryClient = new QueryClient();
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   useEffect(() => {
+    if (hash) {
+      const tryScroll = () => {
+        const el = document.querySelector(hash);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      };
+      // Defer so the target section has mounted on route change
+      setTimeout(tryScroll, 0);
+      return;
+    }
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [pathname, hash]);
   return null;
 }
 
