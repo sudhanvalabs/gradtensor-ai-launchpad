@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet">
+  <title id="title">The GradTensor Gradient - 4-Level AI Mastery Framework</title>
+  <desc id="desc">A four-level progression: Level 1 AI Foundations (Conversations with AI), Level 2 AI Proficiency (Prompts and Prompt Chains), Level 3 AI Agent Builder (AI Agents), Level 4 AI Orchestrator (Multi-Agent Workflows).</desc>
+
+  <defs>
+    <style>
+      .serif { font-family: 'Instrument Serif', 'Georgia', serif; }
+      .sans  { font-family: 'Satoshi', 'Inter', system-ui, sans-serif; }
+      .mono  { font-family: 'DM Mono', 'JetBrains Mono', 'Menlo', monospace; }
+    </style>
+  </defs>
+
+  <!-- Paper background -->
+  <rect width="1080" height="1080" fill="#F7F5F0"/>
+
+  <!-- ===================== HEADER ===================== -->
+
+  <!-- Top banner -->
+  <text x="540" y="50" text-anchor="middle" class="mono" font-size="11" fill="#2D6A4F" letter-spacing="2.5">
+    LEVELS 1-2: BETTER CONSUMERS    |    LEVELS 3-4: REAL CREATORS AND ORCHESTRATORS
+  </text>
+  <line x1="120" y1="64" x2="960" y2="64" stroke="#52B788" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text x="540" y="128" text-anchor="middle" class="serif" font-size="56" fill="#0A0F1E">
+    The GradTensor Gradient
+  </text>
+
+  <!-- Subtitle (green) -->
+  <text x="540" y="162" text-anchor="middle" class="sans" font-size="18" font-weight="600" fill="#2D6A4F">
+    Our Proprietary 4-Level AI Mastery Framework
+  </text>
+
+  <!-- Sub-subtitle -->
+  <text x="540" y="188" text-anchor="middle" class="sans" font-size="14" fill="#6B7080">
+    From AI Consumer to AI Orchestrator
+  </text>
+
+  <!-- ===================== CARDS (2x2 grid) ===================== -->
+  <!-- Row 1: L1 (left), L2 (right). Row 2: L3 (left), L4 (right). -->
+  <!-- Card width 480, gap 30. x positions: 45, 555. y positions: 220, 615. Card height 365. -->
+
+  <!-- ===== LEVEL 1 - AI Foundations (amber) ===== -->
+  <g transform="translate(45, 220)">
+    <rect width="480" height="365" rx="14" fill="#FFFAEB" stroke="#E9A800" stroke-width="1.5" stroke-opacity="0.6"/>
+
+    <!-- Level badge -->
+    <rect x="28" y="28" width="80" height="24" rx="4" fill="#E9A800"/>
+    <text x="68" y="44" text-anchor="middle" class="mono" font-size="11" font-weight="600" fill="#3F2E00" letter-spacing="2">LEVEL 1</text>
+
+    <!-- Icon: BookOpen -->
+    <rect x="28" y="72" width="56" height="56" rx="10" fill="#FCEFC9" stroke="#E9A800" stroke-opacity="0.4"/>
+    <g transform="translate(42, 86)" stroke="#A36A00" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+    </g>
+
+    <!-- Name -->
+    <text x="28" y="166" class="serif" font-size="32" fill="#0A0F1E">AI Foundations</text>
+
+    <!-- Tagline -->
+    <text x="28" y="194" class="sans" font-size="15" font-weight="600" fill="#A36A00">Become AI-Native</text>
+
+    <!-- Operational term pill -->
+    <rect x="28" y="216" width="220" height="26" rx="5" fill="#FCEFC9" stroke="#E9A800" stroke-opacity="0.4"/>
+    <text x="38" y="234" class="mono" font-style="italic" font-size="12" fill="#A36A00">Conversations with AI</text>
+
+    <!-- Description -->
+    <text x="28" y="276" class="sans" font-size="14" fill="#4A4F5C">
+      <tspan x="28" dy="0">Using AI tools confidently for everyday</tspan>
+      <tspan x="28" dy="20">questions and tasks.</tspan>
+    </text>
+  </g>
+
+  <!-- ===== LEVEL 2 - AI Proficiency (primary) ===== -->
+  <g transform="translate(555, 220)">
+    <rect width="480" height="365" rx="14" fill="#EAF5EE" stroke="#2D6A4F" stroke-width="1.5" stroke-opacity="0.6"/>
+
+    <!-- Level badge -->
+    <rect x="28" y="28" width="80" height="24" rx="4" fill="#2D6A4F"/>
+    <text x="68" y="44" text-anchor="middle" class="mono" font-size="11" font-weight="600" fill="#FFFFFF" letter-spacing="2">LEVEL 2</text>
+
+    <!-- Icon: Code2 -->
+    <rect x="28" y="72" width="56" height="56" rx="10" fill="#D8F3DC" stroke="#52B788" stroke-opacity="0.4"/>
+    <g transform="translate(42, 86)" stroke="#1B4332" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m18 16 4-4-4-4"/>
+      <path d="m6 8-4 4 4 4"/>
+      <path d="m14.5 4-5 16"/>
+    </g>
+
+    <!-- Name -->
+    <text x="28" y="166" class="serif" font-size="32" fill="#0A0F1E">AI Proficiency</text>
+
+    <!-- Tagline -->
+    <text x="28" y="194" class="sans" font-size="15" font-weight="600" fill="#2D6A4F">Become Fluent</text>
+
+    <!-- Operational term pill -->
+    <rect x="28" y="216" width="240" height="26" rx="5" fill="#D8F3DC" stroke="#52B788" stroke-opacity="0.4"/>
+    <text x="38" y="234" class="mono" font-style="italic" font-size="12" fill="#1B4332">Prompts and Prompt Chains</text>
+
+    <!-- Description -->
+    <text x="28" y="276" class="sans" font-size="14" fill="#4A4F5C">
+      <tspan x="28" dy="0">Crafted prompts and human-sequenced</tspan>
+      <tspan x="28" dy="20">workflows that compress multi-step work.</tspan>
+    </text>
+  </g>
+
+  <!-- ===== LEVEL 3 - AI Agent Builder (primary) ===== -->
+  <g transform="translate(45, 615)">
+    <rect width="480" height="365" rx="14" fill="#EAF5EE" stroke="#2D6A4F" stroke-width="1.5" stroke-opacity="0.6"/>
+
+    <!-- Level badge -->
+    <rect x="28" y="28" width="80" height="24" rx="4" fill="#2D6A4F"/>
+    <text x="68" y="44" text-anchor="middle" class="mono" font-size="11" font-weight="600" fill="#FFFFFF" letter-spacing="2">LEVEL 3</text>
+
+    <!-- Icon: Network -->
+    <rect x="28" y="72" width="56" height="56" rx="10" fill="#D8F3DC" stroke="#52B788" stroke-opacity="0.4"/>
+    <g transform="translate(42, 86)" stroke="#1B4332" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="16" y="16" width="6" height="6" rx="1"/>
+      <rect x="2" y="16" width="6" height="6" rx="1"/>
+      <rect x="9" y="2" width="6" height="6" rx="1"/>
+      <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/>
+      <path d="M12 12V8"/>
+    </g>
+
+    <!-- Name -->
+    <text x="28" y="166" class="serif" font-size="32" fill="#0A0F1E">AI Agent Builder</text>
+
+    <!-- Tagline -->
+    <text x="28" y="194" class="sans" font-size="15" font-weight="600" fill="#2D6A4F">Become a Builder</text>
+
+    <!-- Operational term pill -->
+    <rect x="28" y="216" width="120" height="26" rx="5" fill="#D8F3DC" stroke="#52B788" stroke-opacity="0.4"/>
+    <text x="38" y="234" class="mono" font-style="italic" font-size="12" fill="#1B4332">AI Agents</text>
+
+    <!-- Description -->
+    <text x="28" y="276" class="sans" font-size="14" fill="#4A4F5C">
+      <tspan x="28" dy="0">Purpose-built AI with tools and context,</tspan>
+      <tspan x="28" dy="20">deployed to do real work.</tspan>
+    </text>
+  </g>
+
+  <!-- ===== LEVEL 4 - AI Orchestrator (primary) ===== -->
+  <g transform="translate(555, 615)">
+    <rect width="480" height="365" rx="14" fill="#EAF5EE" stroke="#2D6A4F" stroke-width="1.5" stroke-opacity="0.6"/>
+
+    <!-- Level badge -->
+    <rect x="28" y="28" width="80" height="24" rx="4" fill="#2D6A4F"/>
+    <text x="68" y="44" text-anchor="middle" class="mono" font-size="11" font-weight="600" fill="#FFFFFF" letter-spacing="2">LEVEL 4</text>
+
+    <!-- Icon: Workflow -->
+    <rect x="28" y="72" width="56" height="56" rx="10" fill="#D8F3DC" stroke="#52B788" stroke-opacity="0.4"/>
+    <g transform="translate(42, 86)" stroke="#1B4332" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <rect width="8" height="8" x="3" y="3" rx="2"/>
+      <path d="M7 11v4a2 2 0 0 0 2 2h4"/>
+      <rect width="8" height="8" x="13" y="13" rx="2"/>
+    </g>
+
+    <!-- Name -->
+    <text x="28" y="166" class="serif" font-size="32" fill="#0A0F1E">AI Orchestrator</text>
+
+    <!-- Tagline -->
+    <text x="28" y="194" class="sans" font-size="15" font-weight="600" fill="#2D6A4F">Become an Orchestrator</text>
+
+    <!-- Operational term pill -->
+    <rect x="28" y="216" width="220" height="26" rx="5" fill="#D8F3DC" stroke="#52B788" stroke-opacity="0.4"/>
+    <text x="38" y="234" class="mono" font-style="italic" font-size="12" fill="#1B4332">Multi-Agent Workflows</text>
+
+    <!-- Description -->
+    <text x="28" y="276" class="sans" font-size="14" fill="#4A4F5C">
+      <tspan x="28" dy="0">Systems where agents coordinate and</tspan>
+      <tspan x="28" dy="20">hand off to deliver outcomes.</tspan>
+    </text>
+  </g>
+
+  <!-- ===================== CONNECTING CHEVRONS ===================== -->
+  <!-- Between L1 and L2 (horizontal, mid-row 1) -->
+  <g stroke="#52B788" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.55">
+    <path d="M533 402 l9 -9 -9 -9"/>
+    <!-- Between L3 and L4 (horizontal, mid-row 2) -->
+    <path d="M533 797 l9 -9 -9 -9"/>
+    <!-- Between L2 and L3 (diagonal down-left, suggesting reading order continues to next row) -->
+    <path d="M540 600 l-6 6 6 6"/>
+  </g>
+
+  <!-- ===================== FOOTER ===================== -->
+  <line x1="120" y1="1010" x2="960" y2="1010" stroke="#DDD8CE" stroke-width="1"/>
+
+  <text x="540" y="1038" text-anchor="middle" class="sans" font-size="13" fill="#6B7080">
+    For Corporates, Working Professionals, and Educational Institutions
+  </text>
+
+  <!-- Logo wordmark (centred) -->
+  <g transform="translate(488, 1066)">
+    <text class="sans" font-size="18" font-weight="700" fill="#2D6A4F">Grad</text>
+    <text x="50" class="sans" font-size="18" font-weight="700" fill="#0A0F1E">Tensor</text>
+  </g>
+
+  <!-- gradtensor.com bottom-left -->
+  <text x="120" y="1062" class="mono" font-size="10" fill="#6B7080" letter-spacing="1">
+    // gradtensor.com
+  </text>
+</svg>
