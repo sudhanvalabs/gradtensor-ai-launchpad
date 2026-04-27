@@ -82,7 +82,7 @@ const CorporateOfferings = () => {
                 </div>
                 <p className="text-sm leading-relaxed text-muted-foreground">
                   Deeper workshops for individual functions. AI prompts that cut
-                  drafting time by 50-70% and AI workflows that compress
+                  drafting time by 50-70% and AI prompt chains that compress
                   multi-step processes into chained prompt sequences.
                 </p>
               </div>
@@ -109,7 +109,7 @@ const CorporateOfferings = () => {
             </p>
             <ul className="mb-8 space-y-1 text-sm text-muted-foreground">
               <li>→ Ready-to-use prompt templates for the team's most common tasks</li>
-              <li>→ Function-specific AI workflows that compress multi-step processes</li>
+              <li>→ Function-specific AI prompt chains that compress multi-step processes</li>
               <li>→ Confidence to use AI daily - across leadership and teams</li>
               <li>→ Customised to your workflows, your documents, your tone</li>
             </ul>

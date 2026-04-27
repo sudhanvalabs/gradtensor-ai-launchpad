@@ -4,7 +4,7 @@ import SiteFooter from "@/components/SiteFooter";
 import SEO from "@/components/SEO";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { getCoursesByCategory } from "@/data/courses";
-import { ArrowLeft, ArrowRight, Mail, Phone, Clock, BookOpen } from "lucide-react";
+import { ArrowLeft, ArrowRight, Mail, Phone, Clock, BookOpen, Wrench } from "lucide-react";
 
 const corporateCourses = getCoursesByCategory("corporate");
 
@@ -26,7 +26,7 @@ const Corporate = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Corporate AI Training"
-        description="AI training for your teams - from AI prompts that speed up daily work to AI workflows that compress entire processes. Customised to your function, your workflows, your documents."
+        description="AI training for your teams - from AI prompts that speed up daily work to AI prompt chains that compress entire processes. Customised to your function, your workflows, your documents."
         path="/corporate"
         jsonLd={corporateLd}
       />
@@ -57,13 +57,49 @@ const Corporate = () => {
             style={{ animationDelay: "0.1s" }}
           >
             AI training tailored to your teams. From AI prompts that speed up
-            daily work to AI workflows that compress entire processes.
+            daily work to AI prompt chains that compress entire processes.
             Customised to your function, your workflows, your documents.
           </p>
         </div>
       </section>
 
-      {/* What's included */}
+      {/* Methodology framing - ties this page to the GradTensor Gradient */}
+      <section className="pb-12">
+        <div className="section-container">
+          <div className="mx-auto max-w-3xl rounded-2xl border border-border bg-card/50 p-8 md:p-10 animate-fade-up" style={{ animationDelay: "0.15s" }}>
+            <p className="mb-3 font-mono text-xs tracking-[0.2em] text-primary uppercase">
+              // The GradTensor Gradient
+            </p>
+            <h2 className="mb-4 font-display text-2xl font-bold tracking-tight sm:text-3xl">
+              The training on this page sits at{" "}
+              <span className="gradient-text">Levels 1 and 2</span>{" "}
+              of the GradTensor Gradient - our 4-level AI mastery framework.
+            </h2>
+            <div className="space-y-3 text-base leading-relaxed text-muted-foreground">
+              <p>
+                These function-specific trainings give your teams immediate,
+                daily AI productivity through prompts and prompt chains. The
+                aim is simple: people leave the room able to use AI well, that
+                same week, on the work they already do.
+              </p>
+              <p>
+                For organisations that want to go further - building AI agents
+                (Level 3) or orchestrating multi-agent systems (Level 4) - see
+                the capability-building option at the bottom of this page.
+              </p>
+            </div>
+            <Link
+              to="/about#gradient"
+              className="mt-5 inline-flex items-center gap-2 font-display text-sm font-semibold text-primary border-b border-primary/40 pb-1 transition-colors hover:text-primary/80"
+            >
+              Explore the full GradTensor Gradient methodology on our About page
+              <ArrowRight size={14} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* What's included - the two pillars */}
       <section className="pb-12">
         <div className="section-container">
           <div className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-2 animate-fade-up" style={{ animationDelay: "0.2s" }}>
@@ -72,22 +108,30 @@ const Corporate = () => {
                 AI Prompts
               </h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                Your team leaves with ready-to-use prompt templates for their
-                most common tasks. Templates they can use the next morning.
-                Cut drafting time by 50-70%.
+                Single instructions. Your team leaves with ready-to-use prompt
+                templates for their most common tasks. Templates they can use
+                the next morning. Cut drafting time by 50-70%.
               </p>
             </div>
             <div className="rounded-xl border border-border bg-card p-6">
               <h3 className="mb-2 font-display text-lg font-semibold text-foreground">
-                AI Workflows
+                AI Prompt Chains
               </h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                Compress multi-step processes into chained prompt sequences.
-                A 10-step process that took 45 minutes becomes 3 prompts in 8
-                minutes. No new tools - just AI used at full depth.
+                Sequences of prompts run by a human. Compress multi-step
+                processes into chained prompt sequences. A 10-step process
+                that took 45 minutes becomes 3 prompts in 8 minutes. No new
+                tools - just AI used at full depth.
               </p>
             </div>
           </div>
+
+          <p className="mx-auto mt-6 max-w-3xl text-sm leading-relaxed text-muted-foreground animate-fade-up" style={{ animationDelay: "0.25s" }}>
+            <span className="font-mono text-xs tracking-wider uppercase text-primary">// Note: </span>
+            AI Agents and true AI Workflows (multi-agent orchestration) are
+            advanced capabilities covered in our capability-building
+            programmes - not in these function-specific trainings.
+          </p>
         </div>
       </section>
 
@@ -148,6 +192,59 @@ const Corporate = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Beyond Prompts and Prompt Chains - capability building */}
+      <section className="pb-20">
+        <div className="section-container">
+          <div className="mx-auto max-w-4xl">
+            <div className="mb-8 text-center animate-fade-up">
+              <p className="mb-3 font-mono text-xs tracking-[0.2em] text-primary uppercase">
+                // Building AI Capability
+              </p>
+              <h2 className="mb-3 font-display text-2xl font-bold tracking-tight sm:text-3xl">
+                Beyond Prompts and Prompt Chains:{" "}
+                <span className="gradient-text">Building AI Capability</span>
+              </h2>
+              <p className="mx-auto max-w-2xl text-base text-muted-foreground">
+                For organisations that want to go beyond function-level
+                training and build deeper AI capability, we work on custom
+                AI build engagements.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border-2 border-primary/30 bg-gradient-to-br from-primary/5 via-card/80 to-card/50 p-8 md:p-10 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+              <div className="mb-4 flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <Wrench size={22} />
+                </div>
+                <span className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 font-display text-[11px] font-semibold tracking-wider text-primary uppercase">
+                  Custom Engagement
+                </span>
+              </div>
+              <h3 className="mb-3 font-display text-xl font-bold tracking-tight sm:text-2xl">
+                Custom AI Build Engagements
+              </h3>
+              <p className="text-base leading-relaxed text-muted-foreground">
+                For high-value AI use cases, we design and deliver custom AI
+                tools - document intelligence systems, internal knowledge
+                bases, agentic workflows. Built collaboratively with your
+                team.
+              </p>
+            </div>
+
+            <p className="mt-6 text-center text-sm text-muted-foreground animate-fade-up" style={{ animationDelay: "0.15s" }}>
+              Engagements start with a discovery conversation.{" "}
+              <a
+                href="mailto:partnerships@gradtensor.com?subject=Custom%20AI%20Build%20Engagement%20-%20Discovery"
+                className="font-semibold text-primary hover:text-primary/80 underline decoration-primary/40 underline-offset-2"
+              >
+                Contact us
+              </a>{" "}
+              to scope what fits your organisation.
+            </p>
           </div>
         </div>
       </section>

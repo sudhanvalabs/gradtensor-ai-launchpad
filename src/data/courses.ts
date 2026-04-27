@@ -195,7 +195,7 @@ export const courses: Course[] = [
     title: "Leadership Teams",
     tagline: "Lead the AI shift. Decide sharper. Move the organisation forward",
     description:
-      "Senior leaders need a working grasp of AI - not coding skills, but the judgement to make confident bets on where AI fits, what to fund, and how to redesign teams and processes around it. Training covers AI prompts for strategic thinking, board and investor communication, and AI workflows that compress executive analysis and decision-making.",
+      "Senior leaders need a working grasp of AI - not coding skills, but the judgement to make confident bets on where AI fits, what to fund, and how to redesign teams and processes around it. Training covers AI prompts for strategic thinking, board and investor communication, and AI prompt chains that compress executive analysis and decision-making.",
     duration: "Online or onsite",
     hours: "Half day or full day",
     idealFor: "CEOs, CXOs, founders, business heads, function heads, senior leadership teams",
@@ -214,7 +214,7 @@ export const courses: Course[] = [
     title: "Customer Support Teams",
     tagline: "Respond better. Respond faster",
     description:
-      "Support agents draft responses in seconds instead of minutes. Written English improves across the team. Response quality stays consistent from agent to agent. Training covers AI prompts for common support scenarios and AI workflows that compress multi-step support processes.",
+      "Support agents draft responses in seconds instead of minutes. Written English improves across the team. Response quality stays consistent from agent to agent. Training covers AI prompts for common support scenarios and AI prompt chains that compress multi-step support processes.",
     duration: "Online or onsite",
     hours: "Full day or 2-3 live sessions",
     idealFor: "Operations managers, BPO training managers, customer service directors",
@@ -233,7 +233,7 @@ export const courses: Course[] = [
     title: "HR Teams",
     tagline: "Hire better. Communicate clearer. Move faster",
     description:
-      "HR professionals write the same documents repeatedly - JDs, offer letters, rejection emails, performance reviews, policy communications. Training covers AI prompts that cut drafting time by 50-70% and AI workflows that compress multi-step HR processes like hiring pipelines and performance cycles.",
+      "HR professionals write the same documents repeatedly - JDs, offer letters, rejection emails, performance reviews, policy communications. Training covers AI prompts that cut drafting time by 50-70% and AI prompt chains that compress multi-step HR processes like hiring pipelines and performance cycles.",
     duration: "Online or onsite",
     hours: "Full day or 2-3 live sessions",
     idealFor: "HR directors, talent acquisition heads, people ops managers",
@@ -252,7 +252,7 @@ export const courses: Course[] = [
     title: "Marketing Teams",
     tagline: "Same headcount, more campaigns",
     description:
-      "Marketing teams produce enormous volumes of content - social posts, email campaigns, ad copy, briefs, reports. Training covers AI prompts that eliminate the blank page and AI workflows that compress entire campaign creation from brief to first-week content.",
+      "Marketing teams produce enormous volumes of content - social posts, email campaigns, ad copy, briefs, reports. Training covers AI prompts that eliminate the blank page and AI prompt chains that compress entire campaign creation from brief to first-week content.",
     duration: "Online or onsite",
     hours: "Full day or 2-3 live sessions",
     idealFor: "Marketing managers, CMOs, brand managers, digital marketing directors",
@@ -271,7 +271,7 @@ export const courses: Course[] = [
     title: "Sales Teams",
     tagline: "Prospect smarter. Follow up faster. Close more",
     description:
-      "Every hour your sales team spends writing is an hour not spent in conversations. Training covers AI prompts for prospecting, follow-ups, and proposals, plus AI workflows that compress research-to-outreach into minutes instead of hours.",
+      "Every hour your sales team spends writing is an hour not spent in conversations. Training covers AI prompts for prospecting, follow-ups, and proposals, plus AI prompt chains that compress research-to-outreach into minutes instead of hours.",
     duration: "Online or onsite",
     hours: "Full day or 2-3 live sessions",
     idealFor: "Sales directors, VP Sales, revenue operations managers",
@@ -290,7 +290,7 @@ export const courses: Course[] = [
     title: "Operations Teams",
     tagline: "Document faster. Communicate clearer. Run tighter",
     description:
-      "Operations professionals deal with constant documentation - SOPs, process notes, vendor communications, escalation reports. Training covers AI prompts that cut documentation time by 60% and AI workflows that compress multi-step operational processes.",
+      "Operations professionals deal with constant documentation - SOPs, process notes, vendor communications, escalation reports. Training covers AI prompts that cut documentation time by 60% and AI prompt chains that compress multi-step operational processes.",
     duration: "Online or onsite",
     hours: "Full day or 2-3 live sessions",
     idealFor: "COOs, operations managers, process improvement heads, supply chain managers",
@@ -309,7 +309,7 @@ export const courses: Course[] = [
     title: "Finance Teams",
     tagline: "Analyse faster. Report clearer. Explain better",
     description:
-      "Finance professionals spend significant time turning numbers into narratives - management reports, variance analysis, board presentations. Training covers AI prompts for financial communication and AI workflows that turn raw data into board-ready output in a fraction of the time.",
+      "Finance professionals spend significant time turning numbers into narratives - management reports, variance analysis, board presentations. Training covers AI prompts for financial communication and AI prompt chains that turn raw data into board-ready output in a fraction of the time.",
     duration: "Online or onsite",
     hours: "Full day or 2-3 live sessions",
     idealFor: "CFOs, finance controllers, FP&A managers",
@@ -328,7 +328,7 @@ export const courses: Course[] = [
     title: "CA Firms",
     tagline: "File faster. Communicate clearer. Review smarter",
     description:
-      "CA professionals and article clerks spend significant time on audit observations, tax summaries, compliance notices, and client communications. Training covers AI prompts for CA-specific documents and AI workflows that collapse multi-step processes into chained prompt sequences.",
+      "CA professionals and article clerks spend significant time on audit observations, tax summaries, compliance notices, and client communications. Training covers AI prompts for CA-specific documents and AI prompt chains that collapse multi-step processes into chained prompt sequences.",
     duration: "Online or onsite",
     hours: "Full day or 2-3 live sessions",
     idealFor: "CA firm managing partners, training heads, ICAI chapter officers",
@@ -347,7 +347,7 @@ export const courses: Course[] = [
     title: "Legal Teams",
     tagline: "Draft faster. Think deeper. Bill smarter",
     description:
-      "Lawyers and legal professionals spend hours on routine drafting - NDAs, contract reviews, compliance communications, client updates. Training covers AI prompts for legal documents and AI workflows that compress contract reviews, matter preparation, and due diligence.",
+      "Lawyers and legal professionals spend hours on routine drafting - NDAs, contract reviews, compliance communications, client updates. Training covers AI prompts for legal documents and AI prompt chains that compress contract reviews, matter preparation, and due diligence.",
     duration: "Online or onsite",
     hours: "Full day or 2-3 live sessions",
     idealFor: "Managing partners, general counsel, legal ops heads",
@@ -366,7 +366,7 @@ export const courses: Course[] = [
     title: "Teachers and Educators",
     tagline: "Plan better. Communicate clearer. Give feedback faster",
     description:
-      "Teachers spend hours every week on documentation - lesson plans, assessments, parent communications, report card comments. Training covers AI prompts that save 3-5 hours per week and AI workflows that compress planning and communication cycles.",
+      "Teachers spend hours every week on documentation - lesson plans, assessments, parent communications, report card comments. Training covers AI prompts that save 3-5 hours per week and AI prompt chains that compress planning and communication cycles.",
     duration: "Online or onsite",
     hours: "Full day or 2-3 live sessions",
     idealFor: "School principals, academic directors, teacher training coordinators",
@@ -385,7 +385,7 @@ export const courses: Course[] = [
     title: "Procurement and Supply Chain",
     tagline: "Source smarter. Document faster. Communicate clearer",
     description:
-      "Procurement professionals produce constant documentation under time pressure - RFQ documents, vendor evaluations, purchase orders, supplier communications. Training covers AI prompts and AI workflows that cut procurement documentation time by 50-70%.",
+      "Procurement professionals produce constant documentation under time pressure - RFQ documents, vendor evaluations, purchase orders, supplier communications. Training covers AI prompts and AI prompt chains that cut procurement documentation time by 50-70%.",
     duration: "Online or onsite",
     hours: "Full day or 2-3 live sessions",
     idealFor: "CPOs, procurement managers, supply chain directors",
