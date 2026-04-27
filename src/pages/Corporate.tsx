@@ -4,6 +4,7 @@ import SiteFooter from "@/components/SiteFooter";
 import SEO from "@/components/SEO";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { getCoursesByCategory } from "@/data/courses";
+import AIMasteryGradient from "@/components/AIMasteryGradient";
 import { ArrowLeft, ArrowRight, Mail, Phone, Clock, BookOpen, Wrench } from "lucide-react";
 
 const corporateCourses = getCoursesByCategory("corporate");
@@ -63,41 +64,21 @@ const Corporate = () => {
         </div>
       </section>
 
-      {/* Methodology framing - ties this page to the GradTensor Gradient */}
-      <section className="pb-12">
+      {/* Methodology framing lead - one-liner above the diagram */}
+      <section className="pb-2">
         <div className="section-container">
-          <div className="mx-auto max-w-3xl rounded-2xl border border-border bg-card/50 p-8 md:p-10 animate-fade-up" style={{ animationDelay: "0.15s" }}>
-            <p className="mb-3 font-mono text-xs tracking-[0.2em] text-primary uppercase">
-              // The GradTensor Gradient
-            </p>
-            <h2 className="mb-4 font-display text-2xl font-bold tracking-tight sm:text-3xl">
-              The training on this page sits at{" "}
-              <span className="gradient-text">Levels 1 and 2</span>{" "}
-              of the GradTensor Gradient - our 4-level AI mastery framework.
-            </h2>
-            <div className="space-y-3 text-base leading-relaxed text-muted-foreground">
-              <p>
-                These function-specific trainings give your teams immediate,
-                daily AI productivity through prompts and prompt chains. The
-                aim is simple: people leave the room able to use AI well, that
-                same week, on the work they already do.
-              </p>
-              <p>
-                For organisations that want to go further - building AI agents
-                (Level 3) or orchestrating multi-agent systems (Level 4) - see
-                the capability-building option at the bottom of this page.
-              </p>
-            </div>
-            <Link
-              to="/about#gradient"
-              className="mt-5 inline-flex items-center gap-2 font-display text-sm font-semibold text-primary border-b border-primary/40 pb-1 transition-colors hover:text-primary/80"
-            >
-              Explore the full GradTensor Gradient methodology on our About page
-              <ArrowRight size={14} />
-            </Link>
-          </div>
+          <p className="mx-auto max-w-3xl text-center font-mono text-xs tracking-wider uppercase text-primary animate-fade-up" style={{ animationDelay: "0.15s" }}>
+            // This page covers Levels 1 and 2 of the GradTensor Gradient
+          </p>
         </div>
       </section>
+
+      {/* The GradTensor Gradient - corporate variant: no chips, no bootcamp callout, no CTA */}
+      <AIMasteryGradient
+        showChips={false}
+        showBootcampCallout={false}
+        showCoursesCta={false}
+      />
 
       {/* What's included - the two pillars */}
       <section className="pb-12">
