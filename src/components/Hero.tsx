@@ -36,26 +36,26 @@ const Hero = () => {
             {/* CTAs */}
             <div className="flex flex-col gap-4 sm:flex-row animate-fade-up" style={{ animationDelay: "0.3s" }}>
               <Link
-                to="/about#gradient"
+                to="/framework"
                 className="btn-shimmer group inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 font-display text-base font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
               >
-                Explore AI Learning Framework
+                Explore the Framework
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </Link>
-              <Link
-                to="/courses"
+              <a
+                href="#tracks"
                 className="inline-flex items-center justify-center rounded-lg border border-border bg-card/50 px-8 py-4 font-display text-base font-medium tracking-wider text-foreground backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-card"
               >
-                Explore Courses
-              </Link>
+                Find Your Track
+              </a>
             </div>
 
-            {/* Mono tagline */}
+            {/* Tagline */}
             <p
               className="mt-5 font-mono text-xs tracking-wide text-muted-foreground animate-fade-up"
               style={{ animationDelay: "0.35s" }}
             >
-              // From AI user to AI builder to AI orchestrator - find your level
+              One framework. Three tracks. Find your door in.
             </p>
 
             {/* Stats */}

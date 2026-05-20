@@ -6,12 +6,13 @@ import { BrowserRouter, Routes, Route, useLocation, Navigate } from "react-route
 import { useEffect } from "react";
 import { ThemeProvider } from "next-themes";
 import Index from "./pages/Index";
-import Courses from "./pages/Courses";
-import CourseDetail from "./pages/CourseDetail";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
-import TeenAIBuildersLanding from "./pages/TeenAIBuildersLanding";
 import Corporate from "./pages/Corporate";
+import Framework from "./pages/Framework";
+import ForEngineers from "./pages/ForEngineers";
+import ForProfessionals from "./pages/ForProfessionals";
+import ForLeaders from "./pages/ForLeaders";
 
 const queryClient = new QueryClient();
 
@@ -44,12 +45,16 @@ const App = () => (
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/courses" element={<Courses />} />
-            <Route path="/courses/:slug" element={<CourseDetail />} />
+            <Route path="/courses" element={<Navigate to="/framework" replace />} />
+            <Route path="/courses/:slug" element={<Navigate to="/framework" replace />} />
+            <Route path="/teen-ai-builders" element={<Navigate to="/framework" replace />} />
             <Route path="/about" element={<About />} />
             <Route path="/trainers" element={<Navigate to="/about" replace />} />
-            <Route path="/teen-ai-builders" element={<TeenAIBuildersLanding />} />
             <Route path="/corporate" element={<Corporate />} />
+            <Route path="/framework" element={<Framework />} />
+            <Route path="/for-engineers" element={<ForEngineers />} />
+            <Route path="/for-professionals" element={<ForProfessionals />} />
+            <Route path="/for-leaders" element={<ForLeaders />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

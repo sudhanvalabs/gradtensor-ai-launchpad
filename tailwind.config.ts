@@ -14,10 +14,23 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Plus Jakarta Sans', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        display: ['Fraunces', 'Georgia', 'serif'],
+        body: ['Fraunces', 'Georgia', 'serif'],
+        mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
       },
       colors: {
+        /* Editorial design system direct tokens — for use alongside the semantic shadcn tokens */
+        ink: '#1a1814',
+        paper: '#f4efe6',
+        'ink-muted': '#6b645a',
+        track: {
+          leaders: '#d4a574',
+          'leaders-dark': '#b8895a',
+          pros: '#7a9b8c',
+          'pros-dark': '#5a7e6f',
+          engs: '#c8472e',
+          'engs-dark': '#a13821',
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
 import SEO from "@/components/SEO";
-import AIMasteryGradient from "@/components/AIMasteryGradient";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { trainers } from "@/data/trainers";
+import { whatsappCustomLink } from "@/data/siteConfig";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 
 const founder = trainers[0];
@@ -27,6 +28,64 @@ const aboutLd = {
     sameAs: founder.links.map((link) => link.url),
   },
 };
+
+const LEVELS = [
+  {
+    num: "L 01",
+    name: "Foundations",
+    outcome: "Become AI-Native",
+    desc: "Understand what AI is, what it isn't, and how to think clearly about it.",
+    format: "Half-day / Keynote",
+  },
+  {
+    num: "L 02",
+    name: "Proficiency",
+    outcome: "Become Fluent",
+    desc: "Work confidently with AI tools, prompts, and patterns in your context.",
+    format: "1-2 day workshop",
+  },
+  {
+    num: "L 03",
+    name: "Builder",
+    outcome: "Become a Builder",
+    desc: "Build real AI-powered workflows, tools, and applications.",
+    format: "4 weeks / 30 hours",
+  },
+  {
+    num: "L 04",
+    name: "Orchestrator",
+    outcome: "Become an Orchestrator",
+    desc: "Design, deploy, and govern autonomous AI systems in production.",
+    format: "6 months / 64 live hours",
+  },
+];
+
+const TRACKS = [
+  {
+    number: "Track 01",
+    name: "For Leaders",
+    desc: "Direct AI work without doing it yourself.",
+    range: "Levels 01 → 02",
+    href: "/for-leaders",
+    barColor: "#d4a574",
+  },
+  {
+    number: "Track 02",
+    name: "For Professionals",
+    desc: "Apply AI in the work you already do.",
+    range: "Levels 01 → 03",
+    href: "/for-professionals",
+    barColor: "#7a9b8c",
+  },
+  {
+    number: "Track 03",
+    name: "For Engineers",
+    desc: "Build production AI systems.",
+    range: "Levels 01 → 04",
+    href: "/for-engineers",
+    barColor: "#c8472e",
+  },
+];
 
 const About = () => {
   useScrollAnimation();
@@ -76,84 +135,154 @@ const About = () => {
         </div>
       </section>
 
-      {/* What makes GradTensor different */}
+      {/* What makes us different */}
       <section className="border-t border-border/50 py-16 md:py-20">
         <div className="section-container">
           <div className="mx-auto max-w-3xl animate-on-scroll">
-            <p className="mb-3 font-mono text-xs tracking-[0.2em] text-primary uppercase">
-              // What makes us different
+            <p className="mb-3 font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground">
+              What makes us different
             </p>
-            <h2 className="mb-6 font-display text-3xl font-bold tracking-tight sm:text-4xl">
-              The{" "}
-              <span className="gradient-text">GradTensor Gradient</span>
-              . One AI mastery ladder, two audiences.
+            <h2 className="mb-6 font-display text-3xl italic font-medium tracking-tight sm:text-4xl md:text-5xl">
+              One framework. Three tracks.{" "}
+              <em className="not-italic text-primary">Same ladder.</em>
             </h2>
-            <div className="space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+            <div className="space-y-4 text-base leading-relaxed text-foreground sm:text-lg">
               <p>
                 We have developed the GradTensor Gradient - a four-level AI
-                mastery ladder that takes a learner from AI Consumer to AI
-                Builder to AI Agent Builder to AI Orchestrator. The ladder
-                applies to both audiences we serve.
-              </p>
-              <p>
-                <strong className="text-foreground">For individuals</strong>{" "}
-                who want to improve their career prospects in the AI
-                engineering domain - the ladder is a clear path from
-                understanding AI to building production agentic systems.{" "}
-                <strong className="text-foreground">For institutions</strong>{" "}
-                that want to improve efficiency with AI - the ladder maps
-                directly to the skills their teams or students need at each
-                stage.
+                mastery ladder from AI Foundations to AI Orchestrator. The
+                ladder is the same for everyone. What changes is the track you
+                take through it, based on your role and what you need to do
+                with AI.
               </p>
               <p>
                 Most of our courses are delivered through institutional
-                partnerships - educational institutions (schools, colleges and
-                institutes) and corporate training. Live, hands-on,
-                and customised to the audience in the room.
+                partnerships - colleges, institutes, and corporate L&amp;D teams.
+                Every cohort is live and instructor-led. No pre-recorded videos.
+                No self-paced drift.
               </p>
-            </div>
-
-            {/* Two-column summary of audiences */}
-            <div className="mt-10 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-xl border border-border bg-card/40 p-5">
-                <p className="mb-2 font-mono text-[11px] tracking-wider uppercase text-primary">
-                  // Educational Institutions
-                </p>
-                <p className="font-display text-base font-semibold">
-                  Schools, Colleges, Institutes
-                </p>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Programmes that prepare students for the AI-shaped job
-                  market.
-                </p>
-              </div>
-              <div className="rounded-xl border border-border bg-card/40 p-5">
-                <p className="mb-2 font-mono text-[11px] tracking-wider uppercase text-primary">
-                  // Corporate Training
-                </p>
-                <p className="font-display text-base font-semibold">
-                  Enterprise Teams &amp; Leadership
-                </p>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Workshops that turn AI from a tool teams use into a workflow
-                  teams own.
-                </p>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* The AI Mastery Gradient (full framework) */}
-      <AIMasteryGradient showCoursesCta={false} />
+      {/* The GradTensor Gradient */}
+      <section id="gradient" className="border-t border-border/50 py-16 md:py-20 scroll-mt-20">
+        <div className="section-container">
+          <div className="mx-auto max-w-3xl">
+            <div className="mb-10 animate-on-scroll">
+              <p className="mb-3 font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground">
+                The GradTensor Gradient
+              </p>
+              <h2 className="mb-3 font-display text-3xl italic font-medium tracking-tight sm:text-4xl md:text-5xl">
+                Our proprietary four-level AI mastery framework.
+              </h2>
+              <p className="text-lg italic text-muted-foreground">
+                Find your level. Take the next step.
+              </p>
+            </div>
 
-      {/* Founder & Lead Trainer */}
+            {/* Vertical ladder */}
+            <div className="border-y border-foreground/80 animate-on-scroll">
+              {LEVELS.map((lv, i) => (
+                <div
+                  key={lv.num}
+                  className={`grid grid-cols-[60px_1fr] sm:grid-cols-[80px_1fr_160px] items-center gap-x-6 gap-y-2 py-6 ${
+                    i > 0 ? "border-t border-foreground/80" : ""
+                  }`}
+                >
+                  <div className="font-mono text-xs tracking-[0.15em] text-muted-foreground sm:text-sm">
+                    {lv.num}
+                  </div>
+                  <div>
+                    <div className="font-display text-xl italic font-medium leading-tight tracking-tight sm:text-2xl">
+                      {lv.name}
+                      <span className="ml-2 text-base font-normal not-italic text-muted-foreground">
+                        · {lv.outcome}
+                      </span>
+                    </div>
+                    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                      {lv.desc}
+                    </p>
+                  </div>
+                  <div className="col-start-2 sm:col-start-3 font-mono text-[11px] tracking-[0.1em] text-foreground sm:text-right">
+                    {lv.format}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Three tracks through the ladder */}
+            <div className="mt-12 animate-on-scroll">
+              <p className="mb-4 font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground">
+                Three tracks through the ladder
+              </p>
+              <div className="grid gap-4 md:grid-cols-3">
+                {TRACKS.map((t) => (
+                  <Link
+                    key={t.href}
+                    to={t.href}
+                    className="group relative flex flex-col gap-2 overflow-hidden border border-foreground/80 bg-card p-5 pt-6 transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-card)]"
+                  >
+                    <span
+                      aria-hidden="true"
+                      className="absolute left-0 right-0 top-0 h-[6px]"
+                      style={{ backgroundColor: t.barColor }}
+                    />
+                    <p className="mt-2 font-mono text-[10px] tracking-[0.2em] uppercase text-muted-foreground">
+                      {t.number}
+                    </p>
+                    <h3 className="font-display text-lg italic font-medium leading-tight tracking-tight">
+                      {t.name}
+                    </h3>
+                    <p className="text-sm leading-relaxed text-muted-foreground">
+                      {t.desc}
+                    </p>
+                    <div className="mt-auto flex items-center justify-between border-t border-dashed border-muted-foreground/40 pt-3">
+                      <span className="font-mono text-[10px] tracking-[0.15em] uppercase text-muted-foreground">
+                        {t.range}
+                      </span>
+                      <ArrowRight
+                        size={14}
+                        className="text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-primary"
+                      />
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Integrated programme callout */}
+            <div className="mt-10 border-2 border-foreground/80 bg-card p-6 sm:p-7 animate-on-scroll">
+              <p className="mb-2 font-mono text-[10px] tracking-[0.2em] uppercase text-primary">
+                Integrated programme
+              </p>
+              <p className="text-base leading-relaxed text-foreground sm:text-lg">
+                Levels 02 to 04 for engineers are also delivered as a single
+                integrated programme: the AI Agentic Engineering Bootcamp.
+                Six months of live instruction, four months of training plus a
+                two-month capstone, 64 live hours. Built for engineering
+                colleges, technical institutes, placement partners, and
+                corporate engineering teams.
+              </p>
+              <Link
+                to="/for-engineers"
+                className="mt-4 inline-flex items-center gap-1.5 font-mono text-xs tracking-[0.18em] uppercase text-foreground transition-colors hover:text-primary"
+              >
+                Explore the Bootcamp
+                <ArrowRight size={14} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder & Lead Instructor */}
       <section className="border-t border-border/50 py-16 md:py-24">
         <div className="section-container">
           <div className="mx-auto max-w-3xl">
             <div className="mb-10 animate-on-scroll">
               <p className="mb-3 font-mono text-xs tracking-[0.2em] text-primary uppercase">
-                // Founder &amp; Lead Trainer
+                // Founder &amp; Lead Instructor
               </p>
               <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
                 Meet <span className="gradient-text">{founder.name}</span>
@@ -248,30 +377,30 @@ const About = () => {
       <section className="border-t border-border/50 py-16 md:py-20">
         <div className="section-container">
           <div className="mx-auto max-w-3xl rounded-2xl border-2 border-primary/30 bg-gradient-to-br from-primary/5 via-card/80 to-card/50 p-8 md:p-10 text-center animate-on-scroll">
-            <h2 className="mb-3 font-display text-2xl font-bold tracking-tight sm:text-3xl">
+            <h2 className="mb-3 font-display text-2xl italic font-medium tracking-tight sm:text-3xl">
               Want to work together?
             </h2>
             <p className="mb-6 text-base text-muted-foreground">
-              See our programmes for colleges, institutes, schools and
-              corporates - or get in touch to discuss a partnership.
+              Three tracks for three audiences. One framework underneath. Find
+              your door in, or get in touch to discuss a partnership.
             </p>
             <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <Link
-                to="/courses"
+                to="/framework"
                 className="btn-shimmer group inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3 font-display text-sm font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
               >
-                Explore Programmes
+                Explore the Framework
                 <ArrowRight
                   size={16}
                   className="transition-transform group-hover:translate-x-1"
                 />
               </Link>
-              <a
-                href="mailto:partnerships@gradtensor.com?subject=Partnership%20Enquiry"
-                className="inline-flex items-center justify-center rounded-lg border border-border bg-card/50 px-8 py-3 font-display text-sm font-medium tracking-wider text-foreground transition-all hover:border-primary/30 hover:bg-card"
+              <WhatsAppButton
+                href={whatsappCustomLink("Hi, I'd like to discuss a partnership with GradTensor.")}
+                className="inline-flex items-center justify-center rounded-lg border border-foreground/80 bg-transparent px-8 py-3 font-display text-sm font-medium tracking-wider text-foreground transition-all hover:bg-foreground hover:text-background"
               >
                 Partnership Enquiry
-              </a>
+              </WhatsAppButton>
             </div>
           </div>
         </div>

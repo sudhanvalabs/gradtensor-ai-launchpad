@@ -37,11 +37,11 @@ const Corporate = () => {
       <div className="pt-24 md:pt-28">
         <div className="section-container">
           <Link
-            to="/courses"
+            to="/framework"
             className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
           >
             <ArrowLeft size={16} />
-            Back to Courses
+            Back to Framework
           </Link>
         </div>
       </div>

@@ -283,10 +283,10 @@ const AIMasteryGradient = ({
         {showCoursesCta && (
           <div className="mt-12 animate-on-scroll text-center">
             <Link
-              to="/courses"
+              to="/framework"
               className="group inline-flex items-center gap-2 font-display text-base font-semibold text-primary transition-colors hover:text-primary/80"
             >
-              See all courses
+              Explore the Framework
               <ArrowRight
                 size={18}
                 className="transition-transform group-hover:translate-x-1"

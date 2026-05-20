@@ -15,9 +15,9 @@ const differentiators = [
   },
   {
     icon: Cpu,
-    title: "The Right Level for You",
+    title: "Built for Three Audiences",
     description:
-      "We teach a clear progression - AI Builder Intensive for students, AI Builder Cohort for working developers, AI Agentic Engineering Bootcamp for serious career investment. Find your level and take the next step.",
+      "Leaders directing AI work. Professionals applying AI in their roles. Engineers building production systems. Three tracks, one framework, instruction tailored to who you are.",
   },
   {
     icon: Target,

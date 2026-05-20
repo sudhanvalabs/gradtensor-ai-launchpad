@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import ThreeTracks from "@/components/ThreeTracks";
 import WhyGradTensor from "@/components/WhyGradTensor";
 import SiteFooter from "@/components/SiteFooter";
 import SEO from "@/components/SEO";
@@ -33,6 +34,7 @@ const Index = () => {
       />
       <Navbar />
       <Hero />
+      <ThreeTracks />
       <WhyGradTensor />
       <SiteFooter />
     </div>

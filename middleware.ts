@@ -16,18 +16,6 @@ const OG_DATA: Record<string, OGData> = {
       "We help people stop fearing AI and start getting ahead with it. Live, hands-on courses from GradTensor.",
     image: "/og/home.png",
   },
-  "/teen-ai-builders": {
-    title: "Teen AI Builders - School Programme | GradTensor",
-    description:
-      "Hands-on AI development for Grades 8 to 12. Students build a fully deployed AI-powered web application over 12 weeks. Bring Teen AI Builders to your school.",
-    image: "/og/teen-ai-builders.jpg",
-  },
-  "/courses": {
-    title: "AI Courses & Programs | GradTensor",
-    description:
-      "AI Agentic Engineering Bootcamp, Teen AI Builders for schools, and corporate AI training. Stop fearing AI. Start getting ahead with it.",
-    image: "/og/courses.png",
-  },
   "/corporate": {
     title: "Corporate AI Training | GradTensor",
     description:
@@ -99,5 +87,5 @@ export default function middleware(request: Request): Response | undefined {
 }
 
 export const config = {
-  matcher: ["/", "/teen-ai-builders", "/courses", "/corporate", "/schedule", "/trainers"],
+  matcher: ["/", "/corporate", "/schedule", "/trainers"],
 };

@@ -1,4 +1,9 @@
 {
+  "redirects": [
+    { "source": "/courses", "destination": "/framework", "permanent": true },
+    { "source": "/courses/:slug*", "destination": "/framework", "permanent": true },
+    { "source": "/teen-ai-builders", "destination": "/framework", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]

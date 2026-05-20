@@ -14,16 +14,6 @@ GradTensor is an AI education company that trains students, graduates, working p
 - Students learn AI fundamentals and build real AI agents from scratch, then build and deploy a production AI application as a capstone project
 - Contact GradTensor for pricing
 
-### Teen AI Builders - School Programme
-- Duration: 12 weeks, 90 minutes per week
-- For: School students in Grades 8 to 12, any curriculum board
-- No prerequisites: No prior coding or AI experience required
-- Students build a fully deployed AI-powered web application (escape room game) from scratch
-- Skills: HTML, CSS, JavaScript, AI API Integration, Deployment
-- Certification: GradTensor AI Builder Certificate on completion
-- Delivery: At your school, online or in-person. Minimum 20 students per batch.
-- URL: https://gradtensor.com/teen-ai-builders
-
 ### Corporate AI Training
 - AI training for teams, customised by function
 - Covers AI prompts (speed up daily tasks) and AI workflows (compress multi-step processes)
@@ -44,10 +34,11 @@ GradTensor is an AI education company that trains students, graduates, working p
 ## Links
 
 - Website: https://gradtensor.com
-- Courses: https://gradtensor.com/courses
+- Framework: https://gradtensor.com/framework
+- For Leaders: https://gradtensor.com/for-leaders
+- For Professionals: https://gradtensor.com/for-professionals
+- For Engineers: https://gradtensor.com/for-engineers
 - Corporate Training: https://gradtensor.com/corporate
-- Teen AI Builders: https://gradtensor.com/teen-ai-builders
-- Schedule: https://gradtensor.com/schedule
-- Trainers: https://gradtensor.com/trainers
+- About: https://gradtensor.com/about
 - Email: courses@gradtensor.com
 - Partnerships: partnerships@gradtensor.com

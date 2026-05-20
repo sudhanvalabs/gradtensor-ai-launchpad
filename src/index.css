@@ -1,115 +1,129 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  /* Light mode (default) */
+  /* Light mode (default) - editorial design system: paper background, ink text, Fraunces + JetBrains Mono */
   :root {
-    --background: 0 0% 100%;
-    --foreground: 224 15% 15%;
+    /* Paper #f4efe6 */
+    --background: 38 33% 93%;
+    /* Ink #1a1814 */
+    --foreground: 35 11% 9%;
 
-    --card: 220 14% 96%;
-    --card-foreground: 224 15% 15%;
+    /* Slightly lighter paper tint so cards lift gently off the background */
+    --card: 38 33% 96%;
+    --card-foreground: 35 11% 9%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 224 15% 15%;
+    --popover: 38 33% 96%;
+    --popover-foreground: 35 11% 9%;
 
-    --primary: 174 72% 40%;
-    --primary-foreground: 0 0% 100%;
+    /* Engineers red #c8472e - default brand accent in the editorial system */
+    --primary: 11 64% 48%;
+    --primary-foreground: 38 33% 96%;
 
-    --secondary: 220 14% 92%;
-    --secondary-foreground: 224 15% 25%;
+    /* Warm secondary on paper */
+    --secondary: 38 25% 88%;
+    --secondary-foreground: 35 11% 15%;
 
-    --muted: 220 14% 94%;
-    --muted-foreground: 220 10% 40%;
+    --muted: 38 25% 90%;
+    /* Muted #6b645a */
+    --muted-foreground: 31 9% 39%;
 
-    --accent: 174 72% 40%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 11 64% 48%;
+    --accent-foreground: 38 33% 96%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 38 33% 96%;
 
-    --border: 220 13% 87%;
-    --input: 220 13% 87%;
-    --ring: 174 72% 40%;
+    /* Warm border tone, darker than the previous gray so rules read sharper on paper */
+    --border: 35 14% 72%;
+    --input: 35 14% 72%;
+    --ring: 11 64% 48%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 220 14% 96%;
-    --sidebar-foreground: 224 15% 25%;
-    --sidebar-primary: 174 72% 40%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 14% 92%;
-    --sidebar-accent-foreground: 224 15% 25%;
-    --sidebar-border: 220 13% 87%;
-    --sidebar-ring: 174 72% 40%;
+    --sidebar-background: 38 33% 96%;
+    --sidebar-foreground: 35 11% 15%;
+    --sidebar-primary: 11 64% 48%;
+    --sidebar-primary-foreground: 38 33% 96%;
+    --sidebar-accent: 38 25% 88%;
+    --sidebar-accent-foreground: 35 11% 15%;
+    --sidebar-border: 35 14% 72%;
+    --sidebar-ring: 11 64% 48%;
 
-    /* Custom tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(174 72% 40%), hsl(190 80% 35%));
-    --gradient-hero: linear-gradient(180deg, hsl(220 20% 97%) 0%, hsl(220 25% 94%) 50%, hsl(220 20% 97%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(220 14% 96%), hsl(220 14% 98%));
-    --glow-primary: 0 0 40px hsl(174 72% 40% / 0.1);
-    --glow-strong: 0 0 60px hsl(174 72% 40% / 0.18);
-    --shadow-card: 0 4px 24px hsl(220 20% 80% / 0.2);
+    /* Custom tokens — recoloured for paper background using accent red */
+    --gradient-primary: linear-gradient(135deg, hsl(11 64% 48%), hsl(12 66% 38%));
+    --gradient-hero: linear-gradient(180deg, hsl(38 33% 95%) 0%, hsl(38 33% 91%) 50%, hsl(38 33% 95%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(38 33% 96%), hsl(38 33% 94%));
+    --glow-primary: 0 0 40px hsl(11 64% 48% / 0.1);
+    --glow-strong: 0 0 60px hsl(11 64% 48% / 0.18);
+    --shadow-card: 0 4px 24px hsl(35 14% 40% / 0.12);
 
-    --font-display: 'Plus Jakarta Sans', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Fraunces', Georgia, serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
   }
 
-  /* Dark mode */
+  /* Dark mode — ink background, paper text, brand accent unchanged */
   .dark {
-    --background: 228 15% 6%;
-    --foreground: 210 20% 95%;
+    /* Ink */
+    --background: 35 11% 9%;
+    /* Paper */
+    --foreground: 38 33% 93%;
 
-    --card: 225 15% 10%;
-    --card-foreground: 210 20% 95%;
+    --card: 35 11% 13%;
+    --card-foreground: 38 33% 93%;
 
-    --popover: 225 15% 10%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 35 11% 13%;
+    --popover-foreground: 38 33% 93%;
 
-    --primary: 174 72% 56%;
-    --primary-foreground: 228 15% 6%;
+    --primary: 11 64% 56%;
+    --primary-foreground: 35 11% 9%;
 
-    --secondary: 225 15% 15%;
-    --secondary-foreground: 210 20% 85%;
+    --secondary: 35 11% 18%;
+    --secondary-foreground: 38 25% 88%;
 
-    --muted: 225 12% 14%;
-    --muted-foreground: 215 15% 55%;
+    --muted: 35 11% 16%;
+    --muted-foreground: 38 12% 65%;
 
-    --accent: 174 72% 56%;
-    --accent-foreground: 228 15% 6%;
+    --accent: 11 64% 56%;
+    --accent-foreground: 35 11% 9%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 38 33% 93%;
 
-    --border: 225 12% 18%;
-    --input: 225 12% 18%;
-    --ring: 174 72% 56%;
+    --border: 35 11% 22%;
+    --input: 35 11% 22%;
+    --ring: 11 64% 56%;
 
-    --sidebar-background: 225 15% 8%;
-    --sidebar-foreground: 210 20% 85%;
-    --sidebar-primary: 174 72% 56%;
-    --sidebar-primary-foreground: 228 15% 6%;
-    --sidebar-accent: 225 15% 14%;
-    --sidebar-accent-foreground: 210 20% 85%;
-    --sidebar-border: 225 12% 18%;
-    --sidebar-ring: 174 72% 56%;
+    --sidebar-background: 35 11% 11%;
+    --sidebar-foreground: 38 25% 88%;
+    --sidebar-primary: 11 64% 56%;
+    --sidebar-primary-foreground: 35 11% 9%;
+    --sidebar-accent: 35 11% 16%;
+    --sidebar-accent-foreground: 38 25% 88%;
+    --sidebar-border: 35 11% 22%;
+    --sidebar-ring: 11 64% 56%;
 
     /* Custom tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(174 72% 56%), hsl(190 80% 45%));
-    --gradient-hero: linear-gradient(180deg, hsl(228 15% 6%) 0%, hsl(225 20% 10%) 50%, hsl(228 15% 6%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(225 15% 12%), hsl(225 15% 8%));
-    --glow-primary: 0 0 40px hsl(174 72% 56% / 0.15);
-    --glow-strong: 0 0 60px hsl(174 72% 56% / 0.25);
-    --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.3);
+    --gradient-primary: linear-gradient(135deg, hsl(11 64% 56%), hsl(12 66% 46%));
+    --gradient-hero: linear-gradient(180deg, hsl(35 11% 9%) 0%, hsl(35 11% 13%) 50%, hsl(35 11% 9%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(35 11% 14%), hsl(35 11% 10%));
+    --glow-primary: 0 0 40px hsl(11 64% 56% / 0.18);
+    --glow-strong: 0 0 60px hsl(11 64% 56% / 0.28);
+    --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.35);
   }
 }
 
 @layer base {
   * {
     @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {

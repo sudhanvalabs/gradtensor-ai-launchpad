@@ -22,8 +22,8 @@ const SiteFooter = () => {
             <a href={`mailto:${siteConfig.email}`} className="transition-colors hover:text-primary">
               Email Us
             </a>
-            <Link to="/courses" className="transition-colors hover:text-primary">
-              Courses
+            <Link to="/framework" className="transition-colors hover:text-primary">
+              Framework
             </Link>
           </div>
           <p className="text-sm text-muted-foreground">
