@@ -13,6 +13,7 @@ import Framework from "./pages/Framework";
 import ForEngineers from "./pages/ForEngineers";
 import ForProfessionals from "./pages/ForProfessionals";
 import ForLeaders from "./pages/ForLeaders";
+import Manifesto from "./pages/Manifesto";
 
 const queryClient = new QueryClient();
 
@@ -55,6 +56,7 @@ const App = () => (
             <Route path="/for-engineers" element={<ForEngineers />} />
             <Route path="/for-professionals" element={<ForProfessionals />} />
             <Route path="/for-leaders" element={<ForLeaders />} />
+            <Route path="/manifesto" element={<Manifesto />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
