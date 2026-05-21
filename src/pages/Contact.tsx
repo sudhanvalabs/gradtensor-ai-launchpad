@@ -5,11 +5,11 @@ import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
 import SEO from "@/components/SEO";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { siteConfig } from "@/data/siteConfig";
 
 const CALENDLY_URL = "https://calendly.com/gradtensor/30min";
 const WHATSAPP_GENERAL =
   "https://wa.me/919108030542?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20GradTensor";
+const FORM_RECIPIENT = "partnerships@gradtensor.com";
 
 const contactLd = {
   "@context": "https://schema.org",
@@ -24,35 +24,39 @@ const contactLd = {
   },
 };
 
-type FormStatus = "idle" | "submitting" | "success" | "error";
+type FormStatus = "idle" | "success";
 
 const Contact = () => {
   const [status, setStatus] = useState<FormStatus>("idle");
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
-    const payload = {
-      source: "contact",
-      name: String(data.get("name") || "").trim(),
-      email: String(data.get("email") || "").trim(),
-      organisation: String(data.get("organisation") || "").trim(),
-      interest: String(data.get("interest") || ""),
-      message: String(data.get("message") || "").trim(),
-    };
+    const name = String(data.get("name") || "").trim();
+    const email = String(data.get("email") || "").trim();
+    const organisation = String(data.get("organisation") || "").trim();
+    const interest = String(data.get("interest") || "");
+    const message = String(data.get("message") || "").trim();
 
-    setStatus("submitting");
-    try {
-      await fetch(siteConfig.googleSheetUrl, {
-        method: "POST",
-        body: JSON.stringify(payload),
-      });
-      setStatus("success");
-      form.reset();
-    } catch {
-      setStatus("error");
-    }
+    const subject = `Contact enquiry: ${name}${interest ? ` (${interest})` : ""}`;
+    const bodyLines = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      organisation ? `Organisation: ${organisation}` : null,
+      `Interest: ${interest}`,
+      "",
+      "Message:",
+      message,
+    ].filter(Boolean) as string[];
+
+    const mailto = `mailto:${FORM_RECIPIENT}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
+
+    window.location.href = mailto;
+    setStatus("success");
+    form.reset();
   };
 
   return (
@@ -247,10 +251,22 @@ const Contact = () => {
             {status === "success" ? (
               <div
                 role="status"
-                className="border-l-4 border-primary bg-card p-6"
+                className="space-y-3 border-l-4 border-primary bg-card p-6"
               >
                 <p className="font-display text-lg italic">
-                  Thank you. We will be in touch within two working days.
+                  Your email client should have opened with the message ready
+                  to send.
+                </p>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  Send it from there and we will reply within two working
+                  days. If nothing opened, email us directly at{" "}
+                  <a
+                    href={`mailto:${FORM_RECIPIENT}`}
+                    className="text-primary underline decoration-primary/40 underline-offset-2 hover:text-primary/80"
+                  >
+                    {FORM_RECIPIENT}
+                  </a>
+                  .
                 </p>
               </div>
             ) : (
@@ -327,20 +343,17 @@ const Contact = () => {
                   />
                 </label>
 
-                {status === "error" && (
-                  <p role="alert" className="text-sm text-destructive">
-                    Something went wrong. Please try again, or reach us
-                    directly via WhatsApp or email above.
-                  </p>
-                )}
+                <p className="text-xs leading-relaxed text-muted-foreground">
+                  Submitting opens your email client with this message
+                  pre-filled, addressed to {FORM_RECIPIENT}.
+                </p>
 
                 <button
                   type="submit"
-                  disabled={status === "submitting"}
-                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-foreground bg-foreground px-6 py-3 font-display text-sm font-semibold tracking-wider text-background transition-all hover:bg-foreground/90 disabled:cursor-not-allowed disabled:opacity-60"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-foreground bg-foreground px-6 py-3 font-display text-sm font-semibold tracking-wider text-background transition-all hover:bg-foreground/90"
                 >
-                  {status === "submitting" ? "Sending..." : "Send message"}
-                  {status !== "submitting" && <ArrowRight size={14} />}
+                  Open in Email
+                  <ArrowRight size={14} />
                 </button>
               </form>
             )}
