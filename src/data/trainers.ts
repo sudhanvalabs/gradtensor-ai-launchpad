@@ -12,7 +12,7 @@ export const trainers: Trainer[] = [
   {
     slug: "prabhu-eshwarla",
     name: "Prabhu Eshwarla",
-    title: "AI Systems Architect | Author",
+    title: "AI Educator & Transformation Advisor | Systems Architect | Author",
     bio: [
       "Prabhu builds AI systems designed for production - and trains engineers to do the same. With over two decades of engineering and leadership across distributed systems, blockchain infrastructure, and enterprise platforms, he now focuses on AI infrastructure, developer tools, and engineering education.",
       "He has held senior leadership roles at Hewlett Packard including heading HP Software services delivery for the India region, and was CTO for a European blockchain startup. Prabhu holds a Master's degree in Engineering from BITS, Pilani. A passionate educator at heart, he has authored two technical books - a commitment that reflects his drive to make complex engineering topics accessible to a wider audience.",
