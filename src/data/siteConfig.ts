@@ -16,6 +16,7 @@ export const siteConfig = {
     messages: {
       general: "Hi, I'd like to know more about GradTensor courses",
       advisor: "Hi, I'd like to speak with an advisor about GradTensor courses",
+      planProgramme: "Hi, I'd like to plan a training programme with GradTensor.",
       enroll: "Hi, I'm interested in enrolling in the course",
       syllabus: "Hi, I'd like to request the syllabus",
       executive: "Hi, I'm interested in the Executive AI program. Here's what I'd find valuable:",

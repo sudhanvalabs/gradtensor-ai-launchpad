@@ -180,10 +180,10 @@ const Navbar = () => {
             <Moon size={18} className="block dark:hidden" />
           </button>
           <WhatsAppButton
-            href={whatsappLink("general")}
+            href={whatsappLink("planProgramme")}
             className="btn-shimmer rounded-lg border border-primary/30 bg-primary/10 px-5 py-2.5 font-display text-sm font-medium tracking-wider text-primary transition-all hover:bg-primary/20"
           >
-            Talk to an Advisor
+            Plan a Programme
           </WhatsAppButton>
         </div>
 
@@ -261,10 +261,10 @@ const Navbar = () => {
           </Link>
 
           <WhatsAppButton
-            href={whatsappLink("general")}
+            href={whatsappLink("planProgramme")}
             className="mt-2 block rounded-lg border border-primary/30 bg-primary/10 px-4 py-2.5 text-center font-display text-sm font-medium tracking-wider text-primary"
           >
-            Talk to an Advisor
+            Plan a Programme
           </WhatsAppButton>
         </div>
       )}
