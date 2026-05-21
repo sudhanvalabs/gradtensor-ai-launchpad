@@ -433,7 +433,7 @@ const Framework = () => {
               <div className="track-num">Track 01</div>
               <div className="track-name">For Leaders</div>
               <p className="track-for">
-                CXOs, boards, principals, deans. Direct AI work without doing it
+                CXOs, boards, business heads. Direct AI work without doing it
                 yourself.
               </p>
               <div className="track-range">

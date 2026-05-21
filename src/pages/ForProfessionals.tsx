@@ -21,10 +21,10 @@ const BUILT_FOR = [
   "Finance and accounting teams",
   "Marketing and sales professionals",
   "HR and operations",
-  "Management and commerce students",
   "Consultants and analysts",
   "Legal and CA firms",
   "Teachers and educators",
+  "Non-tech college students - BBA, MBA, BCom, MCom, CA, humanities, hospitality",
   "Anyone whose work is mostly knowledge work",
 ];
 
@@ -48,7 +48,7 @@ const ForProfessionals = () => {
         trackLabel="Track 02 / For Professionals"
         headlineLead="Apply AI"
         headlineEm="in the work you already do."
-        lede="You don't need to become an engineer. You need to use AI well in your function, your domain, your daily work. This track gets you there."
+        lede="You don't need to become an engineer. You need to use AI well in your function, your domain, your daily work, whether you're already in a role or about to graduate into one. This track gets you there."
       />
 
       <BuiltForPanel items={BUILT_FOR} />
@@ -65,7 +65,7 @@ const ForProfessionals = () => {
           name="AI Literacy Primer"
           description="A short, focused session that builds genuine understanding of AI. No jargon, no hype, no fear."
           includes="What AI actually is. How to think about it. Vocabulary that matters. First confident steps with AI tools."
-          deliveredThrough="Delivered through corporate L&D programmes, business schools, and non-technical college departments."
+          deliveredThrough="Delivered through corporate L&D programmes and partnerships with non-tech colleges (BBA, MBA, BCom, MCom, CA, humanities, hospitality)."
           meta={[
             { label: "Format", value: "Half-day" },
             { label: "Mode", value: "On-site / Online" },
@@ -79,7 +79,7 @@ const ForProfessionals = () => {
           name="Applied AI Workshop"
           description="A focused workshop where participants learn to use AI tools for the work they actually do. Function-specific, project-based."
           includes="Effective prompting. Working with documents and data. AI assistants for your function. Practical patterns that save hours every week."
-          deliveredThrough="Delivered through corporate function-specific training and management, commerce, and humanities college programmes. Functions served include Leadership, HR, Finance, Marketing, Sales, Legal, CA firms, Operations, Customer Support, Procurement, and Educators."
+          deliveredThrough="Delivered through corporate function-specific training and partnerships with non-tech colleges (BBA, MBA, BCom, MCom, CA, humanities, hospitality). Functions served include Leadership, HR, Finance, Marketing, Sales, Legal, CA firms, Operations, Customer Support, Procurement, and Educators."
           meta={[
             { label: "Format", value: "1-2 days" },
             { label: "Mode", value: "On-site / Online" },
@@ -93,7 +93,7 @@ const ForProfessionals = () => {
           name="Applied AI Cohort"
           description="A four-week cohort for professionals ready to build AI workflows for their domain. Not coding-heavy. Outcome-heavy."
           includes="Prompt chains for your function. Custom AI assistants. Automating repeat work. A working AI workflow shipped by the end."
-          deliveredThrough="Delivered through corporate L&D partnerships and as a career-skills programme for business school cohorts."
+          deliveredThrough="Delivered through corporate L&D partnerships and as a career-skills programme for non-tech college cohorts (BBA, MBA, BCom, MCom, CA, humanities, hospitality)."
           meta={[
             { label: "Format", value: "4 weeks" },
             { label: "Duration", value: "30 hours" },

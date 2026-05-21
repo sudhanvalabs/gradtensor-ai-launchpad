@@ -23,6 +23,8 @@ export default {
         ink: '#1a1814',
         paper: '#f4efe6',
         'ink-muted': '#6b645a',
+        /* Brand wordmark green (matches the logo) */
+        'gt-green': '#5fb32d',
         track: {
           leaders: '#d4a574',
           'leaders-dark': '#b8895a',

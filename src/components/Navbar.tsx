@@ -69,7 +69,7 @@ const Navbar = () => {
           <img src={logo} alt="GradTensor" className="h-[60px] w-[60px] dark:hidden" />
           <img src={logoDark} alt="GradTensor" className="h-[60px] w-[60px] hidden dark:block" />
           <span>
-            <span className="gradient-text">Grad</span>
+            <span className="text-gt-green">Grad</span>
             <span className="text-foreground">Tensor</span>
           </span>
         </Link>

@@ -155,10 +155,10 @@ const About = () => {
                 with AI.
               </p>
               <p>
-                Most of our courses are delivered through institutional
-                partnerships - colleges, institutes, and corporate L&amp;D teams.
-                Every cohort is live and instructor-led. No pre-recorded videos.
-                No self-paced drift.
+                Every programme is delivered through one of two channels:
+                corporate L&amp;D teams, or partnerships with colleges and
+                institutes. Every cohort is live and instructor-led. No
+                pre-recorded videos. No self-paced drift.
               </p>
             </div>
           </div>

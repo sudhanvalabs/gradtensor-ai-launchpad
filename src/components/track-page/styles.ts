@@ -113,7 +113,7 @@ export const TRACK_PAGE_CSS = `
   line-height: 1.4;
 }
 .gt-track-page .tp-who-item::before {
-  content: '— ';
+  content: '- ';
   color: var(--accent-dark);
   font-style: normal;
 }

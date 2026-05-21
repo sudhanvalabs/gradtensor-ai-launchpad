@@ -24,7 +24,7 @@ const LandingNavbar = () => {
             className="h-10 w-10 sm:h-[60px] sm:w-[60px] hidden dark:block"
           />
           <span className="hidden sm:inline">
-            <span className="gradient-text">Grad</span>
+            <span className="text-gt-green">Grad</span>
             <span className="text-foreground">Tensor</span>
           </span>
         </Link>

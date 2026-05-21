@@ -21,7 +21,6 @@ import TrackPageShell from "@/components/track-page/TrackPageShell";
 const BUILT_FOR = [
   "CXOs and senior management",
   "Board members and trustees",
-  "College principals and deans",
   "Heads of L&D and HR",
   "Business unit heads",
   "Founders and partners",
@@ -34,7 +33,7 @@ const ForLeaders = () => {
     <TrackPageShell accent="#d4a574" accentDark="#b8895a">
       <SEO
         title="For Leaders"
-        description="Direct AI work without doing it yourself. AI briefings and strategy intensives for CXOs, boards, principals, and senior leadership."
+        description="Direct AI work without doing it yourself. AI briefings and strategy intensives for CXOs, boards, business heads, and senior leadership."
         path="/for-leaders"
       />
 
@@ -66,7 +65,7 @@ const ForLeaders = () => {
           name="AI Briefing for Boards"
           description="A focused session that cuts through hype and gives leaders a clear, honest view of where AI is today and what it means for the organisation."
           includes="What AI can and cannot do today. Vocabulary to engage technical teams. Questions to ask your CTO. Red flags to watch for."
-          deliveredThrough="Delivered through corporate L&D, board offsites, and senior leadership programmes at colleges and institutes."
+          deliveredThrough="Delivered through corporate L&D and board offsites."
           meta={[
             { label: "Format", value: "Half-day" },
             { label: "Mode", value: "On-site" },
@@ -80,7 +79,7 @@ const ForLeaders = () => {
           name="AI Strategy Intensive"
           description="Two days of structured work on the AI questions your organisation actually faces. Case-led, framework-driven, decision-focused."
           includes="A³ Framework for autonomous systems. Governance and risk. ROI patterns that work. Vendor evaluation. Building AI-ready teams. Buy versus build decisions."
-          deliveredThrough="Delivered through corporate engagements and as executive programmes for institutional leadership teams. Also serves principal architects and architecture review boards making AI buy or build decisions."
+          deliveredThrough="Delivered through corporate engagements and executive programmes. Also serves principal architects and architecture review boards making AI buy or build decisions."
           meta={[
             { label: "Format", value: "2 days" },
             { label: "Mode", value: "On-site" },

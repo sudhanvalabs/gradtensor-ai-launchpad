@@ -10,7 +10,7 @@ const SiteFooter = () => {
         <div className="flex flex-col items-center justify-between gap-6 text-base text-muted-foreground sm:flex-row">
           <div>
             <Link to="/" className="font-display text-lg font-bold tracking-tight">
-              <span className="gradient-text">Grad</span>
+              <span className="text-gt-green">Grad</span>
               <span className="text-foreground">Tensor</span>
             </Link>
             <p className="mt-1 text-sm text-muted-foreground">A venture of Sudhanva Labs LLP</p>

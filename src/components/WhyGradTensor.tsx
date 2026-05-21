@@ -33,7 +33,7 @@ const WhyGradTensor = () => {
       <div className="section-container">
         <div className="mb-16 animate-on-scroll">
           <h2 className="mb-4 font-display text-4xl font-bold tracking-tight sm:text-5xl">
-            Why <span className="gradient-text">GradTensor</span>
+            Why <span className="text-gt-green">Grad</span><span className="text-foreground">Tensor</span>
           </h2>
           <p className="max-w-xl text-base text-muted-foreground sm:text-lg">
             We built what we wished existed when we were learning AI  - practical, modern, and obsessed with outcomes.

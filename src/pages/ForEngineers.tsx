@@ -98,7 +98,7 @@ const ForEngineers = () => {
           name="AI Builder Cohort"
           description="Four weeks of spaced learning with production patterns, real projects, and peer review. For engineers who want depth, not just exposure."
           includes="RAG and document AI. Prompt chains. Evals and testing. Cost optimisation. Production deployment patterns."
-          deliveredThrough="Delivered through engineering college partnerships, corporate engineering teams, and direct cohorts for working developers. Also serves Solution Architects and Technical Architects designing AI-integrated systems."
+          deliveredThrough="Delivered through engineering college partnerships and corporate engineering teams. Also serves Solution Architects and Technical Architects designing AI-integrated systems."
           meta={[
             { label: "Format", value: "4 weeks" },
             { label: "Duration", value: "30 hours" },

@@ -6,7 +6,7 @@ const tracks = [
     number: "Track 01",
     name: "For Leaders",
     description:
-      "CXOs, boards, principals, deans. Direct AI work without doing it yourself.",
+      "CXOs, boards, business heads. Direct AI work without doing it yourself.",
     range: "Levels 01 → 02",
     href: "/for-leaders",
     barColor: "#d4a574",
