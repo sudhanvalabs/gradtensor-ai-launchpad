@@ -33,8 +33,24 @@ const Hero = () => {
               <span className="gradient-text">Start Getting Ahead With It.</span>
             </h1>
 
+            {/* Brand stance */}
+            <p
+              className="mb-5 max-w-3xl font-display text-2xl italic leading-snug text-foreground/85 sm:text-3xl md:text-4xl animate-fade-up"
+              style={{ animationDelay: "0.2s" }}
+            >
+              In the age of AI-built AI, we teach the craft.
+            </p>
+
+            {/* Mono descriptor */}
+            <p
+              className="mb-8 font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground animate-fade-up"
+              style={{ animationDelay: "0.3s" }}
+            >
+              One framework. Three tracks. Find your door in.
+            </p>
+
             {/* CTAs */}
-            <div className="flex flex-col gap-4 sm:flex-row animate-fade-up" style={{ animationDelay: "0.3s" }}>
+            <div className="flex flex-col gap-4 sm:flex-row animate-fade-up" style={{ animationDelay: "0.4s" }}>
               <Link
                 to="/framework"
                 className="btn-shimmer group inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 font-display text-base font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
@@ -48,32 +64,6 @@ const Hero = () => {
               >
                 Find Your Track
               </a>
-            </div>
-
-            {/* Tagline */}
-            <p
-              className="mt-5 font-mono text-xs tracking-wide text-muted-foreground animate-fade-up"
-              style={{ animationDelay: "0.35s" }}
-            >
-              One framework. Three tracks. Find your door in.
-            </p>
-
-            {/* Stats */}
-            <div className="mt-16 grid grid-cols-1 gap-8 border-t border-border/50 pt-8 sm:grid-cols-3 animate-fade-up" style={{ animationDelay: "0.4s" }}>
-              {[
-                { value: "Live Sessions", label: "Instructor-led, every course" },
-                { value: "Half-day to 6 Months", label: "Course durations across programmes" },
-                { value: "100% Hands-On", label: "Every Level 2+ course ends with a deployed app" },
-              ].map((stat) => (
-                <div key={stat.label} className="text-center sm:text-left">
-                  <div className="font-display text-2xl font-bold text-primary sm:text-3xl">
-                    {stat.value}
-                  </div>
-                  <div className="mt-1 text-sm text-muted-foreground sm:text-base">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>

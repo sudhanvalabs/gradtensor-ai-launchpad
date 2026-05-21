@@ -1,7 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import PromiseBand from "@/components/PromiseBand";
 import ThreeTracks from "@/components/ThreeTracks";
+import StatsRow from "@/components/StatsRow";
 import WhyGradTensor from "@/components/WhyGradTensor";
+import CloserBand from "@/components/CloserBand";
 import SiteFooter from "@/components/SiteFooter";
 import SEO from "@/components/SEO";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -34,8 +37,11 @@ const Index = () => {
       />
       <Navbar />
       <Hero />
+      <PromiseBand />
       <ThreeTracks />
+      <StatsRow />
       <WhyGradTensor />
+      <CloserBand />
       <SiteFooter />
     </div>
   );

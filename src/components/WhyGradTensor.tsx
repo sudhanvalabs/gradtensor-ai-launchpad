@@ -5,19 +5,19 @@ const differentiators = [
     icon: Radio,
     title: "Live Cohorts, Not Recorded Videos",
     description:
-      "Real-time learning with practitioners who ship AI in production. Live cohorts with instructor support - not pre-recorded videos you will never finish.",
+      "AI craftsmanship is learned in the room, not from the screen. Live cohorts with senior engineers who ship AI in production. No pre-recorded videos. No self-paced drift.",
   },
   {
     icon: Rocket,
-    title: "Build and Deploy Real Applications",
+    title: "Working Systems, Not Demos",
     description:
-      "Every course ends with a live deployed application at a URL you own. An AI Interview Coach. An AI Document Analyst. Production agentic systems. Not toy notebooks.",
+      "Every course ends with a deployed AI system at a URL you own. You leave with the thing, not a recording of someone else making the thing.",
   },
   {
     icon: Cpu,
     title: "Built for Three Audiences",
     description:
-      "Leaders directing AI work. Professionals applying AI in their roles. Engineers building production systems. Three tracks, one framework, instruction tailored to who you are.",
+      "Leaders directing AI work. Professionals applying AI to their domain. Engineers building production systems. The craft adapts to who you are.",
   },
   {
     icon: Target,
