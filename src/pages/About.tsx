@@ -307,50 +307,29 @@ const About = () => {
                 ))}
               </div>
 
-              <ul className="mt-6 space-y-2">
-                {founder.highlights.map((item, j) => (
-                  <li
-                    key={j}
-                    className="flex items-start gap-2 text-sm text-muted-foreground"
-                  >
+              {founder.books.length > 0 && (
+                <ul className="mt-6 space-y-2">
+                  <li className="flex items-start gap-2 text-sm text-muted-foreground">
                     <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                    {item.includes("mlship") ? (
-                      <>
-                        Maintains{" "}
-                        <a
-                          href="https://github.com/sudhanvalabs/mlship"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-primary underline decoration-primary/30 underline-offset-2 hover:text-primary/80"
-                        >
-                          mlship
-                        </a>
-                        , open-source CLI for AI/ML engineers
-                      </>
-                    ) : item.includes("published author") &&
-                      founder.books.length > 0 ? (
-                      <>
-                        Published author:{" "}
-                        {founder.books.map((book, bi) => (
-                          <span key={bi}>
-                            {bi > 0 && " and "}
-                            <a
-                              href={book.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-primary underline decoration-primary/30 underline-offset-2 hover:text-primary/80"
-                            >
-                              {book.title}
-                            </a>
-                          </span>
-                        ))}
-                      </>
-                    ) : (
-                      item
-                    )}
+                    <span>
+                      Published author:{" "}
+                      {founder.books.map((book, bi) => (
+                        <span key={bi}>
+                          {bi > 0 && " and "}
+                          <a
+                            href={book.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary underline decoration-primary/30 underline-offset-2 hover:text-primary/80"
+                          >
+                            {book.title}
+                          </a>
+                        </span>
+                      ))}
+                    </span>
                   </li>
-                ))}
-              </ul>
+                </ul>
+              )}
 
               {founder.links.length > 0 && (
                 <div className="mt-8 flex flex-wrap gap-3">

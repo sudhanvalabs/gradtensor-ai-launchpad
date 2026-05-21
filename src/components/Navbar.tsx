@@ -125,12 +125,11 @@ const Navbar = () => {
             <div
               role="menu"
               aria-hidden={!tracksOpen}
-              className={`absolute left-0 top-full mt-2 w-[260px] overflow-hidden border border-ink/40 shadow-[var(--shadow-card)] transition-all duration-150 ${
+              className={`absolute left-0 top-full mt-2 w-[260px] overflow-hidden border border-foreground/40 bg-foreground text-background shadow-[var(--shadow-card)] transition-all duration-150 ${
                 tracksOpen
                   ? "pointer-events-auto opacity-100 translate-y-0"
                   : "pointer-events-none opacity-0 -translate-y-1"
               }`}
-              style={{ backgroundColor: "#1a1814", color: "#f4efe6" }}
               onMouseEnter={openDropdown}
               onMouseLeave={closeDropdown}
             >
@@ -139,12 +138,9 @@ const Navbar = () => {
                   key={track.href}
                   to={track.href}
                   role="menuitem"
-                  className="group relative flex items-center gap-3 px-6 py-4 transition-colors hover:bg-[rgba(244,239,230,0.08)]"
-                  style={
-                    i > 0
-                      ? { borderTop: "1px solid rgba(244,239,230,0.15)" }
-                      : undefined
-                  }
+                  className={`group relative flex items-center gap-3 px-6 py-4 transition-colors hover:bg-background/[0.08] ${
+                    i > 0 ? "border-t border-background/15" : ""
+                  }`}
                   onClick={() => setTracksOpen(false)}
                 >
                   <span
@@ -153,7 +149,7 @@ const Navbar = () => {
                     style={{ backgroundColor: track.color }}
                   />
                   <div className="flex flex-col gap-1">
-                    <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-[#f4efe6]/55">
+                    <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-background/55">
                       {track.number}
                     </span>
                     <span className="font-display text-base italic font-medium leading-none">

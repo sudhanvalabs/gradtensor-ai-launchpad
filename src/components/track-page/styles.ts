@@ -8,6 +8,11 @@ export const TRACK_PAGE_CSS = `
   --ink: #1a1814;
   --paper: #f4efe6;
   --muted: #6b645a;
+  /* RGB triplets for use with rgba() inside flipped/inverted blocks
+     (flagship card, dark variant of custom band). Swapped in dark mode
+     so the inverted regions remain readable. */
+  --ink-rgb: 26, 24, 20;
+  --paper-rgb: 244, 239, 230;
   /* --accent and --accent-dark are set per-page via inline style */
   font-family: 'Fraunces', serif;
   background: var(--paper);
@@ -15,6 +20,16 @@ export const TRACK_PAGE_CSS = `
   /* Top padding clears the 64px fixed Navbar, then 56px of breathing room */
   padding: 120px 40px 56px;
   min-height: 100vh;
+}
+/* Dark mode: swap paper/ink so the editorial wrapper inverts with the
+   rest of the site. The inverted regions (flagship card, dark CTA band)
+   then naturally re-invert, keeping their "inverse of the page" role. */
+.dark .gt-track-page {
+  --ink: #f4efe6;
+  --paper: #1a1814;
+  --muted: #9e978b;
+  --ink-rgb: 244, 239, 230;
+  --paper-rgb: 26, 24, 20;
 }
 .gt-track-page *,
 .gt-track-page *::before,
@@ -146,12 +161,12 @@ export const TRACK_PAGE_CSS = `
 .gt-track-page .tp-product.tp-flagship .tp-p-level-name { color: var(--accent); }
 .gt-track-page .tp-product.tp-flagship .tp-p-desc { color: var(--paper); }
 .gt-track-page .tp-product.tp-flagship .tp-p-includes {
-  color: rgba(244, 239, 230, 0.75);
+  color: rgba(var(--paper-rgb), 0.75);
   border-left-color: var(--accent);
 }
-.gt-track-page .tp-product.tp-flagship .tp-p-delivered { color: rgba(244, 239, 230, 0.65); }
-.gt-track-page .tp-product.tp-flagship .tp-p-meta-row { border-bottom-color: rgba(244, 239, 230, 0.3); }
-.gt-track-page .tp-product.tp-flagship .tp-p-meta-row span:first-child { color: rgba(244, 239, 230, 0.6); }
+.gt-track-page .tp-product.tp-flagship .tp-p-delivered { color: rgba(var(--paper-rgb), 0.65); }
+.gt-track-page .tp-product.tp-flagship .tp-p-meta-row { border-bottom-color: rgba(var(--paper-rgb), 0.3); }
+.gt-track-page .tp-product.tp-flagship .tp-p-meta-row span:first-child { color: rgba(var(--paper-rgb), 0.6); }
 .gt-track-page .tp-product.tp-flagship::after {
   content: 'FLAGSHIP';
   position: absolute;

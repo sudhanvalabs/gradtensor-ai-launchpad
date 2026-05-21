@@ -78,12 +78,21 @@ const FRAMEWORK_CSS = `
   --leader: #d4a574;
   --pro: #7a9b8c;
   --eng: #c8472e;
+  --ink-rgb: 26, 24, 20;
+  --paper-rgb: 244, 239, 230;
   font-family: 'Fraunces', serif;
   background: var(--paper);
   color: var(--ink);
   /* Top padding clears the 64px fixed Navbar, then 56px of breathing room */
   padding: 120px 40px 56px;
   min-height: 100vh;
+}
+.dark .gt-framework {
+  --ink: #f4efe6;
+  --paper: #1a1814;
+  --muted: #9e978b;
+  --ink-rgb: 244, 239, 230;
+  --paper-rgb: 26, 24, 20;
 }
 .gt-framework *, .gt-framework *::before, .gt-framework *::after { box-sizing: border-box; }
 .gt-framework .container { max-width: 1100px; margin: 0 auto; }
@@ -233,7 +242,7 @@ const FRAMEWORK_CSS = `
 }
 .gt-framework .track:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(26, 24, 20, 0.08);
+  box-shadow: 0 8px 24px rgba(var(--ink-rgb), 0.18);
 }
 .gt-framework .track::before {
   content: '';
