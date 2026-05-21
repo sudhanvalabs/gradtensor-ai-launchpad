@@ -181,7 +181,7 @@ const Navbar = () => {
           </button>
           <WhatsAppButton
             href={whatsappLink("planProgramme")}
-            className="btn-shimmer rounded-lg border border-primary/30 bg-primary/10 px-5 py-2.5 font-display text-sm font-medium tracking-wider text-primary transition-all hover:bg-primary/20"
+            className="btn-shimmer rounded-lg border border-foreground bg-foreground px-5 py-2.5 font-display text-sm font-medium tracking-wider text-background transition-all hover:bg-foreground/90"
           >
             Plan a Programme
           </WhatsAppButton>
@@ -262,7 +262,7 @@ const Navbar = () => {
 
           <WhatsAppButton
             href={whatsappLink("planProgramme")}
-            className="mt-2 block rounded-lg border border-primary/30 bg-primary/10 px-4 py-2.5 text-center font-display text-sm font-medium tracking-wider text-primary"
+            className="mt-2 block rounded-lg border border-foreground bg-foreground px-4 py-2.5 text-center font-display text-sm font-medium tracking-wider text-background"
           >
             Plan a Programme
           </WhatsAppButton>
