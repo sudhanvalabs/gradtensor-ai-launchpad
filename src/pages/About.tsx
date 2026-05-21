@@ -161,6 +161,28 @@ const About = () => {
                 pre-recorded videos. No self-paced drift.
               </p>
             </div>
+
+            {/* Manifesto doorway */}
+            <div className="mt-12">
+              <div
+                aria-hidden="true"
+                className="mb-5 h-px w-20 bg-muted-foreground"
+              />
+              <p className="mb-2 font-display text-base italic text-foreground/85 sm:text-lg">
+                The full story of why we exist, and what we stand for, is in
+                our manifesto.
+              </p>
+              <Link
+                to="/manifesto"
+                className="group inline-flex items-center gap-1.5 font-display text-base text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary/80 hover:decoration-primary"
+              >
+                Read the manifesto
+                <ArrowRight
+                  size={16}
+                  className="transition-transform group-hover:translate-x-1"
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </section>

@@ -16,15 +16,18 @@ const SiteFooter = () => {
             <p className="mt-1 text-sm text-muted-foreground">A venture of Sudhanva Labs LLP</p>
           </div>
           <div className="flex flex-wrap justify-center gap-6 font-display text-sm tracking-wider">
+            <Link to="/framework" className="transition-colors hover:text-primary">
+              Framework
+            </Link>
+            <Link to="/manifesto" className="transition-colors hover:text-primary">
+              Manifesto
+            </Link>
             <WhatsAppButton href={whatsappLink("general")} className="transition-colors hover:text-primary">
               WhatsApp Us
             </WhatsAppButton>
             <a href={`mailto:${siteConfig.email}`} className="transition-colors hover:text-primary">
               Email Us
             </a>
-            <Link to="/framework" className="transition-colors hover:text-primary">
-              Framework
-            </Link>
           </div>
           <p className="text-sm text-muted-foreground">
             © {siteConfig.copyrightYear} {siteConfig.name}. All rights reserved.
