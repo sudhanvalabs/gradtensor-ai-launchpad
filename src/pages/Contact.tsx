@@ -19,7 +19,7 @@ const contactLd = {
   publisher: {
     "@type": "Organization",
     name: "GradTensor",
-    email: "courses@gradtensor.com",
+    email: "partnerships@gradtensor.com",
     telephone: "+91 91080 30542",
   },
 };
@@ -121,11 +121,11 @@ const Contact = () => {
               <div className="space-y-1 font-mono text-sm leading-relaxed text-foreground/90">
                 <div>
                   <span className="text-foreground">+91 91080 30542</span>
-                  <span className="text-muted-foreground"> Students and individuals</span>
+                  <span className="text-muted-foreground"> General enquiries</span>
                 </div>
                 <div>
                   <span className="text-foreground">+91 98452 03997</span>
-                  <span className="text-muted-foreground"> Institutions and corporates</span>
+                  <span className="text-muted-foreground"> Institutional partnerships</span>
                 </div>
               </div>
               <WhatsAppButton
@@ -154,27 +154,19 @@ const Contact = () => {
                 Email us
               </h3>
               <div className="space-y-1 font-mono text-sm leading-relaxed">
-                <div>
-                  <a
-                    href="mailto:courses@gradtensor.com"
-                    className="text-foreground underline decoration-foreground/30 underline-offset-2 transition-colors hover:text-primary"
-                  >
-                    courses@gradtensor.com
-                  </a>
-                  <span className="text-muted-foreground"> General and student enquiries</span>
-                </div>
-                <div>
-                  <a
-                    href="mailto:partnerships@gradtensor.com"
-                    className="text-foreground underline decoration-foreground/30 underline-offset-2 transition-colors hover:text-primary"
-                  >
-                    partnerships@gradtensor.com
-                  </a>
-                  <span className="text-muted-foreground"> Institutional and corporate partnerships</span>
-                </div>
+                <a
+                  href="mailto:partnerships@gradtensor.com"
+                  className="text-foreground underline decoration-foreground/30 underline-offset-2 transition-colors hover:text-primary"
+                >
+                  partnerships@gradtensor.com
+                </a>
+                <p className="font-display text-sm leading-relaxed text-muted-foreground">
+                  For institutional partnerships - corporate L&amp;D teams,
+                  colleges, and institutes.
+                </p>
               </div>
               <a
-                href="mailto:courses@gradtensor.com"
+                href="mailto:partnerships@gradtensor.com"
                 className="mt-auto inline-flex items-center justify-center gap-2 rounded-lg border border-foreground bg-foreground px-5 py-2.5 font-display text-sm font-medium tracking-wider text-background transition-all hover:bg-foreground/90"
               >
                 Open Email

@@ -15,7 +15,7 @@ const organizationLd = {
   name: "GradTensor",
   url: "https://gradtensor.com",
   logo: "https://gradtensor.com/logo.png",
-  email: "courses@gradtensor.com",
+  email: "partnerships@gradtensor.com",
   description:
     "We help people stop fearing AI and start getting ahead with it. Live, hands-on courses from GradTensor.",
   sameAs: [

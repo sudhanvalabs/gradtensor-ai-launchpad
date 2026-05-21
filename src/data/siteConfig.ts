@@ -6,7 +6,7 @@ export const siteConfig = {
   defaultDescription:
     "We help people stop fearing AI and start getting ahead with it. Live, hands-on courses from GradTensor.",
 
-  email: "courses@gradtensor.com",
+  email: "partnerships@gradtensor.com",
 
   googleSheetUrl:
     "https://script.google.com/macros/s/AKfycbwEBRDxehgeoOExaGU0aoglDrmQ3QVtGHFHF9myOj_CfSzYycA6VtLjQLRf-7_rHfc/exec",
