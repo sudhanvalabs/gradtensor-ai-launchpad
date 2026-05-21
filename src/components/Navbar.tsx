@@ -171,6 +171,16 @@ const Navbar = () => {
             About
           </Link>
 
+          <Link
+            to="/contact"
+            className={`flex h-16 items-center border-b-2 font-display text-base tracking-wide transition-colors hover:text-primary ${
+              isActive("/contact") ? "text-primary" : "text-muted-foreground"
+            }`}
+            style={{ borderColor: underlineFor("/contact") ?? "transparent" }}
+          >
+            Contact
+          </Link>
+
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-secondary/50 text-muted-foreground transition-all hover:bg-secondary hover:text-foreground"
@@ -258,6 +268,15 @@ const Navbar = () => {
             }`}
           >
             About
+          </Link>
+          <Link
+            to="/contact"
+            onClick={() => setIsOpen(false)}
+            className={`block py-3 font-display text-base transition-colors hover:text-primary ${
+              isActive("/contact") ? "text-primary" : "text-muted-foreground"
+            }`}
+          >
+            Contact
           </Link>
 
           <WhatsAppButton

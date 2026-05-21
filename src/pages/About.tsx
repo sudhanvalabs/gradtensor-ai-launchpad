@@ -4,8 +4,6 @@ import SiteFooter from "@/components/SiteFooter";
 import SEO from "@/components/SEO";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { trainers } from "@/data/trainers";
-import { whatsappCustomLink } from "@/data/siteConfig";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 
 const founder = trainers[0];
@@ -385,7 +383,7 @@ const About = () => {
               Three tracks for three audiences. One framework underneath. Find
               your door in, or get in touch to discuss a partnership.
             </p>
-            <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+            <div className="flex justify-center">
               <Link
                 to="/framework"
                 className="btn-shimmer group inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3 font-display text-sm font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
@@ -396,12 +394,6 @@ const About = () => {
                   className="transition-transform group-hover:translate-x-1"
                 />
               </Link>
-              <WhatsAppButton
-                href={whatsappCustomLink("Hi, I'd like to discuss a partnership with GradTensor.")}
-                className="inline-flex items-center justify-center rounded-lg border border-foreground/80 bg-transparent px-8 py-3 font-display text-sm font-medium tracking-wider text-foreground transition-all hover:bg-foreground hover:text-background"
-              >
-                Partnership Enquiry
-              </WhatsAppButton>
             </div>
           </div>
         </div>
