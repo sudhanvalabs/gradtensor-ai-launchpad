@@ -19,8 +19,8 @@
     --popover: 38 33% 96%;
     --popover-foreground: 35 11% 9%;
 
-    /* Engineers red #c8472e - default brand accent in the editorial system */
-    --primary: 11 64% 48%;
+    /* Brand green #5fb32d - default brand accent (matches the wordmark) */
+    --primary: 98 60% 44%;
     --primary-foreground: 38 33% 96%;
 
     /* Warm secondary on paper */
@@ -31,7 +31,7 @@
     /* Muted #6b645a */
     --muted-foreground: 31 9% 39%;
 
-    --accent: 11 64% 48%;
+    --accent: 98 60% 44%;
     --accent-foreground: 38 33% 96%;
 
     --destructive: 0 84% 50%;
@@ -40,25 +40,25 @@
     /* Warm border tone, darker than the previous gray so rules read sharper on paper */
     --border: 35 14% 72%;
     --input: 35 14% 72%;
-    --ring: 11 64% 48%;
+    --ring: 98 60% 44%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 38 33% 96%;
     --sidebar-foreground: 35 11% 15%;
-    --sidebar-primary: 11 64% 48%;
+    --sidebar-primary: 98 60% 44%;
     --sidebar-primary-foreground: 38 33% 96%;
     --sidebar-accent: 38 25% 88%;
     --sidebar-accent-foreground: 35 11% 15%;
     --sidebar-border: 35 14% 72%;
-    --sidebar-ring: 11 64% 48%;
+    --sidebar-ring: 98 60% 44%;
 
-    /* Custom tokens — recoloured for paper background using accent red */
-    --gradient-primary: linear-gradient(135deg, hsl(11 64% 48%), hsl(12 66% 38%));
+    /* Custom tokens — recoloured for paper background using brand green */
+    --gradient-primary: linear-gradient(135deg, hsl(98 60% 44%), hsl(98 60% 34%));
     --gradient-hero: linear-gradient(180deg, hsl(38 33% 95%) 0%, hsl(38 33% 91%) 50%, hsl(38 33% 95%) 100%);
     --gradient-card: linear-gradient(135deg, hsl(38 33% 96%), hsl(38 33% 94%));
-    --glow-primary: 0 0 40px hsl(11 64% 48% / 0.1);
-    --glow-strong: 0 0 60px hsl(11 64% 48% / 0.18);
+    --glow-primary: 0 0 40px hsl(98 60% 44% / 0.12);
+    --glow-strong: 0 0 60px hsl(98 60% 44% / 0.22);
     --shadow-card: 0 4px 24px hsl(35 14% 40% / 0.12);
 
     --font-display: 'Fraunces', Georgia, serif;
@@ -79,7 +79,7 @@
     --popover: 35 11% 13%;
     --popover-foreground: 38 33% 93%;
 
-    --primary: 11 64% 56%;
+    --primary: 98 55% 56%;
     --primary-foreground: 35 11% 9%;
 
     --secondary: 35 11% 18%;
@@ -88,7 +88,7 @@
     --muted: 35 11% 16%;
     --muted-foreground: 38 12% 65%;
 
-    --accent: 11 64% 56%;
+    --accent: 98 55% 56%;
     --accent-foreground: 35 11% 9%;
 
     --destructive: 0 70% 50%;
@@ -96,23 +96,23 @@
 
     --border: 35 11% 22%;
     --input: 35 11% 22%;
-    --ring: 11 64% 56%;
+    --ring: 98 55% 56%;
 
     --sidebar-background: 35 11% 11%;
     --sidebar-foreground: 38 25% 88%;
-    --sidebar-primary: 11 64% 56%;
+    --sidebar-primary: 98 55% 56%;
     --sidebar-primary-foreground: 35 11% 9%;
     --sidebar-accent: 35 11% 16%;
     --sidebar-accent-foreground: 38 25% 88%;
     --sidebar-border: 35 11% 22%;
-    --sidebar-ring: 11 64% 56%;
+    --sidebar-ring: 98 55% 56%;
 
     /* Custom tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(11 64% 56%), hsl(12 66% 46%));
+    --gradient-primary: linear-gradient(135deg, hsl(98 55% 56%), hsl(98 55% 46%));
     --gradient-hero: linear-gradient(180deg, hsl(35 11% 9%) 0%, hsl(35 11% 13%) 50%, hsl(35 11% 9%) 100%);
     --gradient-card: linear-gradient(135deg, hsl(35 11% 14%), hsl(35 11% 10%));
-    --glow-primary: 0 0 40px hsl(11 64% 56% / 0.18);
-    --glow-strong: 0 0 60px hsl(11 64% 56% / 0.28);
+    --glow-primary: 0 0 40px hsl(98 55% 56% / 0.2);
+    --glow-strong: 0 0 60px hsl(98 55% 56% / 0.3);
     --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.35);
   }
 }

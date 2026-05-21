@@ -73,7 +73,7 @@ const FRAMEWORK_CSS = `
 .gt-framework {
   --ink: #1a1814;
   --paper: #f4efe6;
-  --accent: #c8472e;
+  --accent: #5fb32d;
   --muted: #6b645a;
   --leader: #d4a574;
   --pro: #7a9b8c;

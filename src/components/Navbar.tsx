@@ -28,7 +28,7 @@ const TRACKS = [
   },
 ];
 
-const DEFAULT_ACCENT = "#c8472e";
+const DEFAULT_ACCENT = "#5fb32d";
 
 const trackByPath = new Map(TRACKS.map((t) => [t.href, t]));
 
