@@ -8,12 +8,14 @@ import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 
 const founder = trainers[0];
 
+const aboutDescription =
+  "GradTensor is the specialist AI training and consulting brand of Sudhanva Labs LLP, Bengaluru. Generative and agentic AI courses for colleges and professionals, plus end-to-end AI adoption services for businesses.";
+
 const aboutLd = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
   name: "About GradTensor",
-  description:
-    "GradTensor was founded to help students and working professionals build practical AI skills that employers actually need.",
+  description: aboutDescription,
   publisher: {
     "@type": "Organization",
     name: "GradTensor",
@@ -85,6 +87,46 @@ const TRACKS = [
   },
 ];
 
+const SERVICES = [
+  {
+    audience: "For colleges",
+    desc: "Digital Literacy courses, longer-form AI Engineering tracks, and faculty development programmes. Every student programme is hands-on - learners build and deploy a working AI application by the end of the course.",
+  },
+  {
+    audience: "For corporates & working professionals",
+    desc: "Structured courses ranging from short workshops to multi-week engineering bootcamps.",
+  },
+  {
+    audience: "For corporates & small businesses",
+    desc: "End-to-end AI adoption services - workflow evaluation, adoption strategy, custom AI agent design, and hands-on deployment. We help organisations move from AI curiosity to AI in production.",
+  },
+  {
+    audience: "For vertical industries",
+    desc: "Specialised training programmes built for specific domains - for example, AI training for construction management firms, covering project planning, document analysis, compliance, and field operations. Similar vertical programmes for other industries are under development.",
+  },
+];
+
+const STEPS = ["Deconstruct", "Build", "Break", "Defend", "Abstract", "Ship"];
+
+const VALUES = [
+  {
+    name: "Substance over hype",
+    desc: "We teach what works, not what is fashionable.",
+  },
+  {
+    name: "Practitioner-led",
+    desc: "Our instructors build AI systems themselves; we do not teach what we have not done.",
+  },
+  {
+    name: "Honest scoping",
+    desc: "We tell clients and learners what AI can and cannot do reliably.",
+  },
+  {
+    name: "Public reference work",
+    desc: "We publish openly so our approach is verifiable.",
+  },
+];
+
 const About = () => {
   useScrollAnimation();
 
@@ -92,7 +134,7 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="About GradTensor"
-        description="GradTensor was founded to help students and working professionals build practical AI skills that employers actually need."
+        description={aboutDescription}
         path="/about"
         jsonLd={aboutLd}
       />
@@ -125,62 +167,124 @@ const About = () => {
             className="max-w-2xl text-lg text-muted-foreground sm:text-xl animate-fade-up"
             style={{ animationDelay: "0.1s" }}
           >
-            GradTensor is a specialist AI training academy based in Bengaluru
-            where every course is live and instructor-led. No pre-recorded
-            videos. No self-paced drift. Just real cohorts moving through real
-            material with a real practitioner.
+            GradTensor is the specialist AI training and consulting brand of
+            Sudhanva Labs LLP, based in Bengaluru, India. We help colleges,
+            working professionals, and organisations build genuine AI
+            capability - not just understand AI conceptually, but use it, build
+            with it, and ship working AI applications that solve real problems.
           </p>
         </div>
       </section>
 
-      {/* What makes us different */}
+      {/* Intro video */}
+      <section className="pb-12 md:pb-16">
+        <div className="section-container">
+          <div className="mx-auto max-w-3xl animate-on-scroll">
+            <div className="overflow-hidden rounded-2xl border-2 border-foreground/80 bg-card shadow-[var(--shadow-card)]">
+              <div className="aspect-video">
+                <iframe
+                  className="h-full w-full"
+                  src="https://www.youtube.com/embed/r8AEOPE4OMo"
+                  title="GradTensor intro"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Focus */}
       <section className="border-t border-border/50 py-16 md:py-20">
         <div className="section-container">
           <div className="mx-auto max-w-3xl animate-on-scroll">
             <p className="mb-3 font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground">
-              What makes us different
+              Our Focus
             </p>
             <h2 className="mb-6 font-display text-3xl italic font-medium tracking-tight sm:text-4xl md:text-5xl">
-              One framework. Three tracks.{" "}
-              <em className="not-italic text-primary">Same ladder.</em>
+              Generative and agentic AI.{" "}
+              <em className="not-italic text-primary">Nothing older.</em>
             </h2>
             <div className="space-y-4 text-base leading-relaxed text-foreground sm:text-lg">
               <p>
-                We have developed the GradTensor Gradient - a four-level AI
-                mastery ladder from AI Foundations to AI Orchestrator. The
-                ladder is the same for everyone. What changes is the track you
-                take through it, based on your role and what you need to do
-                with AI.
+                We specialise in generative AI and agentic AI - the new wave of
+                LLM-powered applications, autonomous agents, and AI-augmented
+                workflows. We do not teach traditional machine learning or data
+                science; those are mature fields with established providers.
               </p>
               <p>
-                Every programme is delivered through one of two channels:
-                corporate L&amp;D teams, or partnerships with colleges and
-                institutes. Every cohort is live and instructor-led. No
-                pre-recorded videos. No self-paced drift.
+                Our work is exclusively on the AI capabilities that have emerged
+                since 2022 - prompting, agents, tool use, retrieval, evaluation,
+                and production deployment patterns.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Who We Serve */}
+      <section className="border-t border-border/50 py-16 md:py-20">
+        <div className="section-container">
+          <div className="mx-auto max-w-3xl animate-on-scroll">
+            <p className="mb-3 font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground">
+              Who We Serve
+            </p>
+            <h2 className="mb-6 font-display text-3xl italic font-medium tracking-tight sm:text-4xl md:text-5xl">
+              AI is a{" "}
+              <em className="not-italic text-primary">horizontal skill</em> now.
+            </h2>
+            <div className="space-y-4 text-base leading-relaxed text-foreground sm:text-lg">
+              <p>
+                Our programmes are designed for learners across every business
+                function and vertical - commerce, finance, marketing,
+                operations, HR, legal, engineering, sales, customer service.
+              </p>
+              <p>
+                AI is no longer a specialist tool for technologists; it is a
+                horizontal capability every modern professional needs. We teach
+                accordingly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Services */}
+      <section className="border-t border-border/50 py-16 md:py-20">
+        <div className="section-container">
+          <div className="mx-auto max-w-3xl">
+            <div className="mb-10 animate-on-scroll">
+              <p className="mb-3 font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground">
+                Our Services
+              </p>
+              <h2 className="mb-3 font-display text-3xl italic font-medium tracking-tight sm:text-4xl md:text-5xl">
+                What we deliver.
+              </h2>
             </div>
 
-            {/* Manifesto doorway */}
-            <div className="mt-12">
-              <div
-                aria-hidden="true"
-                className="mb-5 h-px w-20 bg-muted-foreground"
-              />
-              <p className="mb-2 font-display text-base italic text-foreground/85 sm:text-lg">
-                The full story of why we exist, and what we stand for, is in
-                our manifesto.
-              </p>
-              <Link
-                to="/manifesto"
-                className="group inline-flex items-center gap-1.5 font-display text-base text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary/80 hover:decoration-primary"
-              >
-                Read the manifesto
-                <ArrowRight
-                  size={16}
-                  className="transition-transform group-hover:translate-x-1"
-                />
-              </Link>
+            <div className="grid gap-4 md:grid-cols-2 animate-on-scroll">
+              {SERVICES.map((s) => (
+                <div
+                  key={s.audience}
+                  className="flex flex-col gap-2 border border-foreground/80 bg-card p-6"
+                >
+                  <h3 className="font-display text-lg italic font-medium leading-tight tracking-tight">
+                    {s.audience}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    {s.desc}
+                  </p>
+                </div>
+              ))}
             </div>
+
+            <p className="mt-8 text-base leading-relaxed text-foreground sm:text-lg animate-on-scroll">
+              All our work centres on the Anthropic Claude stack, with reference
+              materials drawn from our public Build with Claude series.
+            </p>
           </div>
         </div>
       </section>
@@ -296,6 +400,102 @@ const About = () => {
         </div>
       </section>
 
+      {/* Our Approach */}
+      <section className="border-t border-border/50 py-16 md:py-20">
+        <div className="section-container">
+          <div className="mx-auto max-w-3xl animate-on-scroll">
+            <p className="mb-3 font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground">
+              Our Approach
+            </p>
+            <h2 className="mb-6 font-display text-3xl italic font-medium tracking-tight sm:text-4xl md:text-5xl">
+              Brick by Brick.
+            </h2>
+            <div className="space-y-4 text-base leading-relaxed text-foreground sm:text-lg">
+              <p>
+                We teach and build the way serious engineers learn - foundations
+                first. Our methodology, called Brick by Brick, has six steps.
+              </p>
+            </div>
+
+            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
+              {STEPS.map((step, i) => (
+                <div
+                  key={step}
+                  className="flex items-center gap-3 border border-foreground/80 bg-card p-4"
+                >
+                  <span className="font-mono text-xs tracking-[0.15em] text-primary">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="font-display text-base italic font-medium tracking-tight">
+                    {step}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <p className="mt-8 text-base leading-relaxed text-foreground sm:text-lg">
+              Learners do not just understand AI tools theoretically; they
+              construct them, stress-test them, and learn to defend their design
+              choices.
+            </p>
+
+            {/* Manifesto doorway */}
+            <div className="mt-12">
+              <div
+                aria-hidden="true"
+                className="mb-5 h-px w-20 bg-muted-foreground"
+              />
+              <p className="mb-2 font-display text-base italic text-foreground/85 sm:text-lg">
+                The full story of why we exist, and what we stand for, is in
+                our manifesto.
+              </p>
+              <Link
+                to="/manifesto"
+                className="group inline-flex items-center gap-1.5 font-display text-base text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary/80 hover:decoration-primary"
+              >
+                Read the manifesto
+                <ArrowRight
+                  size={16}
+                  className="transition-transform group-hover:translate-x-1"
+                />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Values */}
+      <section className="border-t border-border/50 py-16 md:py-20">
+        <div className="section-container">
+          <div className="mx-auto max-w-3xl">
+            <div className="mb-10 animate-on-scroll">
+              <p className="mb-3 font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground">
+                Our Values
+              </p>
+              <h2 className="font-display text-3xl italic font-medium tracking-tight sm:text-4xl md:text-5xl">
+                What we hold to.
+              </h2>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2 animate-on-scroll">
+              {VALUES.map((v) => (
+                <div
+                  key={v.name}
+                  className="flex flex-col gap-2 border border-foreground/80 bg-card p-6"
+                >
+                  <h3 className="font-display text-lg italic font-medium leading-tight tracking-tight text-primary">
+                    {v.name}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    {v.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Founder & Lead Instructor */}
       <section className="border-t border-border/50 py-16 md:py-24">
         <div className="section-container">
@@ -380,8 +580,9 @@ const About = () => {
               Want to work together?
             </h2>
             <p className="mb-6 text-base text-muted-foreground">
-              Three tracks for three audiences. One framework underneath. Find
-              your door in, or get in touch to discuss a partnership.
+              Training for colleges and professionals, or AI adoption for your
+              business. Find your door in, or get in touch to discuss a
+              partnership.
             </p>
             <div className="flex justify-center">
               <Link
