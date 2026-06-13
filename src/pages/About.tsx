@@ -9,7 +9,7 @@ import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 const founder = trainers[0];
 
 const aboutDescription =
-  "GradTensor is the specialist AI training and consulting brand of Sudhanva Labs LLP, Bengaluru. Generative and agentic AI courses for colleges and professionals, plus end-to-end AI adoption services for businesses.";
+  "GradTensor is an India-focused AI education company for colleges. We help students and faculty stop fearing AI and start building with it, and support institutions in putting that capability to work and keeping it running.";
 
 const aboutLd = {
   "@context": "https://schema.org",
@@ -62,47 +62,47 @@ const LEVELS = [
 
 const TRACKS = [
   {
-    number: "Track 01",
-    name: "For Leaders",
-    desc: "Direct AI work without doing it yourself.",
-    range: "Levels 01 → 02",
-    href: "/for-leaders",
-    barColor: "#d4a574",
+    number: "Students",
+    name: "For Students",
+    desc: "Get placement-ready by building real, deployed AI.",
+    range: "Build + Apply",
+    href: "/for-students",
+    barColor: "#c8472e",
   },
   {
-    number: "Track 02",
-    name: "For Professionals",
-    desc: "Apply AI in the work you already do.",
-    range: "Levels 01 → 03",
-    href: "/for-professionals",
+    number: "Faculty",
+    name: "For Faculty",
+    desc: "Use AI for lesson plans, tests, and teaching.",
+    range: "Workshops & FDP",
+    href: "/for-faculty",
     barColor: "#7a9b8c",
   },
   {
-    number: "Track 03",
-    name: "For Engineers",
-    desc: "Build production AI systems.",
-    range: "Levels 01 → 04",
-    href: "/for-engineers",
-    barColor: "#c8472e",
+    number: "Institutions",
+    name: "For Institutions",
+    desc: "Bring AI to your whole campus, end to end.",
+    range: "Campus partnerships",
+    href: "/for-institutions",
+    barColor: "#d4a574",
   },
 ];
 
 const SERVICES = [
   {
-    audience: "For colleges",
-    desc: "Digital Literacy courses, longer-form AI Engineering tracks, and faculty development programmes. Every student programme is hands-on - learners build and deploy a working AI application by the end of the course.",
+    audience: "For engineering students",
+    desc: "From a 2-day AI Builder Intensive to the 6-month AI Agentic Engineering Bootcamp. Every student builds and deploys working AI systems - the profile employers compete for at placements.",
   },
   {
-    audience: "For corporates & working professionals",
-    desc: "Structured courses ranging from short workshops to multi-week engineering bootcamps.",
+    audience: "For non-tech students",
+    desc: "Applied AI for BBA, MBA, BCom, CA, humanities, and hospitality students. Use AI well in your discipline and stand out in placements - no coding required.",
   },
   {
-    audience: "For corporates & small businesses",
-    desc: "End-to-end AI adoption services - workflow evaluation, adoption strategy, custom AI agent design, and hands-on deployment. We help organisations move from AI curiosity to AI in production.",
+    audience: "For faculty",
+    desc: "Hands-on AI productivity workshops and Faculty Development Programmes. Faculty learn to use AI for lesson plans, homework, test papers, and concept explanations - with examples from their own subjects.",
   },
   {
-    audience: "For vertical industries",
-    desc: "Specialised training programmes built for specific domains - for example, AI training for construction management firms, covering project planning, document analysis, compliance, and field operations. Similar vertical programmes for other industries are under development.",
+    audience: "For institutions",
+    desc: "Campus-wide AI partnerships for principals, deans, and placement cells. One partner for student programmes, faculty development, and a roadmap aligned to NEP 2020 and AICTE priorities.",
   },
 ];
 
@@ -161,17 +161,16 @@ const About = () => {
           </p>
           <h1 className="mb-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl animate-fade-up">
             Stop fearing AI.{" "}
-            <span className="gradient-text">Start getting ahead with it.</span>
+            <span className="gradient-text">Start building with it.</span>
           </h1>
           <p
             className="max-w-2xl text-lg text-muted-foreground sm:text-xl animate-fade-up"
             style={{ animationDelay: "0.1s" }}
           >
-            GradTensor is the specialist AI training and consulting brand of
-            Sudhanva Labs LLP, based in Bengaluru, India. We help colleges,
-            working professionals, and organisations build genuine AI
-            capability - not just understand AI conceptually, but use it, build
-            with it, and ship working AI applications that solve real problems.
+            GradTensor is an India-focused AI education company for colleges. We
+            help students and faculty stop fearing AI and start building with
+            it, and support institutions in putting that capability to work and
+            keeping it running.
           </p>
         </div>
       </section>
@@ -238,14 +237,14 @@ const About = () => {
             </h2>
             <div className="space-y-4 text-base leading-relaxed text-foreground sm:text-lg">
               <p>
-                Our programmes are designed for learners across every business
-                function and vertical - commerce, finance, marketing,
-                operations, HR, legal, engineering, sales, customer service.
+                Our programmes are designed for students across every discipline
+                - engineering and computer science, commerce and management,
+                humanities, sciences, and hospitality.
               </p>
               <p>
                 AI is no longer a specialist tool for technologists; it is a
-                horizontal capability every modern professional needs. We teach
-                accordingly.
+                horizontal capability every graduate now needs at placements. We
+                teach accordingly.
               </p>
             </div>
           </div>
@@ -338,7 +337,7 @@ const About = () => {
             {/* Three tracks through the ladder */}
             <div className="mt-12 animate-on-scroll">
               <p className="mb-4 font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground">
-                Three tracks through the ladder
+                Three doors through the ladder
               </p>
               <div className="grid gap-4 md:grid-cols-3">
                 {TRACKS.map((t) => (
@@ -381,15 +380,15 @@ const About = () => {
                 Integrated programme
               </p>
               <p className="text-base leading-relaxed text-foreground sm:text-lg">
-                Levels 02 to 04 for engineers are also delivered as a single
+                Levels 02 to 04 for students are also delivered as a single
                 integrated programme: the AI Agentic Engineering Bootcamp.
                 Six months of live instruction, four months of training plus a
                 two-month capstone, 64 live hours. Built for engineering
-                colleges, technical institutes, placement partners, and
-                corporate engineering teams.
+                colleges, BCA/MCA institutes, technical institutes, and
+                placement partners.
               </p>
               <Link
-                to="/for-engineers"
+                to="/for-students"
                 className="mt-4 inline-flex items-center gap-1.5 font-mono text-xs tracking-[0.18em] uppercase text-foreground transition-colors hover:text-primary"
               >
                 Explore the Bootcamp
@@ -580,9 +579,9 @@ const About = () => {
               Want to work together?
             </h2>
             <p className="mb-6 text-base text-muted-foreground">
-              Training for colleges and professionals, or AI adoption for your
-              business. Find your door in, or get in touch to discuss a
-              partnership.
+              Programmes for your students, development for your faculty, and a
+              roadmap for your institution. Find your door in, or get in touch to
+              discuss a campus partnership.
             </p>
             <div className="flex justify-center">
               <Link

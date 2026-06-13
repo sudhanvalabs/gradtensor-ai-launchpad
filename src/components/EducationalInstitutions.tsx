@@ -16,7 +16,6 @@ const partnershipMail = (subject: string) =>
 const EducationalInstitutions = () => {
   const bootcamp = getCourseBySlug("ai-agentic-engineering-bootcamp");
   const intensive = getCourseBySlug("ai-builder-intensive");
-  const school = getCourseBySlug("teen-ai-builders");
 
   return (
     <section className="py-24 md:py-32">
@@ -28,11 +27,11 @@ const EducationalInstitutions = () => {
           </p>
           <h2 className="mb-4 font-display text-4xl font-bold tracking-tight sm:text-5xl">
             Programmes for colleges,{" "}
-            <span className="gradient-text">institutes &amp; schools</span>
+            <span className="gradient-text">students &amp; faculty</span>
           </h2>
           <p className="max-w-2xl text-base text-muted-foreground sm:text-lg">
             Delivered through institutional partnerships. Career-aligned,
-            placement-ready, and customised to your students.
+            placement-ready, and customised to your students and faculty.
           </p>
         </div>
 
@@ -174,65 +173,54 @@ const EducationalInstitutions = () => {
               </div>
             )}
 
-            {/* Teen AI Builders */}
-            {school && (
-              <div className="animate-on-scroll rounded-2xl border border-border bg-card/30 p-8 transition-all hover:border-primary/20 hover:shadow-lg">
-                <div className="mb-4 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-500">
-                    <School size={22} />
-                  </div>
-                  <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 font-display text-[11px] font-semibold tracking-wider text-emerald-600 dark:text-emerald-400 uppercase">
-                    For Schools (Grades 8-12)
-                  </span>
+            {/* Faculty Productivity Workshop */}
+            <div className="animate-on-scroll rounded-2xl border border-border bg-card/30 p-8 transition-all hover:border-primary/20 hover:shadow-lg">
+              <div className="mb-4 flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-500">
+                  <School size={22} />
                 </div>
-
-                <h3 className="mb-3 font-display text-2xl font-bold tracking-tight">
-                  {school.title}
-                </h3>
-                <p className="mb-4 font-mono text-xs tracking-wide text-muted-foreground border-l-2 border-emerald-500 pl-3">
-                  12 Weeks · One slot per week · 90 min
-                </p>
-                <p className="mb-5 text-sm leading-relaxed text-muted-foreground">
-                  Students build a fully deployed AI-powered escape room game.
-                  Every line of code written and understood by the student. Live
-                  at a URL they can share.
-                </p>
-
-                <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 font-mono text-[10px] font-semibold tracking-wider uppercase text-primary">
-                  Level 2 - AI Builder
-                </div>
-
-                <p className="mb-2 font-mono text-[11px] tracking-wider uppercase text-primary">
-                  Skills students learn
-                </p>
-                <div className="mb-6 flex flex-wrap gap-2">
-                  {[
-                    "HTML / CSS",
-                    "JavaScript",
-                    "AI API Integration",
-                    "Deployment",
-                  ].map((skill) => (
-                    <span
-                      key={skill}
-                      className="rounded-full border border-border bg-card/50 px-3 py-1 text-xs text-muted-foreground"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-
-                <Link
-                  to="/teen-ai-builders"
-                  className="group/btn inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-2.5 font-display text-sm font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
-                >
-                  Bring to Your School
-                  <ArrowRight
-                    size={16}
-                    className="transition-transform group-hover/btn:translate-x-1"
-                  />
-                </Link>
+                <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 font-display text-[11px] font-semibold tracking-wider text-emerald-600 dark:text-emerald-400 uppercase">
+                  For College Faculty
+                </span>
               </div>
-            )}
+
+              <h3 className="mb-3 font-display text-2xl font-bold tracking-tight">
+                AI for Faculty - Productivity Workshop
+              </h3>
+              <p className="mb-4 font-mono text-xs tracking-wide text-muted-foreground border-l-2 border-emerald-500 pl-3">
+                2 × 2-hour online sessions · Free Claude.ai
+              </p>
+              <p className="mb-5 text-sm leading-relaxed text-muted-foreground">
+                Faculty learn AI for the work that fills their week - lesson
+                plans, homework, test papers, concept explainers - with examples
+                from their own subjects. Each builds a workflow and presents on
+                Day 2.
+              </p>
+
+              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 font-mono text-[10px] font-semibold tracking-wider uppercase text-primary">
+                Hands-on · Any discipline
+              </div>
+
+              <p className="mb-2 font-mono text-[11px] tracking-wider uppercase text-primary">
+                Built for
+              </p>
+              <ul className="mb-6 space-y-1 text-sm text-muted-foreground">
+                <li>· Faculty across any discipline</li>
+                <li>· Department heads running faculty upskilling</li>
+                <li>· Institutions running Faculty Development Programmes</li>
+              </ul>
+
+              <Link
+                to="/for-faculty"
+                className="group/btn inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-2.5 font-display text-sm font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
+              >
+                Explore Faculty Programmes
+                <ArrowRight
+                  size={16}
+                  className="transition-transform group-hover/btn:translate-x-1"
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </div>

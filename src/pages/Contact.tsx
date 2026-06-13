@@ -63,7 +63,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Contact"
-        description="Reach GradTensor by WhatsApp, email, or a scheduled call. We work with engineering colleges, business schools, corporate L&D teams, and senior leadership across India."
+        description="Reach GradTensor by WhatsApp, email, or a scheduled call. We work with colleges across India - students, faculty, and institutional leadership."
         path="/contact"
         jsonLd={contactLd}
       />
@@ -89,10 +89,9 @@ const Contact = () => {
               Tell us what you want to build.
             </h1>
             <p className="max-w-2xl text-lg leading-relaxed text-foreground/85 sm:text-xl">
-              We work with engineering colleges, business schools, corporate
-              L&amp;D teams, and senior leadership across India. Tell us a
-              little about who you are and what you need. We will respond
-              within two working days.
+              We work with colleges across India - students, faculty, and
+              institutional leadership. Tell us a little about who you are and
+              what you need. We will respond within two working days.
             </p>
           </header>
         </div>
@@ -161,8 +160,8 @@ const Contact = () => {
                   partnerships@gradtensor.com
                 </a>
                 <p className="font-display text-sm leading-relaxed text-muted-foreground">
-                  For institutional partnerships - corporate L&amp;D teams,
-                  colleges, and institutes.
+                  For institutional partnerships - colleges, placement cells,
+                  and faculty development.
                 </p>
               </div>
               <a
@@ -219,11 +218,11 @@ const Contact = () => {
               A few details speed things up.
             </h2>
             <p className="text-base leading-relaxed text-foreground/85 sm:text-lg">
-              When you reach out, it helps if you mention which track you are
-              interested in (Leaders, Professionals, or Engineers), the size of
-              the cohort or organisation, and the timeframe you are working
-              with. If you have a specific programme in mind, name it. If you
-              do not, describe the outcome you want and we will suggest a fit.
+              When you reach out, it helps if you mention who it is for
+              (Students, Faculty, or your Institution), the size of the cohort,
+              and the timeframe you are working with. If you have a specific
+              programme in mind, name it. If you do not, describe the outcome
+              you want and we will suggest a fit.
             </p>
           </div>
         </div>
@@ -315,9 +314,9 @@ const Contact = () => {
                     <option value="" disabled>
                       Select one
                     </option>
-                    <option value="For Leaders">For Leaders</option>
-                    <option value="For Professionals">For Professionals</option>
-                    <option value="For Engineers">For Engineers</option>
+                    <option value="For Students">For Students</option>
+                    <option value="For Faculty">For Faculty</option>
+                    <option value="For Institutions">For Institutions</option>
                     <option value="Not sure yet">Not sure yet</option>
                     <option value="Other">Other</option>
                   </select>

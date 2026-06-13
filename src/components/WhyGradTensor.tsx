@@ -9,21 +9,21 @@ const differentiators = [
   },
   {
     icon: Rocket,
-    title: "Working Systems, Not Demos",
+    title: "Portfolio Pieces, Not Certificates",
     description:
-      "Every course ends with a deployed AI system at a URL you own. You leave with the thing, not a recording of someone else making the thing.",
+      "Every student leaves with a deployed AI system at a URL they own - something to show at placements, not a certificate of attendance.",
   },
   {
     icon: Cpu,
-    title: "Built for Three Audiences",
+    title: "Built for the Whole Campus",
     description:
-      "Leaders directing AI work. Professionals applying AI to their domain. Engineers building production systems. The craft adapts to who you are.",
+      "Students get placement-ready. Faculty learn to teach with AI. Institutions get one partner for both. Capability that compounds across your campus.",
   },
   {
     icon: Target,
-    title: "Built for Builders, Not Browsers",
+    title: "Placement-Ready, Not Just Aware",
     description:
-      "56% higher pay for AI-skilled developers (PwC 2025). 143% growth in AI Engineer job postings (LinkedIn 2026). The developers who build with AI will pull away from those who only use it.",
+      "56% higher pay for AI-skilled developers (PwC 2025). 143% growth in AI Engineer job postings (LinkedIn 2026). Students who build with AI pull away from those who only use it.",
   },
 ];
 

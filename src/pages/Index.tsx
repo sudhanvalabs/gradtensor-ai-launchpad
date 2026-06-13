@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import PromiseBand from "@/components/PromiseBand";
 import ThreeTracks from "@/components/ThreeTracks";
 import StatsRow from "@/components/StatsRow";
+import EducationalInstitutions from "@/components/EducationalInstitutions";
 import WhyGradTensor from "@/components/WhyGradTensor";
 import CloserBand from "@/components/CloserBand";
 import SiteFooter from "@/components/SiteFooter";
@@ -17,7 +18,7 @@ const organizationLd = {
   logo: "https://gradtensor.com/logo.png",
   email: "partnerships@gradtensor.com",
   description:
-    "We help people stop fearing AI and start getting ahead with it. Live, hands-on AI training and consulting from GradTensor.",
+    "We help people stop fearing AI and start building with it. Hands-on, live AI training from GradTensor, an India-focused AI education company.",
   sameAs: [
     "https://www.linkedin.com/company/gradtensor",
     "https://twitter.com/GradTensor",
@@ -31,15 +32,16 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="GradTensor - Stop Fearing AI. Start Getting Ahead With It."
-        description="We help people stop fearing AI and start getting ahead with it. Live, hands-on AI training and consulting from GradTensor."
+        description="We help people stop fearing AI and start building with it. Hands-on, live AI training from GradTensor, an India-focused AI education company."
         path="/"
         jsonLd={[organizationLd]}
       />
       <Navbar />
       <Hero />
       <PromiseBand />
-      <ThreeTracks />
       <StatsRow />
+      <ThreeTracks />
+      <EducationalInstitutions />
       <WhyGradTensor />
       <CloserBand />
       <SiteFooter />

@@ -16,6 +16,15 @@ const SiteFooter = () => {
             <p className="mt-1 text-sm text-muted-foreground">A venture of Sudhanva Labs LLP</p>
           </div>
           <div className="flex flex-wrap justify-center gap-6 font-display text-sm tracking-wider">
+            <Link to="/for-students" className="transition-colors hover:text-primary">
+              For Students
+            </Link>
+            <Link to="/for-faculty" className="transition-colors hover:text-primary">
+              For Faculty
+            </Link>
+            <Link to="/for-institutions" className="transition-colors hover:text-primary">
+              For Institutions
+            </Link>
             <Link to="/framework" className="transition-colors hover:text-primary">
               Framework
             </Link>

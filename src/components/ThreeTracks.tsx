@@ -3,31 +3,31 @@ import { ArrowRight } from "lucide-react";
 
 const tracks = [
   {
-    number: "Track 01",
-    name: "For Leaders",
+    number: "Students",
+    name: "For Students",
     description:
-      "CXOs, boards, business heads. Direct AI work without doing it yourself.",
-    range: "Levels 01 → 02",
-    href: "/for-leaders",
-    barColor: "#d4a574",
+      "Tech and non-tech students. Get placement-ready by building real, deployed AI.",
+    range: "Build + Apply paths",
+    href: "/for-students",
+    barColor: "#c8472e",
   },
   {
-    number: "Track 02",
-    name: "For Professionals",
+    number: "Faculty",
+    name: "For Faculty",
     description:
-      "Business functions, non-tech students. Apply AI in the work you already do.",
-    range: "Levels 01 → 03",
-    href: "/for-professionals",
+      "Lecturers and professors. Use AI for lesson plans, tests, and teaching - hands-on.",
+    range: "Workshops & FDP",
+    href: "/for-faculty",
     barColor: "#7a9b8c",
   },
   {
-    number: "Track 03",
-    name: "For Engineers",
+    number: "Institutions",
+    name: "For Institutions",
     description:
-      "Developers, architects, CS students, tech teams. Build production AI systems.",
-    range: "Levels 01 → 04",
-    href: "/for-engineers",
-    barColor: "#c8472e",
+      "Principals, deans, and TPOs. Bring AI to your whole campus, end to end.",
+    range: "Campus partnerships",
+    href: "/for-institutions",
+    barColor: "#d4a574",
   },
 ];
 
@@ -40,10 +40,10 @@ const ThreeTracks = () => {
             Find your door in
           </p>
           <h2 className="mb-3 font-display text-4xl italic font-medium tracking-tight sm:text-5xl">
-            Three tracks. <em className="not-italic text-primary">Same ladder.</em>
+            Three doors. <em className="not-italic text-primary">One campus.</em>
           </h2>
           <p className="max-w-xl text-base text-muted-foreground sm:text-lg">
-            Pick the track that matches your role. The framework underneath stays the same.
+            Students, faculty, or institution - whoever you are, there's a way in. The framework underneath stays the same.
           </p>
         </div>
 

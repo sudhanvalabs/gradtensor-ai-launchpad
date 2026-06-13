@@ -9,22 +9,22 @@ import logoDark from "@/assets/logo-dark.png";
 
 const TRACKS = [
   {
-    number: "Track 01",
-    name: "For Leaders",
-    href: "/for-leaders",
-    color: "#d4a574",
+    number: "Students",
+    name: "For Students",
+    href: "/for-students",
+    color: "#c8472e",
   },
   {
-    number: "Track 02",
-    name: "For Professionals",
-    href: "/for-professionals",
+    number: "Faculty",
+    name: "For Faculty",
+    href: "/for-faculty",
     color: "#7a9b8c",
   },
   {
-    number: "Track 03",
-    name: "For Engineers",
-    href: "/for-engineers",
-    color: "#c8472e",
+    number: "Institutions",
+    name: "For Institutions",
+    href: "/for-institutions",
+    color: "#d4a574",
   },
 ];
 
@@ -115,7 +115,7 @@ const Navbar = () => {
               onFocus={openDropdown}
               onBlur={closeDropdown}
             >
-              Tracks
+              Programmes
               <ChevronDown
                 size={14}
                 className={`transition-transform ${tracksOpen ? "rotate-180" : ""}`}
@@ -193,7 +193,7 @@ const Navbar = () => {
             href={whatsappLink("planProgramme")}
             className="btn-shimmer rounded-lg border border-foreground bg-foreground px-5 py-2.5 font-display text-sm font-medium tracking-wider text-background transition-all hover:bg-foreground/90"
           >
-            Plan a Programme
+            Bring AI to Your Campus
           </WhatsAppButton>
         </div>
 
@@ -240,7 +240,7 @@ const Navbar = () => {
           </Link>
 
           <p className="mt-2 pt-2 font-mono text-[10px] tracking-[0.2em] uppercase text-muted-foreground">
-            Tracks
+            Programmes
           </p>
           {TRACKS.map((track) => (
             <Link
@@ -283,7 +283,7 @@ const Navbar = () => {
             href={whatsappLink("planProgramme")}
             className="mt-2 block rounded-lg border border-foreground bg-foreground px-4 py-2.5 text-center font-display text-sm font-medium tracking-wider text-background"
           >
-            Plan a Programme
+            Bring AI to Your Campus
           </WhatsAppButton>
         </div>
       )}

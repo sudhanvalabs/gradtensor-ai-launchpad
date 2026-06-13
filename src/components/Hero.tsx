@@ -30,7 +30,7 @@ const Hero = () => {
             {/* Headline */}
             <h1 className="mb-6 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl animate-fade-up" style={{ animationDelay: "0.1s" }}>
               Stop Fearing AI.{" "}
-              <span className="gradient-text">Start Getting Ahead With It.</span>
+              <span className="gradient-text">Start Building With It.</span>
             </h1>
 
             {/* Brand stance */}
@@ -46,7 +46,7 @@ const Hero = () => {
               className="mb-8 font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground animate-fade-up"
               style={{ animationDelay: "0.3s" }}
             >
-              One framework. Three tracks. Find your door in.
+              Built for India's colleges. Students · Faculty · Institutions.
             </p>
 
             {/* CTAs */}
@@ -62,7 +62,7 @@ const Hero = () => {
                 href="#tracks"
                 className="inline-flex items-center justify-center rounded-lg border border-border bg-card/50 px-8 py-4 font-display text-base font-medium tracking-wider text-foreground backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-card"
               >
-                Find Your Track
+                Find Your Programme
               </a>
             </div>
           </div>

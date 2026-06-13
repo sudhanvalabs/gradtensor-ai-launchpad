@@ -324,7 +324,7 @@ const Framework = () => {
       <div className="gt-framework">
       <SEO
         title="The Framework"
-        description="The GradTensor Gradient: four levels of AI mastery, three tracks tailored to who you are and what you need to do with AI."
+        description="The GradTensor Gradient: four levels of AI mastery, with three doors in for students, faculty, and institutions."
         path="/framework"
       />
       <Helmet>
@@ -346,8 +346,8 @@ const Framework = () => {
             <em>Three doors in.</em>
           </h1>
           <p className="subtitle">
-            Four levels of AI mastery. Three tracks tailored to who you are and
-            what you need to do with AI.
+            Four levels of AI mastery. Three doors tailored to who you are on
+            campus - student, faculty, or institution.
           </p>
         </header>
 
@@ -425,43 +425,43 @@ const Framework = () => {
         <div className="tracks">
           <div className="tracks-label">Horizontal axis / who it's for</div>
           <h2 className="tracks-title">
-            Three tracks. <em>Same ladder.</em>
+            Three doors. <em>Same ladder.</em>
           </h2>
 
           <div className="track-cards">
-            <Link to="/for-leaders" className="track leader">
-              <div className="track-num">Track 01</div>
-              <div className="track-name">For Leaders</div>
+            <Link to="/for-students" className="track eng">
+              <div className="track-num">Students</div>
+              <div className="track-name">For Students</div>
               <p className="track-for">
-                CXOs, boards, business heads. Direct AI work without doing it
-                yourself.
-              </p>
-              <div className="track-range">
-                Levels <strong>01 → 02</strong>
-              </div>
-            </Link>
-
-            <Link to="/for-professionals" className="track pro">
-              <div className="track-num">Track 02</div>
-              <div className="track-name">For Professionals</div>
-              <p className="track-for">
-                Business functions, non-tech students. Apply AI in the work you
-                already do.
-              </p>
-              <div className="track-range">
-                Levels <strong>01 → 03</strong>
-              </div>
-            </Link>
-
-            <Link to="/for-engineers" className="track eng">
-              <div className="track-num">Track 03</div>
-              <div className="track-name">For Engineers</div>
-              <p className="track-for">
-                Developers, architects, CS students, tech teams. Build production
-                AI systems.
+                Tech and non-tech students. Get placement-ready by building real,
+                deployed AI.
               </p>
               <div className="track-range">
                 Levels <strong>01 → 04</strong>
+              </div>
+            </Link>
+
+            <Link to="/for-faculty" className="track pro">
+              <div className="track-num">Faculty</div>
+              <div className="track-name">For Faculty</div>
+              <p className="track-for">
+                Lecturers and professors. Use AI for lesson plans, tests, and
+                teaching - hands-on.
+              </p>
+              <div className="track-range">
+                Workshops <strong>&amp; FDP</strong>
+              </div>
+            </Link>
+
+            <Link to="/for-institutions" className="track leader">
+              <div className="track-num">Institutions</div>
+              <div className="track-name">For Institutions</div>
+              <p className="track-for">
+                Principals, deans, and TPOs. Bring AI to your whole campus, end
+                to end.
+              </p>
+              <div className="track-range">
+                Whole <strong>campus</strong>
               </div>
             </Link>
           </div>

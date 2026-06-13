@@ -235,7 +235,7 @@ const Manifesto = () => {
               from the screen.
             </P>
             <P>
-              We believe Indian builders, professionals, and leaders deserve
+              We believe India's students, faculty, and institutions deserve
               AI education that meets them where they are - not a translation
               of Silicon Valley curricula.
             </P>
@@ -260,16 +260,16 @@ const Manifesto = () => {
               Orchestrator - so you can deploy autonomous systems you can
               defend.
             </P>
-            <P>We teach this to three audiences.</P>
+            <P>We teach this across the whole campus.</P>
             <P>
-              Leaders, so they can direct AI work with clarity and govern it
-              with rigour.
+              Students, so they graduate able to build with AI and stand out
+              at placements.
               <br />
-              Professionals, so they can apply AI to the work they already
-              do, without becoming engineers.
+              Faculty, so they can teach with AI and keep their courses
+              current.
               <br />
-              Engineers, so they can build production AI systems that hold up
-              under load, scrutiny, and time.
+              Institutions, so AI capability takes root across the campus and
+              stays.
             </P>
             <P>
               Every cohort is live. Every course ends with something you
@@ -310,7 +310,7 @@ const Manifesto = () => {
               Walk the path.
             </h2>
             <p className="mb-8 text-base leading-relaxed text-foreground/85 sm:text-lg">
-              Three tracks. Four levels. One craft. Find your door in.
+              Three doors. Four levels. One craft. Find your door in.
             </p>
             <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link
@@ -327,7 +327,7 @@ const Manifesto = () => {
                 to="/#tracks"
                 className="inline-flex items-center justify-center rounded-lg border border-foreground bg-transparent px-8 py-3 font-display text-sm font-medium tracking-wider text-foreground transition-all hover:bg-foreground hover:text-background"
               >
-                Find Your Track
+                Find Your Programme
               </Link>
             </div>
           </div>
