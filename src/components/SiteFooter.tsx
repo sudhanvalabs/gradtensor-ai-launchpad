@@ -45,7 +45,7 @@ const SiteFooter = () => {
 
         {/* Contact details */}
         <p className="mt-8 text-center font-mono text-xs leading-relaxed text-muted-foreground">
-          +91 91080 30542 (Students) · +91 98452 03997 (Institutions) ·{" "}
+          +91 91080 30542 (Students) · +91 98452 03997 (Institutions &amp; Corporates) ·{" "}
           <a
             href={`mailto:${siteConfig.email}`}
             className="transition-colors hover:text-primary"

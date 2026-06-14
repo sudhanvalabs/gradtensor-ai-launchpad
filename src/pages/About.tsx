@@ -284,6 +284,17 @@ const About = () => {
               All our work centres on the Anthropic Claude stack, with reference
               materials drawn from our public Build with Claude series.
             </p>
+
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground animate-on-scroll">
+              Running a corporate team and want custom AI training?{" "}
+              <Link
+                to="/contact"
+                className="font-medium text-primary underline decoration-primary/40 underline-offset-2 transition-colors hover:text-primary/80"
+              >
+                Get in touch
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </section>

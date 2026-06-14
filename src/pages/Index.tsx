@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import PromiseBand from "@/components/PromiseBand";
@@ -44,6 +46,23 @@ const Index = () => {
       <EducationalInstitutions />
       <WhyGradTensor />
       <CloserBand />
+
+      {/* Quiet corporate door - secondary to the college-first message above */}
+      <section className="border-t border-border/50 py-10">
+        <div className="section-container">
+          <p className="mx-auto max-w-2xl text-center text-sm leading-relaxed text-muted-foreground">
+            We also run custom AI training for corporate teams.{" "}
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-1 font-medium text-primary underline decoration-primary/40 underline-offset-2 transition-colors hover:text-primary/80"
+            >
+              Talk to us
+              <ArrowRight size={13} />
+            </Link>
+          </p>
+        </div>
+      </section>
+
       <SiteFooter />
     </div>
   );

@@ -317,6 +317,7 @@ const Contact = () => {
                     <option value="For Students">For Students</option>
                     <option value="For Faculty">For Faculty</option>
                     <option value="For Institutions">For Institutions</option>
+                    <option value="Corporate / team training">Corporate / team training</option>
                     <option value="Not sure yet">Not sure yet</option>
                     <option value="Other">Other</option>
                   </select>
