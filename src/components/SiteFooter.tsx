@@ -16,22 +16,22 @@ const SiteFooter = () => {
             <p className="mt-1 text-sm text-muted-foreground">A venture of Sudhanva Labs LLP</p>
           </div>
           <div className="flex flex-wrap justify-center gap-6 font-display text-sm tracking-wider">
-            <Link to="/for-students" className="transition-colors hover:text-primary">
-              For Students
+            <Link to="/#what-we-do" className="transition-colors hover:text-primary">
+              What we do
             </Link>
-            <Link to="/for-faculty" className="transition-colors hover:text-primary">
-              For Faculty
+            <Link to="/#judgment-line" className="transition-colors hover:text-primary">
+              The Judgment Line
             </Link>
-            <Link to="/for-institutions" className="transition-colors hover:text-primary">
-              For Institutions
+            <Link to="/#forge" className="transition-colors hover:text-primary">
+              Forge
             </Link>
-            <Link to="/framework" className="transition-colors hover:text-primary">
-              Framework
+            <Link to="/about" className="transition-colors hover:text-primary">
+              About
             </Link>
-            <Link to="/manifesto" className="transition-colors hover:text-primary">
-              Manifesto
+            <Link to="/contact" className="transition-colors hover:text-primary">
+              Contact
             </Link>
-            <WhatsAppButton href={whatsappLink("general")} className="transition-colors hover:text-primary">
+            <WhatsAppButton href={whatsappLink("demoTalk")} className="transition-colors hover:text-primary">
               WhatsApp Us
             </WhatsAppButton>
             <a href={`mailto:${siteConfig.email}`} className="transition-colors hover:text-primary">
@@ -45,7 +45,7 @@ const SiteFooter = () => {
 
         {/* Contact details */}
         <p className="mt-8 text-center font-mono text-xs leading-relaxed text-muted-foreground">
-          +91 91080 30542 (Students) · +91 98452 03997 (Institutions &amp; Corporates) ·{" "}
+          +91 98452 03997 ·{" "}
           <a
             href={`mailto:${siteConfig.email}`}
             className="transition-colors hover:text-primary"

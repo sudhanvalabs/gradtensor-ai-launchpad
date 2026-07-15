@@ -1,15 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Mail, MessageCircle, Phone } from "lucide-react";
+import { ArrowRight, Mail, MessageCircle, CalendarClock } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
 import SEO from "@/components/SEO";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { siteConfig, whatsappLink } from "@/data/siteConfig";
 
-const CALENDLY_URL = "https://calendly.com/gradtensor/30min";
-const WHATSAPP_GENERAL =
-  "https://wa.me/919108030542?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20GradTensor";
-const FORM_RECIPIENT = "partnerships@gradtensor.com";
+const FORM_RECIPIENT = siteConfig.email;
+const CONTACT_NUMBER = "+91 98452 03997";
 
 const contactLd = {
   "@context": "https://schema.org",
@@ -19,8 +18,8 @@ const contactLd = {
   publisher: {
     "@type": "Organization",
     name: "GradTensor",
-    email: "partnerships@gradtensor.com",
-    telephone: "+91 91080 30542",
+    email: siteConfig.email,
+    telephone: CONTACT_NUMBER,
   },
 };
 
@@ -39,11 +38,11 @@ const Contact = () => {
     const interest = String(data.get("interest") || "");
     const message = String(data.get("message") || "").trim();
 
-    const subject = `Contact enquiry: ${name}${interest ? ` (${interest})` : ""}`;
+    const subject = `Enquiry: ${name}${interest ? ` (${interest})` : ""}`;
     const bodyLines = [
       `Name: ${name}`,
       `Email: ${email}`,
-      organisation ? `Organisation: ${organisation}` : null,
+      organisation ? `Company: ${organisation}` : null,
       `Interest: ${interest}`,
       "",
       "Message:",
@@ -63,7 +62,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Contact"
-        description="Reach GradTensor by WhatsApp, email, or a scheduled call. We work with colleges across India - students, faculty, and institutional leadership."
+        description="Book a one-hour demo-talk or a short discovery call with GradTensor. We bring governed AI automation to manufacturing and the wider physical economy."
         path="/contact"
         jsonLd={contactLd}
       />
@@ -86,12 +85,13 @@ const Contact = () => {
               Get in touch
             </p>
             <h1 className="mb-6 max-w-3xl font-display text-4xl italic font-medium leading-tight tracking-tight sm:text-5xl md:text-6xl">
-              Tell us what you want to build.
+              See what AI can do in your operation.
             </h1>
             <p className="max-w-2xl text-lg leading-relaxed text-foreground/85 sm:text-xl">
-              We work with colleges across India - students, faculty, and
-              institutional leadership. Tell us a little about who you are and
-              what you need. We will respond within two working days.
+              Book a free one-hour demo-talk, run on your own documents and work,
+              or a short discovery call to talk through where AI might fit. Tell us
+              a little about your business and we will respond within two working
+              days.
             </p>
           </header>
         </div>
@@ -105,8 +105,7 @@ const Contact = () => {
             <div className="group relative flex flex-col gap-3 overflow-hidden border border-foreground/80 bg-card p-6 pt-7">
               <span
                 aria-hidden="true"
-                className="absolute left-0 right-0 top-0 h-[6px]"
-                style={{ backgroundColor: "#d4a574" }}
+                className="absolute left-0 right-0 top-0 h-[6px] bg-primary"
               />
               <div className="mt-3 flex items-center gap-2">
                 <MessageCircle size={16} className="text-muted-foreground" />
@@ -118,17 +117,13 @@ const Contact = () => {
                 WhatsApp us
               </h3>
               <div className="space-y-1 font-mono text-sm leading-relaxed text-foreground/90">
-                <div>
-                  <span className="text-foreground">+91 91080 30542</span>
-                  <span className="text-muted-foreground"> General enquiries</span>
-                </div>
-                <div>
-                  <span className="text-foreground">+91 98452 03997</span>
-                  <span className="text-muted-foreground"> Institutional partnerships</span>
-                </div>
+                <div>{CONTACT_NUMBER}</div>
+                <p className="font-display text-sm leading-relaxed text-muted-foreground">
+                  Quickest way to reach us about a demo-talk or a question.
+                </p>
               </div>
               <WhatsAppButton
-                href={WHATSAPP_GENERAL}
+                href={whatsappLink("demoTalk")}
                 className="mt-auto inline-flex items-center justify-center gap-2 rounded-lg border border-foreground bg-foreground px-5 py-2.5 font-display text-sm font-medium tracking-wider text-background transition-all hover:bg-foreground/90"
               >
                 Open WhatsApp
@@ -140,8 +135,7 @@ const Contact = () => {
             <div className="group relative flex flex-col gap-3 overflow-hidden border border-foreground/80 bg-card p-6 pt-7">
               <span
                 aria-hidden="true"
-                className="absolute left-0 right-0 top-0 h-[6px]"
-                style={{ backgroundColor: "#7a9b8c" }}
+                className="absolute left-0 right-0 top-0 h-[6px] bg-primary/60"
               />
               <div className="mt-3 flex items-center gap-2">
                 <Mail size={16} className="text-muted-foreground" />
@@ -154,18 +148,17 @@ const Contact = () => {
               </h3>
               <div className="space-y-1 font-mono text-sm leading-relaxed">
                 <a
-                  href="mailto:partnerships@gradtensor.com"
+                  href={`mailto:${siteConfig.email}`}
                   className="text-foreground underline decoration-foreground/30 underline-offset-2 transition-colors hover:text-primary"
                 >
-                  partnerships@gradtensor.com
+                  {siteConfig.email}
                 </a>
                 <p className="font-display text-sm leading-relaxed text-muted-foreground">
-                  For institutional partnerships - colleges, placement cells,
-                  and faculty development.
+                  For a considered conversation about AI in your operations.
                 </p>
               </div>
               <a
-                href="mailto:partnerships@gradtensor.com"
+                href={`mailto:${siteConfig.email}`}
                 className="mt-auto inline-flex items-center justify-center gap-2 rounded-lg border border-foreground bg-foreground px-5 py-2.5 font-display text-sm font-medium tracking-wider text-background transition-all hover:bg-foreground/90"
               >
                 Open Email
@@ -173,33 +166,32 @@ const Contact = () => {
               </a>
             </div>
 
-            {/* Phone card */}
+            {/* Discovery call card */}
             <div className="group relative flex flex-col gap-3 overflow-hidden border border-foreground/80 bg-card p-6 pt-7">
               <span
                 aria-hidden="true"
-                className="absolute left-0 right-0 top-0 h-[6px]"
-                style={{ backgroundColor: "#c8472e" }}
+                className="absolute left-0 right-0 top-0 h-[6px] bg-primary/30"
               />
               <div className="mt-3 flex items-center gap-2">
-                <Phone size={16} className="text-muted-foreground" />
+                <CalendarClock size={16} className="text-muted-foreground" />
                 <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-muted-foreground">
-                  For scheduled calls
+                  Free, no obligation
                 </p>
               </div>
               <h3 className="font-display text-2xl italic font-medium leading-tight">
-                Call us
+                Book a call
               </h3>
-              <div className="space-y-1 font-mono text-sm leading-relaxed text-foreground/90">
-                <div>+91 91080 30542</div>
-                <div>+91 98452 03997</div>
-              </div>
+              <p className="font-display text-sm leading-relaxed text-muted-foreground">
+                A 30-minute discovery call to explore where AI could help your
+                business - and where it should not.
+              </p>
               <a
-                href={CALENDLY_URL}
+                href={siteConfig.calendarUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-auto inline-flex items-center justify-center gap-2 rounded-lg border border-foreground bg-transparent px-5 py-2.5 font-display text-sm font-medium tracking-wider text-foreground transition-all hover:bg-foreground hover:text-background"
               >
-                Book a call
+                Pick a time
                 <ArrowRight size={14} />
               </a>
             </div>
@@ -218,11 +210,11 @@ const Contact = () => {
               A few details speed things up.
             </h2>
             <p className="text-base leading-relaxed text-foreground/85 sm:text-lg">
-              When you reach out, it helps if you mention who it is for
-              (Students, Faculty, or your Institution), the size of the cohort,
-              and the timeframe you are working with. If you have a specific
-              programme in mind, name it. If you do not, describe the outcome
-              you want and we will suggest a fit.
+              When you reach out, it helps to know what your business makes or does,
+              the kind of work you are hoping to lighten - office paperwork,
+              plant-floor maintenance, or both - and the timeframe you are working
+              with. If you already have a problem in mind, name it. If not, describe
+              the outcome you want and we will suggest where AI fits.
             </p>
           </div>
         </div>
@@ -291,7 +283,7 @@ const Contact = () => {
 
                 <label className="flex flex-col gap-2 text-sm">
                   <span className="font-mono text-[11px] tracking-[0.15em] uppercase text-muted-foreground">
-                    Organisation
+                    Company
                   </span>
                   <input
                     type="text"
@@ -314,12 +306,12 @@ const Contact = () => {
                     <option value="" disabled>
                       Select one
                     </option>
-                    <option value="For Students">For Students</option>
-                    <option value="For Faculty">For Faculty</option>
-                    <option value="For Institutions">For Institutions</option>
-                    <option value="Corporate / team training">Corporate / team training</option>
+                    <option value="A 1-hour demo-talk">A 1-hour demo-talk</option>
+                    <option value="A discovery call">A discovery call</option>
+                    <option value="Judgment Line Assessment">Judgment Line Assessment</option>
+                    <option value="Team training">Team training</option>
+                    <option value="Building AI assistants">Building AI assistants</option>
                     <option value="Not sure yet">Not sure yet</option>
-                    <option value="Other">Other</option>
                   </select>
                 </label>
 

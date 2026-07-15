@@ -1,63 +1,73 @@
-import { Radio, Rocket, Cpu, Target } from "lucide-react";
+import { Compass, ShieldCheck, Wrench } from "lucide-react";
 
-const differentiators = [
+const reasons = [
   {
-    icon: Radio,
-    title: "Live Cohorts, Not Recorded Videos",
+    icon: Compass,
+    title: "An under-served sector, taken seriously",
     description:
-      "AI craftsmanship is learned in the room, not from the screen. Live cohorts with senior engineers who ship AI in production. No pre-recorded videos. No self-paced drift.",
+      "Most AI vendors chase software, finance, and consumer apps. We bring credible, governed AI to the physical economy - the plants, sites, and depots that keep getting overlooked.",
   },
   {
-    icon: Rocket,
-    title: "Portfolio Pieces, Not Certificates",
+    icon: ShieldCheck,
+    title: "Governance is the through-line",
     description:
-      "Every student leaves with a deployed AI system at a URL they own - something to show at placements, not a certificate of attendance.",
+      "Human control, audit trails, access controls, and compliance-aware design are built in, not bolted on. This is AI a risk-aware operation can actually put to work.",
   },
   {
-    icon: Cpu,
-    title: "Built for the Whole Campus",
+    icon: Wrench,
+    title: "Enterprise-grade engineering",
     description:
-      "Students get placement-ready. Faculty learn to teach with AI. Institutions get one partner for both. Capability that compounds across your campus.",
-  },
-  {
-    icon: Target,
-    title: "Placement-Ready, Not Just Aware",
-    description:
-      "56% higher pay for AI-skilled developers (PwC 2025). 143% growth in AI Engineer job postings (LinkedIn 2026). Students who build with AI pull away from those who only use it.",
+      "We come from building and running systems inside large global corporations. We know what production-grade, accountable software looks like, and we hold our AI to that bar.",
   },
 ];
 
 const WhyGradTensor = () => {
   return (
-    <section className="border-y border-border/50 py-24 md:py-32">
+    <section className="py-24 md:py-32">
       <div className="section-container">
-        <div className="mb-16 animate-on-scroll">
-          <h2 className="mb-4 font-display text-4xl font-bold tracking-tight sm:text-5xl">
-            Why <span className="text-gt-green">Grad</span><span className="text-foreground">Tensor</span>
+        <div className="mb-16 max-w-2xl animate-on-scroll">
+          <p className="mb-4 font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground">
+            Why GradTensor
+          </p>
+          <h2 className="mb-5 font-display text-4xl font-bold tracking-tight sm:text-5xl">
+            Credible AI for businesses that make real things
           </h2>
-          <p className="max-w-xl text-base text-muted-foreground sm:text-lg">
-            We built what we wished existed when we were learning AI  - practical, modern, and obsessed with outcomes.
+          <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
+            GradTensor exists to put governed AI to work in the physical economy -
+            responsibly, and where it genuinely helps. We pair deep engineering
+            experience with a clear method for keeping people in control.
           </p>
         </div>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {differentiators.map((item, i) => (
+        <div className="grid gap-8 sm:grid-cols-3">
+          {reasons.map((r, i) => (
             <div
-              key={item.title}
+              key={r.title}
               className="animate-on-scroll group"
               style={{ transitionDelay: `${i * 0.1}s` }}
             >
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg border border-border bg-secondary transition-all duration-300 group-hover:border-primary/30 group-hover:shadow-[var(--glow-primary)] group-hover:scale-110">
-                <item.icon size={24} className="text-primary transition-transform duration-300 group-hover:scale-110" />
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg border border-border bg-secondary transition-all duration-300 group-hover:border-primary/30 group-hover:shadow-[var(--glow-primary)]">
+                <r.icon size={24} className="text-primary" />
               </div>
-              <h3 className="mb-2 font-display text-base font-bold tracking-tight">
-                {item.title}
+              <h3 className="mb-2 font-display text-lg font-bold tracking-tight">
+                {r.title}
               </h3>
               <p className="text-base leading-relaxed text-muted-foreground">
-                {item.description}
+                {r.description}
               </p>
             </div>
           ))}
+        </div>
+
+        {/* Founder mention - brief and honest, not person-centered */}
+        <div className="mt-16 animate-on-scroll rounded-lg border border-border bg-card p-8">
+          <p className="max-w-3xl text-base leading-relaxed text-muted-foreground">
+            <span className="font-semibold text-foreground">Founded by Prabhu Eshwarla</span>
+            {" "}- 20 years delivering enterprise technology to large global
+            corporations, 10 years in startups, and author of books on
+            high-performance web backends and systems programming with
+            international publishers.
+          </p>
         </div>
       </div>
     </section>

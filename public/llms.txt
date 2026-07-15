@@ -1,44 +1,47 @@
 # GradTensor
 
-> We help people stop fearing AI and start getting ahead with it.
+> Governed AI automation for the businesses that make, build, move, and maintain physical things.
 
-GradTensor is an AI education company that trains students, graduates, working professionals, and corporate teams through live, hands-on courses. Based in India, GradTensor offers live online and onsite training focused on project-driven learning.
+GradTensor brings governed AI automation to the physical economy - manufacturing, construction, distribution, and industrial services, manufacturing first. We put AI to work across operations, from back-office paperwork to plant-floor maintenance and root-cause analysis, always under human control. Based in India, founded as a venture of Sudhanva Labs LLP.
 
-## Courses
+## What we do
 
-### AI Agentic Engineering Bootcamp (Flagship)
-- Duration: 6 months (4 months live training + 2 months capstone project)
-- Live Hours: 64 hours, 3 days a week
-- For: Students and working professionals moving to an AI career
-- Certification: GradTensor Certification on successful capstone completion
-- Students learn AI fundamentals and build real AI agents from scratch, then build and deploy a production AI application as a capstone project
-- Contact GradTensor for pricing
+### Assess - The Judgment Line Assessment
+- We map your operations and identify exactly where AI belongs, and where it must not go
+- Output: a prioritised view of hours to win back and the work that must stay with your people
 
-### Corporate AI Training
-- AI training for teams, customised by function
-- Covers AI prompts (speed up daily tasks) and AI workflows (compress multi-step processes)
-- Functions: HR, Finance, Marketing, Sales, Legal, CA Firms, Operations, Customer Support, Procurement, Teachers & Educators
-- Delivery: Online or onsite, full day or 2-3 live sessions
-- URL: https://gradtensor.com/corporate
+### Train - Executive alignment and team training
+- Align leadership on what AI can and cannot do in your business
+- Hands-on training for teams to use AI safely in real operations
 
-## Trainers
+### Implement - Governed AI assistants, built on Forge
+- Office and document workflows: enquiries, quotes, BOMs, tenders, supplier documents, quality paperwork, service reports
+- Plant-floor needs: predictive-maintenance support, root-cause analysis, and knowledge assistants over machine manuals and maintenance procedures
+- Every assistant runs with a human in control and a full audit trail on every decision
+
+## The Judgment Line
+
+Our method for drawing the line between what AI carries and what stays with your people. Final quality sign-off, contractual and pricing commitments, safety-critical decisions, and final verification never cross the line. This is what makes the automation governed and safe for a risk-aware operation.
+
+## Forge
+
+Our platform for building and deploying governed AI assistants for operations - the proof that we can implement, not a product to buy off the shelf.
+
+## Founder
 
 ### Prabhu Eshwarla
-- AI Systems Architect and published author (Manning Publications, Packt)
-- 20+ years in engineering and leadership across distributed systems, blockchain, and enterprise platforms
-- Former senior leader at Hewlett Packard, former CTO of a European blockchain startup
-- Master's in Engineering from BITS, Pilani
+- 20 years delivering enterprise technology to large global corporations, plus 10 years in startups
+- Author of books on high-performance web backends and systems programming with international publishers
 - LinkedIn: https://www.linkedin.com/in/peshwarla
-- Substack: https://trustandreason.substack.com
+
+## Get in touch
+
+- Free one-hour demo-talk, run on your own documents and work
+- Free 30-minute discovery call: https://calendly.com/gradtensor/30min
 
 ## Links
 
 - Website: https://gradtensor.com
-- Framework: https://gradtensor.com/framework
-- For Leaders: https://gradtensor.com/for-leaders
-- For Professionals: https://gradtensor.com/for-professionals
-- For Engineers: https://gradtensor.com/for-engineers
-- Corporate Training: https://gradtensor.com/corporate
 - About: https://gradtensor.com/about
-- Email: courses@gradtensor.com
-- Partnerships: partnerships@gradtensor.com
+- Contact: https://gradtensor.com/contact
+- Email: partnerships@gradtensor.com

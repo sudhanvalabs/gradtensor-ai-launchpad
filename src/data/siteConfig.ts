@@ -4,16 +4,27 @@ export const siteConfig = {
   siteUrl: "https://gradtensor.com",
   twitterHandle: "@GradTensor",
   defaultDescription:
-    "We help people stop fearing AI and start building with it. Hands-on, live AI training from GradTensor, an India-focused AI education company.",
+    "GradTensor brings governed AI automation to the physical economy - manufacturing, construction, distribution, and industrial services - from back-office paperwork to plant-floor maintenance and root-cause analysis, always under your control.",
 
   email: "partnerships@gradtensor.com",
+
+  // 30-minute free discovery / exploratory call.
+  calendarUrl: "https://calendly.com/gradtensor/30min",
 
   googleSheetUrl:
     "https://script.google.com/macros/s/AKfycbwEBRDxehgeoOExaGU0aoglDrmQ3QVtGHFHF9myOj_CfSzYycA6VtLjQLRf-7_rHfc/exec",
 
   whatsapp: {
-    number: "919108030542",
+    // Business / operations line (matches the number shown in the footer + Contact).
+    // TODO(user): confirm this number is WhatsApp-enabled; the old student line was 919108030542.
+    number: "919845203997",
     messages: {
+      // Enterprise repositioning
+      demoTalk:
+        "Hi, I'd like to book a 1-hour demo-talk to see what AI can do in our business.",
+      discovery:
+        "Hi, I'd like to set up a short discovery call about AI in our operations.",
+      // Legacy (still referenced by unlinked college pages)
       general: "Hi, I'd like to know more about GradTensor courses",
       advisor: "Hi, I'd like to speak with an advisor about GradTensor courses",
       planProgramme: "Hi, I'd like to plan a training programme with GradTensor.",
