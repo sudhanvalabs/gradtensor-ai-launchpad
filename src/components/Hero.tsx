@@ -74,13 +74,13 @@ const Hero = () => {
             </a>
           </div>
 
-          {/* Credibility line */}
+          {/* Buyer-facing microline: value + control, not credentials */}
           <p
             className="mt-8 max-w-2xl font-mono text-xs leading-relaxed tracking-wide text-muted-foreground animate-fade-up"
             style={{ animationDelay: "0.4s" }}
           >
-            Built by engineers with 20 years delivering enterprise technology to
-            large global corporations. Governed AI you can stand behind.
+            Hours back on the paperwork and the plant floor, without handing over
+            the decisions that matter.
           </p>
         </div>
       </div>
