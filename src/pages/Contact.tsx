@@ -90,8 +90,7 @@ const Contact = () => {
             <p className="max-w-2xl text-lg leading-relaxed text-foreground/85 sm:text-xl">
               Book a free one-hour demo-talk, run on your own documents and work,
               or a short discovery call to talk through where AI might fit. Tell us
-              a little about your business and we will respond within two working
-              days.
+              a little about your business and we will take it from there.
             </p>
           </header>
         </div>
@@ -241,8 +240,8 @@ const Contact = () => {
                   to send.
                 </p>
                 <p className="text-sm leading-relaxed text-muted-foreground">
-                  Send it from there and we will reply within two working
-                  days. If nothing opened, email us directly at{" "}
+                  Send it from there and we will get back to you. If nothing
+                  opened, email us directly at{" "}
                   <a
                     href={`mailto:${FORM_RECIPIENT}`}
                     className="text-primary underline decoration-primary/40 underline-offset-2 hover:text-primary/80"
@@ -363,9 +362,6 @@ const Contact = () => {
                 <div className="font-display text-lg font-semibold">Hours</div>
                 <div className="text-muted-foreground">Monday to Friday</div>
                 <div className="mt-2">10:00 to 18:00 IST</div>
-                <div className="mt-2 font-mono text-sm text-muted-foreground">
-                  Response within two working days
-                </div>
               </div>
             </div>
           </div>
