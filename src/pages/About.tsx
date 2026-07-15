@@ -89,27 +89,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Intro video */}
-      <section className="pb-12 md:pb-16">
-        <div className="section-container">
-          <div className="mx-auto max-w-3xl animate-on-scroll">
-            <div className="overflow-hidden rounded-2xl border-2 border-foreground/80 bg-card shadow-[var(--shadow-card)]">
-              <div className="aspect-video">
-                <iframe
-                  className="h-full w-full"
-                  src="https://www.youtube.com/embed/r8AEOPE4OMo"
-                  title="GradTensor intro"
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Our Mission */}
       <section className="border-t border-border/50 py-16 md:py-20">
         <div className="section-container">
