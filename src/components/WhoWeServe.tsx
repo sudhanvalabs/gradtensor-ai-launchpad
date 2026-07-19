@@ -43,8 +43,8 @@ const WhoWeServe = () => {
             The physical economy
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
-            We bring governed AI to the businesses that make, build, move, and
-            maintain physical things - manufacturing, construction, distribution,
+            We bring governed AI to the businesses that make, move, and maintain
+            physical things - manufacturing, construction, distribution,
             and industrial services. Manufacturing first. These are operations
             other AI vendors overlook while they chase software and services. We
             walk in with credible AI expertise these businesses rarely get to see.

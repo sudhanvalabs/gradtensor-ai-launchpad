@@ -1,6 +1,6 @@
 # GradTensor
 
-> Governed AI automation for the businesses that make, build, move, and maintain physical things.
+> Governed AI automation for the businesses that make, move, and maintain physical things.
 
 GradTensor brings governed AI automation to the physical economy - manufacturing, construction, distribution, and industrial services, manufacturing first. We put AI to work across operations, from back-office paperwork to plant-floor maintenance and root-cause analysis, always under human control. Based in India, founded as a venture of Sudhanva Labs LLP.
 

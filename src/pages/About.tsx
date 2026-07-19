@@ -81,8 +81,8 @@ const About = () => {
             className="max-w-2xl text-lg text-muted-foreground sm:text-xl animate-fade-up"
             style={{ animationDelay: "0.1s" }}
           >
-            GradTensor puts AI to work in the businesses that make, build, move,
-            and maintain physical things. We bring credible, governed AI to an
+            GradTensor puts AI to work in the businesses that make, move, and
+            maintain physical things. We bring credible, governed AI to an
             under-served sector - manufacturing first - and keep your people in
             control of it.
           </p>

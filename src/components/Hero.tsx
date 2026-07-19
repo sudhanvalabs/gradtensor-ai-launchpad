@@ -40,7 +40,7 @@ const Hero = () => {
             style={{ animationDelay: "0.1s" }}
           >
             AI automation for the businesses that{" "}
-            <span className="gradient-text">make, build, move, and maintain</span>{" "}
+            <span className="gradient-text">make, move, and maintain</span>{" "}
             physical things.
           </h1>
 
