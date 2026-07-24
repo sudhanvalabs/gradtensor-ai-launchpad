@@ -126,7 +126,7 @@ const CorporateOfferings = () => {
                 />
               </Link>
               <a
-                href="https://calendly.com/gradtensor/30min"
+                href="https://calendly.com/gradtensor/30-min-consultation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 font-display text-sm font-semibold tracking-wider text-primary border-b border-primary/40 pb-1 hover:text-primary/80"

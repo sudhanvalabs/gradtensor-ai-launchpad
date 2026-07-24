@@ -1,0 +1,6 @@
+# Professors & Academics at Engineering Institutions
+# Total: 1
+
+Name                           Position                                           Company                                  URL
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Kushanavo Rakshit              Research Intern                                    Colorado State University                https://www.linkedin.com/in/kushanavo-rakshit

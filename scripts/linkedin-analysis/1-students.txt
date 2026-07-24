@@ -1,0 +1,21 @@
+# Students in Engineering/CS Institutions
+# Total: 16
+
+Name                           Position                                           Company                                  URL
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ANNA THOMAS                    Intern                                             Deloitte                                 https://www.linkedin.com/in/anna-thomas-b5b076189
+ARYA SINGH                     Blockchain Intern                                  KrizPay                                  https://www.linkedin.com/in/arya-singh-322757257
+Abhay Chaudhary                IQA Intern                                         Bennett University                       https://www.linkedin.com/in/theabhaychaudharyy
+Adhvaith Hundi                 Technology Developer Intern                        D. E. Shaw India Private Limited         https://www.linkedin.com/in/adhvaith-h-84b093312
+Aditya Choudhary               Machine Learning Intern                            Feynn Labs                               https://www.linkedin.com/in/adityachoudhary007
+Amit Dua                       European Patent Professional (Trainee Attorney)    Motorola Solutions                       https://www.linkedin.com/in/amitduaresearch
+Ankur Bhadauria                Automation Intern                                  CREBACO Global                           https://www.linkedin.com/in/ankur-bhadauria-786487230
+Arnav Pant                     LLM Student Researcher                             Virginia Tech                            https://www.linkedin.com/in/arnavpant
+Eswara G                       Software Engineer                                  Wissen Technology                        https://www.linkedin.com/in/eswara-rg
+Gaurav Sharma                  Graduate Teaching Assistant                        University of Maryland Baltimore County  https://www.linkedin.com/in/ggsharma99
+Jaya Sandeep Narasimha Chowdhary Nadipalli Machine Learning & NLP Intern                      Dosh.ai                                  https://www.linkedin.com/in/jayasandeep
+Jivitesh Sabharwal             Data Engineer Intern                               Trademo                                  https://www.linkedin.com/in/jivitesh-sabharwal
+Kushanavo Rakshit              Research Intern                                    Colorado State University                https://www.linkedin.com/in/kushanavo-rakshit
+Sanjana Das                    Blockchain Developer Intern                        WeSee                                    https://www.linkedin.com/in/dassanjana
+Santhosh Kumar                 Software Engineer Intern                           SRM Technologies                         https://www.linkedin.com/in/santhosh-kumar-364109224
+Vasundhara V Baligar           Visiting Researcher                                University of Wyoming Electrical Enginee https://www.linkedin.com/in/vasundhara-v-baligar

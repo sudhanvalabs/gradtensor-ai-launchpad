@@ -9,7 +9,7 @@ export const siteConfig = {
   email: "partnerships@gradtensor.com",
 
   // 30-minute free consultation. Calendly 30-minute event type.
-  calendarUrl: "https://calendly.com/gradtensor/30min",
+  calendarUrl: "https://calendly.com/gradtensor/30-min-consultation",
 
   googleSheetUrl:
     "https://script.google.com/macros/s/AKfycbwEBRDxehgeoOExaGU0aoglDrmQ3QVtGHFHF9myOj_CfSzYycA6VtLjQLRf-7_rHfc/exec",

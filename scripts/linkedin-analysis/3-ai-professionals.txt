@@ -1,0 +1,43 @@
+# AI/ML Professionals
+# Total: 38
+
+Name                           Position                                           Company                                  URL
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Abhay Kumar                    AI Engineer                                        Zenwork, Inc                             https://www.linkedin.com/in/iithabhay
+Abhinav Srivastava             AI and Data Science Professional                   Stealth Mode                             https://www.linkedin.com/in/abhinav-srivastava-63b441340
+Aditya Choudhary               Machine Learning Intern                            Feynn Labs                               https://www.linkedin.com/in/adityachoudhary007
+Aditya Chourasiya              Machine Learning Engineer                          The Hackett Group Inc.                   https://www.linkedin.com/in/aditya-chourasiya
+Aditya Pant                    Principal Consultant (Applied ML & GenAI Systems)  Capco                                    https://www.linkedin.com/in/pant-aditya
+Agasthya Omkumar               AI Engineer                                        CamCom                                   https://www.linkedin.com/in/agasthya-omkumar
+Ali Akhtari                    Blockchain & AI Integration Engineer               Tether.io                                https://www.linkedin.com/in/financebro
+Amritanshu  Vivek              Senior Machine Learning Engineer                   Agiliad                                  https://www.linkedin.com/in/amritanshu-vivek-436303108
+Ananth Eswar                   AI Researcher                                      Lexsi Labs                               https://www.linkedin.com/in/anantheswar1333
+Anu Singh                      Associate Partner- AI Integration Services Global  IBM                                      https://www.linkedin.com/in/anu-singh-b24b416
+Arnav Pant                     LLM Student Researcher                             Virginia Tech                            https://www.linkedin.com/in/arnavpant
+Arun Sivasankar Bharadwaj      Senior AI ML Engineer                              STG Labs                                 https://www.linkedin.com/in/arun-sivasankar-bharadwaj-154a4724
+Ayush Singh Rawat              Machine Learning Engineer                          DKAI Technologies                        https://www.linkedin.com/in/ayush-singh-rawat-340b24201
+Daniel Ford                    Client Services Manager - GTM across Web3 | FinTec SmartChoice International GCC            https://www.linkedin.com/in/daniel-ford-956488108
+Devvrata Priyadarshi           AI Product Manager                                 AUMOVIO                                  https://www.linkedin.com/in/devvrata-priyadarshi-ai-product-manager
+Dimple Khatri                  Senior Software Engineer (Applied AI)              Event Butterfly Inc                      https://www.linkedin.com/in/dpk-dimplekhatri
+Eswar Ashish Kusumanchi        AI/ ML Engineer                                    CAW                                      https://www.linkedin.com/in/eswar-ashish-kusumanchi-a91947205
+Jaya Sandeep Narasimha Chowdhary Nadipalli Machine Learning & NLP Intern                      Dosh.ai                                  https://www.linkedin.com/in/jayasandeep
+Kabo Molefe                    Independent AI/ML Engineer (Project-Based)         Freelance                                https://www.linkedin.com/in/kabo-m-042334137
+Keerthana Subramanian          Machine Learning Engineer                          CirrusLabs                               https://www.linkedin.com/in/keerthana-subramanian-1061b1228
+Kumarmanas Nethil              Founding ML Engineer                               Adalat AI                                https://www.linkedin.com/in/kumarmanas-nethil
+Mohit Mali                     Senior AI Engineer                                 Prisma AI                                https://www.linkedin.com/in/mohit-mali-62a57a12a
+Narendra Golla                 AI Engineer - II                                   Oracle                                   https://www.linkedin.com/in/narendra-golla
+Pethuru Raj PhD, SMIEEE        Principal AI Architect                             https://www.linkedin.com/company/infocio https://www.linkedin.com/in/sweetypeter
+Pranavi Mehta                  AI and Robotics Trainer                            STEMbotix                                https://www.linkedin.com/in/pranavi-mehta
+Ratnesh Kumar                  Software Engineer  (AI & ML)                       Techisy Software                         https://www.linkedin.com/in/ratnesh-kumar-10b60587
+Sabuj Chattopadhyay            Senior Artificial Intelligence Research Engineer   Fujita Corporation Japan                 https://www.linkedin.com/in/sabuj-chattopadhyay
+Sachidananda Rautray           AI ML Engineer                                     Percepta Innovations LLP                 https://www.linkedin.com/in/sachidananda-bigdata
+Sahil Rahate                   AI/ML                                              iAI Solution                             https://www.linkedin.com/in/sahil-rahate-ai
+Sanmathi Bharamgouda           Member of Technical Staff, Edge AI/ML Applications SiMa.ai                                  https://www.linkedin.com/in/sanmathigb
+Shalini Galingula              AI Engineer                                        Manifold Systems                         https://www.linkedin.com/in/shalini-galingula-
+Shashank Chugh                 Senior Product Engineer (ML)                       Sprinklr                                 https://www.linkedin.com/in/shashank-chugh
+Subhayan Roy                   Machine Learning Engineer                          Tata Consultancy Services                https://www.linkedin.com/in/subhayan-roy-4787689a
+Tarun Sharma                   Co-Founder | Applied AI & ML Systems               Tyloones Software Private Limited        https://www.linkedin.com/in/tarun-sharma-685a04148
+V. Guru Charan                 Chief Artificial Intelligence Officer              Collaborative Dynamics Inc               https://www.linkedin.com/in/vgurucharan
+Venkatesh Thyagarajan          Vice-President, Data, Analytics, and AI            Tech Mahindra                            https://www.linkedin.com/in/venky-thyagarajan
+Vishal Chauhan                 Associate Programmer (GenAI Engineer)              Xceedance                                https://www.linkedin.com/in/vishalchauhan360
+Vivek Tippireddy               AI/ML Engineer                                     HelixHorizon                             https://www.linkedin.com/in/tippireddy-vivek
