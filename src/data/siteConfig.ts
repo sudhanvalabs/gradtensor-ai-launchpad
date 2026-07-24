@@ -8,7 +8,7 @@ export const siteConfig = {
 
   email: "partnerships@gradtensor.com",
 
-  // 30-minute free discovery / exploratory call.
+  // 30-minute free consultation. Calendly 30-minute event type.
   calendarUrl: "https://calendly.com/gradtensor/30min",
 
   googleSheetUrl:
@@ -20,10 +20,8 @@ export const siteConfig = {
     number: "919845203997",
     messages: {
       // Enterprise repositioning
-      demoTalk:
-        "Hi, I'd like to book a 1-hour demo-talk to see what AI can do in our business.",
-      discovery:
-        "Hi, I'd like to set up a short discovery call about AI in our operations.",
+      consultation:
+        "Hi, I'd like to book a free 30-min consultation about AI in our operations.",
       // Legacy (still referenced by unlinked college pages)
       general: "Hi, I'd like to know more about GradTensor courses",
       advisor: "Hi, I'd like to speak with an advisor about GradTensor courses",

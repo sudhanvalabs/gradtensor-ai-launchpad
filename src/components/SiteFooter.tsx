@@ -31,7 +31,7 @@ const SiteFooter = () => {
             <Link to="/contact" className="transition-colors hover:text-primary">
               Contact
             </Link>
-            <WhatsAppButton href={whatsappLink("demoTalk")} className="transition-colors hover:text-primary">
+            <WhatsAppButton href={whatsappLink("consultation")} className="transition-colors hover:text-primary">
               WhatsApp Us
             </WhatsAppButton>
             <a href={`mailto:${siteConfig.email}`} className="transition-colors hover:text-primary">

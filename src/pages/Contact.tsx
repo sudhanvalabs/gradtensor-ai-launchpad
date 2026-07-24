@@ -62,7 +62,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Contact"
-        description="Book a one-hour demo-talk or a short discovery call with GradTensor. We bring governed AI automation to manufacturing and the wider physical economy."
+        description="Book a free 30-minute consultation with GradTensor. We bring governed AI automation to manufacturing and the wider physical economy."
         path="/contact"
         jsonLd={contactLd}
       />
@@ -88,9 +88,9 @@ const Contact = () => {
               See what AI can do in your operation.
             </h1>
             <p className="max-w-2xl text-lg leading-relaxed text-foreground/85 sm:text-xl">
-              Book a free one-hour demo-talk, run on your own documents and work,
-              or a short discovery call to talk through where AI might fit. Tell us
-              a little about your business and we will take it from there.
+              Book a free 30-minute consultation to talk through where AI fits in
+              your operation. Tell us a little about your business and we will take
+              it from there.
             </p>
           </header>
         </div>
@@ -118,11 +118,11 @@ const Contact = () => {
               <div className="space-y-1 font-mono text-sm leading-relaxed text-foreground/90">
                 <div>{CONTACT_NUMBER}</div>
                 <p className="font-display text-sm leading-relaxed text-muted-foreground">
-                  Quickest way to reach us about a demo-talk or a question.
+                  Quickest way to reach us about a consultation or a question.
                 </p>
               </div>
               <WhatsAppButton
-                href={whatsappLink("demoTalk")}
+                href={whatsappLink("consultation")}
                 className="mt-auto inline-flex items-center justify-center gap-2 rounded-lg border border-foreground bg-foreground px-5 py-2.5 font-display text-sm font-medium tracking-wider text-background transition-all hover:bg-foreground/90"
               >
                 Open WhatsApp
@@ -165,7 +165,7 @@ const Contact = () => {
               </a>
             </div>
 
-            {/* Discovery call card */}
+            {/* Consultation card */}
             <div className="group relative flex flex-col gap-3 overflow-hidden border border-foreground/80 bg-card p-6 pt-7">
               <span
                 aria-hidden="true"
@@ -178,11 +178,11 @@ const Contact = () => {
                 </p>
               </div>
               <h3 className="font-display text-2xl italic font-medium leading-tight">
-                Book a call
+                Book a consultation
               </h3>
               <p className="font-display text-sm leading-relaxed text-muted-foreground">
-                A 30-minute discovery call to explore where AI could help your
-                business - and where it should not.
+                A free 30-minute consultation to talk through where AI fits in your
+                operation - and where it should stay out.
               </p>
               <a
                 href={siteConfig.calendarUrl}
@@ -305,8 +305,7 @@ const Contact = () => {
                     <option value="" disabled>
                       Select one
                     </option>
-                    <option value="A 1-hour demo-talk">A 1-hour demo-talk</option>
-                    <option value="A discovery call">A discovery call</option>
+                    <option value="A 30-min consultation">A 30-min consultation</option>
                     <option value="Judgment Line Assessment">Judgment Line Assessment</option>
                     <option value="Team training">Team training</option>
                     <option value="Building AI assistants">Building AI assistants</option>

@@ -64,7 +64,7 @@ const Navbar = () => {
             to="/contact"
             className="btn-shimmer rounded-lg border border-foreground bg-foreground px-5 py-2.5 font-display text-sm font-medium tracking-wider text-background transition-all hover:bg-foreground/90"
           >
-            Book a demo-talk
+            Book a consultation
           </Link>
         </div>
 
@@ -108,7 +108,7 @@ const Navbar = () => {
             onClick={() => setIsOpen(false)}
             className="mt-2 block rounded-lg border border-foreground bg-foreground px-4 py-2.5 text-center font-display text-sm font-medium tracking-wider text-background"
           >
-            Book a demo-talk
+            Book a consultation
           </Link>
         </div>
       )}

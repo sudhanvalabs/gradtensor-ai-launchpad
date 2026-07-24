@@ -188,15 +188,15 @@ const About = () => {
               See what AI can do in your business
             </h2>
             <p className="mb-6 text-base text-muted-foreground">
-              Book a free one-hour demo-talk, run on your own documents and work.
-              No slideware, no hard sell.
+              Book a free 30-minute consultation. We talk through your operation
+              and where AI can win back hours - and where it should stay out.
             </p>
             <div className="flex justify-center">
               <Link
                 to="/contact"
                 className="btn-shimmer group inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3 font-display text-sm font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
               >
-                Book a 1-hour demo-talk
+                Book a free 30-min consultation
                 <ArrowRight
                   size={16}
                   className="transition-transform group-hover:translate-x-1"

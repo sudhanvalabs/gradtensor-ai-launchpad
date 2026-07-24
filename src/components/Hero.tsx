@@ -63,7 +63,7 @@ const Hero = () => {
               to="/contact"
               className="btn-shimmer group inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 font-display text-base font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
             >
-              Book a 1-hour demo-talk
+              Book a free 30-min consultation
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </Link>
             <a
