@@ -5,7 +5,7 @@ const automate = [
   "Reading and summarising tenders, BOMs, and specs",
   "First-pass quality paperwork and service reports",
   "Surfacing answers from machine manuals and procedures",
-  "Flagging patterns for predictive-maintenance review",
+  "Monitoring maintenance logs against your thresholds and flagging exceedances for review",
 ];
 
 const stays = [

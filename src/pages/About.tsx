@@ -111,8 +111,9 @@ const About = () => {
                 We bring generative and agentic AI to operations across the
                 physical economy: back-office document work like enquiries, quotes,
                 tenders, and quality paperwork, and plant-floor work like
-                predictive-maintenance support, root-cause analysis, and knowledge
-                assistants over machine manuals. Always with a clear line between
+                maintenance knowledge and log monitoring, troubleshooting support
+                from your manuals and maintenance history, and expert answers over
+                machine manuals and procedures. Always with a clear line between
                 what AI carries and what stays with your people.
               </p>
             </div>
