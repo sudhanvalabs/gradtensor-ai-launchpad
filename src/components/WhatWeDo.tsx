@@ -1,6 +1,17 @@
-import { Map, GraduationCap, Cog } from "lucide-react";
+import { Map, GraduationCap, Cog, type LucideIcon } from "lucide-react";
 
-const offerings = [
+type Offering = {
+  step: string;
+  icon: LucideIcon;
+  name: string;
+  tagline: string;
+  outcome: string;
+  description?: string;
+  intro?: string;
+  products?: { verb: string; name: string; body: string }[];
+};
+
+const offerings: Offering[] = [
   {
     step: "01",
     icon: Map,
@@ -23,9 +34,30 @@ const offerings = [
     step: "03",
     icon: Cog,
     name: "Implement",
-    tagline: "Governed AI assistants, built on Forge",
-    description:
-      "We build and deploy governed AI assistants for your real work. Office and document workflows - enquiries, quotes, BOMs, tenders, supplier documents, quality paperwork, service reports. And plant-floor needs - predictive-maintenance support, root-cause analysis, and knowledge assistants over machine manuals and maintenance procedures.",
+    tagline: "Governed AI products, built on Forge",
+    intro: "We build and deploy four kinds of governed AI for your real work.",
+    products: [
+      {
+        verb: "Create",
+        name: "AI Copilots",
+        body: " draft your enquiries, quotes, BOMs, tenders, and supplier documents, with your people reviewing every output.",
+      },
+      {
+        verb: "Track",
+        name: "AI Trackers",
+        body: " keep the records your operation runs on - quality checks, service reports, maintenance logs - and answer from them in plain language.",
+      },
+      {
+        verb: "Ask",
+        name: "AI Experts",
+        body: " give your teams authoritative answers from your own machine manuals, maintenance procedures, and SOPs. Ask the shop floor anything.",
+      },
+      {
+        verb: "Run",
+        name: "AI Automations",
+        body: " run selected workflows end to end - monitoring your logs against your thresholds, flagging exceedances, generating the recurring reports - while your people govern the exceptions.",
+      },
+    ],
     outcome: "Paperwork cut, downtime reduced, every step governed.",
   },
 ];
@@ -69,9 +101,32 @@ const WhatWeDo = () => {
               <p className="mb-4 font-display text-sm italic text-primary">
                 {o.tagline}
               </p>
-              <p className="mb-6 flex-1 text-sm leading-relaxed text-muted-foreground">
-                {o.description}
-              </p>
+              {o.products ? (
+                <div className="mb-6 flex-1">
+                  <p className="mb-5 text-sm leading-relaxed text-muted-foreground">
+                    {o.intro}
+                  </p>
+                  <ul className="space-y-4">
+                    {o.products.map((p) => (
+                      <li key={p.name}>
+                        <span className="mb-0.5 block font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+                          {p.verb}
+                        </span>
+                        <p className="text-sm leading-relaxed text-muted-foreground">
+                          <strong className="font-semibold text-foreground">
+                            {p.name}
+                          </strong>
+                          {p.body}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : (
+                <p className="mb-6 flex-1 text-sm leading-relaxed text-muted-foreground">
+                  {o.description}
+                </p>
+              )}
               <p className="border-t border-border/60 pt-4 font-mono text-[11px] leading-relaxed tracking-wide text-foreground/80">
                 {o.outcome}
               </p>

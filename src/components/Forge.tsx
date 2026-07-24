@@ -11,7 +11,7 @@ const guarantees = [
     icon: ScrollText,
     title: "A full audit trail",
     description:
-      "Every decision an assistant touches is logged - what it saw, what it produced, who approved it. Traceable when it matters.",
+      "Assistant activity is logged and traceable, with approval records on governed workflows. Available when it matters.",
   },
   {
     icon: Shield,
@@ -33,10 +33,18 @@ const Forge = () => {
             Forge
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Forge is how we deliver. It is our platform for building governed AI
-            assistants for operations - proof that we can implement, not a product
-            to buy off the shelf. We deploy assistants on Forge for your real work,
-            with a human in control and a full audit trail on every decision.
+            <a
+              href="https://forge.gradtensor.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-primary underline underline-offset-4 transition-colors hover:text-primary/80"
+            >
+              Forge
+            </a>{" "}
+            is how we deliver. It is our platform for governed AI - AI Copilots,
+            Trackers, Experts, and Automations for business operations. Any
+            mid-size business can use Forge; for the physical economy, we deploy
+            and govern it for you, end to end, on your real work.
           </p>
         </div>
 
