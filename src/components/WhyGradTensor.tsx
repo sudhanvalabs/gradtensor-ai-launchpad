@@ -58,17 +58,6 @@ const WhyGradTensor = () => {
             </div>
           ))}
         </div>
-
-        {/* Founder mention - brief and honest, not person-centered */}
-        <div className="mt-16 animate-on-scroll rounded-lg border border-border bg-card p-8">
-          <p className="max-w-3xl text-base leading-relaxed text-muted-foreground">
-            <span className="font-semibold text-foreground">Founded by Prabhu Eshwarla</span>
-            {" "}- 20 years delivering enterprise technology to large global
-            corporations, 10 years in startups, and author of books on
-            high-performance web backends and systems programming with
-            international publishers.
-          </p>
-        </div>
       </div>
     </section>
   );

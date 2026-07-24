@@ -3,10 +3,7 @@ import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
 import SEO from "@/components/SEO";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { trainers } from "@/data/trainers";
-import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
-
-const founder = trainers[0];
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const aboutDescription =
   "GradTensor brings governed AI automation to the physical economy - manufacturing, construction, distribution, and industrial services. We put AI to work across operations, from back-office paperwork to plant-floor maintenance, always under human control.";
@@ -178,76 +175,6 @@ const About = () => {
                   </p>
                 </div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Founder */}
-      <section className="border-t border-border/50 py-16 md:py-24">
-        <div className="section-container">
-          <div className="mx-auto max-w-3xl">
-            <div className="mb-10 animate-on-scroll">
-              <p className="mb-3 font-mono text-xs tracking-[0.2em] text-primary uppercase">
-                // Founder
-              </p>
-              <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
-                Founded by <span className="gradient-text">{founder.name}</span>
-              </h2>
-            </div>
-
-            <div
-              className="rounded-2xl border border-border bg-card p-8 md:p-10 animate-fade-up opacity-0"
-              style={{ animationDelay: "0.1s" }}
-            >
-              <p className="text-base leading-relaxed text-muted-foreground">
-                20 years delivering enterprise technology to large global
-                corporations, 10 years in startups, and author of books on
-                high-performance web backends and systems programming with
-                international publishers. GradTensor brings that enterprise
-                engineering discipline to AI for the physical economy.
-              </p>
-
-              {founder.books.length > 0 && (
-                <ul className="mt-6 space-y-2">
-                  <li className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                    <span>
-                      Published author:{" "}
-                      {founder.books.map((book, bi) => (
-                        <span key={bi}>
-                          {bi > 0 && " and "}
-                          <a
-                            href={book.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-primary underline decoration-primary/30 underline-offset-2 hover:text-primary/80"
-                          >
-                            {book.title}
-                          </a>
-                        </span>
-                      ))}
-                    </span>
-                  </li>
-                </ul>
-              )}
-
-              {founder.links.length > 0 && (
-                <div className="mt-8 flex flex-wrap gap-3">
-                  {founder.links.map((link) => (
-                    <a
-                      key={link.label}
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-lg border border-border px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:border-primary/30 hover:text-primary"
-                    >
-                      {link.label}
-                      <ExternalLink size={14} />
-                    </a>
-                  ))}
-                </div>
-              )}
             </div>
           </div>
         </div>
