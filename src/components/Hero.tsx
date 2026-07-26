@@ -31,7 +31,7 @@ const Hero = () => {
             className="mb-6 font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground animate-fade-up"
             style={{ animationDelay: "0.05s" }}
           >
-            AI for the physical economy
+            Specialist AI consultancy
           </p>
 
           {/* Headline */}
@@ -39,9 +39,8 @@ const Hero = () => {
             className="mb-6 font-display text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl md:text-6xl animate-fade-up"
             style={{ animationDelay: "0.1s" }}
           >
-            AI automation for the businesses that{" "}
-            <span className="gradient-text">make, move, and maintain</span>{" "}
-            physical things.
+            A specialist AI consultancy with{" "}
+            <span className="gradient-text">its own method and its own tool</span>.
           </h1>
 
           {/* Subhead */}
@@ -49,9 +48,9 @@ const Hero = () => {
             className="mb-8 max-w-3xl text-lg leading-relaxed text-muted-foreground sm:text-xl animate-fade-up"
             style={{ animationDelay: "0.2s" }}
           >
-            We put AI to work across your operations, from back-office paperwork
-            to plant-floor maintenance and root-cause analysis, always under your
-            control.
+            We decide where AI belongs, build the systems, and govern them as your
+            operations grow - with our own method, the Judgment Line, and our own
+            platform, Forge.
           </p>
 
           {/* CTAs */}
@@ -79,8 +78,8 @@ const Hero = () => {
             className="mt-8 max-w-2xl font-mono text-xs leading-relaxed tracking-wide text-muted-foreground animate-fade-up"
             style={{ animationDelay: "0.4s" }}
           >
-            Hours back on the paperwork and the plant floor, without handing over
-            the decisions that matter.
+            Hours back across your operations, without handing over the decisions
+            that matter.
           </p>
         </div>
       </div>

@@ -1,31 +1,41 @@
 # GradTensor
 
-> Governed AI automation for the businesses that make, move, and maintain physical things.
+> A specialist AI consultancy with its own method and its own tool.
 
-GradTensor brings governed AI automation to the physical economy - manufacturing, construction, distribution, and industrial services, manufacturing first. We put AI to work across operations, from back-office paperwork to plant-floor maintenance and root-cause analysis, always under human control. Based in India, founded as a venture of Sudhanva Labs LLP.
+GradTensor is a specialist AI consultancy for mid-size businesses. We decide where AI belongs with our own method, the Judgment Line, build the systems on our own platform, Forge, and keep them governed - always under your control. We work with owner-led and mid-size businesses across industries, wherever there is real operational complexity and little in-house AI. Based in India, founded as a venture of Sudhanva Labs LLP.
 
 ## What we do
 
-### Assess - The Judgment Line Assessment
-- We map your operations and identify exactly where AI belongs, and where it must not go
-- Output: a prioritised view of hours to win back and the work that must stay with your people
+### 01 Govern your people's AI - governed enablement of individual AI use
+- A clear usage policy, hands-on training on your actual work, and AI Copilots and AI Experts in a private, protected workspace on Forge
+- Your company and client data stays under your control; data handling, retention, and access controls documented for IT and compliance review
 
-### Train - Executive alignment and team training
-- Align leadership on what AI can and cannot do in your business
-- Hands-on training for teams to use AI safely in real operations
+### 02 Decide what to automate - the Judgment Line Assessment
+- We map your operations and draw the line, workflow by workflow, between what AI should run, what it should assist, and what must stay with your people
+- Output: a prioritised view of hours to win back and the work that must keep human judgment
 
-### Implement - Governed AI assistants, built on Forge
-- Office and document workflows: enquiries, quotes, BOMs, tenders, supplier documents, quality paperwork, service reports
-- Plant-floor needs: predictive-maintenance support, root-cause analysis, and knowledge assistants over machine manuals and maintenance procedures
-- Every assistant runs with a human in control and a full audit trail on every decision
+### 03 Build your business systems - AI Trackers and AI Automations, built on Forge
+- Systems of record: AI Trackers for the leads, orders, quality checks, and logs you now run on spreadsheets and WhatsApp
+- Systems of action: AI Automations that run selected workflows end to end, monitoring your logs against your thresholds and generating your recurring reports, while your people govern the exceptions
+
+### 04 Govern and improve - ongoing governance of your AI operations
+- Review what AI did, tune the thresholds, handle the exceptions process, and redraw the Judgment Line as your business changes
+- Done with you on an ongoing basis so the systems stay dependable as they grow
+
+## The four products
+
+- AI Copilots (Create): help your people produce their work faster
+- AI Trackers (Track): keep your business records and answer from them
+- AI Experts (Ask): authoritative answers from your company's knowledge
+- AI Automations (Run): run processes end to end while your people govern the exceptions
 
 ## The Judgment Line
 
-Our method for drawing the line between what AI carries and what stays with your people. Final quality sign-off, contractual and pricing commitments, safety-critical decisions, and final verification never cross the line. This is what makes the automation governed and safe for a risk-aware operation.
+Our method for drawing the line between what AI carries and what stays with your people. Final quality sign-off, contractual and pricing commitments, safety-critical and compliance decisions, and final verification never cross the line. This is what makes the automation governed and safe for a risk-aware business.
 
 ## Forge
 
-Our platform for building and deploying governed AI assistants for operations - the proof that we can implement, not a product to buy off the shelf.
+Our platform for governed AI - AI Copilots, Trackers, Experts, and Automations for business operations. Any mid-size business can use Forge; in a GradTensor engagement, we deploy and govern it for you, end to end, on your real work. Product site: https://forge.gradtensor.com
 
 ## Founder
 

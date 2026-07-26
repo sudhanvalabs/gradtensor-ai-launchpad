@@ -6,7 +6,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const aboutDescription =
-  "GradTensor brings governed AI automation to the physical economy - manufacturing, construction, distribution, and industrial services. We put AI to work across operations, from back-office paperwork to plant-floor maintenance, always under human control.";
+  "GradTensor is a specialist AI consultancy for mid-size businesses. We decide where AI belongs with our own method, the Judgment Line, build the systems on our own platform, Forge, and keep them governed, always under human control.";
 
 const aboutLd = {
   "@context": "https://schema.org",
@@ -71,17 +71,16 @@ const About = () => {
             // About GradTensor
           </p>
           <h1 className="mb-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl animate-fade-up">
-            Governed AI for the{" "}
-            <span className="gradient-text">physical economy.</span>
+            Governed AI,{" "}
+            <span className="gradient-text">decided and delivered.</span>
           </h1>
           <p
             className="max-w-2xl text-lg text-muted-foreground sm:text-xl animate-fade-up"
             style={{ animationDelay: "0.1s" }}
           >
-            GradTensor puts AI to work in the businesses that make, move, and
-            maintain physical things. We bring credible, governed AI to an
-            under-served sector - manufacturing first - and keep your people in
-            control of it.
+            GradTensor is a specialist AI consultancy. We decide where AI belongs
+            with our own method, build the systems on our own platform, and keep
+            your people in control of all of it.
           </p>
         </div>
       </section>
@@ -99,19 +98,19 @@ const About = () => {
             </h2>
             <div className="space-y-4 text-base leading-relaxed text-foreground sm:text-lg">
               <p>
-                Most AI vendors chase software, finance, and consumer apps. The
-                businesses that actually make and move things - the plants, sites,
-                and depots that run the real economy - get overlooked. We exist to
-                change that.
+                Most AI vendors sell tools and leave you to work out where they
+                fit. We think that is backwards. The hard part is not the model,
+                it is deciding what AI should run, what it should assist, and what
+                must stay with your people. We exist to get that right.
               </p>
               <p>
-                We bring generative and agentic AI to operations across the
-                physical economy: back-office document work like enquiries, quotes,
-                tenders, and quality paperwork, and plant-floor work like
-                maintenance knowledge and log monitoring, troubleshooting support
-                from your manuals and maintenance history, and expert answers over
-                machine manuals and procedures. Always with a clear line between
-                what AI carries and what stays with your people.
+                We bring generative and agentic AI to your operations: back-office
+                document work like enquiries, quotes, tenders, and quality
+                paperwork, systems of record for the data you now keep in
+                spreadsheets, log monitoring against your own thresholds, and
+                expert answers over your manuals, SOPs, and procedures. Always with
+                a clear line between what AI carries and what stays with your
+                people.
               </p>
             </div>
           </div>

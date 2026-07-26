@@ -2,16 +2,16 @@ import { Check, X } from "lucide-react";
 
 const automate = [
   "Drafting quotes, enquiries, and supplier documents",
-  "Reading and summarising tenders, BOMs, and specs",
+  "Reading and summarising tenders, contracts, and specs",
   "First-pass quality paperwork and service reports",
-  "Surfacing answers from machine manuals and procedures",
-  "Monitoring maintenance logs against your thresholds and flagging exceedances for review",
+  "Surfacing answers from your manuals, SOPs, and procedures",
+  "Monitoring your logs against your thresholds and flagging exceedances for review",
 ];
 
 const stays = [
   "Final quality sign-off",
   "Contractual and pricing commitments",
-  "Safety-critical decisions on the plant floor",
+  "Safety-critical and compliance decisions",
   "Final verification before anything ships",
 ];
 
@@ -29,7 +29,7 @@ const JudgmentLine = () => {
               The Judgment Line
             </h2>
             <p className="mb-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Not everything should be automated. The value of AI in a physical
+              Not everything should be automated. The value of AI in an operating
               business comes from knowing where it belongs, and the risk comes
               from putting it where it does not.
             </p>

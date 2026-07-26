@@ -43,7 +43,7 @@ const Forge = () => {
             </a>{" "}
             is how we deliver. It is our platform for governed AI - AI Copilots,
             Trackers, Experts, and Automations for business operations. Any
-            mid-size business can use Forge; for the physical economy, we deploy
+            mid-size business can use Forge; in a GradTensor engagement, we deploy
             and govern it for you, end to end, on your real work.
           </p>
         </div>

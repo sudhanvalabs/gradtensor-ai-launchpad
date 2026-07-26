@@ -4,6 +4,7 @@ import WhoWeServe from "@/components/WhoWeServe";
 import WhatWeDo from "@/components/WhatWeDo";
 import JudgmentLine from "@/components/JudgmentLine";
 import Forge from "@/components/Forge";
+import WorkflowDemos from "@/components/WorkflowDemos";
 import WhyGradTensor from "@/components/WhyGradTensor";
 import OfferBand from "@/components/OfferBand";
 import SiteFooter from "@/components/SiteFooter";
@@ -31,7 +32,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="GradTensor - Governed AI automation for the physical economy"
+        title="GradTensor - Governed AI consultancy with its own method and tool"
         description={siteConfig.defaultDescription}
         path="/"
         jsonLd={[organizationLd]}
@@ -42,6 +43,7 @@ const Index = () => {
       <WhatWeDo />
       <JudgmentLine />
       <Forge />
+      <WorkflowDemos />
       <WhyGradTensor />
       <OfferBand />
       <SiteFooter />

@@ -4,7 +4,7 @@ export const siteConfig = {
   siteUrl: "https://gradtensor.com",
   twitterHandle: "@GradTensor",
   defaultDescription:
-    "GradTensor brings governed AI automation to the physical economy - manufacturing, construction, distribution, and industrial services - from back-office paperwork to plant-floor maintenance and root-cause analysis, always under your control.",
+    "GradTensor is a specialist AI consultancy for mid-size businesses. We decide where AI belongs with our own method, the Judgment Line, build the systems on our own platform, Forge, and keep them governed - always under your control.",
 
   email: "partnerships@gradtensor.com",
 

@@ -3,9 +3,9 @@ import { Compass, ShieldCheck, Wrench } from "lucide-react";
 const reasons = [
   {
     icon: Compass,
-    title: "An under-served sector, taken seriously",
+    title: "A method, not just tools",
     description:
-      "Most AI vendors chase software, finance, and consumer apps. We bring credible, governed AI to the physical economy - the plants, sites, and depots that keep getting overlooked.",
+      "We start with the Judgment Line - deciding where AI belongs and where it must not go - so you get automation that fits your business, not a pile of demos that never ship.",
   },
   {
     icon: ShieldCheck,
@@ -30,12 +30,12 @@ const WhyGradTensor = () => {
             Why GradTensor
           </p>
           <h2 className="mb-5 font-display text-4xl font-bold tracking-tight sm:text-5xl">
-            Credible AI for businesses that make real things
+            Specialist AI, decided and governed
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
-            GradTensor exists to put governed AI to work in the physical economy -
-            responsibly, and where it genuinely helps. We pair deep engineering
-            experience with a clear method for keeping people in control.
+            GradTensor exists to put governed AI to work where it genuinely helps -
+            responsibly, and under your control. We pair deep engineering
+            experience with a clear method for keeping people in charge.
           </p>
         </div>
 

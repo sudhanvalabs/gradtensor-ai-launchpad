@@ -62,7 +62,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Contact"
-        description="Book a free 30-minute consultation with GradTensor. We bring governed AI automation to manufacturing and the wider physical economy."
+        description="Book a free 30-minute consultation with GradTensor, a specialist AI consultancy. We decide where AI belongs, build the systems, and keep them governed."
         path="/contact"
         jsonLd={contactLd}
       />
@@ -210,10 +210,10 @@ const Contact = () => {
             </h2>
             <p className="text-base leading-relaxed text-foreground/85 sm:text-lg">
               When you reach out, it helps to know what your business makes or does,
-              the kind of work you are hoping to lighten - office paperwork,
-              plant-floor maintenance, or both - and the timeframe you are working
-              with. If you already have a problem in mind, name it. If not, describe
-              the outcome you want and we will suggest where AI fits.
+              the kind of work you are hoping to lighten - document work,
+              record-keeping, or ongoing monitoring - and the timeframe you are
+              working with. If you already have a problem in mind, name it. If not,
+              describe the outcome you want and we will suggest where AI fits.
             </p>
           </div>
         </div>
