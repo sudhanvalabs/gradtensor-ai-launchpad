@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+
 const demos = [
   {
     title: "Enquiry to quote",
@@ -74,6 +77,19 @@ const WorkflowDemos = () => {
               </p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 flex flex-col items-start gap-4 animate-on-scroll sm:flex-row sm:items-center">
+          <p className="text-base leading-relaxed text-muted-foreground">
+            Want to see one on your own work? We run a live walkthrough on request.
+          </p>
+          <Link
+            to="/contact"
+            className="btn-shimmer group inline-flex shrink-0 items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-display text-sm font-semibold tracking-wider text-primary-foreground transition-all hover:shadow-[var(--glow-strong)]"
+          >
+            Request a demo
+            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+          </Link>
         </div>
       </div>
     </section>
