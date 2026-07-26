@@ -39,8 +39,9 @@ const Hero = () => {
             className="mb-6 font-display text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl md:text-6xl animate-fade-up"
             style={{ animationDelay: "0.1s" }}
           >
-            A specialist AI consultancy with{" "}
-            <span className="gradient-text">its own method and its own tool</span>.
+            AI automation for{" "}
+            <span className="gradient-text">manufacturing and supply chain</span>{" "}
+            operations.
           </h1>
 
           {/* Subhead */}
@@ -48,9 +49,9 @@ const Hero = () => {
             className="mb-8 max-w-3xl text-lg leading-relaxed text-muted-foreground sm:text-xl animate-fade-up"
             style={{ animationDelay: "0.2s" }}
           >
-            We decide where AI belongs, build the systems, and govern them as your
-            operations grow - with our own method, the Judgment Line, and our own
-            platform, Forge.
+            For the businesses that make, build, move, store, and maintain physical
+            things. We handle the repetitive operations work, from back-office
+            paperwork to the plant floor, always under your control.
           </p>
 
           {/* CTAs */}
