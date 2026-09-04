@@ -21,7 +21,7 @@ Three ways to work with us. Most engagements use more than one.
 
 ### 03 Forge (product)
 - Our own product, and where our engagements get built
-- A private AI workspace for confidential work: your people work with your documents and data in plain language, inside a workspace your organisation controls
+- A private workspace for confidential work: bring your documents, your data, and the programs you run on them, work with all of it using frontier AI, and keep control of what leaves
 - Product site: https://www.forgeprivate.com
 
 ## The Judgment Line (our method)
@@ -38,11 +38,26 @@ What AI has to prove once it is there. Three properties, in this order:
 
 ## Forge, in detail
 
-- Answers can be traced back to the material they came from
-- Access controls, audit logs, and retention you set, with permanent deletion when you want it
-- Nothing you send trains a model
-- A sealed environment for delivering a proprietary model to a client: they upload their data and get the analysis back, and never see the code
+One workspace, three ways in. What changes is who brings what. What does not change is the promise: your documents and your data stay yours, nothing you send trains a model, access is controlled, and what happens is recorded.
+
+### Teams in companies (corporates and SMEs)
+- You bring your documents and data
+- The work that most needs AI is the work you can least afford to paste into a public tool: contracts, reports, customer information, the spreadsheets the business runs on
+- Your people get the productivity they are already looking for elsewhere, and your material stays somewhere you can point to
+
+### Consultants and service providers (research, risk and analytics)
+- You bring your model. Your client brings the data.
+- Deliver a proprietary model to clients as a service instead of licensing it away. They upload their own data, run it, and get the analysis back.
+- They never see the code. It runs in a sealed environment with no way out.
+
+### Training and AI labs (corporate L&D, universities and training providers)
+- You bring the exercise. Learners bring real work.
+- Run AI training on material that matters instead of invented examples. Each learner gets a private workspace; course materials go in a shared one.
+- Because nothing leaves the organisation, exercises can use the company's own documents and data.
+
+### Accuracy notes
 - Forge is hosted software. It is not self-hosted or deployed on a customer's own servers, and it does not claim in-country data residency.
+- Answers can be traced back to the material they came from. A question asked with no documents attached has no source, so this is never "every answer is traced".
 - Any organisation can use Forge on its own; in a GradTensor engagement we deploy and govern it for you, end to end, on your real work
 
 ## Founder

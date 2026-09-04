@@ -11,11 +11,14 @@ import { siteConfig } from "@/data/siteConfig";
   is where it belongs now that it is one pillar of three rather than the whole
   offer.
 
-  The Products card must stay honest about Forge. Forge is hosted software, not
-  something that runs on a client's own servers, and it is not airtight from
-  every third party: retrieval sends text to an embedding provider and questions
-  to a model provider. Say what the controls are, never that the data never
-  leaves. See the Forge section for the longer version of the same discipline.
+  The Products card previews Forge the way forgeprivate.com positions it: one
+  workspace, three audiences, and the `brings` line is what makes that a position
+  rather than a menu. The Forge section below carries the full version.
+
+  Forge is hosted software, not something that runs on a client's own servers,
+  and it is not airtight from every third party: retrieval sends text to an
+  embedding provider and questions to a model provider. Say what the controls
+  are, never that the data never leaves.
 */
 
 type Pillar = {
@@ -84,23 +87,23 @@ const pillars: Pillar[] = [
     icon: Boxes,
     kind: "Product",
     name: "Forge",
-    tagline: "A private AI workspace for confidential work.",
-    body: "Our own product, and where our engagements get built. Your people work with your documents and data in plain language, inside a workspace your organisation controls.",
+    tagline: "A private workspace for confidential work.",
+    body: "Our own product, and where our engagements get built. One workspace, three ways in, and what changes between them is who brings what.",
     points: [
       {
-        label: "Traceable",
-        text: "Answers can be traced back to the material they came from.",
+        label: "Companies",
+        text: "You bring your documents and data, and work with all of it using frontier AI.",
       },
       {
-        label: "Controlled",
-        text: "Access controls, audit logs, and retention you set. Nothing you send trains a model.",
+        label: "Consultants",
+        text: "You bring your model, your client brings the data, and the code never leaves you.",
       },
       {
-        label: "Sealed",
-        text: "Run a proprietary model for a client without shipping it to them. They upload the data and get the analysis; the code never leaves you.",
+        label: "Training teams",
+        text: "You bring the exercise, learners bring real work, and none of it leaves the organisation.",
       },
     ],
-    outcome: "Built on Defensible AI.",
+    outcome: "Nothing you send trains a model.",
     cta: { label: "Visit forgeprivate.com", href: "https://www.forgeprivate.com" },
   },
 ];
