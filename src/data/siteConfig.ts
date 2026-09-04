@@ -4,7 +4,7 @@ export const siteConfig = {
   siteUrl: "https://gradtensor.com",
   twitterHandle: "@GradTensor",
   defaultDescription:
-    "GradTensor is a specialist AI consultancy for mid-size businesses. We decide where AI belongs with our own method, the Judgment Line, build the systems on our own platform, Forge, and keep them governed - always under your control.",
+    "GradTensor is an applied AI specialist firm. We train your people, decide with you where AI belongs using our own method, the Judgment Line, and build the systems on our own product, Forge.",
 
   email: "partnerships@gradtensor.com",
 

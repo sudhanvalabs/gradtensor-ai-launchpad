@@ -7,7 +7,7 @@ import logoDark from "@/assets/logo-dark.png";
 
 const NAV = [
   { name: "What we do", href: "/#what-we-do" },
-  { name: "The Judgment Line", href: "/#judgment-line" },
+  { name: "Method", href: "/#judgment-line" },
   { name: "Forge", href: "/#forge" },
   { name: "Demos", href: "/#demos" },
   { name: "About", href: "/about" },

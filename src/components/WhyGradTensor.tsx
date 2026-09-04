@@ -5,13 +5,13 @@ const reasons = [
     icon: Compass,
     title: "A method, not just tools",
     description:
-      "We start with the Judgment Line - deciding where AI belongs and where it must not go - so you get automation that fits your business, not a pile of demos that never ship.",
+      "We start with the Judgment Line, deciding where AI belongs and where it must not go, so you get systems that fit your business rather than a pile of demos that never ship.",
   },
   {
     icon: ShieldCheck,
     title: "Governance is the through-line",
     description:
-      "Human control, audit trails, access controls, and compliance-aware design are built in, not bolted on. This is AI a risk-aware operation can actually put to work.",
+      "Human control, audit trails, access controls, and compliance-aware design are built in, not bolted on. We hold what we build to the same Defensible AI standard as our own product.",
   },
   {
     icon: Wrench,
@@ -30,12 +30,13 @@ const WhyGradTensor = () => {
             Why GradTensor
           </p>
           <h2 className="mb-5 font-display text-4xl font-bold tracking-tight sm:text-5xl">
-            Specialist AI, decided and governed
+            One firm, from the training room to production
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
-            GradTensor exists to put governed AI to work where it genuinely helps -
-            responsibly, and under your control. We pair deep engineering
-            experience with a clear method for keeping people in charge.
+            Most firms teach AI, or advise on it, or sell software. We do all
+            three, which means the training is taught by the people who build, the
+            advice is tested against what actually ships, and the product is one we
+            answer for ourselves.
           </p>
         </div>
 

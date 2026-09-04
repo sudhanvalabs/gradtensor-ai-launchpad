@@ -1,41 +1,49 @@
 # GradTensor
 
-> A specialist AI consultancy with its own method and its own tool.
+> An applied AI specialist firm: training, consulting, and our own product.
 
-GradTensor is a specialist AI consultancy for mid-size businesses. We decide where AI belongs with our own method, the Judgment Line, build the systems on our own platform, Forge, and keep them governed - always under your control. We work with owner-led and mid-size businesses across industries, wherever there is real operational complexity and little in-house AI. Based in India, founded as a venture of Sudhanva Labs LLP.
+GradTensor is an applied AI specialist firm. We train your people, decide with you where AI belongs using our own method, the Judgment Line, and build the systems on our own product, Forge. We work with owner-led and mid-size businesses across industries, wherever there is real operational complexity and little in-house AI, and with colleges and training providers. Based in India, founded as a venture of Sudhanva Labs LLP.
 
 ## What we do
 
-### 01 Govern your people's AI - governed enablement of individual AI use
-- A clear usage policy, hands-on training on your actual work, and AI Copilots and AI Experts in a private, protected workspace on Forge
-- Your company and client data stays under your control; data handling, retention, and access controls documented for IT and compliance review
+Three ways to work with us. Most engagements use more than one.
 
-### 02 Decide what to automate - the Judgment Line Assessment
-- We map your operations and draw the line, workflow by workflow, between what AI should run, what it should assist, and what must stay with your people
-- Output: a prioritised view of hours to win back and the work that must keep human judgment
+### 01 AI training (service)
+- Hands-on programmes taught on your own workflows, so people leave able to do the work differently
+- Corporates: role-based upskilling for teams and leadership, with a usage policy people can follow
+- Colleges: job-ready AI skills for students and faculty
+- Industry verticals: programmes shaped to the way your sector actually works
 
-### 03 Build your business systems - AI Trackers and AI Automations, built on Forge
-- Systems of record: AI Trackers for the leads, orders, quality checks, and logs you now run on spreadsheets and WhatsApp
-- Systems of action: AI Automations that run selected workflows end to end, monitoring your logs against your thresholds and generating your recurring reports, while your people govern the exceptions
+### 02 AI consulting (service)
+- Assess: map your operations and draw the Judgment Line, workflow by workflow, between what AI should run, what it should assist, and what stays with your people
+- Build: assistants, trackers, and automations that run on your real work, with a human on the decisions that matter
+- Govern: review what the systems did, tune the thresholds, handle the exceptions, and redraw the line as your business changes
 
-### 04 Govern and improve - ongoing governance of your AI operations
-- Review what AI did, tune the thresholds, handle the exceptions process, and redraw the Judgment Line as your business changes
-- Done with you on an ongoing basis so the systems stay dependable as they grow
+### 03 Forge (product)
+- Our own product, and where our engagements get built
+- A private AI workspace for confidential work: your people work with your documents and data in plain language, inside a workspace your organisation controls
+- Product site: https://www.forgeprivate.com
 
-## The four products
+## The Judgment Line (our method)
 
-- AI Copilots (Create): help your people produce their work faster
-- AI Trackers (Track): keep your business records and answer from them
-- AI Experts (Ask): authoritative answers from your company's knowledge
-- AI Automations (Run): run processes end to end while your people govern the exceptions
+Where AI goes. The line, drawn workflow by workflow, between what AI carries and what stays with your people. Final quality sign-off, contractual and pricing commitments, safety-critical and compliance decisions, and final verification never cross it. Drawn before anything is built, and redrawn as the business changes.
 
-## The Judgment Line
+## Defensible AI (our standard)
 
-Our method for drawing the line between what AI carries and what stays with your people. Final quality sign-off, contractual and pricing commitments, safety-critical and compliance decisions, and final verification never cross the line. This is what makes the automation governed and safe for a risk-aware business.
+What AI has to prove once it is there. Three properties, in this order:
 
-## Forge
+- Reliable: dependable, reproducible answers you can stand behind
+- Accountable: answers can be traced, evaluated, and explained, so you know who is answerable for them
+- Confidential: sensitive information stays within the boundaries it is permitted to exist in
 
-Our platform for governed AI - AI Copilots, Trackers, Experts, and Automations for business operations. Any mid-size business can use Forge; in a GradTensor engagement, we deploy and govern it for you, end to end, on your real work. Product site: https://forge.gradtensor.com
+## Forge, in detail
+
+- Answers can be traced back to the material they came from
+- Access controls, audit logs, and retention you set, with permanent deletion when you want it
+- Nothing you send trains a model
+- A sealed environment for delivering a proprietary model to a client: they upload their data and get the analysis back, and never see the code
+- Forge is hosted software. It is not self-hosted or deployed on a customer's own servers, and it does not claim in-country data residency.
+- Any organisation can use Forge on its own; in a GradTensor engagement we deploy and govern it for you, end to end, on your real work
 
 ## Founder
 

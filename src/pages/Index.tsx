@@ -1,6 +1,5 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import WhoWeServe from "@/components/WhoWeServe";
 import WhatWeDo from "@/components/WhatWeDo";
 import JudgmentLine from "@/components/JudgmentLine";
 import Forge from "@/components/Forge";
@@ -26,20 +25,25 @@ const organizationLd = {
   ],
 };
 
+/*
+  Landing page. WhoWeServe (the four operations archetypes) is deliberately not
+  mounted here: it scoped the page to one pillar, consulting, and read oddly
+  next to a training offer that includes colleges. The component is kept for a
+  future consulting page.
+*/
 const Index = () => {
   useScrollAnimation();
 
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="GradTensor - Governed AI consultancy with its own method and tool"
+        title="GradTensor - AI training, consulting, and products"
         description={siteConfig.defaultDescription}
         path="/"
         jsonLd={[organizationLd]}
       />
       <Navbar />
       <Hero />
-      <WhoWeServe />
       <WhatWeDo />
       <JudgmentLine />
       <Forge />

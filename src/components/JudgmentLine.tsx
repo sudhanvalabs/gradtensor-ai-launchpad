@@ -1,5 +1,24 @@
 import { Check, X } from "lucide-react";
 
+/*
+  Method and standard, in one section.
+
+  The Judgment Line is GradTensor's method: where AI goes. Defensible AI is the
+  standard it has to meet once it is there. They were previously presented as a
+  matched pair of "methods", which was wrong: Defensible AI is an engineering
+  discipline the product is built to, not an engagement you sell. Kept together
+  here because the buyer's question is one question, but labelled differently on
+  purpose.
+
+  The three Defensible AI lines are the shipped wording and are load-bearing.
+  "Answers can be traced" is not "every answer is traced": a question asked with
+  no documents attached has no source to cite, and "every" is the one word a
+  technical buyer can falsify.
+
+  Section id stays "judgment-line" because the navbar, footer, and About page
+  all link to it.
+*/
+
 const automate = [
   "Drafting quotes, enquiries, and supplier documents",
   "Reading and summarising tenders, contracts, and specs",
@@ -13,6 +32,21 @@ const stays = [
   "Contractual and pricing commitments",
   "Safety-critical and compliance decisions",
   "Final verification before anything ships",
+];
+
+const standard = [
+  {
+    word: "Reliable",
+    line: "Dependable, reproducible answers you can stand behind.",
+  },
+  {
+    word: "Accountable",
+    line: "Answers can be traced, evaluated, and explained, so you know who is answerable for them.",
+  },
+  {
+    word: "Confidential",
+    line: "Sensitive information stays within the boundaries it is permitted to exist in.",
+  },
 ];
 
 const JudgmentLine = () => {
@@ -37,8 +71,8 @@ const JudgmentLine = () => {
               The Judgment Line is how we draw that boundary with you. On one side,
               the repetitive work AI can take off your team's plate. On the other,
               the judgment, accountability, and sign-off that must stay with your
-              people. This is what makes our automation governed, and what makes it
-              safe to put in front of a risk-aware operation.
+              people. We draw it before anything gets built, and we redraw it as
+              your business changes.
             </p>
             <p className="font-display text-lg italic text-foreground/80">
               Hours back, without handing over control.
@@ -84,6 +118,42 @@ const JudgmentLine = () => {
                 ))}
               </ul>
             </div>
+          </div>
+        </div>
+
+        {/* The standard. Deliberately quieter than the method above it: the
+            Judgment Line is what a buyer engages us for, Defensible AI is why
+            the result holds up afterwards. */}
+        <div className="mt-20 border-t border-border/60 pt-14 md:mt-24 md:pt-16">
+          <div className="mb-10 max-w-2xl animate-on-scroll">
+            <p className="mb-4 font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground">
+              The standard
+            </p>
+            <h3 className="mb-5 font-display text-3xl font-bold tracking-tight sm:text-4xl">
+              Defensible AI
+            </h3>
+            <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
+              The bar we build our own product to, and the one we hold your systems
+              to. Three properties, in this order, because an answer has to be worth
+              having before it is worth defending.
+            </p>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-3">
+            {standard.map((s, i) => (
+              <div
+                key={s.word}
+                className="animate-on-scroll border-l-2 border-primary/40 pl-5"
+                style={{ transitionDelay: `${i * 0.08}s` }}
+              >
+                <h4 className="mb-2 font-display text-lg font-bold tracking-tight">
+                  {s.word}
+                </h4>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  {s.line}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -2,6 +2,19 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
+/*
+  Hero. Vertical-neutral as of the September 2026 repositioning.
+
+  This replaced a manufacturing / supply-chain headline that was running as a
+  deliberate vertical test on an otherwise neutral body. The test is retired:
+  GradTensor now presents as an AI specialist firm with three ways in, and a
+  sector-specific headline would speak to one of the three pillars only. The
+  headline is deliberately short: it is an imperative, and the subhead below it
+  does the explaining.
+
+  Voice rules for this file and every sibling section: no em dashes, no
+  exclamation marks, and no claim about Forge that Forge cannot back.
+*/
 const Hero = () => {
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden pt-16">
@@ -26,12 +39,12 @@ const Hero = () => {
 
       <div className="section-container relative z-10 py-20 md:py-28">
         <div className="mx-auto max-w-4xl">
-          {/* Sector tag */}
+          {/* Positioning tag */}
           <p
             className="mb-6 font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground animate-fade-up"
             style={{ animationDelay: "0.05s" }}
           >
-            Specialist AI consultancy
+            Applied AI specialists
           </p>
 
           {/* Headline */}
@@ -39,9 +52,7 @@ const Hero = () => {
             className="mb-6 font-display text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl md:text-6xl animate-fade-up"
             style={{ animationDelay: "0.1s" }}
           >
-            AI automation for{" "}
-            <span className="gradient-text">manufacturing and supply chain</span>{" "}
-            operations.
+            Put AI to <span className="gradient-text">work</span>.
           </h1>
 
           {/* Subhead */}
@@ -49,9 +60,9 @@ const Hero = () => {
             className="mb-8 max-w-3xl text-lg leading-relaxed text-muted-foreground sm:text-xl animate-fade-up"
             style={{ animationDelay: "0.2s" }}
           >
-            For the businesses that make, build, move, store, and maintain physical
-            things. We handle the repetitive operations work, from back-office
-            paperwork to the plant floor, always under your control.
+            GradTensor is an AI specialist firm. We train your people, decide with
+            you where AI belongs in your operations, and build the systems that run
+            there. Three ways in, one standard: AI you can stand behind.
           </p>
 
           {/* CTAs */}

@@ -20,7 +20,7 @@ const SiteFooter = () => {
               What we do
             </Link>
             <Link to="/#judgment-line" className="transition-colors hover:text-primary">
-              The Judgment Line
+              Method
             </Link>
             <Link to="/#forge" className="transition-colors hover:text-primary">
               Forge
